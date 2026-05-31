@@ -1,8 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #e8e8e8;
+  --foreground: #FAFAFA;
+  --primary-text: #18181B;
+  --secondary-text: #71717A;
+  --primary-dark: #09090B;
+  --border: #c6c6c6;
 }
 
 @theme inline {
@@ -12,15 +16,121 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-foreground {
+  background-color: var(--foreground);
+}
+
+.text-primary {
+  color: var(--primary-text);
+}
+.text-secondary {
+  color: var(--secondary-text);
+}
+
+.border-primary {
+  border-color: var(--border);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--foreground);
+  min-height: 100vh;
+}
+
+/* Custom scrollbar for premium feel */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(23, 23, 23, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(166, 139, 91, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(166, 139, 91, 0.5);
+}
+
+/* Smooth selection color */
+::selection {
+  background: rgba(166, 139, 91, 0.2);
+  color: #171717;
+}
+
+/* Add to your global CSS or component CSS module */
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.transform-gpu {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom card animations */
+@keyframes cardFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.card-float {
+  animation: cardFloat 4s ease-in-out infinite;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  background: linear-gradient(135deg, #a68b5b, #c4a96e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* 3D perspective utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.perspective-1500 {
+  perspective: 1500px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(23, 23, 23, 0.05);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(166, 139, 91, 0.3);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(166, 139, 91, 0.5);
 }
