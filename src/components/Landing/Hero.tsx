@@ -1,83 +1,132 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Sparkles, Globe, ArrowDown } from "lucide-react";
+import React, { useEffect, useState, useRef } from "react";
+import { motion, AnimatePresence, useMotionValue, useSpring } from "framer-motion";
+import Link from "next/link";
 
 const rotatingText = [
-  "Turn Your Business Into A Digital Brand",
-  "Go Digital. Scale Faster.",
-  "Websites Built For Growth",
-  "Modern Experiences That Convert",
-  "High Performance. Clean Design.",
+  "Built for speed and performance",
+  "Designed to convert visitors into customers",
+  "Optimized for SEO and growth",
+  "Crafted with modern technologies",
+  "Engineered for long-term scalability",
 ];
 
 export default function HeroHeading() {
   const [current, setCurrent] = useState(0);
+  const [hovered, setHovered] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
-  // 1. Core Rotating Text Ticker Loop
+  // High-performance Framer Motion tracking values (Bypasses standard React state rerenders)
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  // Smooth physics spring configurations for the tracking indicator badge
+  const springConfig = { stiffness: 450, damping: 32, mass: 0.4 };
+  const cursorX = useSpring(mouseX, springConfig);
+  const cursorY = useSpring(mouseY, springConfig);
+
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % rotatingText.length);
-    }, 3000);
+    }, 3200);
     return () => clearInterval(interval);
   }, []);
 
+  const handleMouseMove = (e: React.MouseEvent) => {
+    // Track cursor location relative directly to the viewport window bounds
+    mouseX.set(e.clientX - 64); // Centered offset: half of w-32 size element
+    mouseY.set(e.clientY - 64);
+  };
 
   return (
-    <div className="w-full h-screen flex flex-col items-center justify-between px-4 py-12 font-sans antialiased relative overflow-hidden">
-      
-
-      {/* CENTERPIECE COLUMN: High-Fidelity Centered Editorial Layout */}
-      <div className="w-full text-center flex flex-col items-center my-auto relative z-10 px-2 sm:px-6">
-
-        {/* Symmetrical Massive Primary Headline */}
-        <h1 className="text-[2.6rem] sm:text-[4.5rem] md:text-[6rem] lg:text-[7.5rem] leading-[0.92] tracking-[-0.04em] font-light text-[#18181B] flex flex-col items-center">
-          <motion.span
-            initial={{ opacity: 0, y: 35 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: [0.16, 1, 0.3, 1] }}
+    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-white px-4 sm:px-6">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center text-center">
+        
+        {/* Clickable Area Wrapper linked directly to work redirection path */}
+        <Link 
+          href="/work"
+          className="block relative decoration-transparent outline-none group"
+        >
+          <div
+            ref={containerRef}
+            className="relative cursor-none select-none py-4"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+            onMouseMove={handleMouseMove}
           >
-            We Design <span className="font-semibold text-[#09090B]">and</span> Build
-          </motion.span>
-          
-          <motion.span 
-            initial={{ opacity: 0, y: 35 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="text-[#71717A] font-extralight"
-          >
-            Modern Digital Engines.
-          </motion.span>
-        </h1>
+            {/* Viewport Bound Floating Interaction Cursor */}
+            <AnimatePresence>
+              {hovered && (
+                <motion.div
+                  initial={{ scale: 0, opacity: 0 }}
+                  animate={{ scale: 1, opacity: 1 }}
+                  exit={{ scale: 0, opacity: 0 }}
+                  className="pointer-events-none fixed z-50 flex h-32 w-32 items-center justify-center rounded-full bg-[#0066cc] text-sm font-semibold tracking-wide text-white shadow-2xl backdrop-blur-sm"
+                  style={{
+                    left: cursorX,
+                    top: cursorY,
+                  }}
+                >
+                  View Work ↗
+                </motion.div>
+              )}
+            </AnimatePresence>
 
-        {/* FIXED HEIGHT CONTAINER: Holds the text rotation cleanly to prevent page layout jumps */}
-        <div className="w-full max-w-3xl border-t border-b border-[#c6c6c6]/50 my-10 py-5 overflow-hidden h-16 sm:h-20 flex items-center justify-center relative">
+            {/* Dynamic Typography Header Layout */}
+            <h1
+              className="relative z-10 flex flex-col items-center leading-[0.9] tracking-[-0.05em] transition-opacity duration-500 ease-out group-hover:opacity-75"
+            >
+              <motion.span
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="text-[2.75rem] font-bold text-zinc-950 sm:text-[5rem] md:text-[6.5rem] lg:text-[8rem]"
+              >
+                We Build Websites
+              </motion.span>
+
+              <motion.span
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1, duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+                className="text-[2.75rem] font-light text-zinc-400 sm:text-[5rem] md:text-[6.5rem] lg:text-[8rem]"
+              >
+                That Drive Growth.
+              </motion.span>
+            </h1>
+          </div>
+        </Link>
+
+        {/* Studio Agency Body Description block */}
+        <motion.p
+          initial={{ opacity: 0, y: 15 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.6 }}
+          className="mt-8 max-w-2xl text-base leading-relaxed text-zinc-500 md:text-lg font-normal"
+        >
+          We design and develop modern websites, web applications, and digital
+          experiences that help businesses attract customers, build trust, and
+          scale online.
+        </motion.p>
+
+        {/* Dynamic Vertical Text Cycler Carousel Widget */}
+        <div className="relative mt-12 flex h-14 w-full max-w-xl items-center justify-center overflow-hidden border-y border-zinc-100">
           <AnimatePresence mode="wait">
             <motion.p
               key={current}
-              initial={{ y: "100%", opacity: 0, filter: "blur(6px)" }}
-              animate={{ y: "0%", opacity: 1, filter: "blur(0px)" }}
-              exit={{ y: "-100%", opacity: 0, filter: "blur(6px)" }}
-              transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
-              className="text-xl sm:text-2xl md:text-3xl font-light tracking-tight text-[#09090B] absolute"
+              initial={{ y: 25, opacity: 0, filter: "blur(4px)" }}
+              animate={{ y: 0, opacity: 1, filter: "blur(0px)" }}
+              exit={{ y: -25, opacity: 0, filter: "blur(4px)" }}
+              transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+              className="absolute text-sm font-mono uppercase tracking-wider text-zinc-800"
             >
-              ✨ {rotatingText[current]}
+              ✦ {rotatingText[current]}
             </motion.p>
           </AnimatePresence>
         </div>
 
-        {/* Centered Cognitive Sub-description */}
-        <motion.p
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.35, duration: 0.8 }}
-          className="max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed text-[#71717A] font-light"
-        >
-          We architect ultra-scalable interfaces calibrated for exceptional conversion rates and timeless brand authority. We strip out unnecessary digital noise to engineer clean, high-performance software modules.
-        </motion.p>
       </div>
-
-    </div>
+    </section>
   );
 }

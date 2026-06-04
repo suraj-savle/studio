@@ -175,9 +175,11 @@ const Navbar = () => {
           </AnimatePresence>
 
           {/* HAMBURGER ONLY AFTER SCROLL */}
-          <AnimatePresence>
-            {isScrolled && (
+          {/* HAMBURGER */}
+          <AnimatePresence mode="wait">
+            {(isScrolled || true) && (
               <motion.button
+                key={menuOpen ? "close" : "menu"}
                 initial={{ opacity: 0, scale: 0.8, rotate: -10 }}
                 animate={{ opacity: 1, scale: 1, rotate: 0 }}
                 exit={{ opacity: 0, scale: 0.8, rotate: -10 }}
@@ -186,7 +188,10 @@ const Navbar = () => {
                   ease: [0.16, 1, 0.3, 1],
                 }}
                 onClick={() => setMenuOpen(!menuOpen)}
-                className="relative z-[60] flex h-12 w-12 items-center justify-center"
+                className={`
+        relative z-[60] h-12 w-12 items-center justify-center
+        ${isScrolled ? "flex" : "flex md:hidden"}
+      `}
               >
                 {menuOpen ? (
                   <X className="h-5 w-5 text-black" />
