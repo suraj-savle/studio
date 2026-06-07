@@ -9,27 +9,19 @@ import DigitalMarketing from "./services/DigitalMarketing";
 
 const Services = () => {
   return (
-    <section className="relative w-full bg-[#f5f5f0]">
-      
+    <section className="relative w-full">
       {/* SECTION 1 */}
-      <div className="sticky top-0 h-screen z-10">
+      <div className="sticky top-0 h-screen bg-foreground">
         <Main />
       </div>
 
       {/* SECTION 2 */}
-      <div className="sticky top-0 h-screen z-20">
-        <DynamicWebsite />
-      </div>
+      <DynamicWebsite />
 
       {/* SECTION 3 */}
-      <div className="sticky top-0 h-screen z-30">
-        <AutomationShowcase />
-      </div>
+      <AutomationShowcase />
 
-      <div className="sticky top-0 h-screen z-30">
-        <DigitalMarketing />
-      </div>
-
+      <DigitalMarketing />
     </section>
   );
 };
