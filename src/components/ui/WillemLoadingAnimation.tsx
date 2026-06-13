@@ -7,38 +7,51 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function WillemScrollHeader() {
-  const containerRef = useRef(null);
-  const loadingLettersRef = useRef([]);
-  const boxRef = useRef(null);
-  const growingImageRef = useRef(null);
-  const headingStartRef = useRef(null);
-  const headingEndRef = useRef(null);
-  const imageExtrasRef = useRef([]);
-  const headerLettersRef = useRef([]);
-  const interactiveLinksRef = useRef([]);
+  const containerRef = useRef<HTMLElement | null>(null);
+
+  const loadingLettersRef = useRef<HTMLSpanElement[]>([]);
+  const imageExtrasRef = useRef<HTMLImageElement[]>([]);
+  const headerLettersRef = useRef<HTMLSpanElement[]>([]);
+  const interactiveLinksRef = useRef<
+    (HTMLAnchorElement | HTMLParagraphElement)[]
+  >([]);
+
+  const boxRef = useRef<HTMLDivElement | null>(null);
+  const growingImageRef = useRef<HTMLDivElement | null>(null);
+  const headingStartRef = useRef<HTMLDivElement | null>(null);
+  const headingEndRef = useRef<HTMLDivElement | null>(null);
 
   // Ref collectors for array elements
-  const addToLoadingLetters = (el) => {
-    if (el && !loadingLettersRef.current.includes(el))
+  const addToLoadingLetters = (el: HTMLSpanElement | null) => {
+    if (el && !loadingLettersRef.current.includes(el)) {
       loadingLettersRef.current.push(el);
+    }
   };
-  const addToImageExtras = (el) => {
-    if (el && !imageExtrasRef.current.includes(el))
+
+  const addToImageExtras = (el: HTMLImageElement | null) => {
+    if (el && !imageExtrasRef.current.includes(el)) {
       imageExtrasRef.current.push(el);
+    }
   };
-  const addToHeaderLetters = (el) => {
-    if (el && !headerLettersRef.current.includes(el))
+
+  const addToHeaderLetters = (el: HTMLSpanElement | null) => {
+    if (el && !headerLettersRef.current.includes(el)) {
       headerLettersRef.current.push(el);
+    }
   };
-  const addToInteractiveLinks = (el) => {
-    if (el && !interactiveLinksRef.current.includes(el))
+
+  const addToInteractiveLinks = (
+    el: HTMLAnchorElement | HTMLParagraphElement | null,
+  ) => {
+    if (el && !interactiveLinksRef.current.includes(el)) {
       interactiveLinksRef.current.push(el);
+    }
   };
 
   useEffect(() => {
     const ctx = gsap.context(() => {
       if (containerRef.current) {
-        containerRef.current.classList.remove("invisible");
+        containerRef.current?.classList.remove("invisible");
       }
 
       // Create the ScrollTrigger-driven timeline
@@ -141,7 +154,7 @@ export default function WillemScrollHeader() {
           "<",
         );
       }
-    }, containerRef);
+    }, containerRef as React.RefObject<HTMLElement>);
 
     return () => ctx.revert(); // Essential cleanup to drop pinning markers on dismount
   }, []);
@@ -339,7 +352,6 @@ export default function WillemScrollHeader() {
           </div>
         </div>
       </section>
-
     </>
   );
 }
