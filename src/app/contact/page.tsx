@@ -31,7 +31,7 @@ export default function ContactPage() {
         </div>
 
         {/* 2. MIDDLE TWO-COLUMN GRID INTERACTION LAYER */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-16 sm:mb-24 mx-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-16 sm:mb-24 mx-5 sm:mx-10">
           {/* LEFT PANEL: CONTENT STRIP & METADATA GRID */}
           <div className="lg:col-span-7 flex flex-col justify-between h-full">
             <div>
@@ -119,9 +119,9 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
-
+ 
           {/* RIGHT PANEL: PREMIUM FLOATING INPUT FORM CARD */}
-          <div className="lg:col-span-5 bg-white border-l p-8 sm:p-10  relative overflow-hidden group/card">
+          <div className="lg:col-span-5 bg-white border-t md:border-t-0 md:border-l py-6 sm:p-10 relative overflow-hidden group/card">
             {/* Success Overlay with premium backdrop-blur styling */}
             {submitted && (
               <div className="absolute inset-0 bg-white/80 backdrop-blur-md rounded-[32px] z-20 flex flex-col items-center justify-center text-center p-6 transition-all duration-300 animate-in fade-in zoom-in-95">
