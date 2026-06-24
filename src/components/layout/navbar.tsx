@@ -106,12 +106,11 @@ const Navbar = () => {
 
             {/* Services Dropdown Panel */}
             <div
-              className={`absolute top-full left-1/2 -translate-x-1/2 mt-1 w-64 p-2 bg-white border rounded-xl shadow-xl z-50 transition-all duration-200 ${
+              className={`absolute top-full left-1/2 -translate-x-1/2 mt-1 w-64 p-2 bg-white  rounded-xl shadow-xl z-50 transition-all duration-200  ${
                 isDropdownOpen
                   ? "opacity-100 translate-y-0 pointer-events-auto"
                   : "opacity-0 translate-y-2 pointer-events-none"
               }`}
-              style={{ borderColor: "var(--border)" }}
             >
               <div className="flex flex-col gap-0.5">
                 {DROPDOWN_SERVICES.map((subItem) => {
@@ -120,18 +119,9 @@ const Navbar = () => {
                     <Link
                       key={subItem.name}
                       href={subItem.href}
-                      className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-xs font-medium transition-all duration-200 group/link hover:bg-zinc-50"
+                      className="flex items-center gap-3 px-3 py-2.5 text-xs font-medium transition-all duration-200 group/link border border-transparent hover:border-b-zinc-500"
                       style={{ color: "var(--secondary-text)" }}
                     >
-                      <div
-                        className="p-1.5 rounded-md"
-                        style={{ backgroundColor: "var(--primary)" }}
-                      >
-                        <Icon
-                          className="text-sm"
-                          style={{ color: "var(--secondary-text)" }}
-                        />
-                      </div>
                       <span
                         className="flex-1 transition-colors duration-200 group-hover/link:text-black"
                         style={{ color: "var(--primary-text)" }}
@@ -178,7 +168,7 @@ const Navbar = () => {
         <div className="flex items-center gap-3 min-w-[150px] justify-end">
           <Link
             href="/contact"
-            className="hidden lg:group lg:flex items-center justify-center overflow-hidden rounded-full px-5 py-2.5 transition-all duration-300 active:scale-95 border border-zinc-200"
+            className="hidden lg:group lg:flex items-center justify-center overflow-hidden rounded-full px-5 py-2.5 transition-all duration-300 active:scale-95 border"
           >
             <div className="absolute inset-0 translate-y-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-y-0" />
             <div className="relative z-10 flex h-4 items-center overflow-hidden">
@@ -192,7 +182,7 @@ const Navbar = () => {
           {/* HAMBURGER TOGGLE BUTTON */}
           <button
             onClick={() => setIsMenuOpen(true)}
-            className="flex items-center justify-center w-10 h-10 rounded-full bg-white border border-zinc-200 hover:border-zinc-950 text-zinc-950 transition-colors duration-300 focus:outline-none lg:hidden"
+            className="flex items-center justify-center w-10 h-10 rounded-full bg-white border text-zinc-950 transition-colors duration-300 focus:outline-none lg:hidden"
           >
             <TbMenu className="text-xl" />
           </button>
@@ -252,7 +242,7 @@ const Navbar = () => {
           <Link
             href="/contact"
             onClick={() => setIsMenuOpen(false)}
-            className="group inline-flex items-center gap-2 text-3xl font-bold tracking-tight text-blue-600 hover:text-blue-700 transition-colors duration-200 pt-4 border-t border-zinc-100 w-full max-w-xs"
+            className="group inline-flex items-center gap-2 text-3xl font-bold tracking-tight text-blue-600 hover:text-blue-700 transition-colors duration-200 pt-4 border-t w-full max-w-xs"
           >
             <span>Let&apos;s Talk</span>
             <TbArrowUpRight className="text-xl transition-transform duration-200 group-hover:rotate-45" />
