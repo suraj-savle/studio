@@ -1,13 +1,10 @@
 "use client";
-
 import React from "react";
 import { motion } from "framer-motion";;
 
 export default function ServicesIntro() {
   return (
     <section className="w-full h-full flex items-center justify-center text-[#09090B]  font-sans antialiased">
-      {/* CORE TYPOGRAPHIC ENGINE */}
-
       {/* Massive Dynamic Title Block */}
       <div className="lg:col-span-8">
         <motion.h1

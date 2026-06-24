@@ -1,116 +1,163 @@
 "use client";
-
+import React from "react";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
+import { IoMailOutline, IoLocationOutline } from "react-icons/io5";
+import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
+  const servicesLinks = [
+    { name: "Custom Website", href: "#" },
+    { name: "Portfolio", href: "#" },
+    { name: "Seo", href: "#" },
+    { name: "Redesign", href: "#" },
+    { name: "Free Consulting", href: "#" },
+  ];
+
+  const supportLinks = [
+    { name: "Contact Us", href: "#" },
+    { name: "Help Center", href: "#" },
+    { name: "Cookie Policy", href: "#" },
+    { name: "Free Consulting", href: "#" },
+  ];
+
+  const socialLinks = [
+    { name: "GitHub", href: "#", icon: FaGithub },
+    { name: "X", href: "#", icon: FaXTwitter },
+    { name: "LinkedIn", href: "#", icon: FaLinkedinIn },
+    { name: "Instagram", href: "#", icon: FaInstagram },
+  ];
+
   return (
-    <footer className="border-t border-zinc-800 bg-black text-white">
-      <div className="mx-auto max-w-7xl px-6 py-16">
-        <div className="grid gap-12 md:grid-cols-4">
-          {/* Brand */}
-          <div className="md:col-span-2">
-            <h2 className="text-2xl font-bold tracking-tight">
-              SURAJDEV
-            </h2>
-
-            <p className="mt-4 max-w-md text-sm leading-7 text-zinc-400">
-              Building modern websites, web applications, and
-              digital experiences that help businesses grow
-              online.
-            </p>
-
-            <div className="mt-6 flex items-center gap-3">
-              <div className="h-2 w-2 rounded-full bg-green-500" />
-              <span className="text-sm text-zinc-400">
-                Available for freelance projects
-              </span>
-            </div>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="mb-5 text-sm font-semibold uppercase tracking-wider text-zinc-300">
-              Services
-            </h3>
-
-            <ul className="space-y-3 text-sm text-zinc-400">
-              <li>Web Design</li>
-              <li>Web Development</li>
-              <li>Landing Pages</li>
-              <li>E-Commerce</li>
-              <li>SEO Optimization</li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h3 className="mb-5 text-sm font-semibold uppercase tracking-wider text-zinc-300">
-              Contact
-            </h3>
-
-            <div className="space-y-3 text-sm text-zinc-400">
-              <Link
-                href="mailto:hello@surajdev.com"
-                className="flex items-center gap-2 hover:text-white transition-colors"
-              >
-                hello@surajdev.com
-                <ArrowUpRight size={14} />
-              </Link>
-
-              <Link
-                href="https://surajdev.vercel.app"
-                target="_blank"
-                className="flex items-center gap-2 hover:text-white transition-colors"
-              >
-                surajdev.vercel.app
-                <ArrowUpRight size={14} />
-              </Link>
-
-              <p>Mumbai, India</p>
-            </div>
-          </div>
-        </div>
-
-        {/* CTA Strip */}
-        <div className="mt-16 rounded-3xl border border-zinc-800 bg-zinc-900 p-8">
-          <div className="flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-            <div>
-              <h3 className="text-2xl font-bold">
-                Have a project in mind?
-              </h3>
-
-              <p className="mt-2 text-zinc-400">
-                Let's build something that stands out.
-              </p>
-            </div>
-
-            <button className="rounded-xl bg-white px-6 py-3 text-sm font-medium text-black transition hover:scale-105">
-              Start a Project
-            </button>
-          </div>
-        </div>
-
-        {/* Bottom Bar */}
-        <div className="mt-12 flex flex-col gap-4 border-t border-zinc-800 pt-6 text-sm text-zinc-500 md:flex-row md:items-center md:justify-between">
-          <p>
-            © {new Date().getFullYear()} SURAJDEV. All rights reserved.
+    <footer className="w-full text-zinc-900 pt-16 overflow-hidden relative">
+      {/* TOP LINKS LAYER */}
+      {/* TOP FOOTER */}
+      <div className="mx-auto flex flex-col gap-12 border-b border-zinc-200/60 px-4 pb-16 sm:px-12 lg:flex-row lg:justify-between lg:gap-16">
+        {/* LEFT : BRAND */}
+        <div className="max-w-sm shrink-0">
+          <p className="text-lg font-medium leading-snug tracking-tight text-zinc-900">
+            UpgradeUX is an independent digital agency crafting high-performance
+            websites, modern user experiences, and scalable digital products.
           </p>
 
-          <div className="flex gap-6">
-            <Link href="#" className="hover:text-white">
-              Privacy
-            </Link>
+          <div className="mt-5 flex items-center gap-2">
+            <span className="relative flex h-2 w-2">
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-75" />
+              <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
+            </span>
 
-            <Link href="#" className="hover:text-white">
-              Terms
-            </Link>
-
-            <Link href="#" className="hover:text-white">
-              Portfolio
-            </Link>
+            <span className="text-xs font-medium text-zinc-400">
+              Currently accepting new projects
+            </span>
           </div>
         </div>
+
+        {/* CENTER LINKS */}
+        <div className="flex flex-col gap-10 sm:flex-row sm:gap-20">
+          {/* SERVICES */}
+          <div className="flex min-w-[180px] flex-col gap-3">
+            <span className="text-xs font-mono uppercase tracking-[0.2em] text-zinc-400">
+              Services
+            </span>
+
+            <nav className="flex flex-col gap-2">
+              {servicesLinks.map((service) => (
+                <Link
+                  key={service.name}
+                  href={service.href}
+                  className="text-sm font-medium text-zinc-500 transition-colors hover:text-zinc-950"
+                >
+                  {service.name}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          {/* COMPANY */}
+          <div className="flex min-w-[180px] flex-col gap-3">
+            <span className="text-xs font-mono uppercase tracking-[0.2em] text-zinc-400">
+              Company
+            </span>
+
+            <nav className="flex flex-col gap-2">
+              {supportLinks.map((item) => (
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  className="text-sm font-medium text-zinc-500 transition-colors hover:text-zinc-950"
+                >
+                  {item.name}
+                </Link>
+              ))}
+            </nav>
+
+            {/* SOCIALS */}
+            <div className="mt-4 flex flex-wrap gap-2">
+              {socialLinks.map((social) => {
+                const Icon = social.icon;
+
+                return (
+                  <Link
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={social.name}
+                    className="group flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 text-zinc-500 transition-all duration-300 hover:-translate-y-1 hover:border-zinc-950 hover:text-zinc-950"
+                  >
+                    <Icon className="text-base transition-transform duration-300 group-hover:scale-110" />
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+
+        {/* RIGHT : CONTACT */}
+        <div className="flex w-full max-w-sm flex-col gap-6 lg:ml-auto">
+
+          {/* EMAIL */}
+          <a
+            href="mailto:upgradeux@gmail.com"
+            className="group flex items-center justify-between border-b border-zinc-200 pb-4"
+          >
+            <div>
+              <p className="text-xs uppercase tracking-[0.15em] text-zinc-400">
+                Email
+              </p>
+
+              <h4 className="mt-1 text-base font-semibold text-zinc-950">
+                upgradeux@gmail.com
+              </h4>
+            </div>
+
+            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-zinc-950 text-xs text-white transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+              ↗
+            </div>
+          </a>
+
+          {/* LOCATION */}
+          <div>
+            <p className="text-xs uppercase tracking-[0.15em] text-zinc-400">
+              Location
+            </p>
+
+            <h4 className="mt-1 text-base font-semibold text-zinc-950">
+              Mumbai, India
+            </h4>
+
+            <p className="mt-1 text-sm text-zinc-500">
+              Working remotely with clients worldwide.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* GIANT BACKGROUND TYPOGRAPHY ELEMENT */}
+      <div className="w-full relative pointer-events-none select-none overflow-hidden h-[120px] sm:h-[180px] md:h-[240px] lg:h-[280px]">
+        <h1 className="absolute -bottom-[20%] text-[16.8vw] font-black tracking-tighter leading-none antialiased uppercase bg-clip-text text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#4DB2E0]">
+          UpgradeUX
+        </h1>
       </div>
     </footer>
   );

@@ -6,6 +6,7 @@ import Main from "./services/Main";
 import DynamicWebsite from "./services/DynamicWebsite";
 import AutomationShowcase from "./services/AutomationShowcase";
 import DigitalMarketing from "./services/DigitalMarketing";
+import ServicesPage from "../ui/ServicesPage";
 
 const Services = () => {
   return (
@@ -15,13 +16,13 @@ const Services = () => {
         <Main />
       </div>
 
-      {/* SECTION 2 */}
+      {/* <ServicesPage /> */}
+      {/* 
       <DynamicWebsite />
 
-      {/* SECTION 3 */}
       <AutomationShowcase />
 
-      <DigitalMarketing />
+      <DigitalMarketing /> */}
     </section>
   );
 };

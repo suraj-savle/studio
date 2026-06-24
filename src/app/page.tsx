@@ -1,19 +1,23 @@
-import Navbar from "@/components/layout/navbar";
 import Hero from "@/components/Landing/Hero";
-import Services from "@/components/layout/services";
-import Footer from "@/components/layout/Footer";
-import WillemLoadingAnimation from "@/components/ui/WillemLoadingAnimation";
 import AgencyFAQ from "@/components/layout/AgencyFAQ";
+import ServicesPage from "@/components/ui/ServicesPage";
+import DeviceShowcase from "@/components/ui/frames/DeviceFrame";
+import CtaSection from "@/components/ui/CtaSection";
 
 export default function Home() {
   return (
-    <div>
-      <Navbar />
+    <div className="w-full min-h-screenoverflow-hidden">
       <Hero />
-      <WillemLoadingAnimation />
-      <Services />
+      <ServicesPage />
+      <div className="min-h-screen">
+        <DeviceShowcase
+          mobileVideo="/vibe-toast.mp4"
+          tabletVideo="/vibe-toast.mp4"
+          laptopVideo="/vibe-toast.mp4"
+        />
+      </div>
       <AgencyFAQ />
-      <Footer />
+      <CtaSection />
     </div>
   );
 }

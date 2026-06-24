@@ -102,25 +102,21 @@ export default function AgencyFAQ() {
   };
 
   return (
-    <section className="bg-foreground text-primary py-24 px-6 md:px-12 font-sans">
+    <section className="text-primary py-24 px-6 md:px-12 font-sans">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start mb-20 gap-8">
           <div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight text-primary leading-[1.1]">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-primary leading-[1.1]">
               Frequently Asked
               <br />
               <span className="text-secondary">Questions</span>
             </h2>
           </div>
-          <p className="max-w-md text-secondary text-base leading-relaxed border-l-2 border-primary/20 pl-6">
-            Transparency is the foundation of our partnership. If you have other
-            questions, feel free to reach out directly.
-          </p>
         </div>
 
         {/* FAQ Accordion */}
-        <div className="border-t border-primary/10">
+        <div className="">
           {faqData.map((item, index) => (
             <div
               key={item.id}
@@ -144,7 +140,7 @@ export default function AgencyFAQ() {
 
                   {/* Question Text */}
                   <h3
-                    className={`text-xl md:text-2xl lg:text-3xl font-medium tracking-tight transition-colors duration-300 ${
+                    className={`text-xl md:text-2xl lg:text-2xl font-medium tracking-tight transition-colors duration-300 ${
                       activeIndex === index
                         ? "text-primary"
                         : "text-secondary/70 group-hover:text-primary/80"
@@ -194,7 +190,9 @@ export default function AgencyFAQ() {
                     {index === faqData.length - 1 && (
                       <div className="mt-6 pt-4 border-t border-primary/10">
                         <button className="text-primary font-medium text-sm inline-flex items-center gap-2 group/btn transition-all duration-300 hover:gap-3">
-                          Schedule a consultation
+                          <a href="/contact" className="text-primary font-medium text-sm inline-flex items-center gap-2 group/btn transition-all duration-300 hover:gap-3">
+                            Schedule a consultation
+                          </a>
                           <svg
                             className="w-4 h-4 transition-transform group-hover/btn:translate-x-1"
                             fill="none"
@@ -216,28 +214,6 @@ export default function AgencyFAQ() {
               </div>
             </div>
           ))}
-        </div>
-
-        {/* Footer Contact Section */}
-        <div className="mt-20 pt-8 border-t border-primary/10">
-          <div className="flex flex-col md:flex-row justify-between items-start gap-6">
-            <div>
-              <h3 className="text-xl font-medium text-primary mb-2">
-                Still have questions?
-              </h3>
-              <p className="text-secondary text-sm">
-                We're here to help you with any inquiries
-              </p>
-            </div>
-            <div className="flex gap-4">
-              <button className="px-6 py-2.5 bg-primary text-foreground rounded-lg font-medium transition-all duration-300 hover:opacity-90">
-                Contact Us
-              </button>
-              <button className="px-6 py-2.5 border border-primary/20 text-primary rounded-lg font-medium transition-all duration-300 hover:bg-primary/5">
-                Schedule Call
-              </button>
-            </div>
-          </div>
         </div>
       </div>
 
