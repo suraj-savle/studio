@@ -53,7 +53,7 @@ export default function Footer() {
         </div>
 
         {/* CENTER LINKS */}
-        <div className="flex flex-col gap-10 sm:flex-row sm:gap-20">
+        <div className="flex gap-10 sm:flex-row sm:gap-20">
           {/* SERVICES */}
           <div className="flex min-w-[180px] flex-col gap-3">
             <span className="text-xs font-mono uppercase tracking-[0.2em] text-zinc-400">
@@ -103,7 +103,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={social.name}
-                    className="group flex h-10 w-10 items-center justify-center rounded-full border border-zinc-200 text-zinc-500 transition-all duration-300 hover:-translate-y-1 hover:border-zinc-950 hover:text-zinc-950"
+                    className="group flex h-7 w-7 items-center justify-center rounded-full border border-zinc-200 text-zinc-500 transition-all duration-300 hover:-translate-y-1 hover:border-zinc-950 hover:text-zinc-950"
                   >
                     <Icon className="text-base transition-transform duration-300 group-hover:scale-110" />
                   </Link>
