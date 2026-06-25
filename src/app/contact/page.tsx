@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { FaGithub, FaTwitter, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaGithub,  FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { IoPaperPlaneOutline } from "react-icons/io5";
 
@@ -98,25 +98,19 @@ export default function ContactPage() {
                 </span>
                 <div className="flex items-center gap-4 mt-1 text-zinc-600">
                   <a
-                    href="#"
+                    href="https://twitter.com/surajsavle"
                     className="hover:text-[#4DB2E0] transition-colors"
                   >
                     <FaXTwitter className="size-4" />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/surajsavle/"
                     className="hover:text-[#4DB2E0] transition-colors"
                   >
                     <FaLinkedinIn className="size-4" />
                   </a>
                   <a
-                    href="#"
-                    className="hover:text-[#4DB2E0] transition-colors"
-                  >
-                    <FaGithub className="size-4" />
-                  </a>
-                  <a
-                    href="#"
+                    href="https://www.instagram.com/upgradeux/"
                     className="hover:text-[#4DB2E0] transition-colors"
                   >
                     <FaInstagram className="size-4" />

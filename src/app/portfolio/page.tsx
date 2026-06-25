@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { FaGithub } from "react-icons/fa";
 import {
@@ -7,7 +8,6 @@ import {
   TbActivity,
   TbFlame,
   TbArrowUpRight,
-  TbMail,
 } from "react-icons/tb";
 
 // ============================================================================
@@ -106,7 +106,7 @@ const GallerySlideFrame: React.FC<{ images: string[] }> = React.memo(
     );
 
     return (
-      <div className="w-full h-full relative overflow-hidden bg-zinc-950 rounded group/gallery">
+      <div className="w-full h-full relative overflow-hidden bg-zinc-700 rounded group/gallery">
         {images.map((imgUrl, idx) => (
           <img
             key={idx}
@@ -279,7 +279,7 @@ export default function ProjectsPage() {
       {/* 1. Flat Header Structural Panel Block */}
       <header className="w-full h-64 sm:h-80 bg-gradient-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 border-b border-zinc-100 mb-16 rounded">
         <div className="max-w-4xl">
-          <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-800 uppercase leading-none rounded">
+          <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-700 uppercase leading-none rounded">
             Our Projects
           </h1>
         </div>
@@ -301,32 +301,35 @@ export default function ProjectsPage() {
             />
           ))}
 
-          <div className="w-full h-60 sm:h-64 bg-linear-to-br from-[#285f77] to-[#00aeff] relative flex flex-col justify-between p-6 sm:p-8 overflow-hidden select-none transition-all duration-500 rounded-2xl group hover:shadow-2xl hover:shadow-[#4DB2E0]/10 border border-white/5">
+          <div className="w-full h-60 sm:h-64 relative flex flex-col justify-between p-6 sm:p-8 overflow-hidden select-none transition-all duration-500 rounded-2xl group hover:shadow-2xl hover:shadow-[#4DB2E0]/5 border border-dashed border-zinc-800/80 hover:border-zinc-700/80 hover:-translate-y-1">
 
             {/* Content */}
             <div className="relative z-10 space-y-4">
               <div className="space-y-1.5">
-
                 {/* Main Heading */}
-                <h3 className="text-2xl sm:text-3xl md:text-4xl font-black tracking-tight text-white leading-[1.1]">
+                <h3 className="text-2xl sm:text-3xl leading-tight uppercase">
                   Have an Idea?
                   <br />
-                  <span className="">
-                    Let&apos;s Build It.
-                  </span>
+                  <span className="text-[#4DB2E0]">Let&apos;s Build It.</span>
                 </h3>
               </div>
             </div>
 
             {/* CTA Section */}
-            <div className="relative z-10 flex items-center justify-between gap-4">
-              <button className="group/btn relative overflow-hidden px-6 py-2.5 bg-[#4DB2E0] text-white font-bold text-xs sm:text-sm tracking-wider uppercase rounded-lg transition-all duration-300 ]">
-                <span className="relative z-10 flex items-center gap-2">
-                  <span>Contact Us</span>
-                  <TbArrowUpRight className="size-4 transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+            <Link href="/contact" className="relative z-10 flex items-center justify-between gap-4 cursor-pointer">
+              <button className="group/btn relative overflow-hidden px-5 py-2.5 bg-zinc-800 hover:bg-zinc-800 text-white border border-zinc-700 font-bold text-xs tracking-wider uppercase rounded-xl transition-all duration-300 shadow-lg shadow-zinc-950/50">
+                {/* Slid-in Accent Overlay */}
+                <span className="absolute inset-0 w-full h-full bg-[#4DB2E0] translate-y-full transition-transform duration-300 ease-out group-hover/btn:translate-y-0" />
+
+                {/* Button Text & Icon Layer */}
+                <span className="relative z-10 flex items-center gap-2 transition-colors duration-300 group-hover/btn:text-zinc-950">
+                  <span className="text-white">
+                    Contact Us
+                  </span>
+                  <TbArrowUpRight className="size-3.5 transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                 </span>
               </button>
-            </div>
+            </Link>
           </div>
         </div>
       </section>

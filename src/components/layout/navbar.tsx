@@ -32,6 +32,7 @@ const NAV_LINKS = [
   { name: "How We Work", href: "/how-we-work" },
   { name: "Our Services", href: "/services" },
   { name: "About", href: "/about" },
+  { name: "portfolio", href: "/portfolio" },
 ];
 
 const Navbar = () => {
@@ -172,7 +173,7 @@ const Navbar = () => {
             <div className="absolute inset-0 translate-y-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-y-0" />
             <div className="relative z-10 flex h-4 items-center overflow-hidden">
               <span className="flex items-center gap-1 text-[11px] font-bold uppercase tracking-[0.15em]">
-                Let&apos;s Talk{" "}
+                Contact Us{" "}
                 <TbArrowUpRight className="text-sm opacity-50" />
               </span>
             </div>
@@ -213,7 +214,6 @@ const Navbar = () => {
 
         {/* Clean Mobile Links Track */}
         <div className="flex flex-col justify-center items-start gap-6 my-auto pl-4">
-
           {/* 1. Services Router Link */}
           <Link
             href="/services"
@@ -241,16 +241,16 @@ const Navbar = () => {
           <Link
             href="/contact"
             onClick={() => setIsMenuOpen(false)}
-            className="group inline-flex items-center gap-2 text-3xl font-bold tracking-tight text-blue-600 hover:text-blue-700 transition-colors duration-200 pt-4 border-t w-full max-w-xs"
+            className="group inline-flex items-center gap-2 text-3xl font-bold tracking-tight text-[#4DB2E0] hover:text-[#4DB2E0]/80 transition-colors duration-200 pt-4 border-t w-full max-w-xs"
           >
-            <span>Let&apos;s Talk</span>
+            <span>Contact US</span>
             <TbArrowUpRight className="text-xl transition-transform duration-200 group-hover:rotate-45" />
           </Link>
         </div>
 
         {/* Footer Area */}
         <div className="flex items-center justify-between text-zinc-400 text-[10px] font-mono pt-5 border-t border-zinc-100 w-full">
-          <span>MINIMALIST UX ARCHITECTURE</span>
+          <span>Web Development</span>
           <span>© 2026 UPGRADEUX</span>
         </div>
       </div>

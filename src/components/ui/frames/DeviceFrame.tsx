@@ -37,7 +37,7 @@ const DeviceShowcase: React.FC<DeviceShowcaseProps> = ({
   return (
     <div
       ref={containerRef}
-      className={`w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 flex flex-col items-center justify-center bg-zinc-50/40 rounded-3xl border border-zinc-200/60 overflow-hidden select-none ${className}`}
+      className={`w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 flex flex-col items-center justify-center bg-zinc-50/40 rounded-3xl ${className}`}
     >
       <div className="w-full max-w-2xl text-center mb-12 sm:mb-16 flex flex-col items-center">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-zinc-900 text-zinc-100 rounded-full text-[11px] font-mono tracking-wider uppercase mb-4 border border-zinc-800">

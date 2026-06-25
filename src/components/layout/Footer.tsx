@@ -15,17 +15,16 @@ export default function Footer() {
   ];
 
   const supportLinks = [
-    { name: "Contact Us", href: "#" },
+    { name: "Contact Us", href: "/contact" },
     { name: "Help Center", href: "#" },
     { name: "Cookie Policy", href: "#" },
     { name: "Free Consulting", href: "#" },
   ];
 
   const socialLinks = [
-    { name: "GitHub", href: "#", icon: FaGithub },
-    { name: "X", href: "#", icon: FaXTwitter },
-    { name: "LinkedIn", href: "#", icon: FaLinkedinIn },
-    { name: "Instagram", href: "#", icon: FaInstagram },
+    { name: "X", href: "https://twitter.com/surjasavle", icon: FaXTwitter },
+    { name: "LinkedIn", href: "https://www.linkedin.com/in/surajsavle/", icon: FaLinkedinIn },
+    { name: "Instagram", href: "https://www.instagram.com/upgradeux/", icon: FaInstagram },
   ];
 
   return (
