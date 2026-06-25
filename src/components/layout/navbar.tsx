@@ -29,9 +29,8 @@ const DROPDOWN_SERVICES = [
 ];
 
 const NAV_LINKS = [
-  { name: "Process", href: "/process" },
-  { name: "Our Work", href: "/work" },
-  { name: "Tech Stack", href: "/stack" },
+  { name: "How We Work", href: "/how-we-work" },
+  { name: "Our Services", href: "/services" },
   { name: "About", href: "/about" },
 ];
 

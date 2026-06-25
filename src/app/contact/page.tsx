@@ -24,10 +24,16 @@ export default function ContactPage() {
     <div className="w-full min-h-screen font-sans antialiased ">
       <div className="">
         {/* 1. TOP HERO HERO BANNER BLOCK (Inspired by image_379f24.jpg) */}
-        <div className="w-full h-55 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-center mb-16 sm:mb-24 pb-8">
-          <h1 className="text-4xl sm:text-8xl font-black tracking-tight">
-            Contact Us
-          </h1>
+        <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 border-b border-zinc-100 mb-20">
+          <div className="max-w-4xl">
+            <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-800 uppercase leading-none">
+              contact us
+            </h1>
+          </div>
+          <p className="text-xs sm:text-sm font-normal text-zinc-500 max-w-xs leading-relaxed hidden md:block">
+            Explore our complete systematic workflow menu built explicitly on
+            performant code ecosystems.
+          </p>
         </div>
 
         {/* 2. MIDDLE TWO-COLUMN GRID INTERACTION LAYER */}
@@ -35,7 +41,7 @@ export default function ContactPage() {
           {/* LEFT PANEL: CONTENT STRIP & METADATA GRID */}
           <div className="lg:col-span-7 flex flex-col justify-between h-full">
             <div>
-              <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-950 max-w-2xl leading-[1.15] mb-6">
+              <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-950 max-w-2xl leading-[1.15] mb-6">
                 We are always ready to help you and answer your questions
               </h2>
 
@@ -51,7 +57,7 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10 border-t border-zinc-100 pt-10">
               {/* Box 1: Communications */}
               <div className="flex flex-col gap-1.5">
-                <span className="text-xs font-mono font-bold tracking-wider text-zinc-400 uppercase">
+                <span className="text-xs font-mono font-bold tracking-wider  uppercase">
                   Call Center
                 </span>
                 <a
@@ -64,7 +70,7 @@ export default function ContactPage() {
 
               {/* Box 2: Location Parameters */}
               <div className="flex flex-col gap-1.5">
-                <span className="text-xs font-mono font-bold tracking-wider text-zinc-400 uppercase">
+                <span className="text-xs font-mono font-bold tracking-wider  uppercase">
                   Our Location
                 </span>
                 <p className="text-base font-bold text-zinc-900 leading-tight">
@@ -74,7 +80,7 @@ export default function ContactPage() {
 
               {/* Box 3: Email Coordinates */}
               <div className="flex flex-col gap-1.5">
-                <span className="text-xs font-mono font-bold tracking-wider text-zinc-400 uppercase">
+                <span className="text-xs font-mono font-bold tracking-wider  uppercase">
                   Email
                 </span>
                 <a
@@ -87,7 +93,7 @@ export default function ContactPage() {
 
               {/* Box 4: Networks */}
               <div className="flex flex-col gap-1.5">
-                <span className="text-xs font-mono font-bold tracking-wider text-zinc-400 uppercase">
+                <span className="text-xs font-mono font-bold tracking-wider  uppercase">
                   Social network
                 </span>
                 <div className="flex items-center gap-4 mt-1 text-zinc-600">
@@ -119,7 +125,7 @@ export default function ContactPage() {
               </div>
             </div>
           </div>
- 
+
           {/* RIGHT PANEL: PREMIUM FLOATING INPUT FORM CARD */}
           <div className="lg:col-span-5 bg-white border-t md:border-t-0 md:border-l py-6 sm:p-10 relative overflow-hidden group/card">
             {/* Success Overlay with premium backdrop-blur styling */}
@@ -156,7 +162,7 @@ export default function ContactPage() {
             >
               {/* Input 1: Full Name */}
               <div className="flex flex-col gap-3 border-b py-2.5 transition-all duration-200">
-                <label className="text-2xl font-bold text-zinc-400 tracking-wider">
+                <label className="text-2xl font-bold  tracking-wider">
                   Name
                 </label>
                 <input
@@ -173,7 +179,7 @@ export default function ContactPage() {
 
               {/* Input 2: Email */}
               <div className="flex flex-col gap-3 border-b py-2.5 transition-all duration-200">
-                <label className="text-2xl font-bold text-zinc-400 tracking-wider">
+                <label className="text-2xl font-bold  tracking-wider">
                   Email Address
                 </label>
                 <input
@@ -190,7 +196,7 @@ export default function ContactPage() {
 
               {/* Input 3: Subject */}
               <div className="flex flex-col gap-3 border-b py-2.5 transition-all duration-200">
-                <label className="text-2xl font-bold text-zinc-400 tracking-wider">
+                <label className="text-2xl font-bold  tracking-wider">
                   Subject
                 </label>
                 <input
@@ -207,7 +213,7 @@ export default function ContactPage() {
 
               {/* Input 4: Message */}
               <div className="flex flex-col gap-3 border-b py-2.5 transition-all duration-200">
-                <label className="text-2xl font-bold text-zinc-400 tracking-wider">
+                <label className="text-2xl font-bold  tracking-wider">
                   Message
                 </label>
                 <textarea
@@ -228,14 +234,14 @@ export default function ContactPage() {
                 className="inline-flex items-center justify-center gap-2 mt-2 px-6 py-3.5 bg-zinc-950 hover:bg-zinc-900 text-white rounded-xl text-xs font-bold uppercase tracking-widest shadow-md shadow-zinc-950/10 hover:shadow-xl transition-all duration-300 group active:scale-[0.98]"
               >
                 <span>Send message</span>
-                <IoPaperPlaneOutline className="size-3.5 text-zinc-400 group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
+                <IoPaperPlaneOutline className="size-3.5  group-hover:text-white group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
               </button>
             </form>
           </div>
         </div>
 
         {/* 3. EDGE-TO-EDGE MONOCHROME MAP CONTAINER (Inspired by image_379f24.jpg) */}
-        <div className="w-full h-[320px] sm:h-[420px] rounded-[32px] overflow-hidden border border-zinc-200 relative shadow-inner bg-zinc-100 grayscale contrast-115 brightness-95 transition-all duration-700">
+        <div className="w-full h-[320px] sm:h-[420px] overflow-hidden border border-zinc-200 relative shadow-inner bg-zinc-100 grayscale contrast-115 brightness-95 transition-all duration-700">
           <iframe
             title="UpgradeUX Navi Mumbai Location Map"
             src="https://maps.google.com/maps?q=Navi%20Mumbai,%20Maharashtra,%20India&t=&z=13&ie=UTF8&iwloc=&output=embed"

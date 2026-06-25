@@ -154,8 +154,8 @@ export default function Footer() {
       </div>
 
       {/* GIANT BACKGROUND TYPOGRAPHY ELEMENT */}
-      <div className="w-full relative pointer-events-none select-none overflow-hidden h-[120px] sm:h-[180px] md:h-[240px] lg:h-[280px]">
-        <h1 className="absolute -bottom-[20%] text-[16.8vw] font-black tracking-tighter leading-none antialiased uppercase bg-clip-text text-transparent bg-gradient-to-b from-[#FFFFFF] to-[#4DB2E0]">
+      <div className="w-full relative pointer-events-none select-none overflow-hidden h-30 sm:h-45 md:h-60 lg:h-70">
+        <h1 className="absolute bottom-[-20%] text-[16.8vw] font-black tracking-tighter leading-none antialiased uppercase bg-clip-text text-transparent bg-linear-to-b from-[#FFFFFF] to-[#4DB2E0]">
           UpgradeUX
         </h1>
       </div>

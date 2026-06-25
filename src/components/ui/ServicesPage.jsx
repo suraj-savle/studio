@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import {
   TbPalette,
   TbCode,
@@ -73,8 +74,8 @@ const DETAILED_SERVICES = [
 
 export default function ServicesShowcaseRows() {
   return (
-    <section className="w-full px-4 sm:px-28  bg-white text-zinc-950 select-none antialiased">
-      <div className=" mx-auto">
+    <section className="w-full px-4 sm:px-28 bg-white text-zinc-950 select-none antialiased">
+      <div className="mx-auto">
         <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-zinc-900 pb-10">
           <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase leading-none">
             Our Services
@@ -171,14 +172,20 @@ export default function ServicesShowcaseRows() {
             );
           })}
         </div>
-      </div>
 
-      <style jsx>{`
-        .stroke-text {
-          -webkit-text-stroke: 1px #18181b;
-          color: transparent;
-        }
-      `}</style>
+        {/* BOTTOM ACTION LAYER: VIEW ALL SERVICES LINK */}
+        <div className="w-full flex justify-center items-center pt-16 pb-24 border-t border-zinc-100 mt-10">
+          <Link
+            href="/services"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-zinc-950 hover:bg-zinc-900 text-white rounded-xl text-xs font-bold uppercase tracking-widest shadow-lg shadow-zinc-950/10 hover:shadow-xl transition-all duration-300 group active:scale-[0.98]"
+          >
+            <span>View All Services</span>
+            <div className="w-5 h-5 rounded-full bg-zinc-800 flex items-center justify-center group-hover:bg-white group-hover:text-zinc-950 group-hover:rotate-45 transition-all duration-300">
+              <TbArrowUpRight className="text-[10px]" />
+            </div>
+          </Link>
+        </div>
+      </div>
     </section>
   );
 }

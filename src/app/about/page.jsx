@@ -1,126 +1,183 @@
 "use client";
 
 import React from "react";
-import { motion } from "framer-motion";
-import { ArrowUpRight, ShieldCheck, Zap, Layers } from "lucide-react";
+import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { LuLayoutDashboard, LuCpu, LuEye } from "react-icons/lu";
 
-const metrics = [
-  { value: "99.9%", label: "System Uptime Guaranteed" },
-  { value: "40%+", label: "Average Conversion Lift" },
-  { value: "25M+", label: "API Requests Processed Daily" },
-];
+export default function AboutPage() {
+  const metrics = [
+    { value: "20+", label: "Projects Delivered" },
+    { value: "100%", label: "Custom Built Solutions" },
+    { value: "Next.js", label: "Core Technology" },
+    { value: "India", label: "Operating Worldwide" },
+  ];
 
-const pillars = [
-  {
-    icon: <Zap className="w-5 h-5 text-[#09090B]" />,
-    title: "Radical Performance",
-    description: "We optimize every single line of code. No bloat, no heavy frameworks where they don't belong—just raw, lightweight speed that ranks higher and converts faster."
-  },
-  {
-    icon: <Layers className="w-5 h-5 text-[#09090B]" />,
-    title: "Systemic Architecture",
-    description: "We don't build temporary landing pages. We build modular software frameworks and digital design languages that scale comfortably alongside your ARR."
-  },
-  {
-    icon: <ShieldCheck className="w-5 h-5 text-[#09090B]" />,
-    title: "Timeless Authority",
-    description: "Trends fade within quarters. We lean heavily into minimalist, high-contrast, type-driven editorial layouts that look as striking in five years as they do today."
-  }
-];
+  const philosophyValues = [
+    {
+      icon: <LuLayoutDashboard className="size-5 text-zinc-900" />,
+      title: "Built For Business Growth",
+      description:
+        "Every website is designed to improve credibility, increase conversions, and create measurable business impact rather than simply looking attractive.",
+    },
+    {
+      icon: <LuCpu className="size-5 text-zinc-900" />,
+      title: "Modern Development Standards",
+      description:
+        "We build using Next.js, React, and modern web technologies to deliver exceptional speed, SEO performance, scalability, and long-term reliability.",
+    },
+    {
+      icon: <LuEye className="size-5 text-zinc-900" />,
+      title: "Design That Stands Out",
+      description:
+        "Instead of generic templates, we create distinctive digital experiences with thoughtful interactions, premium visuals, and memorable user experiences.",
+    },
+  ];
 
-export default function AboutSection() {
   return (
-    <section className="w-full bg-white text-[#18181B] font-sans antialiased py-20 sm:py-32 px-4 border-t border-neutral-100 relative overflow-hidden">
-      <div className="w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
-        
-        {/* LEFT COLUMN: Sticky Header Context */}
-        <div className="lg:col-span-5 flex flex-col justify-between items-start lg:h-[75vh] lg:sticky lg:top-12">
+    <div className="w-full min-h-screen font-sans antialiased bg-white selection:bg-[#4DB2E0]/20">
+      {/* 1. TOP HERO BANNER BLOCK */}
+      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 border-b border-zinc-100 mb-20">
+        <div className="max-w-4xl">
+          <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-800 uppercase leading-none">
+            about us
+          </h1>
+        </div>
+        <p className="text-xs sm:text-sm font-normal text-zinc-500 max-w-xs leading-relaxed hidden md:block">
+          Explore our complete systematic workflow menu built explicitly on
+          performant code ecosystems.
+        </p>
+      </div>
+
+      {/* 2. CORE PHILOSOPHY SPLIT-LAYOUT GRID */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-20 sm:mb-28 mx-5 sm:mx-10">
+        {/* LEFT PANEL: MISSION DECLARATION STATEMENT */}
+        <div className="lg:col-span-7 flex flex-col justify-between h-full">
           <div>
-            <div className="flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-neutral-400 font-mono mb-4">
-              <span className="w-2 h-2 rounded-full bg-[#09090B] inline-block animate-pulse" />
-              Who We Are
-            </div>
-            
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-light tracking-tight leading-[1.05] text-[#09090B]">
-              Engineered for <br />
-              <span className="font-semibold text-neutral-400">the modern web.</span>
+            <span className="text-xs font-mono font-bold tracking-wider text-[#4DB2E0] uppercase block mb-3">
+              Our Story
+            </span>
+
+            <h2 className="text-3xl sm:text-5xl font-bold tracking-tight text-zinc-950 max-w-3xl leading-[1.1] mb-6">
+              We started UpgradeUX because most websites look good, but very few
+              actually help businesses grow.
             </h2>
+
+            <p className="text-sm sm:text-base text-zinc-500 max-w-2xl leading-relaxed mb-6">
+              UpgradeUX is an independent web design and development studio
+              founded by developers who believe a website should be more than
+              just a digital brochure. It should build trust, communicate value,
+              and turn visitors into customers.
+            </p>
+
+            <p className="text-sm sm:text-base text-zinc-500 max-w-2xl leading-relaxed mb-6">
+              We partner with startups, creators, agencies, and growing
+              businesses to design modern digital experiences that are fast,
+              scalable, and built with purpose. Every project combines
+              thoughtful design, clean development, and a deep focus on business
+              outcomes.
+            </p>
+
+            <p className="text-sm sm:text-base text-zinc-500 max-w-2xl leading-relaxed">
+              Unlike traditional agencies that rely on templates and bloated
+              processes, we work closely with every client, crafting custom
+              solutions that are tailored to their goals. From strategy and
+              design to development and launch, every decision is made to help
+              your business move forward.
+            </p>
           </div>
 
-          {/* Core Metric Highlights */}
-          <div className="grid grid-cols-3 gap-4 border-t border-neutral-200 pt-8 w-full mt-8 lg:mt-0">
+          {/* Social Network Connection Anchor Group */}
+          <div className="border-t border-zinc-100 pt-8 mt-4">
+            <span className="text-xs font-mono font-bold tracking-wider text-zinc-400 uppercase block mb-3">
+              Follow Our Pulse
+            </span>
+            <div className="flex items-center gap-5 text-zinc-600">
+              <a
+                href="https://x.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#4DB2E0] transition-colors"
+              >
+                <FaXTwitter className="size-4" />
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#4DB2E0] transition-colors"
+              >
+                <FaLinkedinIn className="size-4" />
+              </a>
+              <a
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#4DB2E0] transition-colors"
+              >
+                <FaGithub className="size-4" />
+              </a>
+              <a
+                href="https://instagram.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-[#4DB2E0] transition-colors"
+              >
+                <FaInstagram className="size-4" />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* RIGHT PANEL: PHILOSOPHY VALUES ARCHITECTURE */}
+        <div className="lg:col-span-5 flex flex-col gap-6 w-full border-t lg:border-t-0 lg:border-l border-zinc-200/60 pt-8 lg:pt-0 lg:pl-10">
+          <span className="text-xs font-mono font-bold tracking-wider text-zinc-400 uppercase block mb-2">
+            Engineering Pillars
+          </span>
+
+          {philosophyValues.map((value, idx) => (
+            <div
+              key={idx}
+              className="group border-b border-zinc-100 pb-5 last:border-0 last:pb-0"
+            >
+              <div className="flex gap-4 items-start">
+                <div className="p-2 rounded-xl bg-zinc-50 border border-zinc-200/50 text-zinc-900 group-hover:bg-[#4DB2E0]/10 group-hover:border-[#4DB2E0]/40 transition-colors duration-300 desktop:p-3">
+                  {value.icon}
+                </div>
+                <div className="space-y-1.5">
+                  <h3 className="text-base font-bold text-zinc-900 tracking-tight">
+                    {value.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-zinc-500 leading-relaxed font-normal">
+                    {value.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* 3. STUDIO METRICS STRIP CONTAINER */}
+      <div className="mx-5 sm:mx-10 mb-16 sm:mb-24">
+        <div className="w-full bg-zinc-50 border border-zinc-200/50 rounded-[32px] p-8 sm:p-12 relative overflow-hidden group">
+          {/* Ambient Design Token Mesh Glow */}
+          <div className="absolute -bottom-10 -right-10 w-[200px] h-[200px] bg-[#4DB2E0]/10 rounded-full filter blur-2xl pointer-events-none select-none transition-opacity duration-500 group-hover:opacity-100 opacity-60" />
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 relative z-10">
             {metrics.map((metric, idx) => (
               <div key={idx} className="flex flex-col gap-1">
-                <span className="text-2xl sm:text-3xl font-semibold tracking-tight text-[#09090B]">
+                <span className="text-2xl sm:text-4xl font-black text-zinc-950 tracking-tight">
                   {metric.value}
                 </span>
-                <span className="text-[10px] sm:text-xs leading-tight text-[#71717A] font-light">
+                <span className="text-[11px] sm:text-xs font-mono font-bold uppercase tracking-wider text-zinc-400 leading-snug">
                   {metric.label}
                 </span>
               </div>
             ))}
           </div>
         </div>
-
-        {/* RIGHT COLUMN: Detailed Editorial Context */}
-        <div className="lg:col-span-7 flex flex-col gap-16 lg:pl-12">
-          
-          {/* Manifesto Intro Paragraph */}
-          <div className="flex flex-col gap-6">
-            <p className="text-xl sm:text-2xl font-light leading-relaxed text-[#404047]">
-              Most digital experiences are choked with unnecessary scripts, confusing layouts, and transient design patterns. We operate on a fundamentally different philosophy. 
-            </p>
-            <p className="text-base sm:text-lg font-light leading-relaxed text-[#71717A]">
-              We sit at the intersection of rigid software architecture and boundary-pushing branding. By stripping away digital excess, we expose the absolute core value of your product, translating complex operations into ultra-slick, intuitive consumer interfaces.
-            </p>
-          </div>
-
-          {/* The Core Pillars Grid */}
-          <div className="flex flex-col gap-8 w-full">
-            <h3 className="text-xs uppercase tracking-[0.2em] text-neutral-400 font-mono border-b border-neutral-100 pb-3">
-              Our Operational Parameters
-            </h3>
-            
-            <div className="flex flex-col gap-8">
-              {pillars.map((pillar, index) => (
-                <motion.div 
-                  key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.6, delay: index * 0.15 }}
-                  className="group flex flex-col sm:flex-row items-start gap-4 p-6 rounded-2xl border border-neutral-100 bg-neutral-50/50 hover:bg-neutral-50 transition-colors duration-300"
-                >
-                  <div className="p-3 bg-white rounded-xl shadow-sm border border-neutral-100 shrink-0">
-                    {pillar.icon}
-                  </div>
-                  <div className="flex flex-col gap-2">
-                    <h4 className="text-lg font-medium text-[#09090B] flex items-center gap-1.5">
-                      {pillar.title}
-                    </h4>
-                    <p className="text-sm sm:text-base text-[#71717A] font-light leading-relaxed">
-                      {pillar.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-
-          {/* Minimalist Action Call */}
-          <div className="pt-4">
-            <a 
-              href="#work" 
-              className="inline-flex items-center gap-2 text-sm font-medium tracking-tight bg-[#09090B] text-white px-6 py-3.5 rounded-full hover:bg-neutral-800 transition-colors group shadow-sm"
-            >
-              Review Our Proven Protocols
-              <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-            </a>
-          </div>
-
-        </div>
-
       </div>
-    </section>
+    </div>
   );
 }
