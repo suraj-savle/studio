@@ -8,14 +8,13 @@ export default function CtaSection() {
   return (
     <section className="w-full py-28 px-4 sm:px-8 md:px-16 lg:px-24 bg-white border-t border-zinc-200/60 text-center relative overflow-hidden selection:bg-[#4DB2E0]/20">
       {/* Subtle background ambient blur mesh to tie into your aesthetic */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[250px] bg-gradient-to-tr from-[#4DB2E0]/10 to-transparent rounded-full filter blur-[80px] pointer-events-none select-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[250px] bg-linear-to-tr from-[#4DB2E0]/10 to-transparent rounded-full filter blur-[80px] pointer-events-none select-none" />
 
       <div className="relative max-w-4xl mx-auto space-y-8 z-10">
-
         {/* Headline */}
         <h2 className="text-4xl sm:text-6xl font-black tracking-tight text-zinc-950 leading-[1.1]">
           Missing online presence? <br />
-          <span className="font-light text-zinc-400 bg-clip-text text-transparent bg-gradient-to-r from-zinc-400 via-zinc-500 to-zinc-400">
+          <span className="font-light text-zinc-400 bg-clip-text text-transparent bg-linear-to-r from-zinc-400 via-zinc-500 to-zinc-400">
             Let’s find solutions.
           </span>
         </h2>
@@ -29,9 +28,8 @@ export default function CtaSection() {
 
         {/* Action Button Matrix */}
         <div className="pt-6 flex flex-col sm:flex-row gap-4 justify-center items-center">
-          
           {/* Primary Action Button */}
-          <Link 
+          <Link
             href="/contact"
             className="w-full sm:w-auto group relative flex items-center justify-center gap-3 bg-zinc-950 text-white rounded-full px-8 py-4 text-xs font-bold uppercase tracking-[0.15em] overflow-hidden transition-all duration-300 hover:shadow-lg active:scale-[0.98]"
           >
@@ -50,7 +48,6 @@ export default function CtaSection() {
             View Our Work
             <TbArrowUpRight className="text-base transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
-
         </div>
       </div>
     </section>

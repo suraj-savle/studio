@@ -15,6 +15,9 @@ import {
   TbGauge,
   TbDatabase,
   TbCloudComputing,
+  TbLayoutDashboard,
+  TbBolt,
+  TbGlobe,
 } from "react-icons/tb";
 
 const ALL_EXTENDED_SERVICES = [
@@ -22,74 +25,91 @@ const ALL_EXTENDED_SERVICES = [
     id: "01",
     title: "UI/UX Design Systems",
     subtitle: "High-Fidelity Interface Engineering",
-    description: "Architecting atomic components, modular type hierarchies, and fluid interaction variables. We deliver predictable transactional flows that scale directly into clean multi-brand production engines.",
-    image: "/1.png",
+    description:
+      "Architecting atomic components, modular type hierarchies, and fluid interaction variables. We deliver predictable transactional flows that scale directly into clean multi-brand production engines.",
+    image: "/customwebsite.png",
     icon: TbPalette,
     metric: "40% Conversion Lift",
     metricIcon: TbActivityHeartbeat,
-    capabilities: ["Tokens Studio Isolation", "Figma Variables Matrix", "Asymmetric Wireframing", "Micro-Interaction Blueprints"]
+    capabilities: [
+      "Tokens Studio Isolation",
+      "Figma Variables Matrix",
+      "Asymmetric Wireframing",
+      "Micro-Interaction Blueprints",
+    ],
   },
   {
     id: "02",
     title: "Custom Web Applications",
     subtitle: "Performance-Driven Core Architectures",
-    description: "Engineering decoupled serverless Next.js, React, and strict Tailwind modules optimized for critical loading phases, edge middleware caching, and robust relational data layouts.",
-    image: "/2.png",
+    description:
+      "Engineering decoupled serverless Next.js, React, and strict Tailwind modules optimized for critical loading phases, edge middleware caching, and robust relational data layouts.",
+    image: "/customwebsite1.png",
     icon: TbCode,
     metric: "0.2s Time to Interactive",
     metricIcon: TbGauge,
-    capabilities: ["Next.js Router Architecture", "TypeScript Typings", "Tailwind Isolation", "Edge Caching Layers"]
-  },
-  {
-    id: "03",
-    title: "Native Mobile Layers",
-    subtitle: "Cross-Platform Application Frameworks",
-    description: "Deploying fluid, production-hardened iOS and Android ecosystems built entirely on performance-tuned custom gesture layers, local data persistence setups, and background task runners.",
-    image: "/3.png",
-    icon: TbDeviceMobile,
-    metric: "99.9% Crash-Free Sessions",
-    metricIcon: TbFingerprint,
-    capabilities: ["React Native Hubs", "Expo Core Systems", "Zustand Engine", "Native Native Bridges"]
+    capabilities: [
+      "Next.js Router Architecture",
+      "TypeScript Typings",
+      "Tailwind Isolation",
+      "Edge Caching Layers",
+    ],
+  },{
+    id: "04", // Update this index according to your array order
+    title: "Premium Digital Portfolios",
+    subtitle: "Custom Brand Showcases & Developer Kits",
+    description:
+      "Engineering lightning-fast, highly animated digital portfolios and resume platforms built with smooth micro-interactions, clean layout patterns, and robust content systems designed to secure premium inquiries.",
+    image: "/portfolio.png",
+    icon: TbLayoutDashboard, // Or use TbBriefcase / TbUserCheck from your current imports
+    metric: "100% Core Web Vitals",
+    metricIcon: TbBolt,
+    capabilities: [
+      "Framer Motion Workflows",
+      "Next.js Static Generation",
+      "Tailwind Glassmorphism",
+      "SEO & Discovery Tuning",
+    ],
   },
   {
     id: "04",
     title: "Programmatic SEO Engines",
     subtitle: "Structural Search Discoverability",
-    description: "Structuring semantic schema markup injections, edge-rendered XML indexes, and fast caching configurations to systematically capture massive scale multi-market user acquisition.",
-    image: "/4.png",
+    description:
+      "Structuring semantic schema markup injections, edge-rendered XML indexes, and fast caching configurations to systematically capture massive scale multi-market user acquisition.",
+    image: "/seo.png",
     icon: TbSearch,
     metric: "3x Organic Discovery Index",
     metricIcon: TbCpu,
-    capabilities: ["Schema Injections", "Edge Metadata Rendering", "Vitals Optimization", "Automated Map Indexing"]
+    capabilities: [
+      "Schema Injections",
+      "Edge Metadata Rendering",
+      "Vitals Optimization",
+      "Automated Map Indexing",
+    ],
   },
   {
     id: "05",
-    title: "Database Architecture",
-    subtitle: "Relational Storage Engineering",
-    description: "Structuring high-availability storage configurations using MongoDB pipelines, clean schema setups, validation controls, and cached indexing layers for extreme read execution.",
-    image: "/1.png", // Reusable pointer fallback asset
-    icon: TbDatabase,
-    metric: "< 14ms DB Query Read",
-    metricIcon: TbGauge,
-    capabilities: ["Aggregation Pipeline Hooks", "Mongoose Strict Schema", "Indexing Optimization", "State Persistence"]
+    title: " headless & Custom WordPress",
+    subtitle: "Enterprise Content Infrastructure",
+    description:
+      "Transforming monolithic WordPress setups into lightning-fast platforms using custom Gutenberg block development, decoupled Headless React architectures, and high-security caching structures.",
+    image: "/wordpress-website.png",
+    icon: TbGlobe, // Represents the open-web nature of WP
+    metric: "Under 1.2s Content Load",
+    metricIcon: TbBolt,
+    capabilities: [
+      "Headless WP via GraphQL",
+      "Custom Gutenberg Blocks",
+      "Advanced Custom Fields",
+      "WooCommerce Scale Tuning",
+    ],
   },
-  {
-    id: "06",
-    title: "Cloud Infrastructure Setup",
-    subtitle: "Automated Deployment Engineering",
-    description: "Configuring systematic deployment states, automated Git container triggers, continuous tracking loops, and safe staging environments that preserve product version control.",
-    image: "/2.png", // Reusable pointer fallback asset
-    icon: TbCloudComputing,
-    metric: "100% Automated Deployment",
-    metricIcon: TbCpu,
-    capabilities: ["CI/CD Pipeline Automation", "Serverless Infrastructure", "Log Normalization", "SSL/Security Headers"]
-  }
 ];
 
 export default function ServicesPage() {
   return (
     <div className="w-full min-h-screen text-zinc-950 antialiased font-sans selection:bg-[#4DB2E0]/20">
-      
       {/* 1. HERO HEADER AREA */}
       <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 border-b border-zinc-100">
         <div className="max-w-4xl">
@@ -98,7 +118,8 @@ export default function ServicesPage() {
           </h1>
         </div>
         <p className="text-xs sm:text-sm font-normal text-zinc-500 max-w-xs leading-relaxed hidden md:block">
-          Explore our complete systematic workflow menu built explicitly on performant code ecosystems.
+          Explore our complete systematic workflow menu built explicitly on
+          performant code ecosystems.
         </p>
       </div>
 
@@ -110,15 +131,15 @@ export default function ServicesPage() {
             const MetricIcon = service.metricIcon;
 
             return (
-              <div 
-                key={service.id} 
+              <div
+                key={service.id}
                 className="group flex flex-col justify-between border-t border-zinc-200/80 pt-6 hover:border-zinc-950 transition-colors duration-500"
               >
                 <div>
                   {/* Title Metrics Layout Header */}
                   <div className="flex items-center justify-between mb-5">
                     <span className="text-xs font-mono font-black text-zinc-300 group-hover:text-zinc-950 transition-colors duration-300">
-                       {service.id}
+                      {service.id}
                     </span>
                     <div className="flex items-center gap-1.5 bg-zinc-50 group-hover:bg-zinc-950 border border-zinc-100 group-hover:border-zinc-900 px-2.5 py-1 rounded-lg transition-colors duration-500">
                       <MetricIcon className="text-emerald-500 text-xs animate-pulse" />
@@ -158,7 +179,10 @@ export default function ServicesPage() {
                   {/* Component Capabilities List */}
                   <div className="flex flex-col gap-1.5 border-t border-zinc-100 pt-4 mb-8">
                     {service.capabilities.map((cap, capIdx) => (
-                      <div key={capIdx} className="flex items-center gap-2 text-[11px] text-zinc-400 group-hover:text-zinc-600 transition-colors duration-300 font-mono">
+                      <div
+                        key={capIdx}
+                        className="flex items-center gap-2 text-[11px] text-zinc-400 group-hover:text-zinc-600 transition-colors duration-300 font-mono"
+                      >
                         <span className="w-1 h-1 rounded-full bg-zinc-300 group-hover:bg-[#4DB2E0] transition-colors" />
                         {cap}
                       </div>
@@ -180,7 +204,6 @@ export default function ServicesPage() {
           })}
         </div>
       </div>
-
     </div>
   );
 }

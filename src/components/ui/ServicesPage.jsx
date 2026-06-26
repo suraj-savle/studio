@@ -21,7 +21,7 @@ const DETAILED_SERVICES = [
     subtitle: "High-Fidelity Interface Engineering",
     description:
       "Architecting atomic components, modular type hierarchies, and fluid interaction variables. We deliver predictable transactional flows that scale directly into clean multi-brand production engines.",
-    image: "/1.png",
+    image: "/seo.png",
     icon: TbPalette,
     metric: "40% Conversion Lift",
     metricIcon: TbActivityHeartbeat,
@@ -77,10 +77,10 @@ export default function ServicesShowcaseRows() {
     <section className="w-full px-4 sm:px-28 bg-white text-zinc-950 select-none antialiased">
       <div className="mx-auto">
         <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-zinc-900 pb-10">
-          <h2 className="text-5xl md:text-7xl font-black tracking-tighter uppercase leading-none">
+          <h2 className="text-5xl md:text-6xl font-medium tracking-tighter uppercase leading-none">
             Our Services
           </h2>
-          <p className="text-xs md:text-sm font-medium text-zinc-500 max-w-xs leading-relaxed">
+          <p className="text-xs md:text-xs font-medium text-zinc-500 max-w-sm leading-relaxed">
             We operate at the exact boundary line of extreme performance metrics
             and pure engineering clarity to scale custom platforms.
           </p>
@@ -104,10 +104,8 @@ export default function ServicesShowcaseRows() {
                 </div>
 
                 <div
-                  className={`lg:col-span-5 relative w-full aspect-[16/11] overflow-hidden bg-zinc-50 border border-zinc-100 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                    isEven
-                      ? "rounded-t-full rounded-bl-full lg:order-2"
-                      : "rounded-t-full rounded-br-full lg:order-3"
+                  className={`lg:col-span-5 relative w-full aspect-18/10 overflow-hidden bg-zinc-50 border border-zinc-100 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
+                    isEven ? "rounded-2xl lg:order-2" : "rounded-2xl lg:order-3"
                   }`}
                 >
                   <Image

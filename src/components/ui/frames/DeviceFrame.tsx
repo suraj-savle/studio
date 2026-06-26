@@ -15,8 +15,8 @@ interface DeviceShowcaseProps {
 
 const DeviceShowcase: React.FC<DeviceShowcaseProps> = ({
   className = "",
-  mobileVideo = "/videos/mobile-demo.mp4",
-  tabletVideo = "/videos/tablet-demo.mp4",
+  mobileVideo = "/vibe-toast.mp4",
+  tabletVideo = "/vibe-toast.mp4",
   laptopVideo = "/vibe-toast.mp4",
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -60,21 +60,18 @@ const DeviceShowcase: React.FC<DeviceShowcaseProps> = ({
         <div className="max-w-[130px] sm:max-w-[160px] lg:max-w-[220px] xl:max-w-[260px] flex justify-center order-1 z-30 -mr-8 sm:-mr-12 xl:-mr-14 sm:scale-90 select-none">
           <TabletFrame
             videoSrc={tabletVideo}
-            poster="/posters/tablet-poster.jpg"
           />
         </div>
 
         <div className="max-w-[360px] sm:max-w-[380px] lg:max-w-[460px] xl:max-w-[620px] flex justify-center order-2 z-20 relative select-none">
           <LaptopFrame
             videoSrc={laptopVideo}
-            poster="/posters/laptop-poster.jpg"
           />
         </div>
 
         <div className="max-w-[95px] sm:max-w-[100px] lg:max-w-[130px] xl:max-w-[150px] flex justify-center order-3 z-30 -ml-10 sm:-ml-14 xl:-ml-16 sm:scale-95 select-none pt-2 sm:pt-6">
           <MobileFrame
             videoSrc={mobileVideo}
-            poster="/posters/mobile-poster.jpg"
           />
         </div>
       </div>

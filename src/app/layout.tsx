@@ -1,18 +1,27 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Plus_Jakarta_Sans , Poppins , Geist } from "next/font/google";
 import "./globals.css";
 import SmoothScrolling from "@/components/ui/SmoothScrolling";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+
+const plusJakartaSans = Plus_Jakarta_Sans({
+  weight: ["300", "400", "700"],
   subsets: ["latin"],
+  variable: "--font-plus-jakarta",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const geist = Geist({
+  weight: ["400", "700"],
   subsets: ["latin"],
+  variable: "--font-geist",
+});
+
+const poppins = Poppins({
+  weight: ["100" , "400", "700"],
+  subsets: ["latin"],
+  variable: "--font-poppins",
 });
 
 export const metadata: Metadata = {
@@ -29,7 +38,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} antialiased selection:bg-[#4DB2E0]/20`}
+      className={`${plusJakartaSans.variable} ${geist.variable} ${poppins.variable} antialiased selection:bg-[#4DB2E0]/20`}
       suppressHydrationWarning
     >
       <body

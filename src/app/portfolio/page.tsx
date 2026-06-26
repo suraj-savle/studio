@@ -245,7 +245,7 @@ const ProjectCard: React.FC<{
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-zinc-400 hover:text-zinc-950 transition-colors duration-300 flex-shrink-0 rounded"
+              className="text-zinc-400 hover:text-zinc-950 transition-colors duration-300 shrink-0 rounded"
               aria-label={`Access external source branch for repository compilation: ${project.title}`}
             >
               <FaGithub className="size-4" />
@@ -277,9 +277,9 @@ export default function ProjectsPage() {
   return (
     <div className="w-full min-h-screen font-sans antialiased bg-white text-zinc-950 selection:bg-[#4DB2E0]/20">
       {/* 1. Flat Header Structural Panel Block */}
-      <header className="w-full h-64 sm:h-80 bg-gradient-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 border-b border-zinc-100 mb-16 rounded">
+      <header className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 border-b border-zinc-100 mb-16 rounded">
         <div className="max-w-4xl">
-          <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-700 uppercase leading-none rounded">
+          <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-700 leading-none rounded">
             Our Projects
           </h1>
         </div>

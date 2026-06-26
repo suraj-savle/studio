@@ -2,35 +2,27 @@
 
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import {
-  TbArrowUpRight,
-  TbMenu,
-  TbX,
-  TbChevronDown,
-  TbBrandWordpress,
-  TbRefresh,
-  TbSettings,
-  TbPalette,
-} from "react-icons/tb";
+import { TbArrowUpRight, TbMenu, TbX, TbChevronDown } from "react-icons/tb";
 
 const DROPDOWN_SERVICES = [
-  { name: "Website Design", href: "/services/website-design", icon: TbPalette },
-  { name: "Redesign Systems", href: "/services/redesign", icon: TbRefresh },
+  { name: "Custom Design", href: "/services/custom-website" },
+  { name: "Website Redesign", href: "/services/website-redesign" },
   {
-    name: "Automation Pipelines",
-    href: "/services/automation",
-    icon: TbSettings,
+    name: "Seo Optimization",
+    href: "/services/search-engine-optimization",
   },
   {
-    name: "WordPress Architectures",
+    name: "WordPress website",
     href: "/services/wordpress",
-    icon: TbBrandWordpress,
+  },
+  {
+    name: "All services",
+    href: "/services",
   },
 ];
 
 const NAV_LINKS = [
   { name: "How We Work", href: "/how-we-work" },
-  { name: "Our Services", href: "/services" },
   { name: "About", href: "/about" },
   { name: "portfolio", href: "/portfolio" },
 ];
@@ -72,7 +64,7 @@ const Navbar = () => {
         }`}
       >
         {/* LEFT BRAND LOGO */}
-        <div className="flex items-center min-w-[150px]">
+        <div className="flex items-center min-w-37.5">
           <Link href="/" className="group flex items-center focus:outline-none">
             <span
               className="text-xl md:text-2xl font-bold tracking-tight transition-all duration-300 group-hover:opacity-80"
@@ -93,10 +85,10 @@ const Navbar = () => {
           >
             <div className="relative flex items-center gap-1 h-5 overflow-hidden">
               <span
-                className="flex items-center gap-1 text-[11px] font-bold uppercase tracking-[0.15em]"
+                className="flex items-center gap-1 text-sm font-medium tracking-[0.15em]"
                 style={{ color: "var(--primary-text)" }}
               >
-                Services
+                our Services
                 <TbChevronDown
                   className={`text-xs transition-transform duration-300 ${isDropdownOpen ? "rotate-180" : ""}`}
                   style={{ color: "var(--secondary-text)" }}
@@ -106,7 +98,7 @@ const Navbar = () => {
 
             {/* Services Dropdown Panel */}
             <div
-              className={`absolute top-full left-1/2 -translate-x-1/2 mt-1 w-64 p-2 bg-white  rounded-xl shadow-xl z-50 transition-all duration-200  ${
+              className={`absolute top-full left-1/2 -translate-x-1/2 w-64 p-2 bg-white  rounded-xl shadow-xl z-50 transition-all duration-200  ${
                 isDropdownOpen
                   ? "opacity-100 translate-y-0 pointer-events-auto"
                   : "opacity-0 translate-y-2 pointer-events-none"
@@ -114,7 +106,6 @@ const Navbar = () => {
             >
               <div className="flex flex-col gap-0.5">
                 {DROPDOWN_SERVICES.map((subItem) => {
-                  const Icon = subItem.icon;
                   return (
                     <Link
                       key={subItem.name}
@@ -146,15 +137,15 @@ const Navbar = () => {
               href={link.href}
               className="group relative rounded-full px-4 py-2 focus:outline-none"
             >
-              <div className="relative h-4 overflow-hidden">
+              <div className="relative overflow-hidden">
                 <span
-                  className="block text-[11px] font-bold uppercase tracking-[0.15em] transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
-                  style={{ color: "var(--secondary-text)" }}
+                  className="block text-sm font-medium tracking-[0.15em] transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
+                  style={{ color: "var(--primary-text)" }}
                 >
                   {link.name}
                 </span>
                 <span
-                  className="absolute inset-0 translate-y-full text-[11px] font-bold uppercase tracking-[0.15em] transition-all duration-500 group-hover:translate-y-0"
+                  className="absolute inset-0 translate-y-full text-sm font-medium  tracking-[0.15em] transition-all duration-500 group-hover:translate-y-0"
                   style={{ color: "var(--primary-text)" }}
                 >
                   {link.name}
@@ -165,16 +156,15 @@ const Navbar = () => {
         </div>
 
         {/* RIGHT ACTION HUB */}
-        <div className="flex items-center gap-3 min-w-[150px] justify-end">
+        <div className="flex items-center gap-3 min-w-37.5 justify-end">
           <Link
             href="/contact"
             className="hidden lg:group lg:flex items-center justify-center overflow-hidden rounded-full px-5 py-2.5 transition-all duration-300 active:scale-95 border"
           >
             <div className="absolute inset-0 translate-y-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-y-0" />
             <div className="relative z-10 flex h-4 items-center overflow-hidden">
-              <span className="flex items-center gap-1 text-[11px] font-bold uppercase tracking-[0.15em]">
-                Contact Us{" "}
-                <TbArrowUpRight className="text-sm opacity-50" />
+              <span className="flex items-center gap-1 text-[11px] font-medium uppercase tracking-[0.15em]">
+                Contact Us <TbArrowUpRight className="text-sm opacity-50" />
               </span>
             </div>
           </Link>
@@ -213,7 +203,7 @@ const Navbar = () => {
         </div>
 
         {/* Clean Mobile Links Track */}
-        <div className="flex flex-col justify-center items-start gap-6 my-auto pl-4">
+        <div className="flex flex-col justify-center items-start gap-4 my-auto pl-4">
           {/* 1. Services Router Link */}
           <Link
             href="/services"

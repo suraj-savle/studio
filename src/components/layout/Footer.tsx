@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { IoMailOutline, IoLocationOutline } from "react-icons/io5";
-import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import {  FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
@@ -154,7 +153,7 @@ export default function Footer() {
 
       {/* GIANT BACKGROUND TYPOGRAPHY ELEMENT */}
       <div className="w-full relative pointer-events-none select-none overflow-hidden h-30 sm:h-45 md:h-60 lg:h-70">
-        <h1 className="absolute bottom-[-20%] text-[16.8vw] font-black tracking-tighter leading-none antialiased uppercase bg-clip-text text-transparent bg-linear-to-b from-[#FFFFFF] to-[#4DB2E0]">
+        <h1 className="absolute bottom-[-20%] right-0.5 text-[17.5vw] font-black tracking-tighter leading-none antialiased uppercase bg-clip-text text-transparent bg-linear-to-b from-[#FFFFFF] to-[#4DB2E0] font-geist">
           UpgradeUX
         </h1>
       </div>

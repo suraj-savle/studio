@@ -42,7 +42,7 @@ export default function HeroHeading() {
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
             >
-              <span className="text-[3rem] font-bold text-zinc-800 sm:text-[4rem] md:text-[6.5rem]">
+              <span className="text-[3rem]  text-zinc-800 sm:text-[4rem] md:text-[6.5rem]">
                 We Build Websites
               </span>
 

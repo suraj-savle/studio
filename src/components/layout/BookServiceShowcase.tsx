@@ -140,7 +140,7 @@
 //   const rightUnderRef = useRef(null);
 //   const flapRef = useRef(null);
 //   const flapContentRef = useRef(null);
-//   const foldGradientRef = useRef(null);
+//   const foldlinearRef = useRef(null);
 //   const rafRef = useRef(null);
 
 //   const [leftIndex, setLeftIndex] = useState(0);
@@ -312,11 +312,11 @@
 //     const dxG = mx - activeCorner[0];
 //     const dyG = my - activeCorner[1];
 //     const angleG = Math.atan2(dyG, dxG);
-//     if (foldGradientRef.current) {
-//       foldGradientRef.current.style.transform = `translate(${midx}px, ${midy}px) rotate(${angleG}rad)`;
+//     if (foldlinearRef.current) {
+//       foldlinearRef.current.style.transform = `translate(${midx}px, ${midy}px) rotate(${angleG}rad)`;
 //       const progress = Math.min(Math.abs(mx - activeCorner[0]) / width, 1);
 //       const opacity = Math.sin(progress * Math.PI);
-//       foldGradientRef.current.style.opacity = opacity.toFixed(3);
+//       foldlinearRef.current.style.opacity = opacity.toFixed(3);
 //     }
 //   };
 
@@ -467,8 +467,8 @@
 //             </div>
 //             <h2 style="font-size:20px; font-weight:700; margin:0 0 6px 0; color:#18181b; letter-spacing:-0.02em;">${page.tier}</h2>
 //             <p style="font-size:11px; color:#71717a; margin:0 0 20px 0; line-height:1.5;">${page.subtitle}</p>
-            
-//             <div style="background:${isHighlight ? 'linear-gradient(135deg, #0066cc08 0%, #0066cc02 100%)' : '#fafafa'}; border:1px solid ${isHighlight ? '#0066cc20' : '#e4e4e7'}; padding:16px; border-radius:16px; margin-bottom:20px;">
+
+//             <div style="background:${isHighlight ? 'linear-linear(135deg, #0066cc08 0%, #0066cc02 100%)' : '#fafafa'}; border:1px solid ${isHighlight ? '#0066cc20' : '#e4e4e7'}; padding:16px; border-radius:16px; margin-bottom:20px;">
 //               <div style="font-size:36px; font-weight:800; color:#18181b; letter-spacing:-0.03em;">${page.price}</div>
 //               <div style="font-size:10px; color:#71717a; margin-top:4px;">one-time investment</div>
 //             </div>
@@ -483,7 +483,7 @@
 //               ${page.features.map(f => `<li style="display:flex; gap:10px; align-items:flex-start; font-size:11px; color:#3f3f46; line-height:1.4;"><span style="color:#0066cc; font-size:14px;">✦</span> ${f}</li>`).join('')}
 //             </ul>
 //           </div>
-          
+
 //           <button style="margin-top:24px; width:100%; background:#18181b; color:white; border:none; padding:12px; font-size:12px; font-weight:600; border-radius:40px; cursor:pointer; transition:all 0.2s;" onmouseover="this.style.background='#0066cc'" onmouseout="this.style.background='#18181b'">
 //             Select Plan →
 //           </button>
@@ -523,7 +523,7 @@
 //     display: 'flex',
 //     justifyContent: 'center',
 //     alignItems: 'center',
-//     background: 'linear-gradient(135deg, #f5f7fa 0%, #eef2f6 100%)',
+//     background: 'linear-linear(135deg, #f5f7fa 0%, #eef2f6 100%)',
 //     fontFamily: 'system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif'
 //   };
 
@@ -553,8 +553,8 @@
 
 //   return (
 //     <div style={containerStyle}>
-//       <div 
-//         ref={bookRef} 
+//       <div
+//         ref={bookRef}
 //         style={bookContainerStyle}
 //         onPointerDown={handlePointerDown}
 //         onPointerMove={handlePointerMove}
@@ -563,32 +563,32 @@
 //         onMouseLeave={() => setIsHovering(false)}
 //       >
 //         {/* Under layers for preloading */}
-//         <div ref={leftUnderRef} style={{ ...commonPageStyle, left: 0, borderTopLeftRadius: '20px', borderBottomLeftRadius: '20px', backgroundImage: 'linear-gradient(to left, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0) 8%)' }} />
-//         <div ref={rightUnderRef} style={{ ...commonPageStyle, left: '50%', borderTopRightRadius: '20px', borderBottomRightRadius: '20px', backgroundImage: 'linear-gradient(to right, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0) 8%)', borderLeft: '1px solid #f0f0f0' }} />
+//         <div ref={leftUnderRef} style={{ ...commonPageStyle, left: 0, borderTopLeftRadius: '20px', borderBottomLeftRadius: '20px', backgroundImage: 'linear-linear(to left, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0) 8%)' }} />
+//         <div ref={rightUnderRef} style={{ ...commonPageStyle, left: '50%', borderTopRightRadius: '20px', borderBottomRightRadius: '20px', backgroundImage: 'linear-linear(to right, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0) 8%)', borderLeft: '1px solid #f0f0f0' }} />
 
 //         {/* Core visible pages */}
-//         <div ref={leftFrontRef} style={{ ...commonPageStyle, left: 0, zIndex: 2, borderTopLeftRadius: '20px', borderBottomLeftRadius: '20px', backgroundImage: 'linear-gradient(to left, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0) 8%)' }} />
-//         <div ref={rightFrontRef} style={{ ...commonPageStyle, left: '50%', zIndex: 2, borderTopRightRadius: '20px', borderBottomRightRadius: '20px', backgroundImage: 'linear-gradient(to right, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0) 8%)', borderLeft: '1px solid #f0f0f0' }} />
+//         <div ref={leftFrontRef} style={{ ...commonPageStyle, left: 0, zIndex: 2, borderTopLeftRadius: '20px', borderBottomLeftRadius: '20px', backgroundImage: 'linear-linear(to left, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0) 8%)' }} />
+//         <div ref={rightFrontRef} style={{ ...commonPageStyle, left: '50%', zIndex: 2, borderTopRightRadius: '20px', borderBottomRightRadius: '20px', backgroundImage: 'linear-linear(to right, rgba(0,0,0,0.04) 0%, rgba(0,0,0,0) 8%)', borderLeft: '1px solid #f0f0f0' }} />
 
 //         {/* Flip animation layers */}
-//         <div 
-//           ref={flapRef} 
+//         <div
+//           ref={flapRef}
 //           style={{
-//             width: '100%', 
-//             height: '100%', 
-//             position: 'absolute', 
-//             top: 0, 
-//             left: 0, 
+//             width: '100%',
+//             height: '100%',
+//             position: 'absolute',
+//             top: 0,
+//             left: 0,
 //             zIndex: 5,
-//             filter: 'drop-shadow(-4px 8px 20px rgba(0,0,0,0.2))', 
-//             pointerEvents: 'none', 
+//             filter: 'drop-shadow(-4px 8px 20px rgba(0,0,0,0.2))',
+//             pointerEvents: 'none',
 //             display: 'none'
 //           }}
 //         >
 //           <div ref={flapContentRef} style={{ width: '50%', height: '100%', position: 'absolute', top: 0, left: 0, padding: '32px 36px', boxSizing: 'border-box', backgroundColor: '#ffffff' }} />
-//           <div ref={foldGradientRef} style={{ position: 'absolute', width: '300%', height: '300%', left: '-150%', top: '-150%', background: 'linear-gradient(to right, transparent 49%, rgba(0,0,0,0.08) 50%, rgba(255,255,255,0.2) 50.5%, rgba(0,0,0,0.02) 52%, transparent 58%)', pointerEvents: 'none' }} />
+//           <div ref={foldlinearRef} style={{ position: 'absolute', width: '300%', height: '300%', left: '-150%', top: '-150%', background: 'linear-linear(to right, transparent 49%, rgba(0,0,0,0.08) 50%, rgba(255,255,255,0.2) 50.5%, rgba(0,0,0,0.02) 52%, transparent 58%)', pointerEvents: 'none' }} />
 //         </div>
-        
+
 //         {/* Corner hint indicators */}
 //         {!stateRef.current.isDragging && !isHovering && (
 //           <div style={{ position: 'absolute', bottom: '16px', right: '16px', zIndex: 10, pointerEvents: 'none' }}>

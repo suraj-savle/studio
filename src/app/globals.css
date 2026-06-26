@@ -12,8 +12,10 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-jakarta: "Plus Jakarta Sans", sans-serif;
+  --font-noto-sans: "Noto Sans", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-geist: "Geist", sans-serif;
 }
 
 .bg-primary {
@@ -37,6 +39,7 @@
 
 body {
   background-color: var(--foreground);
+  font-family: var(--font-poppins), var(--font-jakarta), var(--font-geist), sans-serif;
   min-height: 100vh;
 }
 
@@ -64,55 +67,9 @@ body {
   color: #171717;
 }
 
-/* Add to your global CSS or component CSS module */
-
-.preserve-3d {
-  transform-style: preserve-3d;
-}
-
-.transform-gpu {
-  transform: translateZ(0);
-  backface-visibility: hidden;
-  -webkit-font-smoothing: antialiased;
-}
-
 /* Smooth scroll behavior */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom card animations */
-@keyframes cardFloat {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-.card-float {
-  animation: cardFloat 4s ease-in-out infinite;
-}
-
-/* Gradient text utility */
-.gradient-text {
-  background: linear-gradient(135deg, #a68b5b, #c4a96e);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-
-/* 3D perspective utilities */
-.perspective-1000 {
-  perspective: 1000px;
-}
-
-.perspective-1500 {
-  perspective: 1500px;
-}
-
-.transform-style-3d {
-  transform-style: preserve-3d;
-}
 
