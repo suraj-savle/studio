@@ -12,7 +12,7 @@ export async function POST(req: Request) {
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
         { success: false, error: "All configuration fields are required." },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -35,15 +35,27 @@ export async function POST(req: Request) {
 
     if (data.error) {
       console.error("Resend API processing layer error:", data.error);
-      return NextResponse.json({ success: false, error: data.error.message }, { status: 400 });
+      return NextResponse.json(
+        { success: false, error: data.error.message },
+        { status: 400 },
+      );
     }
 
     return NextResponse.json({ success: true });
-  } catch (error: any) {
+  } catch (error: unknown) {
     console.error("Critical server internal contact handler exception:", error);
+
+    const message =
+      error instanceof Error ? error.message : "Internal server setup failure.";
+
     return NextResponse.json(
-      { success: false, error: error.message || "Internal server setup failure." },
-      { status: 500 }
+      {
+        success: false,
+        error: message,
+      },
+      {
+        status: 500,
+      },
     );
   }
 }

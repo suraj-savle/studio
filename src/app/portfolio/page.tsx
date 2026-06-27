@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { FaGithub } from "react-icons/fa";
@@ -108,11 +109,13 @@ const GallerySlideFrame: React.FC<{ images: string[] }> = React.memo(
     return (
       <div className="w-full h-full relative overflow-hidden bg-zinc-700 rounded group/gallery">
         {images.map((imgUrl, idx) => (
-          <img
+          <Image
             key={idx}
             src={imgUrl}
             alt={`Slide track asset frame ${idx + 1}`}
             className={`absolute inset-0 w-full h-full object-cover rounded transition-all duration-1000 cubic-bezier(0.16, 1, 0.3, 1) ${getSlideClassName(idx, activeIndex, images.length)}`}
+            width={800}
+            height={600}
           />
         ))}
 
@@ -160,9 +163,11 @@ const VideoHoverFrame: React.FC<{
 
   return (
     <div className="w-full h-full relative overflow-hidden bg-zinc-950 rounded">
-      <img
+      <Image
         src={imageSrc}
         alt="Video thumbnail mask container"
+        width={800}
+        height={600}
         className={`w-full h-full object-cover absolute inset-0 z-10 transition-all duration-500 cubic-bezier(0.16, 1, 0.3, 1) rounded ${
           isCardHovered
             ? "opacity-0 scale-105 pointer-events-none"
@@ -302,7 +307,6 @@ export default function ProjectsPage() {
           ))}
 
           <div className="w-full h-60 sm:h-64 relative flex flex-col justify-between p-6 sm:p-8 overflow-hidden select-none transition-all duration-500 rounded-2xl group hover:shadow-2xl hover:shadow-[#4DB2E0]/5 border border-dashed border-zinc-800/80 hover:border-zinc-700/80 hover:-translate-y-1">
-
             {/* Content */}
             <div className="relative z-10 space-y-4">
               <div className="space-y-1.5">
@@ -316,16 +320,17 @@ export default function ProjectsPage() {
             </div>
 
             {/* CTA Section */}
-            <Link href="/contact" className="relative z-10 flex items-center justify-between gap-4 cursor-pointer">
+            <Link
+              href="/contact"
+              className="relative z-10 flex items-center justify-between gap-4 cursor-pointer"
+            >
               <button className="group/btn relative overflow-hidden px-5 py-2.5 bg-zinc-800 hover:bg-zinc-800 text-white border border-zinc-700 font-bold text-xs tracking-wider uppercase rounded-xl transition-all duration-300 shadow-lg shadow-zinc-950/50">
                 {/* Slid-in Accent Overlay */}
                 <span className="absolute inset-0 w-full h-full bg-[#4DB2E0] translate-y-full transition-transform duration-300 ease-out group-hover/btn:translate-y-0" />
 
                 {/* Button Text & Icon Layer */}
                 <span className="relative z-10 flex items-center gap-2 transition-colors duration-300 group-hover/btn:text-zinc-950">
-                  <span className="text-white">
-                    Contact Us
-                  </span>
+                  <span className="text-white">Contact Us</span>
                   <TbArrowUpRight className="size-3.5 transition-transform duration-300 group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                 </span>
               </button>
