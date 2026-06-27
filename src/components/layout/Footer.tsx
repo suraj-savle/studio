@@ -53,7 +53,7 @@ export default function Footer() {
         {/* CENTER LINKS */}
         <div className="flex gap-10 sm:flex-row sm:gap-20">
           {/* SERVICES */}
-          <div className="flex min-w-[180px] flex-col gap-3">
+          <div className="flex min-w-45 flex-col gap-3">
             <span className="text-xs font-mono uppercase tracking-[0.2em] text-zinc-400">
               Services
             </span>
@@ -72,7 +72,7 @@ export default function Footer() {
           </div>
 
           {/* COMPANY */}
-          <div className="flex min-w-[180px] flex-col gap-3">
+          <div className="flex min-w-45 flex-col gap-3">
             <span className="text-xs font-mono uppercase tracking-[0.2em] text-zinc-400">
               Company
             </span>

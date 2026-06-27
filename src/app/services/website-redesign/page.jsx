@@ -11,22 +11,12 @@ import {
   TbShieldLock,
   TbFingerprint,
   TbLayoutDashboard,
-  TbAlertCircle,
   TbCheck,
   TbX,
   TbCircleCheck,
-  TbClock,
-  TbDeviceMobile,
-  TbEye,
   TbFileText,
-  TbChartBar,
-  TbLink,
-  TbServer,
   TbRefresh,
   TbSearch,
-  TbMap,
-  TbCode,
-  TbSettings,
   TbShield,
 } from "react-icons/tb";
 
@@ -191,10 +181,6 @@ export default function PremiumRedesignPage() {
         ? prev.filter((i) => i !== index)
         : [...prev, index];
     });
-  };
-
-  const isSignSelected = (index) => {
-    return Array.isArray(selectedSigns) && selectedSigns.includes(index);
   };
 
   return (

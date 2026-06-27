@@ -6,12 +6,6 @@ import { FaXTwitter } from "react-icons/fa6";
 import { LuLayoutDashboard, LuCpu, LuEye } from "react-icons/lu";
 
 export default function AboutPage() {
-  const metrics = [
-    { value: "20+", label: "Projects Delivered" },
-    { value: "100%", label: "Custom Built Solutions" },
-    { value: "Next.js", label: "Core Technology" },
-    { value: "India", label: "Operating Worldwide" },
-  ];
 
   const philosophyValues = [
   {

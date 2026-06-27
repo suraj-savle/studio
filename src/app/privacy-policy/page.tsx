@@ -537,7 +537,7 @@ export default function PrivacyPolicyPage() {
                 </h2>
               </div>
               <p className="text-zinc-600 leading-relaxed mb-4">
-                Under India's Digital Personal Data Protection Act, 2023 (DPDP
+                Under India&apos;s Digital Personal Data Protection Act, 2023 (DPDP
                 Act) and applicable data protection principles, we process your
                 personal data on the following lawful bases:
               </p>
@@ -848,7 +848,7 @@ export default function PrivacyPolicyPage() {
                 </h2>
               </div>
               <p className="text-zinc-600 leading-relaxed mb-4">
-                Under India's Digital Personal Data Protection Act, 2023 (DPDP
+                Under India&apos;s Digital Personal Data Protection Act, 2023 (DPDP
                 Act), you have the following rights in respect of your personal
                 data:
               </p>
@@ -949,7 +949,7 @@ export default function PrivacyPolicyPage() {
                   <TbUsers className="size-6" />
                 </div>
                 <h2 className="text-2xl sm:text-3xl font-bold">
-                  12. Children's Privacy
+                  12. Children&apos;s Privacy
                 </h2>
               </div>
               <p className="text-zinc-600 leading-relaxed">
@@ -984,7 +984,7 @@ export default function PrivacyPolicyPage() {
                 We may update this Privacy Policy from time to time to reflect
                 changes in our practices, applicable law, or the services we
                 offer. When material changes are made, the updated policy will
-                be published on this page with a revised "Last Updated" date.
+                be published on this page with a revised Last Updated date.
               </p>
               <p className="mt-4 text-zinc-600 leading-relaxed">
                 Where changes are significant, we will notify active clients

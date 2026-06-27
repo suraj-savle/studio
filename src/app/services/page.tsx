@@ -1,20 +1,15 @@
 "use client";
 
 import React from "react";
-import Link from "next/link";
 import Image from "next/image";
 import {
   TbPalette,
   TbCode,
-  TbDeviceMobile,
   TbSearch,
   TbArrowUpRight,
   TbActivityHeartbeat,
-  TbFingerprint,
   TbCpu,
   TbGauge,
-  TbDatabase,
-  TbCloudComputing,
   TbLayoutDashboard,
   TbBolt,
   TbGlobe,
@@ -150,7 +145,7 @@ export default function ServicesPage() {
                   </div>
 
                   {/* PREMIUM ASPECT RATIO IMAGE LAYER */}
-                  <div className="relative w-full aspect-[16/10] bg-zinc-50 border border-zinc-100/80 overflow-hidden rounded-xl rounded-br-[42px] mb-6 transition-all duration-500 group-hover:shadow-md">
+                  <div className="relative w-full aspect-16/10 bg-zinc-50 border border-zinc-100/80 overflow-hidden rounded-xl rounded-br-[42px] mb-6 transition-all duration-500 group-hover:shadow-md">
                     <Image
                       src={service.image}
                       alt={service.title}

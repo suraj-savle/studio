@@ -1,12 +1,11 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import {
   TbArrowUpRight,
   TbCheck,
-  TbChevronRight,
   TbSearch,
   TbBrain,
   TbChartBar,
@@ -65,14 +64,6 @@ const SEARCH_LAYERS_DETAIL = [
     color: "text-purple-600",
     bgColor: "bg-purple-100",
   },
-];
-
-const WHY_MUMBAI = [
-  "Google still dominates — 93% of all searches in India happen on Google. Traditional SEO remains the highest-ROI digital marketing channel for most Mumbai businesses.",
-  "AI Overviews now appear on most informational searches in India — pushing organic results further down and making AI visibility essential for brand exposure.",
-  "Voice search is growing fast — Mumbai's Hindi-English bilingual search patterns are increasingly conversational, which requires AEO-optimised content to appear in answers.",
-  "First-mover advantage — most Mumbai businesses have not started AIO/AEO/GEO optimisation yet. Early movers establish authority that is very difficult for late entrants to displace.",
-  "Compound effect — strong SEO signals (authority, backlinks, content quality) directly improve AI visibility. Optimising both layers from the same content investment delivers outsized returns.",
 ];
 
 const TRADITIONAL_SERVICES = [

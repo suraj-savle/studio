@@ -5,11 +5,8 @@ import React from "react";
 import { FaWhatsapp } from "react-icons/fa";
 import {
   TbArrowUpRight,
-  TbCheck,
-  TbChevronRight,
   TbBrandWordpress,
   TbLayoutDashboard,
-  TbCode,
   TbPlug,
   TbShoppingCart,
   TbTransfer,
@@ -25,17 +22,8 @@ import {
   TbDatabase,
   TbSpeedboat,
   TbPalette,
-  TbSettings,
-  TbCertificate,
-  TbMessageCircle,
-  TbCalendar,
-  TbHeadset,
-  TbRocket,
   TbCloud,
   TbWorld,
-  TbDeviceMobile,
-  TbServer,
-  TbLock,
 } from "react-icons/tb";
 
 /* ============================================================================
@@ -183,51 +171,6 @@ const ENTERPRISE_SOLUTIONS = [
     title: "WordPress Hosting Consultation",
     description:
       "We help you choose and configure secure, scalable hosting solutions for WordPress — from shared hosting recommendations to managed WordPress hosting and VPS server setups.",
-  },
-];
-
-const WHY_CHOOSE_US = [
-  {
-    icon: TbCertificate,
-    title: "12+ Years of WordPress Expertise",
-    description:
-      "Our team has been building WordPress websites since 2014. That depth of experience means fewer mistakes, faster delivery, and a team that has solved virtually every WordPress challenge you might face.",
-    tag: "WordPress Expertise",
-  },
-  {
-    icon: TbRocket,
-    title: "Business-Centric Approach",
-    description:
-      "We do not just build websites — we solve business problems. Every WordPress website we build is designed to generate enquiries, build trust with customers, and grow alongside your business in Mumbai.",
-    tag: "Business-Centric Approach",
-  },
-  {
-    icon: TbTools,
-    title: "Rigorous QA Before Every Launch",
-    description:
-      "Every site undergoes thorough testing for performance, cross-browser compatibility, mobile responsiveness, security, and form functionality. Nothing goes live until it passes our complete quality checklist.",
-    tag: "Rigorous QA Before Every Launch",
-  },
-  {
-    icon: TbMessageCircle,
-    title: "Transparent, Collaborative Process",
-    description:
-      "We prioritise open communication at every stage — regular WhatsApp updates, milestone previews, and complete involvement so your vision stays at the centre from brief to launch and beyond.",
-    tag: "Collaborative Process",
-  },
-  {
-    icon: TbCalendar,
-    title: "On-Time, On-Budget Delivery",
-    description:
-      "Our structured workflows and experienced project managers guarantee timely delivery with clear milestones — without last-minute surprises on the timeline or the invoice.",
-    tag: "On-Budget Delivery",
-  },
-  {
-    icon: TbHeadset,
-    title: "1 Year Free Post-Launch Support",
-    description:
-      "Every WordPress project includes 12 months of free post-launch support — updates, bug fixes, security patches, and technical assistance. You are never on your own after handover.",
-    tag: "Reliable 1 year support",
   },
 ];
 

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { TbArrowUpRight } from "react-icons/tb";
 
 const rotatingText = [
@@ -12,37 +12,38 @@ const rotatingText = [
 ];
 
 export default function HeroHeading() {
-  const [current, setCurrent] = useState(0);
-  const [mounted, setMounted] = useState(false);
-
-  // Initial load transition trigger
-  useEffect(() => {
-    setMounted(true);
-
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % rotatingText.length);
-    }, 3200);
-    return () => clearInterval(interval);
-  }, []);
+  const totalDuration = rotatingText.length * 3.2; // 16 seconds total loop
 
   return (
     <section 
-      className="relative flex min-h-[80vh] md:min-h-screen w-full items-center justify-center overflow-hidden px-4 sm:px-6 pt-28 pb-16 md:py-0 overflow-x-hidden"
-      style={{
-        background: "linear-gradient(to bottom, #4DB2E0 0%, #FFFFFF 100%)"
-      }}
+      className="relative flex min-h-[80vh] md:min-h-screen w-full items-center justify-center overflow-hidden px-4 sm:px-6 pt-28 pb-16 md:py-0 overflow-x-hidden bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF]"
     >
+      {/* CSS Keyframes injected directly to avoid external stylesheet dependencies */}
+      <style jsx global>{`
+        @keyframes customFadeUp {
+          from { opacity: 0; transform: translateY(24px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes textRotationLoop {
+          0%, 15% { opacity: 1; transform: translateY(0); }
+          20%, 95% { opacity: 0; transform: translateY(-16px); }
+          100% { opacity: 0; transform: translateY(16px); }
+        }
+        .animate-fade-up {
+          animation: customFadeUp 1000s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+        }
+      `}</style>
+
       <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center text-center">
         <div className="block relative decoration-transparent outline-none group">
           <div className="relative select-none py-2 md:py-4">
             
             {/* Dynamic Typography Header Layout */}
             <h1
-              className={`relative z-10 flex flex-col items-center leading-[0.95] md:leading-[0.9] tracking-[-0.04em] md:tracking-[-0.05em] transition-all duration-1000 ease-[cubic-bezier(0.16,1,0.3,1)] transform gap-3 md:gap-5 ${
-                mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
+              className="relative z-10 flex flex-col items-center leading-[0.95] md:leading-[0.9] tracking-[-0.04em] md:tracking-tighter transform gap-3 md:gap-5 animate-fade-up"
+              style={{ animationDuration: '1000ms' }}
             >
-              <span className="text-[3rem]  text-zinc-800 sm:text-[4rem] md:text-[6.5rem]">
+              <span className="text-[3rem] text-zinc-800 sm:text-[4rem] md:text-[6.5rem]">
                 We Build Websites
               </span>
 
@@ -53,42 +54,42 @@ export default function HeroHeading() {
           </div>
         </div>
 
-        {/* --- IMPROVED FIXED TEXT ROTATOR --- */}
+        {/* --- PURE CSS FIXED TEXT ROTATOR --- */}
         <div 
-          className={`relative h-6 md:h-8 mt-2 overflow-hidden transition-all duration-1000 delay-75 w-full flex justify-center ${
-            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-          }`}
+          className="relative h-6 md:h-8 mt-2 overflow-hidden w-full flex justify-center animate-fade-up"
+          style={{ animationDuration: '1000ms', animationDelay: '75ms' }}
         >
-          {rotatingText.map((text, idx) => (
-            <span
-              key={idx}
-              className={`absolute text-xs md:text-sm font-mono font-bold tracking-[0.15em] text-zinc-700 uppercase transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] ${
-                idx === current
-                  ? "opacity-100 translate-y-0 pointer-events-auto"
-                  : "opacity-0 -translate-y-4 pointer-events-none"
-              }`}
-            >
-               {text}
-            </span>
-          ))}
+          {rotatingText.map((text, idx) => {
+            const delay = idx * 3.2;
+            return (
+              <span
+                key={idx}
+                className="absolute text-xs md:text-sm font-mono font-bold tracking-[0.15em] text-zinc-700 uppercase opacity-0 transform translate-y-4"
+                style={{
+                  animation: `textRotationLoop ${totalDuration}s infinite ease-in-out`,
+                  animationDelay: `${delay}s`,
+                }}
+              >
+                {text}
+              </span>
+            );
+          })}
         </div>
 
         {/* Studio Agency Body Description block */}
         <p
-          className={`mt-4 max-w-2xl text-xs md:text-lg leading-relaxed text-zinc-600 font-normal transition-all duration-1000 delay-150 ease-[cubic-bezier(0.16,1,0.3,1)] transform ${
-            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className="mt-4 max-w-2xl text-xs md:text-lg leading-relaxed text-zinc-600 font-normal transform animate-fade-up"
+          style={{ animationDuration: '1000ms', animationDelay: '150ms' }}
         >
           We design and develop modern websites, web applications, and digital
           experiences that help businesses attract customers, build trust, and
           scale online.
         </p>
 
-        {/* --- ADDED DYNAMIC CTA BUTTON --- */}
+        {/* --- DYNAMIC CTA BUTTON --- */}
         <div
-          className={`mt-5 transition-all duration-1000 delay-300 transform ${
-            mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-          }`}
+          className="mt-5 transform animate-fade-up"
+          style={{ animationDuration: '1000ms', animationDelay: '300ms' }}
         >
           <a
             href="/contact"
