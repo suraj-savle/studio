@@ -137,7 +137,7 @@ export default function HowWeWorkPage() {
                 <label className="text-2xl font-bold tracking-wider uppercase text-zinc-800">
                   {WORK_STEPS[activeStep].subtitle}
                 </label>
-                <div className="text-xs font-mono font-semibold text-[#4DB2E0] uppercase tracking-widest mt-1">
+                <div className="text-xs font-mono font-semibold uppercase tracking-widest mt-1">
                   Our Process
                 </div>
               </div>
