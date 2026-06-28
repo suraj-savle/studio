@@ -58,10 +58,10 @@ const TABLE_OF_CONTENTS = [
     icon: TbTransactionEuro,
   },
   { id: "chargebacks", title: "Chargebacks", icon: TbCreditCard },
-  { id: "Project Abandonment", title: "Project Abandonment", icon: TbReceipt },
+  { id: "Project-Abandonment", title: "Project Abandonment", icon: TbReceipt },
   {
-    id: "Intellectual Property",
-    title: "Intellectual Property",
+    id: "Intellectual-Property",
+    title: "Intellectual-Property",
     icon: TbFileText,
   },
   { id: "contact", title: "Contact Us", icon: TbPhone },
@@ -685,7 +685,7 @@ export default function RefundPolicyPage() {
               </div>
             </div>
 
-            <div id="Project Abandonment" className="scroll-mt-24">
+            <div id="Project-Abandonment" className="scroll-mt-24">
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-2 bg-[#4DB2E0]/10 rounded-lg ">
                   <TbCreditCard className="w-6 h-6" />
@@ -708,7 +708,7 @@ export default function RefundPolicyPage() {
               </div>
             </div>
 
-            <div id="Intellectual Property" className="scroll-mt-24">
+            <div id="Intellectual-Property" className="scroll-mt-24">
               <div className="flex items-center gap-3 mb-6">
                 <div className="p-2 bg-[#4DB2E0]/10 rounded-lg ">
                   <TbFileText className="w-6 h-6" />
@@ -743,86 +743,98 @@ export default function RefundPolicyPage() {
               </div>
               <div className="bg-zinc-50 border border-zinc-200/60 rounded-2xl p-6 shadow-sm">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-zinc-600">
-  {/* Left Side: Corporate Identity & Address Card */}
-  <div className="p-5 rounded-xl border border-zinc-200/50 bg-gradient-to-br from-white to-zinc-50/50 space-y-4 shadow-sm">
-    <div className="flex items-start gap-3">
-      <div className="p-2 rounded-lg bg-zinc-100 mt-0.5">
-        <TbReceipt className="w-4 h-4 shrink-0" />
-      </div>
-      <div>
-        <h4 className="font-bold text-zinc-800 text-sm tracking-tight leading-tight">
-          {COMPANY_INFO.name}
-        </h4>
-        <p className="text-zinc-400 font-medium mt-0.5">
-          Legal Entity: <span className="text-zinc-500 font-semibold">{COMPANY_INFO.legalName}</span>
-        </p>
-      </div>
-    </div>
-    
-    <div className="w-full h-px bg-zinc-200/60" />
+                  {/* Left Side: Corporate Identity & Address Card */}
+                  <div className="p-5 rounded-xl border border-zinc-200/50 bg-gradient-to-br from-white to-zinc-50/50 space-y-4 shadow-sm">
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 rounded-lg bg-zinc-100 mt-0.5">
+                        <TbReceipt className="w-4 h-4 shrink-0" />
+                      </div>
+                      <div>
+                        <h4 className="font-bold text-zinc-800 text-sm tracking-tight leading-tight">
+                          {COMPANY_INFO.name}
+                        </h4>
+                        <p className="text-zinc-400 font-medium mt-0.5">
+                          Legal Entity:{" "}
+                          <span className="text-zinc-500 font-semibold">
+                            {COMPANY_INFO.legalName}
+                          </span>
+                        </p>
+                      </div>
+                    </div>
 
-    <div className="flex items-start gap-3">
-      <div className="p-2 rounded-lg bg-zinc-100 text-zinc-400 mt-0.5">
-        <TbMapPin className="w-4 h-4 flex-shrink-0 text-zinc-500" />
-      </div>
-      <p className="leading-relaxed text-zinc-600 font-medium pt-1">
-        {COMPANY_INFO.address}
-      </p>
-    </div>
-  </div>
+                    <div className="w-full h-px bg-zinc-200/60" />
 
-  {/* Right Side: Communication Channels Card */}
-  <div className="p-5 rounded-xl border border-zinc-200/50 bg-gradient-to-br from-white to-zinc-50/50 flex flex-col justify-between gap-3.5 shadow-sm">
-    <div className="space-y-2.5">
-      {/* Primary Email */}
-      <div className="flex items-center gap-3 group">
-        <div className="p-2 rounded-lg transition-colors duration-200 bg-zinc-100">
-          <TbMail className="w-4 h-4 shrink-0" />
-        </div>
-        <a
-          href={`mailto:${COMPANY_INFO.email}`}
-          className="text-zinc-700 hover:text-[#4DB2E0] font-semibold transition-colors duration-200 hover:underline break-all"
-        >
-          {COMPANY_INFO.email}
-        </a>
-      </div>
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 rounded-lg bg-zinc-100 text-zinc-400 mt-0.5">
+                        <TbMapPin className="w-4 h-4 flex-shrink-0 text-zinc-500" />
+                      </div>
+                      <p className="leading-relaxed text-zinc-600 font-medium pt-1">
+                        {COMPANY_INFO.address}
+                      </p>
+                    </div>
+                  </div>
 
-      {/* Alternate Email */}
-      {COMPANY_INFO.alternateEmail && (
-        <div className="flex items-center gap-3 group">
-          <div className="p-2 rounded-lg transition-colors duration-200 bg-zinc-100">
-            <TbMail className="w-4 h-4 shrink-0" />
-          </div>
-          <a
-            href={`mailto:${COMPANY_INFO.alternateEmail}`}
-            className="text-zinc-600 hover:text-[#4DB2E0] font-medium transition-colors duration-200 hover:underline break-all"
-          >
-            {COMPANY_INFO.alternateEmail}
-          </a>
-        </div>
-      )}
-    </div>
+                  {/* Right Side: Communication Channels Card */}
+                  <div className="p-5 rounded-xl border border-zinc-200/50 bg-gradient-to-br from-white to-zinc-50/50 flex flex-col justify-between gap-3.5 shadow-sm">
+                    <div className="space-y-2.5">
+                      {/* Primary Email */}
+                      <div className="flex items-center gap-3 group">
+                        <div className="p-2 rounded-lg transition-colors duration-200 bg-zinc-100">
+                          <TbMail className="w-4 h-4 shrink-0" />
+                        </div>
+                        <a
+                          href={`mailto:${COMPANY_INFO.email}`}
+                          className="text-zinc-700 hover:text-[#4DB2E0] font-semibold transition-colors duration-200 hover:underline break-all"
+                        >
+                          {COMPANY_INFO.email}
+                        </a>
+                      </div>
 
-    <div className="w-full h-px bg-zinc-200/60" />
+                      {/* Alternate Email */}
+                      {COMPANY_INFO.alternateEmail && (
+                        <div className="flex items-center gap-3 group">
+                          <div className="p-2 rounded-lg transition-colors duration-200 bg-zinc-100">
+                            <TbMail className="w-4 h-4 shrink-0" />
+                          </div>
+                          <a
+                            href={`mailto:${COMPANY_INFO.alternateEmail}`}
+                            className="text-zinc-600 hover:text-[#4DB2E0] font-medium transition-colors duration-200 hover:underline break-all"
+                          >
+                            {COMPANY_INFO.alternateEmail}
+                          </a>
+                        </div>
+                      )}
+                    </div>
 
-    {/* Phone Numbers */}
-    <div className="flex items-start gap-3">
-      <div className="p-2 rounded-lg bg-zinc-100">
-        <TbPhone className="w-4 h-4 shrink-0 " />
-      </div>
-      <div className="flex flex-col gap-1 font-semibold text-zinc-700 pt-0.5">
-        <a href={`tel:${COMPANY_INFO.phone}`} className="hover:text-[#4DB2E0] transition-colors">
-          {COMPANY_INFO.phone}
-        </a>
-        {COMPANY_INFO.alternatePhone && (
-          <a href={`tel:${COMPANY_INFO.alternatePhone}`} className="text-zinc-500 hover:text-[#4DB2E0] font-medium transition-colors">
-            {COMPANY_INFO.alternatePhone} <span className="text-xs text-zinc-400 font-normal mx-1">(Alternate)</span>
-          </a>
-        )}
-      </div>
-    </div>
-  </div>
-</div>
+                    <div className="w-full h-px bg-zinc-200/60" />
+
+                    {/* Phone Numbers */}
+                    <div className="flex items-start gap-3">
+                      <div className="p-2 rounded-lg bg-zinc-100">
+                        <TbPhone className="w-4 h-4 shrink-0 " />
+                      </div>
+                      <div className="flex flex-col gap-1 font-semibold text-zinc-700 pt-0.5">
+                        <a
+                          href={`tel:${COMPANY_INFO.phone}`}
+                          className="hover:text-[#4DB2E0] transition-colors"
+                        >
+                          {COMPANY_INFO.phone}
+                        </a>
+                        {COMPANY_INFO.alternatePhone && (
+                          <a
+                            href={`tel:${COMPANY_INFO.alternatePhone}`}
+                            className="text-zinc-500 hover:text-[#4DB2E0] font-medium transition-colors"
+                          >
+                            {COMPANY_INFO.alternatePhone}{" "}
+                            <span className="text-xs text-zinc-400 font-normal mx-1">
+                              (Alternate)
+                            </span>
+                          </a>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </main>

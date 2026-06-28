@@ -4,8 +4,7 @@ import React, { useState } from "react";
 import { 
   TbCalendarEvent, 
   TbClock, 
-  TbCircleCheck, 
-  TbArrowRight, 
+  TbCircleCheck,  
   TbDeviceLaptop, 
   TbMessages, 
   TbBulb,

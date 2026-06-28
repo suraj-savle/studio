@@ -6,17 +6,17 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
   const servicesLinks = [
-    { name: "Custom Website", href: "/custom-website" },
-    { name: "Portfolio", href: "/portfolio" },
-    { name: "Seo", href: "/seo" },
-    { name: "Redesign", href: "/redesign" },
-    { name: "Free Consulting", href: "/free-consulting" },
+    { name: "Custom Website", href: "/services/custom-website" },
+    { name: "Seo Optimization", href: "/services/search-engine-optimization" },
+    { name: "Website Redesign", href: "/services/website-redesign" },
+    { name: "Wordpress Website", href: "/services/wordpress" },
   ];
 
   const supportLinks = [
     { name: "Contact Us", href: "/contact" },
     { name: "Help Center", href: "/help-center" },
-    { name: "Cookie Policy", href: "/privacy-policy" },
+    { name: "privacy-policy", href: "/privacy-policy" },
+    { name: "Refund Policy", href: "/refund-policy" },
     { name: "Free Consulting", href: "/free-consulting" },
   ];
 

@@ -47,7 +47,7 @@ const LaptopFrame: React.FC<LaptopFrameProps> = ({
                 muted
                 loop
                 playsInline
-                className="w-full h-full object-cover select-none pointer-events-none"
+                className="w-full h-full object-contain select-none pointer-events-none"
               />
             ) : (
               <div className="w-full h-full bg-linear-to-br from-zinc-900 via-zinc-950 to-zinc-900 p-2 xs:p-3 sm:p-4 flex flex-col justify-between">

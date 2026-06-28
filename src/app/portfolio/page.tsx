@@ -4,12 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect, useRef, useCallback } from "react";
 import { FaGithub } from "react-icons/fa";
-import {
-  TbLayersIntersect,
-  TbActivity,
-  TbFlame,
-  TbArrowUpRight,
-} from "react-icons/tb";
+import { TbLayersIntersect, TbActivity, TbArrowUpRight } from "react-icons/tb";
 
 // ============================================================================
 // Types & Constants
@@ -29,43 +24,40 @@ interface Project {
 
 const PROJECTS_DATA: Project[] = [
   {
-    id: "vibe-toast",
-    title: "VIBETOAST NOTIFICATION SYSTEM",
-    icon: TbFlame,
-    mediaType: "video",
-    imageSrc:
-      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=800&auto=format&fit=crop",
-    videoSrc: "/vibe-toast.mp4",
-    description:
-      "An open-source React notification package specializing in fluid canvas blob animations and glassmorphism styling frameworks.",
-    link: "https://github.com",
-  },
-  {
-    id: "bbms-portal",
-    title: "BLOOD BANK SYSTEM PLATFORM",
+    id: "fitnation",
+    title: "Fitnation GYM",
     icon: TbActivity,
     mediaType: "video",
-    imageSrc:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
-    videoSrc:
-      "https://assets.mixkit.co/videos/preview/mixkit-digital-animation-of-screens-and-numbers-31919-large.mp4",
+    imageSrc: "/portfolio/gym.png",
+    videoSrc: "/video/gym.mp4",
     description:
-      "A secure real-time inventory engine designed for localized medical distribution tracking.",
+      "fitnation is a dynamic fitness platform that empowers users to achieve their health goals through personalized workout plans, nutrition tracking, and community engagement.",
     link: "",
   },
   {
-    id: "justus-kit",
-    title: "JUSTUS-KIT CLI TOOLS",
+    id: "portfolio",
+    title: "Personal Portfolio",
+    icon: TbActivity,
+    mediaType: "video",
+    imageSrc: "/portfolio/portfolio.png",
+    videoSrc: "/video/portfolio.mp4",
+    description:
+      "fitnation is a dynamic fitness platform that empowers users to achieve their health goals through personalized workout plans, nutrition tracking, and community engagement.",
+    link: "",
+  },
+  {
+    id: "Invoice-Generator",
+    title: "Invoice Generator",
     icon: TbLayersIntersect,
     mediaType: "gallery",
     images: [
-      "https://images.unsplash.com/photo-1607799279861-4dd421887fb3?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=800&auto=format&fit=crop",
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop",
+      "/portfolio/invoice.png",
+      "/portfolio/invoice1.png",
+      "/portfolio/invoice2.png",
     ],
     description:
-      "An automated multi-platform CLI workflow scaffold that structures post-initialization parameters for scalable production setups.",
-    link: "https://github.com",
+      "Invoice Generator is a web application that allows users to create professional invoices quickly and easily, with customizable templates and automated calculations.",
+    link: "",
   },
 ];
 
@@ -125,7 +117,7 @@ const GallerySlideFrame: React.FC<{ images: string[] }> = React.memo(
             <button
               key={idx}
               className={`h-full transition-all duration-500 ease-out rounded flex-1 ${
-                idx === activeIndex ? "bg-[#4DB2E0]" : "bg-white/15"
+                idx === activeIndex ? "bg-[#0000006b]" : "bg-white/15"
               }`}
               onClick={() => setActiveIndex(idx)}
               aria-label={`Maps explicitly to project frame snapshot index ${idx + 1}`}
@@ -168,7 +160,7 @@ const VideoHoverFrame: React.FC<{
         alt="Video thumbnail mask container"
         width={800}
         height={600}
-        className={`w-full h-full object-cover absolute inset-0 z-10 transition-all duration-500 cubic-bezier(0.16, 1, 0.3, 1) rounded ${
+        className={`w-full h-full object-fit absolute inset-0 z-10 transition-all duration-500 cubic-bezier(0.16, 1, 0.3, 1) rounded ${
           isCardHovered
             ? "opacity-0 scale-105 pointer-events-none"
             : "opacity-100 scale-100"
@@ -229,7 +221,7 @@ const ProjectCard: React.FC<{
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-sm font-black tracking-wider text-zinc-950 uppercase hover:text-[#4DB2E0] transition-colors inline-flex items-center gap-1 group/link truncate rounded"
+                className="text-sm font-black tracking-wider text-zinc-700 uppercase hover:text-zinc-900 transition-colors inline-flex items-center gap-1 group/link truncate rounded"
               >
                 <span className="relative overflow-hidden inline-block">
                   <span className="inline-block transition-transform duration-300 transform group-hover:translate-x-0.5">
@@ -239,7 +231,7 @@ const ProjectCard: React.FC<{
                 <TbArrowUpRight className="size-3.5 opacity-40 group-hover/link:opacity-100 group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-all duration-300 ease-out" />
               </a>
             ) : (
-              <h2 className="text-sm font-black tracking-wider text-zinc-950 uppercase truncate rounded">
+              <h2 className="text-sm text-medium text-zinc-950 truncate rounded">
                 {project.title}
               </h2>
             )}
@@ -258,7 +250,7 @@ const ProjectCard: React.FC<{
           )}
         </div>
 
-        <p className="text-xs sm:text-sm text-zinc-500 font-normal leading-relaxed text-justify pt-0.5 rounded transition-colors duration-300 group-hover:text-zinc-700">
+        <p className="text-xs text-zinc-500 font-normal leading-relaxed text-justify pt-0.5 rounded transition-colors duration-300 group-hover:text-zinc-700">
           {project.description}
         </p>
       </div>

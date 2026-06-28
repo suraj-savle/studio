@@ -101,7 +101,7 @@ export default function CustomWebsitePage() {
         {/* Left Image */}
         <div className="flex justify-start">
           <Image
-            src="/seo.png"
+            src="/customwebsite1.png"
             alt="Custom Website Development"
             width={650}
             height={650}

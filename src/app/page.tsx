@@ -10,11 +10,7 @@ export default function Home() {
       <Hero />
       <ServicesPage />
       <div className="min-h-screen">
-        <DeviceShowcase
-          mobileVideo="/vibe-toast.mp4"
-          tabletVideo="/vibe-toast.mp4"
-          laptopVideo="/vibe-toast.mp4"
-        />
+        <DeviceShowcase />
       </div>
       <AgencyFAQ />
       <CtaSection />

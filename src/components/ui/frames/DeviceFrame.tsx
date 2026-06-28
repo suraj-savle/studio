@@ -15,9 +15,9 @@ interface DeviceShowcaseProps {
 
 const DeviceShowcase: React.FC<DeviceShowcaseProps> = ({
   className = "",
-  mobileVideo = "/vibe-toast.mp4",
-  tabletVideo = "/vibe-toast.mp4",
-  laptopVideo = "/vibe-toast.mp4",
+  mobileVideo = "/video/gym.mp4",
+  tabletVideo = "/video/gym.mp4",
+  laptopVideo = "/video/gym.mp4",
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 

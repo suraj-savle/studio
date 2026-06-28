@@ -3,17 +3,9 @@
 import React from "react";
 import Link from "next/link";
 import {
-  TbHeadset,
-  TbMail,
-  TbPhone,
-  TbClock,
   TbCode,
   TbPalette,
-  TbRocket,
-  TbUserCheck,
-  TbMessageCircle,
   TbArrowRight,
-  TbExternalLink,
   TbShieldCheck,
   TbRefresh,
   TbScale,

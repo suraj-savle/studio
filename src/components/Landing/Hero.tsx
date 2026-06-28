@@ -56,7 +56,7 @@ export default function HeroHeading() {
 
         {/* --- PURE CSS FIXED TEXT ROTATOR --- */}
         <div 
-          className="relative h-6 md:h-8 mt-2 overflow-hidden w-full flex justify-center animate-fade-up"
+          className="relative h-8 md:h-8 overflow-hidden w-full flex justify-center animate-fade-up"
           style={{ animationDuration: '1000ms', animationDelay: '75ms' }}
         >
           {rotatingText.map((text, idx) => {

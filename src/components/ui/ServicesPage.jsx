@@ -4,71 +4,48 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  TbPalette,
   TbCode,
-  TbDeviceMobile,
   TbSearch,
   TbArrowUpRight,
-  TbActivityHeartbeat,
-  TbFingerprint,
   TbCpu,
   TbGauge,
 } from "react-icons/tb";
 
 const DETAILED_SERVICES = [
   {
-    title: "UI/UX Design Systems",
-    subtitle: "High-Fidelity Interface Engineering",
+    title: "Custom Web Development",
+    subtitle: "Fast, Scalable & Secure Websites",
     description:
-      "Architecting atomic components, modular type hierarchies, and fluid interaction variables. We deliver predictable transactional flows that scale directly into clean multi-brand production engines.",
-    image: "/seo.png",
-    icon: TbPalette,
-    metric: "40% Conversion Lift",
-    metricIcon: TbActivityHeartbeat,
-    stack: [
-      "Figma Enterprise",
-      "Tokens Studio",
-      "Prototyping",
-      "A/B Test Matrices",
-    ],
-  },
-  {
-    title: "Custom Web Applications",
-    subtitle: "Performance-Driven Core Architectures",
-    description:
-      "Engineering decoupled serverless Next.js, React, and strict Tailwind modules optimized for critical loading phases, edge middleware caching, and robust relational data layouts.",
-    image: "/2.png",
+      "Building high-performance websites and web applications using modern technologies that deliver exceptional speed, scalability, and seamless user experiences.",
+    image: "/customwebsite1.png",
     icon: TbCode,
-    metric: "0.2s Time to Interactive",
+    metric: "95+ PageSpeed Score",
     metricIcon: TbGauge,
-    stack: ["Next.js", "TypeScript", "Tailwind CSS", "GraphQL Layers"],
+    stack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+    ],
+    href: "/custom-website",
   },
+
   {
-    title: "Native Mobile Layers",
-    subtitle: "Cross-Platform Application Frameworks",
+    title: "SEO & Performance Optimization",
+    subtitle: "Rank Higher. Load Faster.",
     description:
-      "Deploying fluid, production-hardened iOS and Android ecosystems built entirely on performance-tuned custom gesture layers, local data persistence setups, and background task runners.",
-    image: "/3.png",
-    icon: TbDeviceMobile,
-    metric: "99.9% Crash-Free Sessions",
-    metricIcon: TbFingerprint,
-    stack: ["React Native", "Expo Core", "Zustand State", "Native Bridges"],
-  },
-  {
-    title: "Programmatic SEO Engines",
-    subtitle: "Structural Search Discoverability",
-    description:
-      "Structuring semantic schema markup injections, edge-rendered XML indexes, and fast caching configurations to systematically capture massive scale multi-market user acquisition.",
-    image: "/4.png",
+      "Improve your search visibility with technical SEO, Core Web Vitals optimization, structured data, and performance enhancements that drive long-term organic growth.",
+    image: "/seo.png",
     icon: TbSearch,
-    metric: "3x Organic Discovery Index",
+    metric: "3× Organic Growth",
     metricIcon: TbCpu,
     stack: [
-      "Schema.org Injections",
-      "Edge Rendering",
+      "Technical SEO",
+      "Schema Markup",
       "Core Web Vitals",
-      "Analytics",
+      "Google Analytics",
     ],
+    href: "/services/search-engine-optimization",
   },
 ];
 
@@ -162,7 +139,9 @@ export default function ServicesShowcaseRows() {
                       Request Deployment Specs
                     </span>
                     <div className="w-8 h-8 rounded-full border border-zinc-200 flex items-center justify-center transition-all duration-500 group-hover:bg-zinc-950 group-hover:border-zinc-950 group-hover:text-white group-hover:rotate-45">
+                      <Link href={service.href} className="flex items-center justify-center w-full h-full">
                       <TbArrowUpRight className="text-xs" />
+                      </Link>
                     </div>
                   </div>
                 </div>
