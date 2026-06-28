@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import {  FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 export default function Footer() {
@@ -16,14 +16,22 @@ export default function Footer() {
   const supportLinks = [
     { name: "Contact Us", href: "/contact" },
     { name: "Help Center", href: "/help-center" },
-    { name: "Cookie Policy", href: "/cookie-policy" },
+    { name: "Cookie Policy", href: "/privacy-policy" },
     { name: "Free Consulting", href: "/free-consulting" },
   ];
 
   const socialLinks = [
     { name: "X", href: "https://twitter.com/surjasavle", icon: FaXTwitter },
-    { name: "LinkedIn", href: "https://www.linkedin.com/in/surajsavle/", icon: FaLinkedinIn },
-    { name: "Instagram", href: "https://www.instagram.com/upgradeux/", icon: FaInstagram },
+    {
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/surajsavle/",
+      icon: FaLinkedinIn,
+    },
+    {
+      name: "Instagram",
+      href: "https://www.instagram.com/upgradeux/",
+      icon: FaInstagram,
+    },
   ];
 
   return (
@@ -113,7 +121,6 @@ export default function Footer() {
 
         {/* RIGHT : CONTACT */}
         <div className="flex w-full max-w-sm flex-col gap-6 lg:ml-auto">
-
           {/* EMAIL */}
           <a
             href="mailto:upgradeux@gmail.com"

@@ -106,9 +106,9 @@ export default function ServicesPage() {
   return (
     <div className="w-full min-h-screen text-zinc-950 antialiased font-sans selection:bg-[#4DB2E0]/20">
       {/* 1. HERO HEADER AREA */}
-      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 border-b border-zinc-100">
+      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12">
         <div className="max-w-4xl">
-          <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-700 uppercase leading-none">
+          <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-700 leading-none">
             Our Services
           </h1>
         </div>

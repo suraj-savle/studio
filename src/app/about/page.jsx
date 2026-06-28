@@ -31,7 +31,7 @@ export default function AboutPage() {
   return (
     <div className="w-full min-h-screen font-sans antialiased bg-white selection:bg-[#4DB2E0]/20">
       {/* 1. TOP HERO BANNER BLOCK */}
-      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 border-b border-zinc-100 mb-20">
+      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 mb-20">
         <div className="max-w-4xl">
           <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-700  leading-none">
             About Us
