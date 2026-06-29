@@ -7,7 +7,7 @@ import FeaturesMarquee from "@/components/ui/FeaturesMarquee";
 
 export default function Home() {
   return (
-    <div className="w-full min-h-screenoverflow-hidden">
+    <div className="w-full min-h-screen overflow-hidden">
       <Hero />
       <ServicesPage />
       <div className="min-h-screen">
