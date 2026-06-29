@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Plus_Jakarta_Sans , Poppins , Geist } from "next/font/google";
+import { Plus_Jakarta_Sans, Poppins, Geist } from "next/font/google";
 import "./globals.css";
 import SmoothScrolling from "@/components/ui/SmoothScrolling";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/Footer";
-
+import CookieConsentBanner from "@/components/ui/CookieConsentBanner";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ["300", "400", "700"],
@@ -19,7 +19,7 @@ const geist = Geist({
 });
 
 const poppins = Poppins({
-  weight: ["100" , "400", "700"],
+  weight: ["100", "400", "700"],
   subsets: ["latin"],
   variable: "--font-poppins",
 });
@@ -50,6 +50,7 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
         </SmoothScrolling>
+        <CookieConsentBanner />
       </body>
     </html>
   );

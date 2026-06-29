@@ -3,8 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import {
-  TbCode,
-  TbPalette,
   TbArrowRight,
   TbShieldCheck,
   TbRefresh,
@@ -34,27 +32,6 @@ const COMPANY_INFO = {
     turnaroundTime: "Within 7 business days",
   },
 };
-
-const SUPPORT_CARDS = [
-  {
-    title: "Project Consultation",
-    description:
-      "Ready to launch a new product ecosystem or revamp your application design architecture? Start a conversation with our core design team.",
-    actionText: "Send Design Brief",
-    link: `mailto:${COMPANY_INFO.email}?subject=Project Consultation Request`,
-    icon: TbPalette,
-    color: "sky",
-  },
-  {
-    title: "Technical Support",
-    description:
-      "Active client facing technical issues, deployment hurdles, or sprint-related system dependencies? Connect directly with an engineer.",
-    actionText: "Open Support Thread",
-    link: `mailto:${COMPANY_INFO.email}?subject=Technical Support Inquiry`,
-    icon: TbCode,
-    color: "zinc",
-  },
-];
 
 const POLICY_LINKS = [
   {

@@ -25,6 +25,7 @@ const NAV_LINKS = [
   { name: "How We Work", href: "/how-we-work" },
   { name: "About", href: "/about" },
   { name: "portfolio", href: "/portfolio" },
+  { name: "Blog", href: "/blog" },
 ];
 
 const Navbar = () => {
@@ -63,6 +64,7 @@ const Navbar = () => {
           isScrolled ? "py-3.5 bg-white shadow-sm" : "py-6"
         }`}
       >
+
         {/* LEFT BRAND LOGO */}
         <div className="flex items-center min-w-37.5">
           <Link href="/" className="group flex items-center focus:outline-none">

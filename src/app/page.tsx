@@ -3,7 +3,7 @@ import AgencyFAQ from "@/components/layout/AgencyFAQ";
 import ServicesPage from "@/components/ui/ServicesPage";
 import DeviceShowcase from "@/components/ui/frames/DeviceFrame";
 import CtaSection from "@/components/ui/CtaSection";
-import CookieConsentBanner from "@/components/ui/CookieConsentBanner";
+import FeaturesMarquee from "@/components/ui/FeaturesMarquee";
 
 export default function Home() {
   return (
@@ -14,8 +14,8 @@ export default function Home() {
         <DeviceShowcase />
       </div>
       <AgencyFAQ />
+      <FeaturesMarquee />
       <CtaSection />
-      <CookieConsentBanner />
     </div>
   );
 }

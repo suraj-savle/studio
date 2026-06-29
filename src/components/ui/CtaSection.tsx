@@ -6,7 +6,7 @@ import { TbArrowRight, TbArrowUpRight } from "react-icons/tb";
 
 export default function CtaSection() {
   return (
-    <section className="w-full py-28 px-4 sm:px-8 md:px-16 lg:px-24 bg-white border-t border-zinc-200/60 text-center relative overflow-hidden selection:bg-[#4DB2E0]/20">
+    <section className="w-full py-28 px-4 sm:px-8 md:px-16 lg:px-24 text-center relative overflow-hidden selection:bg-[#4DB2E0]/20">
       {/* Subtle background ambient blur mesh to tie into your aesthetic */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[250px] bg-linear-to-tr from-[#4DB2E0]/10 to-transparent rounded-full filter blur-[80px] pointer-events-none select-none" />
 

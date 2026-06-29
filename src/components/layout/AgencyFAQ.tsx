@@ -6,39 +6,39 @@ import { gsap } from "gsap";
 const faqData = [
   {
     id: "01",
-    question: "What is your typical project timeline?",
+    question: "How long does a typical project take?",
     answer:
-      "Most digital products take 8-12 weeks from strategy to launch. We prioritize quality over speed, ensuring every pixel and interaction serves a purpose. Throughout this process, we maintain transparent communication and provide weekly progress updates to ensure alignment with your goals.",
+      "Project timelines depend on the scope, but most websites and digital products are completed within 2–8 weeks. You'll receive regular updates throughout the process, ensuring everything stays on schedule.",
   },
   {
     id: "02",
-    question: "Do you offer post-launch support?",
+    question: "Do you provide support after launch?",
     answer:
-      "Absolutely. We view ourselves as partners, not vendors. We offer monthly evolution sprints to keep your platform scaling with your user base. Our support includes regular performance audits, security updates, feature enhancements, and 24/7 emergency maintenance.",
+      "Yes. We offer ongoing maintenance, performance optimization, security updates, and feature enhancements to keep your website running smoothly long after launch.",
   },
   {
     id: "03",
-    question: "How do you handle branding and UI/UX?",
+    question: "Can you help with branding and UI/UX design?",
     answer:
-      "Our process is research-driven. We start with 'The Why' before moving to wireframes, ensuring the visual identity aligns with business goals. We conduct user research, create interactive prototypes, and iterate based on feedback before any code is written.",
+      "Absolutely. We design intuitive user experiences and modern interfaces backed by research, ensuring your brand looks professional while improving usability and conversions.",
   },
   {
     id: "04",
-    question: "What technologies do you specialize in?",
+    question: "What technologies do you use?",
     answer:
-      "We are experts in Next.js, GSAP, and Tailwind for the front-end, paired with headless CMS solutions like Sanity or Strapi for flexibility. Our backend expertise includes Node.js, Python, and cloud platforms like AWS and Vercel for optimal performance.",
+      "We build with modern technologies including Next.js, React, TypeScript, Tailwind CSS, Node.js, and headless CMS solutions to create fast, scalable, and SEO-friendly websites.",
   },
   {
     id: "05",
-    question: "How do you measure project success?",
+    question: "Will my website be mobile-friendly and SEO optimized?",
     answer:
-      "We define key performance indicators (KPIs) at the start of every project based on your business objectives. Metrics include user engagement, conversion rates, page load times, and overall ROI. We provide detailed analytics dashboards and monthly performance reports.",
+      "Yes. Every project is fully responsive, optimized for Core Web Vitals, and built using SEO best practices to improve visibility, speed, and user experience across all devices.",
   },
   {
     id: "06",
-    question: "Can you work with existing designs or systems?",
+    question: "Can you redesign my existing website?",
     answer:
-      "Yes, we regularly collaborate with in-house design teams or integrate with existing CMS platforms. Our flexible approach allows us to adapt to your current tech stack while providing recommendations for improvement where beneficial.",
+      "Definitely. Whether your website needs a visual refresh, better performance, or a complete rebuild, we can transform it into a modern, high-performing digital experience.",
   },
 ];
 
