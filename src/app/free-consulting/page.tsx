@@ -207,27 +207,6 @@ export default function FreeConsultingPage() {
 
           {/* RIGHT PANEL: SECURE APPOINTMENT SCHEDULER BRIEF CARD */}
           <div className="lg:col-span-5 bg-white border-t lg:border-t-0 lg:border-l py-6 lg:pl-10 lg:pr-2 relative overflow-hidden group/card">
-            {/* Metadata Specs Ribbon */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-8 bg-zinc-50/70 p-3 rounded-xl border border-zinc-100">
-              <div className="flex items-center gap-2 text-zinc-600 px-2">
-                <TbClock className="w-4 h-4 text-[#4DB2E0]" />
-                <span className="text-xs font-semibold">
-                  {CONSULTATION_METADATA.duration}
-                </span>
-              </div>
-              <div className="flex items-center gap-2 text-zinc-600 px-2">
-                <TbDeviceLaptop className="w-4 h-4 text-[#4DB2E0]" />
-                <span className="text-xs font-semibold truncate">
-                  {CONSULTATION_METADATA.platform}
-                </span>
-              </div>
-              <div className="flex items-center gap-2 text-zinc-600 px-2 col-span-2 sm:col-span-1">
-                <TbCalendarEvent className="w-4 h-4 text-[#4DB2E0]" />
-                <span className="text-xs font-semibold">
-                  {CONSULTATION_METADATA.availability}
-                </span>
-              </div>
-            </div>
 
             {/* Success Overlay Display (Matches ContactPage Absolute Layout Pattern) */}
             {submitted && (
@@ -263,33 +242,33 @@ export default function FreeConsultingPage() {
               className="flex flex-col gap-5 relative z-10"
             >
               {/* Input 1: Identity */}
-              <div className="flex flex-col gap-2 border-b border-zinc-200 py-2.5">
-                <label className="text-sm font-bold tracking-wider text-zinc-400 uppercase">
+              <div className="flex flex-col gap-2 border-b border-zinc-700 py-2.5">
+                <label className="text-sm font-bold uppercase">
                   Full Name
                 </label>
                 <input
                   type="text"
                   required
                   disabled={loading}
-                  placeholder="e.g. Marcus Aurelius"
+                  placeholder="client name"
                   value={formState.fullName}
                   onChange={(e) =>
                     setFormState({ ...formState, fullName: e.target.value })
                   }
-                  className="w-full bg-transparent border-0 outline-hidden p-0 text-base text-zinc-900 placeholder:text-zinc-300 font-medium focus:ring-0 disabled:opacity-50"
+                  className="w-full bg-transparent border-0 outline-hidden p-0 text-base text-zinc-900 placeholder:text-zinc-400 font-medium focus:ring-0 disabled:opacity-50"
                 />
               </div>
 
               {/* Input 2: Communication Coordinates */}
-              <div className="flex flex-col gap-2 border-b border-zinc-200 py-2.5">
-                <label className="text-sm font-bold tracking-wider text-zinc-400 uppercase">
+              <div className="flex flex-col gap-2 border-b border-zinc-700 py-2.5">
+                <label className="text-sm font-bold text-zinc-700 uppercase">
                   Work Email Address
                 </label>
                 <input
                   type="email"
                   required
                   disabled={loading}
-                  placeholder="marcus@enterprise.com"
+                  placeholder="client@upgradeux.com"
                   value={formState.email}
                   onChange={(e) =>
                     setFormState({ ...formState, email: e.target.value })
@@ -299,9 +278,9 @@ export default function FreeConsultingPage() {
               </div>
 
               {/* Input 3: Asset Pointer */}
-              <div className="flex flex-col gap-2 border-b border-zinc-200 py-2.5">
-                <label className="text-sm font-bold tracking-wider text-zinc-400 uppercase">
-                  Current Website / Company URL
+              <div className="flex flex-col gap-2 border-b border-zinc-00 py-2.5">
+                <label className="text-sm font-bold tracking-wider text-zinc-00 uppercase">
+                  Whatsapp mobile number
                 </label>
                 <input
                   type="number"
@@ -316,15 +295,15 @@ export default function FreeConsultingPage() {
               </div>
 
               {/* Input 5: Context Brief */}
-              <div className="flex flex-col gap-2 border-b border-zinc-200 py-2.5">
-                <label className="text-sm font-bold tracking-wider text-zinc-400 uppercase">
-                  What is your core interface bottleneck?
+              <div className="flex flex-col gap-2 border-b border-zinc-00 py-2.5">
+                <label className="text-sm font-bold tracking-wider text-zinc-00 uppercase">
+                  Any Specific message or context you want to share with our team?
                 </label>
                 <textarea
                   rows={3}
                   required
                   disabled={loading}
-                  placeholder="Explain conversion lag, application rendering issues, design layout flaws..."
+                  placeholder="Hii , I am looking for a free consultation regarding my product's UX architecture and would like to discuss potential improvements and strategies."
                   value={formState.message}
                   onChange={(e) =>
                     setFormState({ ...formState, message: e.target.value })
@@ -347,7 +326,7 @@ export default function FreeConsultingPage() {
                 className="inline-flex items-center justify-center gap-2 mt-2 px-6 py-3.5 bg-zinc-950 hover:bg-zinc-900 text-white rounded-xl text-xs font-bold uppercase tracking-widest shadow-md transition-all duration-300 group active:scale-[0.98] disabled:opacity-60 disabled:pointer-events-none"
               >
                 <span>
-                  {loading ? "Processing Brief..." : "Lock Session Slot"}
+                  {loading ? "Processing Brief..." : "send brief & schedule"}
                 </span>
                 {loading ? (
                   <TbLoaderQuarter className="w-4 h-4 animate-spin text-[#4DB2E0]" />
@@ -360,7 +339,7 @@ export default function FreeConsultingPage() {
         </div>
 
         {/* 3. EDGE-TO-EDGE MONOCHROME MAP CONTAINER */}
-        <div className="w-full h-[320px] sm:h-[420px] overflow-hidden border border-zinc-200 relative shadow-inner bg-zinc-100 grayscale contrast-115 brightness-95 transition-all duration-700">
+        <div className="w-full h-80 sm:h-105 overflow-hidden border border-zinc-200 relative shadow-inner bg-zinc-100 grayscale contrast-115 brightness-95 transition-all duration-700">
           <iframe
             title="UpgradeUX Navi Mumbai Location Map"
             src="https://maps.google.com/maps?q=Navi%20Mumbai&t=&z=13&ie=UTF-8&iwloc=&output=embed"
