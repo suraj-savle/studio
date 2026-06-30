@@ -4,6 +4,7 @@ import ServicesPage from "@/components/ui/ServicesPage";
 import DeviceShowcase from "@/components/ui/frames/DeviceFrame";
 import CtaSection from "@/components/ui/CtaSection";
 import FeaturesMarquee from "@/components/ui/FeaturesMarquee";
+import Testimonials from "@/components/ui/Testimonials";
 
 export default function Home() {
   return (
@@ -13,8 +14,9 @@ export default function Home() {
       <div className="min-h-screen">
         <DeviceShowcase />
       </div>
-      <AgencyFAQ />
       <FeaturesMarquee />
+      <Testimonials />
+      <AgencyFAQ />
       <CtaSection />
     </div>
   );

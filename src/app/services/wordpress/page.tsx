@@ -182,7 +182,7 @@ export default function WordPressServicesPage() {
   return (
     <div className="w-full min-h-screen font-sans antialiased bg-zinc-50/70 text-zinc-900 selection:bg-[#4DB2E0]/20 scroll-smooth">
       {/* Editorial Header Section */}
-      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 mb-20">
+      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 md:mb-20">
         <div className="max-w-4xl">
           <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-700 uppercase leading-none">
             WordPress
@@ -246,7 +246,7 @@ export default function WordPressServicesPage() {
           <div className="w-full lg:w-1/2 flex justify-start lg:justify-end">
             <div className="relative">
               <Image
-                src="/wordpress-website.png"
+                src="/services/wordpress-website.png"
                 alt="Premium interface comparison mockup"
                 width={580}
                 height={500}

@@ -84,7 +84,7 @@ export default function CustomWebsitePage() {
   return (
     <div className="w-full min-h-screen font-sans antialiased bg-zinc-50/50 text-zinc-900 selection:bg-[#4DB2E0]/20 scroll-smooth">
       {/* Dynamic Grid Background Overlay */}
-      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 mb-20">
+      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 md:mb-20">
         <div className="max-w-4xl">
           <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-700  leading-none">
             Custom Website
@@ -101,7 +101,7 @@ export default function CustomWebsitePage() {
         {/* Left Image */}
         <div className="flex justify-start">
           <Image
-            src="/customwebsite1.png"
+            src="/services/customwebsite1.png"
             alt="Custom Website Development"
             width={650}
             height={650}

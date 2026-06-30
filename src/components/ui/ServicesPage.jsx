@@ -17,7 +17,7 @@ const DETAILED_SERVICES = [
     subtitle: "Fast, Scalable & Secure Websites",
     description:
       "Building high-performance websites and web applications using modern technologies that deliver exceptional speed, scalability, and seamless user experiences.",
-    image: "/customwebsite1.png",
+    image: "/services/customwebsite1.png",
     icon: TbCode,
     metric: "95+ PageSpeed Score",
     metricIcon: TbGauge,
@@ -35,7 +35,7 @@ const DETAILED_SERVICES = [
     subtitle: "Rank Higher. Load Faster.",
     description:
       "Improve your search visibility with technical SEO, Core Web Vitals optimization, structured data, and performance enhancements that drive long-term organic growth.",
-    image: "/seo.png",
+    image: "/services/seo.png",
     icon: TbSearch,
     metric: "3× Organic Growth",
     metricIcon: TbCpu,

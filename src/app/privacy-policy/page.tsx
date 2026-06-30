@@ -212,7 +212,7 @@ export default function PrivacyPolicyPage() {
       </div>
 
       {/* Hero Header Space Content Container */}
-      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 mb-20">
+      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 md:mb-20">
         <div className="max-w-4xl">
           <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-800  leading-none">
             privacy policy
@@ -275,7 +275,13 @@ export default function PrivacyPolicyPage() {
               </div>
               <div className="text-sm sm:text-base text-zinc-600 leading-relaxed space-y-4">
                 <p>
-                  UpgradeUX is an independent web design and development business operated remotely by Suraj Savle from Mumbai, Maharashtra, India. We provide custom website design, website development, UI/UX design, website redesign, SEO optimization, and related digital services to clients worldwide. This Privacy Policy explains how we collect, use, and protect your information when you use our website or contact us.
+                  UpgradeUX is an independent web design and development
+                  business operated remotely by Suraj Savle from Mumbai,
+                  Maharashtra, India. We provide custom website design, website
+                  development, UI/UX design, website redesign, SEO optimization,
+                  and related digital services to clients worldwide. This
+                  Privacy Policy explains how we collect, use, and protect your
+                  information when you use our website or contact us.
                 </p>
                 <div className="p-5 bg-white rounded-xl border border-zinc-300">
                   <div className="flex items-start gap-3">
@@ -512,7 +518,11 @@ export default function PrivacyPolicyPage() {
                 </h2>
               </div>
               <p className="text-sm sm:text-base text-zinc-600 leading-relaxed">
-                We do not sell, rent, or trade your personal information. Your information may be shared only with trusted third-party service providers that help us operate our business, such as website hosting providers, email delivery services, analytics providers, payment processors, or when required by law.
+                We do not sell, rent, or trade your personal information. Your
+                information may be shared only with trusted third-party service
+                providers that help us operate our business, such as website
+                hosting providers, email delivery services, analytics providers,
+                payment processors, or when required by law.
               </p>
             </section>
 
@@ -572,6 +582,22 @@ export default function PrivacyPolicyPage() {
                 </div>
               </div>
             </section>
+            
+            {/* Footer Note */}
+            <div className="pt-8 border-t border-zinc-200 text-center text-xs text-zinc-400 space-y-1">
+              <p>
+                These Privacy Policy were last updated on{" "}
+                <strong className="text-zinc-600">
+                  1 July 2026
+                </strong>
+                .
+              </p>
+              <p>
+                By engaging our services or using this website, you confirm that
+                you have read, understood, and agree to be bound by these Terms
+                in their entirety.
+              </p>
+            </div>
           </main>
         </div>
       </div>

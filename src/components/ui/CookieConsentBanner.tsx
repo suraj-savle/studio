@@ -49,7 +49,7 @@ export default function CookieConsentBanner() {
         {/* Top Header Segment */}
         <div className="flex items-center justify-between gap-2 mb-3">
           <div className="flex items-center gap-2.5">
-            <Image src="/cookie.png" alt="Cookie Icon" width={24} height={24} />
+            <Image src="/assets/cookie.png" alt="Cookie Icon" width={24} height={24} />
             <div>
               <h3 className="text-xs font-bold text-zinc-950 tracking-tight">Cookie Preferences</h3>
               <p className="text-[10px] text-zinc-500">Manage how we use cookies.</p>

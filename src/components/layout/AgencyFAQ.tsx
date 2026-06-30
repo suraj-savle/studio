@@ -105,7 +105,7 @@ export default function AgencyFAQ() {
     <section className="text-primary py-24 px-6 md:px-12 font-sans">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-start mb-20 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-center md:mb-20 gap-8">
           <div>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-primary leading-[1.1]">
               Frequently Asked
@@ -113,6 +113,11 @@ export default function AgencyFAQ() {
               <span className="text-secondary">Questions</span>
             </h2>
           </div>
+          <p className="text-sm text-secondary/80 max-w-md leading-relaxed">
+            Have questions about our services, processes, or technologies? Here
+            are the answers to the most common inquiries we receive from our
+            clients.
+          </p>
         </div>
 
         {/* FAQ Accordion */}

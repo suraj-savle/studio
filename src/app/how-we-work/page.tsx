@@ -51,7 +51,7 @@ export default function HowWeWorkPage() {
     <div className="w-full min-h-screen font-sans antialiased bg-white text-zinc-950">
       <div>
         {/* 1. TOP HERO BANNER BLOCK */}
-        <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 mb-20">
+        <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 md:mb-20">
           <div className="max-w-4xl">
             <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-700  leading-none">
               How We Work
@@ -131,7 +131,6 @@ export default function HowWeWorkPage() {
               key={activeStep}
               className="flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-2 duration-500"
             >
-
               {/* Subtitle / Spec Tracker */}
               <div className="flex flex-col gap-2 border-b py-2.5">
                 <label className="text-2xl font-bold tracking-wider uppercase text-zinc-800">

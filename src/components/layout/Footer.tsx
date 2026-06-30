@@ -17,6 +17,7 @@ export default function Footer() {
     { name: "Help Center", href: "/help-center" },
     { name: "privacy-policy", href: "/privacy-policy" },
     { name: "Refund Policy", href: "/refund-policy" },
+    { name: "Terms of Service", href: "/terms-service" },
     { name: "Free Consulting", href: "/free-consulting" },
   ];
 

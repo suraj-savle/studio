@@ -190,7 +190,7 @@ const AI_ACRONYMS = [
 export default function SEOOptimisationPage() {
   return (
     <div className="w-full min-h-screen font-sans antialiased bg-gradient-to-br from-zinc-50 via-white to-zinc-50/80 text-zinc-900 selection:bg-[#4DB2E0]/20 scroll-smooth">
-      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 mb-20">
+      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 md:mb-20">
         <div className="max-w-4xl">
           <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-700 leading-none">
             seo optimisation
@@ -254,7 +254,7 @@ export default function SEOOptimisationPage() {
 
           <div className="flex justify-start">
             <Image
-              src="/seo.png"
+              src="/services/seo.png"
               alt="Custom Website Development"
               width={650}
               height={650}

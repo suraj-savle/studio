@@ -30,7 +30,7 @@ const COMPANY_INFO = {
   name: "upgradeUx Agency",
   legalName: "UpgradeUx",
   address:
-    "A-104, Bhoomi Utsav, M.G. Road, Kandivali West, Mumbai – 400067, Maharashtra, India",
+    "Navi Mumbai, Maharashtra, India",
   email: "upgradeux.agency@gmail.com",
   alternateEmail: "iamsurajsavle@gmail.com",
   phone: "+91 8369213418",
@@ -836,6 +836,22 @@ export default function RefundPolicyPage() {
                   </div>
                 </div>
               </div>
+            </div>
+            
+            {/* Footer Note */}
+            <div className="pt-8 border-t border-zinc-200 text-center text-xs text-zinc-400 space-y-1">
+              <p>
+                These Refund Policy were last updated on{" "}
+                <strong className="text-zinc-600">
+                  1 July 2026
+                </strong>
+                .
+              </p>
+              <p>
+                By engaging our services or using this website, you confirm that
+                you have read, understood, and agree to be bound by these Terms
+                in their entirety.
+              </p>
             </div>
           </main>
         </div>

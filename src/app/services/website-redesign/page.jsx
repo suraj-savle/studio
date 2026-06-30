@@ -186,7 +186,7 @@ export default function PremiumRedesignPage() {
   return (
     <div className="w-full min-h-screen font-sans antialiased bg-zinc-50/70 text-zinc-900 selection:bg-[#4DB2E0]/20 scroll-smooth">
       {/* Editorial Header Section */}
-      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 mb-20">
+      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 md:mb-20">
         <div className="max-w-4xl">
           <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-700 leading-none">
             Redesign Website
@@ -248,7 +248,7 @@ export default function PremiumRedesignPage() {
           <div className="w-full lg:w-1/2 flex justify-start lg:justify-end">
             <div className="relative">
               <Image
-                src="/website-redesign.png"
+                src="/services/website-redesign.png"
                 alt="Premium interface comparison mockup"
                 width={580}
                 height={500}
