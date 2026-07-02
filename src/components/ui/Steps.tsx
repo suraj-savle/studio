@@ -7,7 +7,6 @@ import {
   TbCpu,
   TbShieldCheck,
   TbArrowRight,
-  TbSparkles,
   TbCheck,
 } from "react-icons/tb";
 

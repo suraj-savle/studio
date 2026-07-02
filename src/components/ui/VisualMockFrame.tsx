@@ -190,7 +190,7 @@ const SupportMock: React.FC = () => (
           <p className="text-[7px] font-bold text-zinc-400 mb-0.5 pl-1">Client (6 Months Post-Launch) • Just now</p>
           <div className="bg-zinc-100 rounded-2xl rounded-tl-xs px-2.5 py-1.5">
             <p className="text-[9px] font-medium text-zinc-800 leading-tight">
-              Hey team! Our site has been running great, but we need to roll out a quick performance optimization update for today's campaign. Available?
+              Hey team! Our site has been running great, but we need to roll out a quick performance optimization update for today&apos;s campaign. Available?
             </p>
           </div>
         </div>
@@ -199,7 +199,7 @@ const SupportMock: React.FC = () => (
           <p className="text-[7px] font-bold text-zinc-400 mb-0.5 pr-1 text-right">Alex • Agency Lead</p>
           <div className="bg-zinc-950 text-white rounded-2xl rounded-tr-xs px-2.5 py-1.5 shadow-sm">
             <p className="text-[9px] font-medium leading-tight text-zinc-100">
-              Always! Project handoff was just the beginning. We’ve got you covered. Let's push it live. 🚀
+              Always! Project handoff was just the beginning. We’ve got you covered. Let&apos;s push it live. 🚀
             </p>
           </div>
         </div>
