@@ -47,187 +47,160 @@ export default function AgencyFAQ() {
   const answerRefs = useRef<(HTMLDivElement | null)[]>([]);
   const contentRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  const onEnter = (index: number) => {
-    setActiveIndex(index);
-
-    // Force overwrite kills any lingering reverse animations mid-stutter
-    gsap.killTweensOf([answerRefs.current[index], contentRefs.current[index]]);
-
-    const tl = gsap.timeline();
-
-    tl.to(answerRefs.current[index], {
-      height: "auto",
-      opacity: 1,
-      duration: 0.55,
-      ease: "power3.inOut",
-    }).fromTo(
-      contentRefs.current[index],
-      { y: 15, opacity: 0 },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 0.45,
-        ease: "power2.out",
-        force3D: true,
-      },
-      "-=0.3", // Clean overlap sequencing prevents a halting feel
-    );
-  };
-
-  const onLeave = (index: number) => {
-    gsap.killTweensOf([answerRefs.current[index], contentRefs.current[index]]);
-
-    const tl = gsap.timeline({
-      onComplete: () => {
-        setActiveIndex((prev) => (prev === index ? null : prev));
-      },
-    });
-
-    tl.to(contentRefs.current[index], {
-      y: -10,
-      opacity: 0,
-      duration: 0.3,
-      ease: "power2.in",
-      force3D: true,
-    }).to(
-      answerRefs.current[index],
-      {
+  const handleToggle = (index: number) => {
+    const isOpening = activeIndex !== index;
+    
+    // 1. Close current active panel if it exists
+    if (activeIndex !== null) {
+      const closingIndex = activeIndex;
+      gsap.killTweensOf([answerRefs.current[closingIndex], contentRefs.current[closingIndex]]);
+      
+      const closeTl = gsap.timeline();
+      closeTl.to(contentRefs.current[closingIndex], {
+        y: -10,
+        opacity: 0,
+        duration: 0.25,
+        ease: "power2.in",
+      }).to(answerRefs.current[closingIndex], {
         height: 0,
         opacity: 0,
-        duration: 0.4,
+        duration: 0.35,
         ease: "power3.inOut",
-      },
-      "-=0.15",
-    );
+      }, "-=0.15");
+    }
+
+    // 2. Update state index target
+    setActiveIndex(isOpening ? index : null);
+
+    // 3. Open target panel if requested action is expanding
+    if (isOpening) {
+      gsap.killTweensOf([answerRefs.current[index], contentRefs.current[index]]);
+      
+      const openTl = gsap.timeline();
+      openTl.to(answerRefs.current[index], {
+        height: "auto",
+        opacity: 1,
+        duration: 0.45,
+        ease: "power3.inOut",
+      }).fromTo(contentRefs.current[index],
+        { y: 15, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.35,
+          ease: "power2.out",
+          force3D: true,
+        },
+        "-=0.2"
+      );
+    }
   };
 
   return (
-    <section className="text-primary py-24 px-6 md:px-12 font-sans">
+    <section className="text-zinc-950 py-12 sm:py-24 px-6 md:px-12 font-sans bg-white selection:bg-zinc-900/10">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
-        <div className="flex flex-col md:flex-row justify-between items-center md:mb-20 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start sm:items-center mb-10 md:mb-20 gap-8">
           <div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-primary leading-[1.1]">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-zinc-950 leading-[1.1]">
               Frequently Asked
               <br />
-              <span className="text-secondary">Questions</span>
+              <span className="text-zinc-400">Questions</span>
             </h2>
           </div>
-          <p className="text-sm text-secondary/80 max-w-md leading-relaxed">
+          <p className="text-sm text-zinc-500 max-w-md ">
             Have questions about our services, processes, or technologies? Here
             are the answers to the most common inquiries we receive from our
             clients.
           </p>
         </div>
 
-        {/* FAQ Accordion */}
-        <div className="">
-          {faqData.map((item, index) => (
-            <div
-              key={item.id}
-              className="group border-b border-primary/10 will-change-[transform,opacity]"
-              onMouseEnter={() => onEnter(index)}
-              onMouseLeave={() => onLeave(index)}
-            >
-              {/* Removed transition-all duration-300 from here to prevent fighting GSAP layout state changes */}
-              <div className="flex items-start justify-between py-6 md:py-8 cursor-pointer">
-                <div className="flex items-start gap-4 md:gap-8 flex-1">
-                  {/* Question Number */}
-                  <span
-                    className={`text-sm font-mono font-medium transition-colors duration-300 ${
-                      activeIndex === index
-                        ? "text-primary"
-                        : "text-secondary/40"
-                    }`}
-                  >
-                    {item.id}
-                  </span>
-
-                  {/* Question Text */}
-                  <h3
-                    className={`text-xl md:text-2xl lg:text-2xl font-medium tracking-tight transition-colors duration-300 ${
-                      activeIndex === index
-                        ? "text-primary"
-                        : "text-secondary/70 group-hover:text-primary/80"
-                    }`}
-                  >
-                    {item.question}
-                  </h3>
-                </div>
-
-                {/* Expand Icon Frame */}
-                <div className="relative w-8 h-8 flex items-center justify-center ml-4">
-                  <div
-                    className={`relative w-5 h-5 transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] ${
-                      activeIndex === index ? "rotate-45" : "rotate-0"
-                    }`}
-                  >
-                    <span className="absolute top-1/2 left-0 w-full h-px bg-primary/60 -translate-y-1/2" />
-                    <span
-                      className={`absolute top-0 left-1/2 w-px h-full bg-primary/60 -translate-x-1/2 transition-opacity duration-300 ${
-                        activeIndex === index ? "opacity-0" : "opacity-100"
-                      }`}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              {/* Answer Panel Box */}
+        {/* FAQ Accordion Grid Layout */}
+        <div className="border-t border-zinc-200">
+          {faqData.map((item, index) => {
+            const isOpen = activeIndex === index;
+            return (
               <div
-                ref={(el: HTMLDivElement | null) => {
-                  answerRefs.current[index] = el;
-                }}
-                className="h-0 opacity-0 overflow-hidden transform-gpu"
+                key={item.id}
+                className="group border-b border-zinc-200 will-change-[transform,opacity]"
               >
-                <div
-                  ref={(el: HTMLDivElement | null) => {
-                    contentRefs.current[index] = el;
-                  }}
-                  className="pb-6 md:pb-8 pl-12 md:pl-16 pr-4 transform-gpu"
+                {/* Accordion Interactive Header Triggers Toggle on Click */}
+                <button
+                  onClick={() => handleToggle(index)}
+                  className="w-full flex items-start justify-between py-6 md:py-8 cursor-pointer text-left focus:outline-none"
+                  aria-expanded={isOpen}
                 >
-                  <div className="max-w-3xl">
-                    <div className="w-12 h-px bg-primary/20 mb-4" />
-                    <p className="text-secondary text-base leading-relaxed">
-                      {item.answer}
-                    </p>
+                  <div className="flex items-start gap-4 md:gap-8 flex-1">
+                    {/* Question Number Identifier */}
+                    <span
+                      className={`text-sm sm:font-medium transition-colors duration-300 ${
+                        isOpen ? "text-zinc-950" : "text-zinc-300"
+                      }`}
+                    >
+                      {item.id}
+                    </span>
 
-                    {/* Optional CTA within answer */}
-                    {index === faqData.length - 1 && (
-                      <div className="mt-6 pt-4 border-t border-primary/10">
-                        <button className="text-primary font-medium text-sm inline-flex items-center gap-2 group/btn transition-all duration-300 hover:gap-3">
-                          <a href="/contact" className="text-primary font-medium text-sm inline-flex items-center gap-2 group/btn transition-all duration-300 hover:gap-3">
-                            Schedule a consultation
-                          </a>
-                          <svg
-                            className="w-4 h-4 transition-transform group-hover/btn:translate-x-1"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
+                    {/* Question Headline text */}
+                    <h3
+                      className={`text-sm md:text-2xl sm:font-medium transition-colors duration-300 ${
+                        isOpen ? "text-zinc-950" : "text-zinc-600 group-hover:text-zinc-950"
+                      }`}
+                    >
+                      {item.question}
+                    </h3>
+                  </div>
+                </button>
+
+                {/* Answer Hidden Animated Mask Box */}
+                <div
+                  ref={(el) => {
+                    answerRefs.current[index] = el;
+                  }}
+                  className="h-0 opacity-0 overflow-hidden transform-gpu"
+                >
+                  <div
+                    ref={(el) => {
+                      contentRefs.current[index] = el;
+                    }}
+                    className="pb-6 md:pb-8 pl-9 md:pl-14 pr-4 transform-gpu"
+                  >
+                    <div className="max-w-3xl">
+                      <p className="text-zinc-500 text-sm md:text-base sm:font-medium">
+                        {item.answer}
+                      </p>
+
+                      {/* Explicit Action Call internally placed within final card node */}
+                      {index === faqData.length - 1 && (
+                        <div className="mt-6 pt-6 border-t border-zinc-100">
+                          <a
+                            href="/free-consulting"
+                            className="text-zinc-950 text-xs tracking-wider inline-flex items-center gap-2 group/btn transition-all duration-300"
                           >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              strokeWidth={2}
-                              d="M14 5l7 7m0 0l-7 7m7-7H3"
-                            />
-                          </svg>
-                        </button>
-                      </div>
-                    )}
+                            <span>Schedule a consultation</span>
+                            <svg
+                              className="w-4 h-4 transition-transform group-hover/btn:translate-x-1"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2.5}
+                                d="M14 5l7 7m0 0l-7 7m7-7H3"
+                              />
+                            </svg>
+                          </a>
+                        </div>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
-
-      <style jsx>{`
-        .transform-gpu {
-          transform: translateZ(0);
-          backface-visibility: hidden;
-        }
-      `}</style>
     </section>
   );
 }

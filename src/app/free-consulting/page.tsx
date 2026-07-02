@@ -2,8 +2,6 @@
 
 import React, { useState } from "react";
 import {
-  TbCalendarEvent,
-  TbClock,
   TbDeviceLaptop,
   TbMessages,
   TbBulb,

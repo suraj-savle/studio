@@ -37,15 +37,15 @@ const DeviceShowcase: React.FC<DeviceShowcaseProps> = ({
   return (
     <div
       ref={containerRef}
-      className={`w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 flex flex-col items-center justify-center bg-zinc-50/40 rounded-3xl ${className}`}
+      className={`w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-24 flex flex-col items-center justify-center bg-zinc-50/40 rounded-3xl ${className}`}
     >
-      <div className="w-full max-w-2xl text-center mb-12 sm:mb-16 flex flex-col items-center">
+      <div className="w-full max-w-2xl text-center mb-10 sm:mb-16 flex flex-col items-center">
         <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-zinc-900 text-zinc-100 rounded-full text-[11px] font-mono tracking-wider uppercase mb-4 border border-zinc-800">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-          Omnichannel Delivery
+           Delivery
         </div>
 
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-900 sm:text-5xl">
+        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-900">
           Flawless on every viewport.
         </h2>
 
@@ -57,19 +57,19 @@ const DeviceShowcase: React.FC<DeviceShowcaseProps> = ({
       </div>
 
       <div className="w-full max-w-md sm:max-w-none flex flex-row items-center justify-center native-device-composite select-none pointer-events-none origin-center px-2 sm:px-0">
-        <div className="max-w-[130px] sm:max-w-[160px] lg:max-w-[220px] xl:max-w-[260px] flex justify-center order-1 z-30 -mr-8 sm:-mr-12 xl:-mr-14 sm:scale-90 select-none">
+        <div className="max-w-[110px] sm:max-w-[160px] lg:max-w-[220px] xl:max-w-[260px] flex justify-center order-1 z-30 -mr-8 sm:-mr-12 xl:-mr-14 sm:scale-90 select-none">
           <TabletFrame
             videoSrc={tabletVideo}
           />
         </div>
 
-        <div className="max-w-[360px] sm:max-w-[380px] lg:max-w-[460px] xl:max-w-[620px] flex justify-center order-2 z-20 relative select-none">
+        <div className="max-w-[400px] sm:max-w-[380px] lg:max-w-[460px] xl:max-w-[620px] flex justify-center order-2 z-20 relative select-none">
           <LaptopFrame
             videoSrc={laptopVideo}
           />
         </div>
 
-        <div className="max-w-[95px] sm:max-w-[100px] lg:max-w-[130px] xl:max-w-[150px] flex justify-center order-3 z-30 -ml-10 sm:-ml-14 xl:-ml-16 sm:scale-95 select-none pt-2 sm:pt-6">
+        <div className="max-w-[75px] sm:max-w-[100px] lg:max-w-[130px] xl:max-w-[150px] flex justify-center order-3 z-30 -ml-10 sm:-ml-14 xl:-ml-16 sm:scale-95 select-none pt-2 sm:pt-6">
           <MobileFrame
             videoSrc={mobileVideo}
           />

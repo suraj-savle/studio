@@ -124,7 +124,7 @@ export default function Footer() {
         <div className="flex w-full max-w-sm flex-col gap-6 lg:ml-auto">
           {/* EMAIL */}
           <a
-            href="mailto:upgradeux@gmail.com"
+            href="mailto:upgradeux.agency@gmail.com"
             className="group flex items-center justify-between border-b border-zinc-200 pb-4"
           >
             <div>
@@ -133,7 +133,7 @@ export default function Footer() {
               </p>
 
               <h4 className="mt-1 text-base font-semibold text-zinc-950">
-                upgradeux@gmail.com
+                upgradeux.agency@gmail.com
               </h4>
             </div>
 

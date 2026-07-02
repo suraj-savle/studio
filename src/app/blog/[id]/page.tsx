@@ -5,25 +5,28 @@ import { notFound } from "next/navigation";
 import { TbArrowLeft } from "react-icons/tb";
 import { FiCalendar, FiClock, FiTag } from "react-icons/fi";
 import { getPostById, getRelatedPosts } from "@/lib/posts";
+import { MediaContainer } from "@/components/MediaContainer"; // Path to your loader component
 
 interface PageProps {
-  params: Promise<{ id: string }>; // Changed from slug to id
+  params: Promise<{ id: string }>;
 }
 
 export default async function BlogDetailPage({ params }: PageProps) {
-  const resolvedParams = await params;
-  const post = getPostById(resolvedParams.id); // Use id directly
+  const { id } = await params;
+  const post = getPostById(id);
 
   if (!post) {
     notFound();
   }
 
+  // Pre-fetching related posts simultaneously
   const relatedPosts = getRelatedPosts(post.id);
 
   return (
     <>
-      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12"></div>
-      <article className="w-full max-w-5xl mx-auto px-6 pb-20 animate-in fade-in duration-300">
+      <div className="w-full h-64 sm:h-80 bg-gradient-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12"></div>
+      <article className="w-full max-w-5xl mx-auto px-6 pb-20  animate-in fade-in duration-300 z-99">
+        
         {/* Back Navigation */}
         <Link
           href="/blog"
@@ -35,7 +38,6 @@ export default async function BlogDetailPage({ params }: PageProps) {
 
         {/* Header */}
         <header className="mb-10">
-          {/* Category & Meta */}
           <div className="flex flex-wrap items-center gap-3 text-sm font-mono text-zinc-400 mb-4">
             {post.category && (
               <>
@@ -56,13 +58,11 @@ export default async function BlogDetailPage({ params }: PageProps) {
             </span>
           </div>
 
-          {/* Title */}
-          <h1 className="text-3xl md:text-5xl font-extrabold text-zinc-700 tracking-tight leading-tight mb-4">
+          <h1 className="text-2xl md:text-5xl font-extrabold text-zinc-700 tracking-tight leading-tight mb-4">
             {post.title}
           </h1>
 
-          {/* Excerpt */}
-          <p className="text-lg font-medium text-zinc-500 leading-relaxed py-1 max-w-2xl">
+          <p className="text-sm md:text-lg font-medium text-zinc-500 leading-relaxed py-1 max-w-2xl">
             {post.excerpt}
           </p>
 
@@ -75,6 +75,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
                     src={post.author.avatar}
                     alt={post.author.name}
                     fill
+                    sizes="48px"
                     className="object-cover"
                   />
                 ) : (
@@ -93,33 +94,26 @@ export default async function BlogDetailPage({ params }: PageProps) {
           )}
         </header>
 
-        {/* Cover Image */}
+        {/* Cover Image Wrapper with Loader */}
         {post.coverImage && (
-          <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden mb-10 bg-zinc-100 shadow-lg">
-            <Image
-              src={post.coverImage}
-              alt={post.title}
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
+          <MediaContainer 
+            type="image" 
+            src={post.coverImage} 
+            alt={post.title} 
+            priority={true} 
+          />
         )}
 
-        {/* Video Embed */}
+        {/* Video Embed Wrapper with Loader */}
         {post.videoUrl && (
-          <div className="relative w-full aspect-[16/9] rounded-2xl overflow-hidden mb-10 shadow-lg">
-            <iframe
-              src={post.videoUrl}
-              title={`${post.title} - Video`}
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-              className="w-full h-full"
-            />
-          </div>
+          <MediaContainer 
+            type="video" 
+            src={post.videoUrl} 
+            alt={post.title} 
+          />
         )}
 
-        {/* Content - Renders TSX content directly */}
+        {/* Content */}
         <div className="prose prose-zinc max-w-none text-base text-zinc-800 leading-relaxed pt-6 border-t border-zinc-100">
           {post.content}
         </div>
@@ -168,7 +162,6 @@ export default async function BlogDetailPage({ params }: PageProps) {
   );
 }
 
-// Generate static paths for all blog posts
 export async function generateStaticParams() {
   const { getAllPosts } = await import("@/lib/posts");
   const posts = getAllPosts();

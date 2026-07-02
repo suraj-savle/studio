@@ -36,7 +36,7 @@ const MobileFrame: React.FC<MobileFrameProps> = ({
       <div className="relative w-full max-w-[170px] xs:max-w-[210px] sm:max-w-[240px] md:max-w-[280px]">
         
         {/* Gray Mobile Outer Bezel/Chassis */}
-        <div className="relative bg-zinc-300 p-0.5 xs:p-1 sm:p-1 rounded-[20px] xs:rounded-[26px] sm:rounded-[16px] shadow-md border border-zinc-400/60 ring-1 ring-black/5">
+        <div className="relative bg-zinc-300 p-0.5 xs:p-1 sm:p-1 rounded-[12px] xs:rounded-[26px] sm:rounded-[16px] shadow-md border border-zinc-400/60 ring-1 ring-black/5">
           
           {/* Top Speaker/Camera Dynamic Island Component */}
           <div className="absolute top-1 xs:top-2 sm:top-2 left-1/2 -translate-x-1/2 w-6 xs:w-8 h-1.5 xs:h-2.5 bg-zinc-400 rounded-full z-20 flex items-center justify-end px-0.5 xs:px-1 border border-zinc-500/30 shadow-inner">
@@ -46,7 +46,7 @@ const MobileFrame: React.FC<MobileFrameProps> = ({
           </div>
           
           {/* Screen Display Area */}
-          <div className="relative bg-zinc-950 rounded-[18px] xs:rounded-[22px] sm:rounded-[16px] overflow-hidden aspect-[9/19.5] shadow-inner z-10 border border-zinc-900/40">
+          <div className="relative bg-zinc-950 rounded-[12px] xs:rounded-[22px] sm:rounded-[16px] overflow-hidden aspect-[9/19.5] shadow-inner z-10 border border-zinc-900/40">
             {videoSrc ? (
               <video
                 ref={videoRef}
