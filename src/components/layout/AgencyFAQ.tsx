@@ -102,13 +102,13 @@ export default function AgencyFAQ() {
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start sm:items-center mb-10 md:mb-20 gap-8">
           <div>
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-medium text-zinc-950 leading-[1.1]">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl text-zinc-950 leading-[1.1]">
               Frequently Asked
               <br />
-              <span className="text-zinc-400">Questions</span>
+              <span className="text-zinc-900">Questions</span>
             </h2>
           </div>
-          <p className="text-sm text-zinc-500 max-w-md ">
+          <p className="text-sm text-zinc-700 max-w-sm ">
             Have questions about our services, processes, or technologies? Here
             are the answers to the most common inquiries we receive from our
             clients.

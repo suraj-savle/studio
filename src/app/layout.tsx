@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Poppins, Geist } from "next/font/google";
 import "./globals.css";
 import SmoothScrolling from "@/components/ui/SmoothScrolling";
-import Navbar from "@/components/layout/navbar";
+import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CookieConsentBanner from "@/components/ui/CookieConsentBanner";
 

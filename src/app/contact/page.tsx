@@ -122,10 +122,10 @@ export default function ContactPage() {
                   Email
                 </span>
                 <a
-                  href="mailto:iamsurajsavle@gmail.com"
+                  href="mailto:upgradeux.agency@gmail.com"
                   className="text-base font-bold text-zinc-900 hover:text-[#4DB2E0] transition-colors"
                 >
-                  iamsurajsavle@gmail.com
+                  upgradeux.agency@gmail.com
                 </a>
               </div>
 
@@ -200,7 +200,7 @@ export default function ContactPage() {
             >
               {/* Input 1: Full Name */}
               <div className="flex flex-col gap-2 border-b border-zinc-200 py-2.5">
-                <label className="text-sm font-bold tracking-wider text-zinc-400 uppercase">
+                <label className="text-sm font-bold tracking-wider text-zinc-700 uppercase">
                   Name
                 </label>
                 <input
@@ -218,7 +218,7 @@ export default function ContactPage() {
 
               {/* Input 2: Email */}
               <div className="flex flex-col gap-2 border-b border-zinc-200 py-2.5">
-                <label className="text-sm font-bold tracking-wider text-zinc-400 uppercase">
+                <label className="text-sm font-bold tracking-wider text-zinc-700 uppercase">
                   Email Address
                 </label>
                 <input
@@ -236,7 +236,7 @@ export default function ContactPage() {
 
               {/* Input 3: Subject */}
               <div className="flex flex-col gap-2 border-b border-zinc-200 py-2.5">
-                <label className="text-sm font-bold tracking-wider text-zinc-400 uppercase">
+                <label className="text-sm font-bold tracking-wider text-zinc-700 uppercase">
                   Subject
                 </label>
                 <input
@@ -254,7 +254,7 @@ export default function ContactPage() {
 
               {/* Input 4: Message */}
               <div className="flex flex-col gap-2 border-b border-zinc-200 py-2.5">
-                <label className="text-sm font-bold tracking-wider text-zinc-400 uppercase">
+                <label className="text-sm font-bold tracking-wider text-zinc-700 uppercase">
                   Message
                 </label>
                 <textarea

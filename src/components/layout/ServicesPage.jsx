@@ -110,12 +110,12 @@ export default function ServicesShowcaseRows() {
                   <div className="space-y-4">
                     <div className="flex items-center gap-2">
                       <Icon className="text-sm text-zinc-400 group-hover:text-zinc-950 transition-colors duration-300" />
-                      <span className="text-[10px] font-mono font-bold tracking-widest text-zinc-400 uppercase">
+                      <span className="text-[10px] font-medium tracking-widest text-zinc-400 uppercase">
                         {service.subtitle}
                       </span>
                     </div>
 
-                    <h3 className="text-2xl md:text-3xl font-black tracking-tight text-zinc-900 group-hover:translate-x-1 transition-transform duration-500">
+                    <h3 className="text-2xl md:text-3xl font-medium tracking-tight text-zinc-900 group-hover:translate-x-1 transition-transform duration-500">
                       {service.title}
                     </h3>
                     <p className="text-xs md:text-sm leading-relaxed text-zinc-500 font-normal max-w-xl">

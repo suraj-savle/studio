@@ -1,11 +1,11 @@
 import Hero from "@/components/Landing/Hero";
 import AgencyFAQ from "@/components/layout/AgencyFAQ";
-import ServicesPage from "@/components/ui/ServicesPage";
+import ServicesPage from "@/components/layout/ServicesPage";
 import DeviceShowcase from "@/components/ui/frames/DeviceFrame";
-import CtaSection from "@/components/ui/CtaSection";
-import Testimonials from "@/components/ui/Testimonials";
-import VisualMockFrame from "@/components/ui/VisualMockFrame";
-import Steps from "@/components/ui/Steps";
+import CtaSection from "@/components/layout/CtaSection";
+import Testimonials from "@/components/layout/Testimonials";
+import VisualMockFrame from "@/components/layout/Features";
+import Steps from "@/components/layout/HowWework";
 
 export default function Home() {
   return (

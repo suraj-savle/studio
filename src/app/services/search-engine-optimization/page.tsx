@@ -236,7 +236,7 @@ export default function SEOOptimisationPage() {
                 rel="noopener noreferrer"
                 className="group flex items-center gap-2.5 rounded-xl bg-zinc-900 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-zinc-800 shadow-sm hover:shadow-lg hover:shadow-zinc-900/20"
               >
-                Get Your Free Audit
+                Schedule a Free Consultation
                 <TbArrowUpRight className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </a>
 
@@ -521,7 +521,7 @@ export default function SEOOptimisationPage() {
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 px-8 py-3.5 bg-white text-zinc-900 font-semibold rounded-xl hover:shadow-xl transition-all hover:scale-[1.02] active:scale-[0.98]"
               >
-                Get Your Free Audit
+                Schedule a Free Consultation
                 <TbArrowUpRight className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </a>
               <a

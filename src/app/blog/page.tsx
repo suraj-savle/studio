@@ -1,5 +1,5 @@
 import React from "react";
-import BlogCard from "@/components/ui/BlogCard";
+import BlogCard from "@/components/ui/blog/BlogCard";
 import { getAllPosts, getFeaturedPosts } from "@/lib/posts";
 
 export const metadata = {

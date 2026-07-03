@@ -2,12 +2,8 @@
 
 import React from "react";
 import { GoGraph } from "react-icons/go";
-import {
-  TbTrendingUp,
-  TbHeadset,
-  TbBellRinging,
-} from "react-icons/tb";
-import WalletCards from "./WalletCards";
+import { TbTrendingUp, TbHeadset, TbBellRinging } from "react-icons/tb";
+import WalletCards from "../ui/WalletCards";
 import { MdOutlineSecurity } from "react-icons/md";
 import { Sparkles, Zap, Layout } from "lucide-react";
 
@@ -138,21 +134,19 @@ const RedesignMock: React.FC = () => (
                 label: "All Devices",
                 color:
                   "text-emerald-600 bg-emerald-50/70 border-emerald-100/50",
-                icon: <Layout  className="w-2 h-2 text-emerald-500 shrink-0" />,
+                icon: <Layout className="w-2 h-2 text-emerald-500 shrink-0" />,
               },
               {
                 text: "Performance Optimized",
                 label: "90+ Score",
                 color: "text-sky-600 bg-sky-50/70 border-sky-100/50",
-                icon: <Zap  className="w-2 h-2 text-sky-500 shrink-0" />,
+                icon: <Zap className="w-2 h-2 text-sky-500 shrink-0" />,
               },
               {
                 text: "Easy to Manage",
                 label: "CMS",
                 color: "text-indigo-600 bg-indigo-50/70 border-indigo-100/50",
-                icon: (
-                  <Sparkles  className="w-2 h-2 text-indigo-500 shrink-0" />
-                ),
+                icon: <Sparkles className="w-2 h-2 text-indigo-500 shrink-0" />,
               },
             ].map((item, idx) => (
               <div
