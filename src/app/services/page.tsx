@@ -22,7 +22,7 @@ const ALL_EXTENDED_SERVICES = [
     subtitle: "High-Fidelity Interface Engineering",
     description:
       "Architecting atomic components, modular type hierarchies, and fluid interaction variables. We deliver predictable transactional flows that scale directly into clean multi-brand production engines.",
-    image: "/customwebsite.png",
+    image: "/services/customwebsite.png",
     icon: TbPalette,
     metric: "40% Conversion Lift",
     metricIcon: TbActivityHeartbeat,
@@ -39,7 +39,7 @@ const ALL_EXTENDED_SERVICES = [
     subtitle: "Performance-Driven Core Architectures",
     description:
       "Engineering decoupled serverless Next.js, React, and strict Tailwind modules optimized for critical loading phases, edge middleware caching, and robust relational data layouts.",
-    image: "/customwebsite1.png",
+    image: "/services/customwebsite1.png",
     icon: TbCode,
     metric: "0.2s Time to Interactive",
     metricIcon: TbGauge,
@@ -55,7 +55,7 @@ const ALL_EXTENDED_SERVICES = [
     subtitle: "Custom Brand Showcases & Developer Kits",
     description:
       "Engineering lightning-fast, highly animated digital portfolios and resume platforms built with smooth micro-interactions, clean layout patterns, and robust content systems designed to secure premium inquiries.",
-    image: "/portfolio.png",
+    image: "/services/portfolio.png",
     icon: TbLayoutDashboard, // Or use TbBriefcase / TbUserCheck from your current imports
     metric: "100% Core Web Vitals",
     metricIcon: TbBolt,
@@ -72,7 +72,7 @@ const ALL_EXTENDED_SERVICES = [
     subtitle: "Structural Search Discoverability",
     description:
       "Structuring semantic schema markup injections, edge-rendered XML indexes, and fast caching configurations to systematically capture massive scale multi-market user acquisition.",
-    image: "/seo.png",
+    image: "/services/seo.png",
     icon: TbSearch,
     metric: "3x Organic Discovery Index",
     metricIcon: TbCpu,
@@ -89,7 +89,7 @@ const ALL_EXTENDED_SERVICES = [
     subtitle: "Enterprise Content Infrastructure",
     description:
       "Transforming monolithic WordPress setups into lightning-fast platforms using custom Gutenberg block development, decoupled Headless React architectures, and high-security caching structures.",
-    image: "/wordpress-website.png",
+    image: "/services/wordpress-website.png",
     icon: TbGlobe, // Represents the open-web nature of WP
     metric: "Under 1.2s Content Load",
     metricIcon: TbBolt,
