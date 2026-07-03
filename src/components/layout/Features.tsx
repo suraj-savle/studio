@@ -483,10 +483,10 @@ const FeatureCard: React.FC<{ feature: FeatureItem }> = ({ feature }) => {
 export default function AgencyFeatures() {
   return (
     <section
-      className="w-full max-w-7xl mx-auto py-24 px-6 md:px-12 antialiased border-t border-zinc-100"
+      className="w-full max-w-7xl mx-auto py-12 md:py-24 px-4 antialiased"
       aria-labelledby="features-heading"
     >
-      <div className="w-full max-w-7xl">
+      <div className="w-full">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <h2
             id="features-heading"

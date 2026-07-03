@@ -49,7 +49,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="max-w-7xl mx-auto px-[6px] px-[12px] bg-white py-12 sm:py-20 select-none border-t border-zinc-100">
+    <section className="max-w-7xl mx-auto px-4 bg-white py-12 sm:py-20 select-none border-t border-zinc-100">
       {/* Global CSS Inject Block for Marquee Track Architecture */}
       <style jsx global>{`
         @keyframes marquee {
@@ -98,12 +98,12 @@ export default function Testimonials() {
             return (
               <div
                 key={idx}
-                className="relative flex flex-col justify-between p-6 bg-[#F2F2F2] backdrop-blur-md hover:bg-white border border-zinc-200/60 hover:border-[#4DB2E0]/40 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 ease-out w-80 shrink-0 group/card"
+                className="relative flex flex-col justify-between p-6 bg-[#f2f2f258] backdrop-blur-md hover:bg-white border border-zinc-200/60 hover:border-[#4DB2E0]/40 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 ease-out w-80 shrink-0 group/card"
               >
                 {/* Top Profile Header Area */}
                 <div className="flex flex-col items-center text-center gap-3">
                   {/* Avatar Ring */}
-                  <div className="relative w-10 h-10 overflow-hidden rounded-full border border-zinc-200 shrink-0 bg-zinc-50 flex items-center justify-center transition-transform duration-300 group-hover/card:scale-105">
+                  <div className="relative w-10 h-10 overflow-hidden rounded-full border border-zinc-200 shrink-0 bg-[#4db1e074] flex items-center justify-center transition-transform duration-300 group-hover/card:scale-105">
                     {item.avatar && item.avatar.trim() !== "" ? (
                       <Image
                         src={item.avatar}
@@ -113,24 +113,24 @@ export default function Testimonials() {
                         className="object-cover"
                       />
                     ) : (
-                      <TbUser className="w-4 h-4 text-zinc-400" />
+                      <TbUser className="w-5 h-5 text-zinc-900" />
                     )}
                   </div>
 
                   {/* Identity Texts with Precise Fallbacks */}
                   <div className="flex flex-col items-center justify-center min-w-0 max-w-full">
-                    <h4 className="text-xs font-bold text-zinc-950 tracking-tight truncate w-full">
+                    <h4 className="text-sm font-medium text-zinc-950 tracking-tight truncate w-full">
                       {item.author}
                     </h4>
 
                     {hasMeta && (
-                      <p className="text-[10px] font-medium text-zinc-400 mt-0.5 truncate w-full px-2">
+                      <p className="text-xs font-medium text-zinc-400 mt-0.5 truncate w-full px-2">
                         {hasRole && <span>{item.role}</span>}
                         {hasRole && hasCompany && (
                           <span className="mx-1 opacity-60">at</span>
                         )}
                         {hasCompany && (
-                          <span className="text-[#4DB2E0] font-semibold transition-colors">
+                          <span className="text-[#4DB2E0] transition-colors">
                             {item.company}
                           </span>
                         )}

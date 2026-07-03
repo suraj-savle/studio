@@ -171,7 +171,7 @@ export default function HowItWorks() {
 
   return (
     <section
-      className="w-full py-12 sm:py-24 px-4 md:px-12  border-t border-zinc-200/30 selection:bg-zinc-950/10"
+      className="w-full max-w-7xl mx-auto py-12 sm:py-24 px-4  border-t border-zinc-200/30 selection:bg-zinc-950/10"
       aria-labelledby="process-heading"
     >
       <div className="max-w-7xl mx-auto relative">
@@ -203,7 +203,7 @@ export default function HowItWorks() {
           <div className="lg:col-span-5 flex justify-center relative min-h-[380px] lg:min-h-[460px]">
             {/* The SVG Curved Timeline Tracker */}
             <svg
-              className="absolute left-[10%] sm:left-[25%] lg:left-[-30%] top-0 h-full w-40 pointer-events-none hidden sm:block"
+              className="absolute left-[10%] sm:left-[25%] lg:left-[-33%] top-0 h-full w-40 pointer-events-none hidden sm:block"
               viewBox="0 0 100 400"
               fill="none"
               preserveAspectRatio="none"

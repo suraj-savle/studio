@@ -97,7 +97,7 @@ export default function AgencyFAQ() {
   };
 
   return (
-    <section className="text-zinc-950 py-12 sm:py-24 px-6 md:px-12 font-sans bg-white selection:bg-zinc-900/10">
+    <section className="max-w-7xl mx-auto text-zinc-950 py-12 sm:py-24 px-4 font-sans bg-white selection:bg-zinc-900/10">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-start sm:items-center mb-10 md:mb-20 gap-8">
