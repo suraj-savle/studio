@@ -2,7 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
-import { TbStarFilled, TbQuote, TbArrowUpRight, TbUser } from "react-icons/tb";
+import { TbUser } from "react-icons/tb";
 
 interface Testimonial {
   quote: string;

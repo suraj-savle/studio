@@ -4,8 +4,8 @@ import ServicesPage from "@/components/layout/ServicesPage";
 import DeviceShowcase from "@/components/ui/frames/DeviceFrame";
 import CtaSection from "@/components/layout/CtaSection";
 import Testimonials from "@/components/layout/Testimonials";
-import VisualMockFrame from "@/components/layout/Features";
-import Steps from "@/components/layout/HowWework";
+import Features from "@/components/layout/Features";
+import HowWework from "@/components/layout/HowWework";
 
 export default function Home() {
   return (
@@ -15,9 +15,9 @@ export default function Home() {
       <div className="max-h-screen">
         <DeviceShowcase />
       </div>
-      <VisualMockFrame />
+      <HowWework />
+      <Features />
       <Testimonials />
-      <Steps />
       <AgencyFAQ />
       <CtaSection />
     </div>
