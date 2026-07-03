@@ -35,13 +35,16 @@ export const post: BlogPost = {
 
       <p className="text-lg my-4">
         We started UpgradeUX with one simple goal — to help businesses build
-        websites that don&apos;t just look impressive but actually generate results.
-        Too many websites are slow, outdated, difficult to use, and fail to
-        convert visitors into customers. We believe every business deserves a
-        digital experience that is fast, modern, and built with purpose.
+        websites that don&apos;t just look impressive but actually generate
+        results. Too many websites are slow, outdated, difficult to use, and
+        fail to convert visitors into customers. We believe every business
+        deserves a digital experience that is fast, modern, and built with
+        purpose.
       </p>
 
-      <h2 className="text-2xl font-medium my-2">Why We Started <strong>UpgradeUX</strong>.</h2>
+      <h2 className="text-2xl font-medium my-2">
+        Why We Started <strong>UpgradeUX</strong>.
+      </h2>
 
       <p className="text-lg my-4">
         Every brand has a story worth sharing. Unfortunately, many websites fail
@@ -83,14 +86,17 @@ export const post: BlogPost = {
       <h2 className="text-2xl font-medium my-4">Our Approach</h2>
 
       <p className="text-lg my-2">
-        As a team led by a full-stack developer, every single line of code we write 
-        is tuned for maximum efficiency. We don&apos;t use generic templates or 
-        one-size-fits-all solutions. Every website is carefully planned from the 
-        ground up using advanced architectures like Next.js, prioritizing lightning-fast 
-        performance, fluid animations, and intuitive interfaces.
+        As a team led by a full-stack developer, every single line of code we
+        write is tuned for maximum efficiency. We don&apos;t use generic
+        templates or one-size-fits-all solutions. Every website is carefully
+        planned from the ground up using advanced architectures like Next.js,
+        prioritizing lightning-fast performance, fluid animations, and intuitive
+        interfaces.
       </p>
 
-      <h2 className="text-2xl font-medium my-4">Why Businesses Choose UpgradeUX</h2>
+      <h2 className="text-2xl font-medium my-4">
+        Why Businesses Choose UpgradeUX
+      </h2>
 
       <ul className="list-disc list-inside text-lg my-4">
         <li>Modern, glassmorphism aesthetics and responsive layouts</li>
@@ -98,7 +104,7 @@ export const post: BlogPost = {
         <li>SEO-friendly architecture out of the box</li>
         <li>Clean, modular, and maintainable codebases</li>
         <li>Transparent communication throughout the sprint lifecycle</li>
-        <li>Reliable post-launch support</li>
+        <li>Reliable Support That Doesn&apos;t End at Launch</li>
       </ul>
 
       <div className="bg-primary-50 border border-primary-200 rounded-xl p-6 my-8">
@@ -124,12 +130,14 @@ export const post: BlogPost = {
         developer, we hope you&apos;ll find valuable insights here.
       </p>
 
-      <h2 className="text-2xl font-medium my-4">Let&apos;s Build Something Great</h2>
+      <h2 className="text-2xl font-medium my-4">
+        Let&apos;s Build Something Great
+      </h2>
 
       <p className="text-lg my-4">
-        If you&apos;re planning your next website or digital product, we&apos;d love to
-        hear about your project. Together, let&apos;s create an experience your users
-        will remember.
+        If you&apos;re planning your next website or digital product, we&apos;d
+        love to hear about your project. Together, let&apos;s create an
+        experience your users will remember.
       </p>
     </>
   ),

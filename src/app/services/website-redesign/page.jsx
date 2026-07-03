@@ -30,7 +30,7 @@ const REDESIGN_PHASES = [
   "Create a modern custom design tailored to your brand.",
   "Develop a fast, responsive website using modern technologies.",
   "Test across desktop, tablet, and mobile devices.",
-  "Launch smoothly with post-launch support included.",
+  "Launch smoothly with Support That Doesn't End at Launch included.",
 ];
 
 const METRIC_BENEFITS = [

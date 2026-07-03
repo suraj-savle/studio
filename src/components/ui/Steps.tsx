@@ -92,7 +92,11 @@ const STEPS: ProcessStep[] = [
       { label: "Support", value: "30 Days" },
     ],
     accentColor: "zinc",
-    features: ["Quality Assurance", "Secure Deployment", "Post-Launch Support"],
+    features: [
+      "Quality Assurance",
+      "Secure Deployment",
+      "Support That Doesn't End at Launch",
+    ],
   },
 ];
 
@@ -129,7 +133,9 @@ const FeaturePill: React.FC<{ text: string; delay: number }> = ({
     style={{ animationDelay: `${delay}ms` }}
   >
     <TbCheck className="w-3 h-3 text-emerald-500" />
-    <span className="text-[6px] sm:text-[10px] font-medium text-zinc-700">{text}</span>
+    <span className="text-[6px] sm:text-[10px] font-medium text-zinc-700">
+      {text}
+    </span>
   </div>
 );
 

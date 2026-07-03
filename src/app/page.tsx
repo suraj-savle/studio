@@ -5,7 +5,6 @@ import DeviceShowcase from "@/components/ui/frames/DeviceFrame";
 import CtaSection from "@/components/ui/CtaSection";
 import Testimonials from "@/components/ui/Testimonials";
 import VisualMockFrame from "@/components/ui/VisualMockFrame";
-import WalletCards from "@/components/ui/WalletCards";
 import Steps from "@/components/ui/Steps";
 
 export default function Home() {
@@ -20,7 +19,6 @@ export default function Home() {
       <Testimonials />
       <Steps />
       <AgencyFAQ />
-      <WalletCards />
       <CtaSection />
     </div>
   );
