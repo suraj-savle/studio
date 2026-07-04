@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { TbUser } from "react-icons/tb";
+import { FaQuoteLeft } from "react-icons/fa";
 
 interface Testimonial {
   quote: string;
@@ -11,7 +12,7 @@ interface Testimonial {
   company: string;
   metricLabel: string;
   metricValue: string;
-  avatar?: string; // Made optional to natively handle missing paths
+  avatar?: string;
 }
 
 export default function Testimonials() {
@@ -48,106 +49,158 @@ export default function Testimonials() {
     },
   ];
 
+  const row1 = [...reviews, ...reviews, ...reviews];
+  const row2 = [...reviews, ...reviews, ...reviews];
+  const row3 = [...reviews, ...reviews, ...reviews];
+
+  const CardContent = ({ item }: { item: Testimonial }) => {
+    const hasRole = item.role && item.role.trim() !== "";
+    const hasCompany = item.company && item.company.trim() !== "";
+    const hasMeta = hasRole || hasCompany;
+
+    return (
+      <div className="group/card relative flex flex-col p-6 mb-6 bg-white/80 backdrop-blur-xl border border-gray-200 rounded-2xl shadow-[0000003b] hover:shadow-[#0000003b] transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#00000034]">
+        {/* Gradient Background on Hover */}
+        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#4DB2E0]/0 via-[#4DB2E0]/0 to-[#4DB2E0]/5 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500" />
+        
+        {/* Content */}
+        <div className="relative z-10">
+          {/* Quote Icon */}
+          <FaQuoteLeft className="text-[#4DB2E0]/20 text-2xl mb-4 group-hover/card:text-[#000000b7] transition-colors duration-300" />
+          
+          {/* Quote Text */}
+          <p className="text-sm text-zinc-600 leading-relaxed font-normal antialiased mb-6 line-clamp-4 group-hover/card:text-zinc-500 transition-colors duration-300">
+            &ldquo;{item.quote}&rdquo;
+          </p>
+
+          {/* Divider */}
+          <div className="w-full h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent mb-5 group-hover/card:via-[#4DB2E0]/30 transition-all duration-300" />
+
+          {/* Footer */}
+          <div className="flex items-center gap-4">
+            {/* Avatar */}
+            <div className="relative w-12 h-12 overflow-hidden rounded-full border-2 border-zinc-100 group-hover/card:border-[#4DB2E0]/30 transition-all duration-300 shrink-0 bg-gradient-to-br from-[#000a0e58] to-[#000000] flex items-center justify-center">
+              {item.avatar && item.avatar.trim() !== "" ? (
+                <Image
+                  src={item.avatar}
+                  alt={item.author}
+                  fill
+                  sizes="48px"
+                  className="object-cover"
+                />
+              ) : (
+                <TbUser className="w-5 h-5 text-zinc-100 group-hover/card:text-[#000000] transition-colors duration-300" />
+              )}
+            </div>
+
+            {/* Author Info */}
+            <div className="flex-1 min-w-0">
+              <h4 className="text-sm font-semibold text-zinc-900 tracking-tight group-hover/card:text-[#00000082] transition-colors duration-300">
+                {item.author}
+              </h4>
+              {hasMeta && (
+                <p className="text-xs text-zinc-400 mt-0.5 truncate">
+                  {hasRole && <span>{item.role}</span>}
+                  {hasRole && hasCompany && <span className="mx-1">·</span>}
+                  {hasCompany && (
+                    <span className="text-zinc-500 font-medium">
+                      {item.company}
+                    </span>
+                  )}
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <section className="max-w-7xl mx-auto px-4 bg-white py-12 sm:py-20 select-none border-t border-zinc-100">
-      {/* Global CSS Inject Block for Marquee Track Architecture */}
+    <section className="max-w-7xl mx-auto px-4 bg-gradient-to-b from-white to-zinc-50/50 py-12 sm:py-20 select-none border-t border-zinc-100">
       <style jsx global>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0%);
-          }
-          100% {
-            transform: translateX(-50%);
-          }
+        @keyframes marquee-up {
+          0% { transform: translateY(0%); }
+          100% { transform: translateY(-50%); }
         }
-        .animate-marquee {
+        
+        @keyframes marquee-down {
+          0% { transform: translateY(-50%); }
+          100% { transform: translateY(0%); }
+        }
+        
+        .animate-marquee-up {
           display: flex;
-          width: max-content;
-          animation: marquee 25s linear infinite;
+          flex-direction: column;
+          height: max-content;
+          animation: marquee-up 25s linear infinite;
+        }
+        
+        .animate-marquee-down {
+          display: flex;
+          flex-direction: column;
+          height: max-content;
+          animation: marquee-down 25s linear infinite;
+        }
+
+        .mask-gradient-container {
+          mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+          -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+        }
+
+        .line-clamp-4 {
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
         }
       `}</style>
 
-      <div className="">
-        {/* Section Header */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-16">
-          <div>
-            <h2 className="text-3xl md:text-5xl tracking-tight text-zinc-950 leading-tight">
-              Loved by Clients.
-              <br />
+      {/* Section Header */}
+      <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 mb-16">
+        <div className="space-y-2">
+          <h2 className="text-3xl sm:text-5xl text-zinc-900 font-medium">
+            Loved by Clients.
+            <br />
+            <span className="text-zinc-900">
               Built to Perform.
-            </h2>
-          </div>
-          <p className="text-xs md:text-sm text-zinc-500 max-w-sm leading-relaxed">
-            Businesses choose UpgradeUX because we focus on more than beautiful
-            design. We deliver fast, conversion-focused websites backed by clear
-            communication, reliable support, and measurable results.
-          </p>
+            </span>
+          </h2>
         </div>
+        <p className="text-sm text-zinc-500 max-w-sm leading-relaxed">
+          Businesses choose UpgradeUX because we focus on more than beautiful
+          design. We deliver fast, conversion-focused websites backed by clear
+          communication, reliable support, and measurable results.
+        </p>
       </div>
 
-      {/* Infinite Horizontal Marquee Stream Wrapper Layout Container */}
-      <div className="relative w-full max-w-7xl mx-auto overflow-x-hidden  flex mask-gradient-container group">
-        {/* Dual Loop Tracks for Gapless Streaming Layouts */}
-        <div className="animate-marquee flex gap-6 pr-6 hover:[animation-play-state:paused]">
-          {[...reviews, ...reviews, ...reviews].map((item, idx) => {
-            // Clean conditional flags to keep metadata seamless
-            const hasRole = item.role && item.role.trim() !== "";
-            const hasCompany = item.company && item.company.trim() !== "";
-            const hasMeta = hasRole || hasCompany;
+      {/* Three Row Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-25">
+        {/* Row 1 - Moving UP */}
+        <div className="relative h-[650px] overflow-hidden mask-gradient-container group">
+          <div className="animate-marquee-up hover:[animation-play-state:paused] transition-all duration-300">
+            {row1.map((item, idx) => (
+              <CardContent key={`row1-${idx}`} item={item} />
+            ))}
+          </div>
+        </div>
 
-            return (
-              <div
-                key={idx}
-                className="relative flex flex-col justify-between p-6 bg-[#f2f2f258] backdrop-blur-md hover:bg-white border border-zinc-200/60 hover:border-[#4DB2E0]/40 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 ease-out w-80 shrink-0 group/card"
-              >
-                {/* Top Profile Header Area */}
-                <div className="flex flex-col items-center text-center gap-3">
-                  {/* Avatar Ring */}
-                  <div className="relative w-10 h-10 overflow-hidden rounded-full border border-zinc-200 shrink-0 bg-[#4db1e074] flex items-center justify-center transition-transform duration-300 group-hover/card:scale-105">
-                    {item.avatar && item.avatar.trim() !== "" ? (
-                      <Image
-                        src={item.avatar}
-                        alt={item.author}
-                        fill
-                        sizes="40px"
-                        className="object-cover"
-                      />
-                    ) : (
-                      <TbUser className="w-5 h-5 text-zinc-900" />
-                    )}
-                  </div>
+        {/* Row 2 - Moving DOWN */}
+        <div className="relative h-162.5 mask-gradient-container group">
+          <div className="animate-marquee-down hover:[animation-play-state:paused] transition-all duration-300">
+            {row2.map((item, idx) => (
+              <CardContent key={`row2-${idx}`} item={item} />
+            ))}
+          </div>
+        </div>
 
-                  {/* Identity Texts with Precise Fallbacks */}
-                  <div className="flex flex-col items-center justify-center min-w-0 max-w-full">
-                    <h4 className="text-sm font-medium text-zinc-950 tracking-tight truncate w-full">
-                      {item.author}
-                    </h4>
-
-                    {hasMeta && (
-                      <p className="text-xs font-medium text-zinc-400 mt-0.5 truncate w-full px-2">
-                        {hasRole && <span>{item.role}</span>}
-                        {hasRole && hasCompany && (
-                          <span className="mx-1 opacity-60">at</span>
-                        )}
-                        {hasCompany && (
-                          <span className="text-[#4DB2E0] transition-colors">
-                            {item.company}
-                          </span>
-                        )}
-                      </p>
-                    )}
-                  </div>
-                </div>
-
-                {/* Main Content Quote Block */}
-                <div className="mt-5 border-t border-zinc-100/80 flex-1 flex items-center justify-center">
-                  <p className="text-xs md:text-[13px] text-zinc-600 leading-relaxed font-medium text-center antialiased">
-                    &ldquo;{item.quote}&rdquo;
-                  </p>
-                </div>
-              </div>
-            );
-          })}
+        {/* Row 3 - Moving UP */}
+        <div className="relative h-[650px] overflow-hidden mask-gradient-container group">
+          <div className="animate-marquee-up hover:[animation-play-state:paused] transition-all duration-300">
+            {row3.map((item, idx) => (
+              <CardContent key={`row3-${idx}`} item={item} />
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -51,10 +51,10 @@ const DETAILED_SERVICES = [
 
 export default function ServicesShowcaseRows() {
   return (
-    <section className="w-full max-w-7xl mx-auto px-4 bg-white text-zinc-950 select-none antialiased mt-20">
+    <section className="w-full max-w-7xl mx-auto px-4 bg-white text-zinc-950 select-none antialiased">
       <div className="mx-auto">
         <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-zinc-900 pb-10">
-          <h2 className="text-5xl md:text-6xl font-medium tracking-tighter uppercase leading-none">
+          <h2 className="text-5xl md:text-6xl font-medium tracking-tighter leading-none">
             Our Services
           </h2>
           <p className="text-xs md:text-xs font-medium text-zinc-500 max-w-sm leading-relaxed">

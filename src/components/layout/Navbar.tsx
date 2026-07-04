@@ -61,7 +61,7 @@ const Navbar = () => {
       {/* ================= STICKY NAVBAR WRAPPER ================= */}
       <nav
         className={`fixed top-0 left-0 right-0 z-40 flex w-full items-center justify-between px-6 md:px-12 lg:px-12 select-none transition-all duration-300 ease-out ${
-          isScrolled ? "py-3.5 bg-white shadow-sm" : "py-6"
+          isScrolled ? "py-3.5 bg-linear-to-b from-white to-[#ffffffb5] shadow-sm" : "py-6"
         }`}
       >
 
@@ -141,14 +141,12 @@ const Navbar = () => {
             >
               <div className="relative overflow-hidden">
                 <span
-                  className="block text-sm font-medium tracking-[0.15em] transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0"
-                  style={{ color: "var(--primary-text)" }}
+                  className="block text-sm font-medium tracking-[0.15em] transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0 text-[#171417]"
                 >
                   {link.name}
                 </span>
                 <span
-                  className="absolute inset-0 translate-y-full text-sm font-medium  tracking-[0.15em] transition-all duration-500 group-hover:translate-y-0"
-                  style={{ color: "var(--primary-text)" }}
+                  className="absolute inset-0 translate-y-full text-sm font-medium  tracking-[0.15em] transition-all duration-500 group-hover:translate-y-0 text-[#000000]"
                 >
                   {link.name}
                 </span>

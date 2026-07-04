@@ -2,52 +2,79 @@
 
 import React from "react";
 import Link from "next/link";
-import { TbArrowRight, TbArrowUpRight } from "react-icons/tb";
+import { TbArrowUpRight } from "react-icons/tb";
 
 export default function CtaSection() {
   return (
-    <section className="w-full max-w-8xl mx-auto relative mb-20">
-      <div className="w-full flex flex-col justify-center items-center bg-linear-to-b from-[#ffffff] via-[#4db1e060] to-[#ffffff] relative z-10 py-12 md:py-28 gap-8">
-        {/* Headline */}
-        <div className="flex flex-col justify-center items-center gap-2">
-          <h2 className="text-center text-2xl sm:text-6xl font-black tracking-tight text-zinc-950 leading-[1.1]">
-            Ready to Build a Website
-          </h2>
-          <h2 className="text-center text-2xl sm:text-6xl  text-zinc-500 leading-[1.1]">
-            That Actually Grows Your Business?
-          </h2>
-        </div>
-        {/* Description */}
-        <p className="max-w-3xl mx-auto text-center text-xs sm:text-base text-zinc-900 font-normal px-4 leading-relaxed">
-          Whether you&apos;re launching a new business or upgrading an outdated
-          website, we&apos;ll create a fast, conversion-focused experience
-          tailored to your goals. From strategy to launch, we handle everything
-          with precision.
-        </p>
+    <section className="w-full max-w-7xl mx-auto relative mb-24 md:mb-32 select-none overflow-hidden">
+      
+      {/* Main Card Wrapper Layout */}
+      <div className="relative rounded-xl bg-linear-to-bl from-[#f3f4f6] to-[#e5e7eb] p-8 sm:p-12 md:p-24 text-center  overflow-hidden group">
+        
+        {/* Reference Style 1: Subtle Minimalist Dotted Grid Overlay Background */}
+        <div 
+          className="absolute inset-0 opacity-[0.45] pointer-events-none mix-blend-multiply"
+          style={{
+            backgroundImage: `radial-gradient(circle, #e4e4e7 1.5px, transparent 1.5px)`,
+            backgroundSize: "24px 24px"
+          }}
+          aria-hidden="true"
+        />
 
-        {/* Action Button Matrix */}
-        <div className="w-full flex sm:flex-row gap-4 justify-center items-center px-5">
-          {/* Primary Action Button */}
-          <Link
-            href="/contact"
-            className="w-full sm:w-auto group relative flex items-center justify-center gap-3 bg-zinc-950 text-white rounded-full px-4 sm:px-8 py-2 sm:py-4 text-[10px] sm:text-xs tracking-[0.15em] overflow-hidden transition-all duration-300 hover:shadow-lg active:scale-[0.98]"
-          >
-            <div className="absolute inset-0 translate-y-full bg-zinc-800 transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-y-0" />
-            <span className="relative z-10 flex items-center gap-2.5">
+        {/* Reference Style 2: Ambient Soft Glow Fields */}
+        <div 
+          className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#4db1e0]/15 rounded-full w-[450px] h-[450px] blur-[100px] pointer-events-none mix-blend-screen" 
+          aria-hidden="true" 
+        />
+
+        {/* Core Elements Stack */}
+        <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center space-y-6 md:space-y-8">
+
+          {/* Reference Style 4: High Contrast Clean Headline Structure */}
+          <div className="flex flex-col items-center gap-1 sm:gap-2">
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-zinc-950 leading-[1.05] antialiased">
+              Ready to Build a Website
+            </h2>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-light tracking-tight text-zinc-500 leading-[1.05] antialiased">
+              That Actually Grows Your Business?
+            </h2>
+          </div>
+
+          {/* Styled Balanced Explainer Paragraph */}
+          <p className="max-w-2xl text-xs sm:text-base text-zinc-500 font-normal leading-relaxed antialiased px-2">
+            Whether you&apos;re launching a new business or upgrading an outdated website, we&apos;ll create a fast, conversion-focused experience tailored to your goals. From strategy to launch, we handle everything with precision.
+          </p>
+
+          {/* Refined Actions Layout */}
+          <div className="pt-4 flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center items-center px-4">
+            
+            {/* Primary Action Call Button */}
+            <Link
+              href="/contact"
+              className="w-full sm:w-auto group/btn flex items-center justify-center gap-2 bg-zinc-950 hover:bg-zinc-900 text-white rounded-full px-8 py-4 text-xs font-bold uppercase tracking-wider shadow-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+            >
               Contact Us
-              <TbArrowRight className="text-base transition-transform duration-300 group-hover:translate-x-1" />
-            </span>
-          </Link>
+              <TbArrowUpRight className="text-sm transition-transform duration-300 ease-out group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+            </Link>
 
-          {/* Secondary Action Link */}
-          <Link
-            href="/portfolio"
-            className="w-full sm:w-auto group flex items-center justify-center gap-2.5 border border-zinc-900 text-zinc-900 rounded-full px-4 sm:px-8 py-2 sm:py-4 text-[10px] tracking-[0.15em] transition-all duration-300 hover:border-zinc-300 hover:text-zinc-950 hover:bg-zinc-50/80 shadow-2xs active:scale-[0.98]"
-          >
-            View Our Work
-            <TbArrowUpRight className="text-[10px] sm:text-base transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </Link>
+            {/* Secondary Action Work Link */}
+            <Link
+              href="/portfolio"
+              className="w-full sm:w-auto group/btn flex items-center justify-center gap-2 border border-zinc-200 bg-zinc-50/40 backdrop-blur-xs text-zinc-700 rounded-full px-8 py-4 text-xs font-bold uppercase tracking-wider transition-all duration-300 hover:border-zinc-400 hover:text-zinc-950 hover:bg-white active:scale-[0.98]"
+            >
+              View Our Work
+            </Link>
+            
+          </div>
         </div>
+
+        {/* Reference Style 5: Large Faded Background Typography Watermark */}
+        <div className="absolute -bottom-[15%] left-1/2 -translate-x-1/2 w-full pointer-events-none select-none overflow-hidden h-32 md:h-44 opacity-[0.03] z-0">
+          <h1 className="text-[14vw] font-black tracking-tighter leading-none text-center text-blue-950 uppercase">
+            UpgradeUX
+          </h1>
+        </div>
+
       </div>
     </section>
   );

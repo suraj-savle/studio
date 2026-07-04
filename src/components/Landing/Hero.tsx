@@ -1,25 +1,42 @@
 "use client";
 
+import Image from "next/image";
 import React from "react";
-import { TbArrowUpRight } from "react-icons/tb";
 
 const rotatingText = [
-  "Built for speed and performance",
-  "Designed to convert visitors into customers",
-  "Optimized for SEO and growth",
-  "Crafted with modern technologies",
-  "Engineered for long-term scalability",
+  "Lightning-Fast Performance",
+  "Designed to Convert Visitors into Customers",
+  "SEO-Optimized for Higher Rankings",
+  "Built with Modern Technologies",
+  "Scalable Solutions for Growing Businesses",
+];
+
+const domains = [
+  "E-Commerce",
+  "SaaS Platforms",
+  "Corporate Websites",
+  "Custom Web Apps",
+  "UI/UX Design",
+  "SEO Strategy",
+  "Brand Identity",
 ];
 
 export default function HeroHeading() {
   const totalDuration = rotatingText.length * 3.2; // 16 seconds total loop
 
   return (
-    <section 
-      className="relative flex min-h-[80vh] md:min-h-screen w-full items-center justify-center overflow-hidden px-4 sm:px-6 pt-28 pb-16 md:py-0 overflow-x-hidden select-none bg-white border-none outline-none"
-    >
+    <section className="relative flex min-h-[80vh] md:min-h-screen w-full items-center justify-center overflow-hidden px-4 sm:px-6 pt-28 pb-16 md:py-0 overflow-x-hidden select-none bg-linear-to-b from-[#4DB2E0] to-[#ffffffe4] border-none outline-none">
       {/* BACKGROUND VIDEO FRAMEWORK CONTAINER */}
       <div className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 border-none outline-none select-none">
+        <Image
+          src="/landing-page.png"
+          className="w-full h-full object-cover"
+          width={1920}
+          height={1080}
+          alt="Landing Page Background"
+        />
+      </div>
+      <div className="absolute inset-0 w-full h-full object-cover pointer-events-none z-10 border-none outline-none select-none">
         <video
           autoPlay
           loop
@@ -35,50 +52,77 @@ export default function HeroHeading() {
       {/* CSS Keyframes injected directly to avoid external stylesheet dependencies */}
       <style jsx global>{`
         @keyframes customFadeUp {
-          from { opacity: 0; transform: translateY(24px); }
-          to { opacity: 1; transform: translateY(0); }
+          from {
+            opacity: 0;
+            transform: translateY(24px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
         @keyframes textRotationLoop {
-          0%, 15% { opacity: 1; transform: translateY(0); }
-          20%, 95% { opacity: 0; transform: translateY(-16px); }
-          100% { opacity: 0; transform: translateY(16px); }
+          0%,
+          15% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          20%,
+          95% {
+            opacity: 0;
+            transform: translateY(-16px);
+          }
+          100% {
+            opacity: 0;
+            transform: translateY(16px);
+          }
+        }
+        @keyframes marqueeLoop {
+          0% {
+            transform: translate3d(0, 0, 0);
+          }
+          100% {
+            transform: translate3d(-50%, 0, 0);
+          }
         }
         .animate-fade-up {
           animation: customFadeUp 1000s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
+        .animate-marquee {
+          animation: marqueeLoop 25s linear infinite;
+        }
       `}</style>
 
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center text-center">
+      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center text-center w-full">
         <div className="block relative decoration-transparent outline-none group">
           <div className="relative select-none py-2 md:py-4">
-            
             {/* Dynamic Typography Header Layout */}
             <h1
-              className="relative z-10 flex flex-col items-center leading-[0.95] md:leading-[0.9] tracking-[-0.04em] md:tracking-tighter transform gap-3 md:gap-5 animate-fade-up"
-              style={{ animationDuration: '1000ms' }}
+              className="relative z-10 flex flex-col items-center leading-[0.9] tracking-[-0.05em] gap-2 md:gap-4 animate-fade-up"
+              style={{ animationDuration: "1000ms" }}
             >
-              <span className="text-[3rem] text-white sm:text-[4rem] md:text-[6.5rem] font-extrabold antialiased">
-                We Build Websites
+              <span className="text-[3rem] sm:text-[5rem] font-medium text-white">
+                Your Next Best
               </span>
 
-              <span className="text-[2.25rem] font-light text-zinc-300 sm:text-[4rem] md:text-[5rem] antialiased">
-                That Drive Growth.
+              <span className="text-[1.5rem] sm:text-[5rem] text-[#17282f]">
+                Business decisions start here.
               </span>
             </h1>
           </div>
         </div>
 
         {/* --- PURE CSS FIXED TEXT ROTATOR --- */}
-        <div 
+        <div
           className="relative h-8 md:h-8 overflow-hidden w-full flex justify-center animate-fade-up"
-          style={{ animationDuration: '1000ms', animationDelay: '75ms' }}
+          style={{ animationDuration: "1000ms", animationDelay: "75ms" }}
         >
           {rotatingText.map((text, idx) => {
             const delay = idx * 3.2;
             return (
               <span
                 key={idx}
-                className="absolute text-xs md:text-sm font-mono font-bold tracking-[0.15em] text-[#4DB2E0] uppercase opacity-0 transform translate-y-4"
+                className="absolute text-xs md:text-sm font-medium text-[#1f282d] opacity-0 transform translate-y-2 sm:translate-y-4"
                 style={{
                   animation: `textRotationLoop ${totalDuration}s infinite ease-in-out`,
                   animationDelay: `${delay}s`,
@@ -92,28 +136,30 @@ export default function HeroHeading() {
 
         {/* Studio Agency Body Description block */}
         <p
-          className="mt-4 max-w-2xl text-xs md:text-lg leading-relaxed text-zinc-300 font-normal transform animate-fade-up antialiased px-4"
-          style={{ animationDuration: '1000ms', animationDelay: '150ms' }}
+          className=" sm:mt-6 max-w-3xl text-[10px] sm:text-sm leading-3.5 sm:leading-5 text-zinc-700 px-4 animate-fade-up"
+          style={{ animationDuration: "1000ms", animationDelay: "150ms" }}
         >
-          We design and develop modern websites, web applications, and digital
-          experiences that help businesses attract customers, build trust, and
-          scale online.
+          We create high-performance websites that help businesses attract more
+          customers, build credibility, and increase revenue. Every project is
+          crafted with modern design, clean code, SEO best practices, and a
+          seamless user experience that drives measurable results.
         </p>
 
-        {/* --- DYNAMIC CTA BUTTON --- */}
+        {/* --- INFINITE MARQUEE DOMAIN ROW --- */}
         <div
-          className="mt-6 transform animate-fade-up"
-          style={{ animationDuration: '1000ms', animationDelay: '300ms' }}
+          className="relative sm:mt-5 w-full overflow-hidden py-4 animate-fade-up"
+          style={{ animationDuration: "1000ms", animationDelay: "225ms" }}
         >
-          <a
-            href="/contact"
-            className="group relative inline-flex items-center gap-2 overflow-hidden rounded-full bg-white px-6 py-3.5 md:px-8 md:py-4 text-xs font-bold uppercase tracking-[0.15em] text-zinc-950 shadow-xl shadow-black/20 transition-transform duration-300 hover:scale-[1.02] active:scale-95"
-          >
-            <span className="relative z-10 flex items-center gap-1.5">
-              Start Your Project
-              <TbArrowUpRight className="text-sm transition-transform duration-300 group-hover:rotate-45 group-hover:scale-110" />
-            </span>
-          </a>
+          <div className="flex w-max gap-8 animate-marquee whitespace-nowrap">
+            {[...domains, ...domains].map((domain, index) => (
+              <div
+                key={index}
+                className="flex items-center gap-3 text-sm md:text-base font-medium tracking-wide text-[#feffff] px-5 py-2"
+              >
+                {domain}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
