@@ -72,12 +72,7 @@ const SupportPeriodMock: React.FC = () => (
 );
 
 const RedesignMock: React.FC = () => (
-  <div className="w-full h-full flex flex-col items-center justify-center relative top-10 p-6 select-none bg-linear-to-b from-zinc-50/40 to-zinc-100/10">
-    {/* Ambient Glow Effects */}
-    <div
-      className="absolute bg-[#4DB2E0] rounded-full w-44 h-44 blur-2xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
-      aria-hidden="true"
-    />
+  <div className="w-full h-fit flex flex-col items-center justify-center relative top-15 p-6 select-none bg-linear-to-b from-zinc-50/40 to-zinc-100/10">
 
     {/* Foreground Card - Elite Modern UI Experience */}
     <div className="bg-white/90 backdrop-blur-md border border-zinc-200/80 shadow-xl shadow-zinc-950/5 rounded-2xl p-3.5 w-66 sm:w-100 relative z-10 transition-all duration-500 group-hover:scale-[1.03] group-hover:shadow-2xl group-hover:shadow-[#4DB2E0]/5 group-hover:border-zinc-300">
@@ -85,13 +80,13 @@ const RedesignMock: React.FC = () => (
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-2">
           <div
-            className="w-5 h-5 bg-sky-50 border border-sky-100 rounded-md flex items-center justify-center text-[#4DB2E0] transition-all duration-300 group-hover:bg-[#4DB2E0] group-hover:text-white group-hover:border-[#4DB2E0]"
+            className="w-5 h-5 bg-sky-50 border border-sky-100 rounded-md flex items-center justify-center text-[#041a24] transition-all duration-300 group-hover:bg-[#4DB2E0] group-hover:text-white group-hover:border-[#4DB2E0]"
             aria-hidden="true"
           >
             <Sparkles className="w-2.5 h-2.5 transition-transform duration-500 group-hover:scale-110" />
           </div>
           <div>
-            <h5 className="text-[10px] font-black text-zinc-950 leading-none tracking-tight">
+            <h5 className="text-[10px] font-medium text-zinc-950 leading-none">
               Visual Glow-Up
             </h5>
             <p className="text-[7px] font-medium text-zinc-400 mt-0.5">
@@ -99,7 +94,7 @@ const RedesignMock: React.FC = () => (
             </p>
           </div>
         </div>
-        <span className="text-[7px] font-bold bg-sky-50 text-[#4DB2E0] border border-sky-100 px-2 py-0.5 rounded-full uppercase tracking-wider font-mono shadow-2xs">
+        <span className="text-[7px] font-bold bg-sky-50 text-[#0d2f3e] border border-sky-100 px-2 py-0.5 rounded-full uppercase tracking-wider font-mono shadow-2xs">
           Live Now
         </span>
       </div>
@@ -124,7 +119,7 @@ const RedesignMock: React.FC = () => (
 
         {/* Mock Application Interface Hero Elements */}
         <div className="space-y-2 py-0.5">
-          <div className="w-8/12 h-2.5 bg-gradient-to-r from-[#4DB2E0] to-sky-300 rounded-xs" />
+          <div className="w-8/12 h-1 bg-gradient-to-r from-[#011620] to-sky-300 rounded-xs" />
 
           {/* Detailed Features Inside Canvas Window */}
           <div className="grid grid-cols-1 gap-1 pt-0.5">
@@ -286,7 +281,7 @@ const SupportMock: React.FC = () => (
 );
 
 const SeoMock: React.FC = () => (
-  <div className="w-full h-full flex flex-col items-center justify-center relative p-6 select-none bg-gradient-to-b from-zinc-50/40 to-zinc-100/10">
+  <div className="w-full h-full flex flex-col items-center justify-center relative mt-5 p-6 select-none bg-gradient-to-b from-zinc-50/40 to-zinc-100/10">
     {/* Animated Background Layer 1: Ambient Shadow Glow Up */}
     <div
       className="absolute bg-emerald-500/5 rounded-full w-40 h-40 blur-2xl top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-700"
@@ -438,7 +433,7 @@ const FeatureCard: React.FC<{ feature: FeatureItem }> = ({ feature }) => {
 
   return (
     <div
-      className="group bg-gradient-to-b from-white to-zinc-50/50 border border-zinc-200/70 rounded-2xl flex flex-col overflow-hidden transition-all duration-500 max-w-[450px] mx-auto shadow-sm hover:shadow-xl hover:shadow-zinc-200/50 hover:border-zinc-300/80"
+      className="group bg-gradient-to-b from-white to-zinc-50/50 border border-zinc-200/70 rounded-2xl flex flex-col overflow-hidden transition-all duration-500 max-w-[450px] h-full mx-auto shadow-sm hover:shadow-xl hover:shadow-zinc-200/50 hover:border-zinc-300/80"
       role="article"
       aria-label={`${feature.title} capability`}
     >
@@ -450,7 +445,7 @@ const FeatureCard: React.FC<{ feature: FeatureItem }> = ({ feature }) => {
         <VisualMockFrame featureType={feature.type} />
       </div>
 
-      <div className="p-8 sm:p-10 flex flex-col items-center justify-between flex-1">
+      <div className="p-8 sm:p-7 md:p-10 flex flex-col items-center justify-between flex-1">
         <div className="space-y-3.5 w-full">
           <div className="flex justify-center items-center gap-3">
             {/* Animated Micro-Interaction Icon Base Wrapper */}
@@ -503,7 +498,7 @@ export default function AgencyFeatures() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8" role="list">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 gap-y-10 md:px-30" role="list">
           {AGENCY_FEATURES.map((feature) => (
             <div key={feature.id} role="listitem">
               <FeatureCard feature={feature} />
