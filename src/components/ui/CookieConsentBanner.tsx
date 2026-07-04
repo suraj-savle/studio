@@ -43,7 +43,7 @@ export default function CookieConsentBanner() {
   if (!isVisible) return null;
 
   return (
-    <div className="fixed bottom-5 right-0 sm:right-5 z-50 w-full max-w-sm mx-auto px-4 sm:px-0 animate-in fade-in slide-in-from-bottom-5 duration-500">
+    <div className="fixed bottom-5 right-0 sm:right-5 z-100 w-full max-w-sm mx-auto px-4 sm:px-0 animate-in fade-in slide-in-from-bottom-5 duration-500">
       <div className="w-full bg-white/95 backdrop-blur-md border border-zinc-200/80 rounded-2xl shadow-xl shadow-zinc-950/5 p-5 sm:p-6 relative overflow-hidden">
         
         {/* Top Header Segment */}

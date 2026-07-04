@@ -204,7 +204,7 @@ export default function AgencyDashboardWindow() {
   const currentData = FEATURE_DATA[activeTab];
 
   return (
-    <section className="w-full max-w-7xl mx-auto relative -top-30 px-6 select-none z-99">
+    <section className="w-full max-w-7xl mx-auto relative -top-30 px-6 select-none z-50">
       {/* Main Display */}
       <div className="w-full bg-zinc-200 rounded-xl border border-zinc-200 shadow-2xl overflow-hidden flex flex-col md:flex-row min-h-[620px]">
         {/* LEFT SIDEBAR PANEL */}
