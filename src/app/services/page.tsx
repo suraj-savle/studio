@@ -18,86 +18,91 @@ import {
 const ALL_EXTENDED_SERVICES = [
   {
     id: "01",
-    title: "UI/UX Design Systems",
-    subtitle: "High-Fidelity Interface Engineering",
+    title: "UI/UX Design",
+    subtitle: "Beautiful Experiences That Drive Results",
     description:
-      "Architecting atomic components, modular type hierarchies, and fluid interaction variables. We deliver predictable transactional flows that scale directly into clean multi-brand production engines.",
+      "We design modern, intuitive interfaces that strengthen your brand, build customer trust, and create seamless user experiences. Every screen is crafted with strategy, usability, and conversion in mind.",
     image: "/services/customwebsite.png",
     icon: TbPalette,
-    metric: "40% Conversion Lift",
+    metric: "Conversion-Focused Design",
     metricIcon: TbActivityHeartbeat,
     capabilities: [
-      "Tokens Studio Isolation",
-      "Figma Variables Matrix",
-      "Asymmetric Wireframing",
-      "Micro-Interaction Blueprints",
+      "Custom UI Design",
+      "User Experience Strategy",
+      "Interactive Prototypes",
+      "Design Systems",
     ],
   },
+
   {
     id: "02",
-    title: "Custom Web Applications",
-    subtitle: "Performance-Driven Core Architectures",
+    title: "Custom Website Development",
+    subtitle: "Fast, Scalable & Built for Growth",
     description:
-      "Engineering decoupled serverless Next.js, React, and strict Tailwind modules optimized for critical loading phases, edge middleware caching, and robust relational data layouts.",
+      "We develop high-performance websites using modern technologies like Next.js and React. Every project is optimized for speed, security, SEO, and long-term scalability.",
     image: "/services/customwebsite1.png",
     icon: TbCode,
-    metric: "0.2s Time to Interactive",
+    metric: "Lightning-Fast Performance",
     metricIcon: TbGauge,
     capabilities: [
-      "Next.js Router Architecture",
-      "TypeScript Typings",
-      "Tailwind Isolation",
-      "Edge Caching Layers",
-    ],
-  },{
-    id: "04", // Update this index according to your array order
-    title: "Premium Digital Portfolios",
-    subtitle: "Custom Brand Showcases & Developer Kits",
-    description:
-      "Engineering lightning-fast, highly animated digital portfolios and resume platforms built with smooth micro-interactions, clean layout patterns, and robust content systems designed to secure premium inquiries.",
-    image: "/services/portfolio.png",
-    icon: TbLayoutDashboard, // Or use TbBriefcase / TbUserCheck from your current imports
-    metric: "100% Core Web Vitals",
-    metricIcon: TbBolt,
-    capabilities: [
-      "Framer Motion Workflows",
-      "Next.js Static Generation",
-      "Tailwind Glassmorphism",
-      "SEO & Discovery Tuning",
+      "Next.js Development",
+      "React & TypeScript",
+      "Responsive Design",
+      "Performance Optimization",
     ],
   },
+
+  {
+    id: "03",
+    title: "Business Portfolios",
+    subtitle: "Showcase Your Brand with Confidence",
+    description:
+      "From personal portfolios to company profile websites, we create visually engaging digital experiences that highlight your expertise, build credibility, and generate new business opportunities.",
+    image: "/services/portfolio.png",
+    icon: TbLayoutDashboard,
+    metric: "Professional Online Presence",
+    metricIcon: TbBolt,
+    capabilities: [
+      "Personal Portfolios",
+      "Company Profiles",
+      "Modern Animations",
+      "SEO Optimization",
+    ],
+  },
+
   {
     id: "04",
-    title: "Programmatic SEO Engines",
-    subtitle: "Structural Search Discoverability",
+    title: "SEO & Website Optimization",
+    subtitle: "Get Found by the Right Customers",
     description:
-      "Structuring semantic schema markup injections, edge-rendered XML indexes, and fast caching configurations to systematically capture massive scale multi-market user acquisition.",
+      "A great website deserves to be seen. We optimize your website for search engines, improve loading speed, and implement technical SEO best practices to increase visibility and attract qualified traffic.",
     image: "/services/seo.png",
     icon: TbSearch,
-    metric: "3x Organic Discovery Index",
+    metric: "SEO Ready",
     metricIcon: TbCpu,
     capabilities: [
-      "Schema Injections",
-      "Edge Metadata Rendering",
-      "Vitals Optimization",
-      "Automated Map Indexing",
+      "Technical SEO",
+      "Schema Markup",
+      "Core Web Vitals",
+      "Google Search Optimization",
     ],
   },
+
   {
     id: "05",
-    title: " headless & Custom WordPress",
-    subtitle: "Enterprise Content Infrastructure",
+    title: "WordPress & Headless CMS",
+    subtitle: "Flexible Content Management Solutions",
     description:
-      "Transforming monolithic WordPress setups into lightning-fast platforms using custom Gutenberg block development, decoupled Headless React architectures, and high-security caching structures.",
+      "Whether you need a traditional WordPress website or a modern Headless CMS solution, we build secure, scalable platforms that make managing your content simple while delivering exceptional performance.",
     image: "/services/wordpress-website.png",
-    icon: TbGlobe, // Represents the open-web nature of WP
-    metric: "Under 1.2s Content Load",
+    icon: TbGlobe,
+    metric: "Easy Content Management",
     metricIcon: TbBolt,
     capabilities: [
-      "Headless WP via GraphQL",
-      "Custom Gutenberg Blocks",
-      "Advanced Custom Fields",
-      "WooCommerce Scale Tuning",
+      "Custom WordPress",
+      "Headless CMS",
+      "WooCommerce",
+      "Content Management",
     ],
   },
 ];
