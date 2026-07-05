@@ -30,7 +30,7 @@ export default function HeroHeading() {
       <div className="absolute inset-0 w-full h-full object-cover pointer-events-none z-10 border-none outline-none select-none">
         <video
           poster="/landing-page.png"
-          src="/landing-page.mp4"
+          src="/landing-page-1.mp4"
           autoPlay
           muted
           loop
@@ -77,7 +77,7 @@ export default function HeroHeading() {
           }
         }
         .animate-fade-up {
-          animation: customFadeUp 1000s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+          animation: customFadeUp 1000ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
         .animate-marquee {
           animation: marqueeLoop 25s linear infinite;
