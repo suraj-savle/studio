@@ -27,26 +27,17 @@ export default function HeroHeading() {
   return (
     <section className="relative flex min-h-[80vh] md:min-h-screen w-full items-center justify-center overflow-hidden px-4 sm:px-6 pt-28 pb-16 md:py-0 overflow-x-hidden select-none bg-linear-to-b from-[#4DB2E0] to-[#ffffffe4] border-none outline-none">
       {/* BACKGROUND VIDEO FRAMEWORK CONTAINER */}
-      <div className="absolute inset-0 w-full h-full object-cover pointer-events-none z-0 border-none outline-none select-none">
-        <Image
-          src="/landing-page.png"
-          className="w-full h-full object-cover"
-          width={1920}
-          height={1080}
-          alt="Landing Page Background"
-        />
-      </div>
       <div className="absolute inset-0 w-full h-full object-cover pointer-events-none z-10 border-none outline-none select-none">
         <video
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover"
+          poster="/landing-page.png"
           src="/landing-page.mp4"
-        >
-          Your browser does not support the video tag.
-        </video>
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="auto"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
       </div>
 
       {/* CSS Keyframes injected directly to avoid external stylesheet dependencies */}
