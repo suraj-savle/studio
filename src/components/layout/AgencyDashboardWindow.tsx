@@ -1,23 +1,24 @@
 "use client";
-
+import { User2 } from "lucide-react";
+import Image from "next/image";
 import React, { useState } from "react";
 import {
   TbRocket,
-  TbUsers,
   TbCalendar,
   TbArrowUpRight,
   TbChartBar,
   TbBrandGoogle,
   TbPalette,
   TbCode,
-  TbTrendingUp,
-  TbHeart,
-  TbStar,
   TbHome,
   TbInbox,
   TbFileText,
   TbAlertCircle,
   TbGraph,
+  TbMail,
+  TbStars,
+  TbHeadset,
+  TbShield,
 } from "react-icons/tb";
 
 const FEATURE_DATA = {
@@ -204,23 +205,18 @@ export default function AgencyDashboardWindow() {
   const currentData = FEATURE_DATA[activeTab];
 
   return (
-    <section className="w-full max-w-7xl mx-auto relative -top-30 px-6 select-none z-50">
+    <section className="w-full max-w-7xl mx-auto relative px-4 -top-30 select-none z-20">
       {/* Main Display */}
-      <div className="w-full bg-zinc-200 rounded-xl border border-zinc-200 shadow-2xl overflow-hidden flex flex-col md:flex-row min-h-[620px]">
+      <div className="w-full bg-zinc-200 rounded-xl border border-zinc-200 shadow-2xl overflow-hidden flex flex-col md:flex-row min-h-180">
         {/* LEFT SIDEBAR PANEL */}
         <aside className="w-full md:w-64 bg-zinc-50 p-4 flex flex-col border-b md:border-b-0 md:border-r border-zinc-200 shrink-0">
           {/* App Header Window Buttons */}
-          <div className="flex items-center justify-between pl-3 mb-6 px-1">
+          <div className="flex items-center justify-between pl-3 mb-8 px-1">
             <div className="flex items-center gap-2">
               <span className="w-3 h-3 rounded-full bg-[#FF5F56] block cursor-pointer" />
               <span className="w-3 h-3 rounded-full bg-[#FFBD2E] block cursor-pointer" />
               <span className="w-3 h-3 rounded-full bg-[#27C93F] block cursor-pointer" />
             </div>
-          </div>
-
-          {/* Interactive Search Bar */}
-          <div className="relative mb-5 text-xl pl-3 flex items-center gap-2 text-zinc-400">
-            UpgradeUx
           </div>
 
           {/* Navigation */}
@@ -232,7 +228,7 @@ export default function AgencyDashboardWindow() {
                   className={`w-full flex items-center gap-3 px-3 py-1.5 text-xs font-medium rounded-lg transition-all ${currentNav === "about-us" ? "bg-zinc-200 text-zinc-900 font-semibold" : "text-zinc-600 hover:bg-zinc-100"}`}
                 >
                   <TbHome className="text-sm text-zinc-400" />
-                  <span>About Us Snapshot</span>
+                  <span>Overview</span>
                 </button>
                 <button
                   onClick={() => setCurrentNav("why-website")}
@@ -337,20 +333,9 @@ export default function AgencyDashboardWindow() {
 
           {/* Profile Status */}
           <div className="pt-4 border-t border-zinc-200 flex flex-col gap-2 mt-auto">
-            <div className="flex items-center justify-between bg-white border border-zinc-200 p-2.5 rounded-xl">
-              <div className="flex items-center gap-2">
-                <div className="h-6 w-6 rounded-full bg-[#4DB2E0] flex items-center justify-center text-[9px] font-bold text-white">
-                  UX
-                </div>
-                <span className="text-[11px] font-semibold text-zinc-700 leading-none">
-                  Ready to Build
-                </span>
-              </div>
-              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            </div>
             <a
               href="/contact"
-              className="w-full bg-gradient-to-r from-[#4DB2E0] to-[#2D8BB5] hover:from-[#3D9FC8] hover:to-[#1D7B9F] text-white font-bold text-xs px-4 py-2.5 rounded-xl inline-flex items-center justify-center gap-2 transition-all shadow-lg hover:shadow-[#4DB2E0]/30 hover:scale-[1.02] active:scale-[0.98]"
+              className="w-full bg-linear-to-r from-[#4DB2E0] to-[#2D8BB5] hover:from-[#3D9FC8] hover:to-[#1D7B9F] text-white font-bold text-xs px-4 py-2.5 rounded-xl inline-flex items-center justify-center gap-2 transition-all shadow-lg hover:shadow-[#4DB2E0]/30 hover:scale-[1.02] active:scale-[0.98]"
             >
               <span>Start Your Project</span>
               <TbArrowUpRight className="text-sm" />
@@ -359,7 +344,22 @@ export default function AgencyDashboardWindow() {
         </aside>
 
         {/* MAIN CONTENT WINDOW */}
-        <main className="flex-1 p-6 md:p-8 flex flex-col bg-white">
+        <main className="flex-1 px-4 md:px-6 flex flex-col bg-white">
+          <div className="w-full flex items-center justify-between text-lg text-zinc-900 mb-4">
+            <div>
+              <span className="text-xs font-bold text-zinc-400 uppercase tracking-wider">
+                UpgradeUx Agency
+              </span>
+            </div>
+            <div className="flex items-center justify-center px-3 w-12 h-12">
+              <Image
+                src="/assets/logo.png"
+                alt="User Profile"
+                width={100}
+                height={100}
+              />
+            </div>
+          </div>
           {/* VIEW 1: CORE SERVICES PANEL */}
           {currentNav === "services" && (
             <div className="flex flex-col h-full animate-fadeIn">
@@ -463,56 +463,227 @@ export default function AgencyDashboardWindow() {
           {currentNav === "about-us" && (
             <div className="flex flex-col h-full justify-between animate-fadeIn">
               <div>
-                <div className="border-b border-zinc-100 pb-4 mb-4">
-                  <span className="text-xs font-bold text-[#4DB2E0] uppercase tracking-wider">
-                    Who We Are
-                  </span>
-                  <h3 className="text-2xl font-black text-zinc-900 tracking-tight mt-1">
-                    Crafting Digital Excellence
-                  </h3>
-                </div>
-                <p className="text-sm text-zinc-600 leading-relaxed max-w-2xl mb-6">
-                  We are an elite design and development agency focusing on
-                  high-converting aesthetic platforms. By fusing modern
-                  engineering framework mechanics with glassmorphism design
-                  layouts, we take standard businesses and scale them into
-                  authoritative digital brands.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-                  <div className="p-4 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-zinc-300 transition-all">
-                    <TbPalette className="text-[#4DB2E0] text-xl mb-2" />
-                    <h4 className="text-xs font-bold text-zinc-900">
-                      High-End UI Aesthetics
-                    </h4>
-                    <p className="text-[11px] text-zinc-500 mt-1">
-                      Organic layouts, responsive grids, and stunning modern
-                      visual flows.
-                    </p>
+                {/* Header Section with Enhanced Visuals */}
+                <div className="border-b border-zinc-100 pb-4 mb-6 relative">
+                  <div className="absolute -top-2 -right-2 w-12 h-12 bg-[#4DB2E0]/5 rounded-full blur-xl" />
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="inline-block w-1 h-4 bg-[#4DB2E0] rounded-full" />
+                    <span className="text-[11px] font-bold text-[#4DB2E0] uppercase tracking-[0.2em]">
+                      Why Businesses Choose UpgradeUX
+                    </span>
                   </div>
-                  <div className="p-4 rounded-2xl bg-zinc-50 border border-zinc-100 hover:border-zinc-300 transition-all">
-                    <TbCode className="text-[#2D8BB5] text-xl mb-2" />
-                    <h4 className="text-xs font-bold text-zinc-900">
-                      Clean Architecture
-                    </h4>
-                    <p className="text-[11px] text-zinc-500 mt-1">
-                      Production-ready setups using high-speed Next.js patterns.
-                    </p>
+                  <h3 className="text-2xl font-black text-zinc-900 tracking-tight mt-1.5 leading-tight">
+                    Building Websites That{" "}
+                    <span className="text-[#4DB2E0]">Grow</span> Businesses
+                  </h3>
+                  <p className="text-xs text-zinc-400 mt-1.5 font-medium">
+                    Trusted by 500+ companies worldwide
+                  </p>
+                </div>
+
+                {/* Main Description with Enhanced Formatting */}
+                <div className="relative">
+                  <div className="absolute -left-2 top-0 w-1 h-full bg-gradient-to-b from-[#4DB2E0]/20 to-transparent rounded-full" />
+                  <p className="text-sm text-zinc-600 leading-relaxed max-w-2xl mb-6 pl-3">
+                    At{" "}
+                    <span className="font-semibold text-zinc-800">
+                      UpgradeUX
+                    </span>
+                    , we combine strategy, design, and development to create
+                    websites that do more than look great. Every project is
+                    built to:
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-6">
+                    <div className="flex items-start gap-2.5 bg-gradient-to-br from-blue-50/50 to-transparent p-3 rounded-xl border border-blue-100/50">
+                      <TbRocket className="text-[#4DB2E0] text-lg mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="text-[11px] font-bold text-zinc-800">
+                          Drive Growth
+                        </h4>
+                        <p className="text-[10px] text-zinc-500">
+                          Generate qualified leads
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-2.5 bg-gradient-to-br from-indigo-50/50 to-transparent p-3 rounded-xl border border-indigo-100/50">
+                      <TbShield className="text-indigo-500 text-lg mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="text-[11px] font-bold text-zinc-800">
+                          Build Trust
+                        </h4>
+                        <p className="text-[10px] text-zinc-500">
+                          Increase credibility
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-2.5 bg-gradient-to-br from-emerald-50/50 to-transparent p-3 rounded-xl border border-emerald-100/50">
+                      <TbChartBar className="text-emerald-500 text-lg mt-0.5 flex-shrink-0" />
+                      <div>
+                        <h4 className="text-[11px] font-bold text-zinc-800">
+                          Ensure Success
+                        </h4>
+                        <p className="text-[10px] text-zinc-500">
+                          Long-term business growth
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Feature Grid with Enhanced Cards */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-2">
+                  {/* Card 1 - Design */}
+                  <div className="group relative p-5 rounded-2xl bg-white border border-zinc-100 hover:border-[#4DB2E0]/30 hover:shadow-xl hover:shadow-[#4DB2E0]/5 transition-all duration-300 hover:-translate-y-0.5">
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#4DB2E0]/0 to-[#4DB2E0]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="relative">
+                      <div className="w-10 h-10 rounded-xl bg-[#4DB2E0]/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                        <TbPalette className="text-[#4DB2E0] text-xl" />
+                      </div>
+                      <h4 className="text-sm font-bold text-zinc-900 mb-1.5">
+                        High-End UI Aesthetics
+                      </h4>
+                      <p className="text-xs text-zinc-500 leading-relaxed">
+                        Organic layouts, responsive grids, and stunning modern
+                        visual flows that captivate users and reinforce brand
+                        identity.
+                      </p>
+                      <div className="mt-3 flex items-center gap-1 text-[10px] font-medium text-[#4DB2E0] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span>Learn more</span>
+                        <TbArrowUpRight className="text-xs" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Card 2 - Development */}
+                  <div className="group relative p-5 rounded-2xl bg-white border border-zinc-100 hover:border-[#2D8BB5]/30 hover:shadow-xl hover:shadow-[#2D8BB5]/5 transition-all duration-300 hover:-translate-y-0.5">
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#2D8BB5]/0 to-[#2D8BB5]/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="relative">
+                      <div className="w-10 h-10 rounded-xl bg-[#2D8BB5]/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                        <TbCode className="text-[#2D8BB5] text-xl" />
+                      </div>
+                      <h4 className="text-sm font-bold text-zinc-900 mb-1.5">
+                        Clean Architecture
+                      </h4>
+                      <p className="text-xs text-zinc-500 leading-relaxed">
+                        Production-ready setups using high-speed Next.js
+                        patterns with type-safe code, optimal performance, and
+                        scalability built-in.
+                      </p>
+                      <div className="mt-3 flex items-center gap-1 text-[10px] font-medium text-[#2D8BB5] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span>Learn more</span>
+                        <TbArrowUpRight className="text-xs" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Card 3 - Performance (New) */}
+                  <div className="group relative p-5 rounded-2xl bg-white border border-zinc-100 hover:border-emerald-400/30 hover:shadow-xl hover:shadow-emerald-400/5 transition-all duration-300 hover:-translate-y-0.5">
+                    <div className="absolute inset-0 bg-gradient-to-br from-emerald-400/0 to-emerald-400/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="relative">
+                      <div className="w-10 h-10 rounded-xl bg-emerald-400/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                        <TbRocket className="text-emerald-500 text-xl" />
+                      </div>
+                      <h4 className="text-sm font-bold text-zinc-900 mb-1.5">
+                        Lightning Performance
+                      </h4>
+                      <p className="text-xs text-zinc-500 leading-relaxed">
+                        Optimized for speed with 90+ Lighthouse scores, instant
+                        page loads, and smooth interactions that keep users
+                        engaged.
+                      </p>
+                      <div className="mt-3 flex items-center gap-1 text-[10px] font-medium text-emerald-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span>Learn more</span>
+                        <TbArrowUpRight className="text-xs" />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Card 4 - Support (New) */}
+                  <div className="group relative p-5 rounded-2xl bg-white border border-zinc-100 hover:border-purple-400/30 hover:shadow-xl hover:shadow-purple-400/5 transition-all duration-300 hover:-translate-y-0.5">
+                    <div className="absolute inset-0 bg-gradient-to-br from-purple-400/0 to-purple-400/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                    <div className="relative">
+                      <div className="w-10 h-10 rounded-xl bg-purple-400/10 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform duration-300">
+                        <TbHeadset className="text-purple-500 text-xl" />
+                      </div>
+                      <h4 className="text-sm font-bold text-zinc-900 mb-1.5">
+                        Dedicated Support
+                      </h4>
+                      <p className="text-xs text-zinc-500 leading-relaxed">
+                        24/7 expert assistance, regular maintenance updates, and
+                        a dedicated team that ensures your website runs
+                        flawlessly.
+                      </p>
+                      <div className="mt-3 flex items-center gap-1 text-[10px] font-medium text-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <span>Learn more</span>
+                        <TbArrowUpRight className="text-xs" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Stats Section (New) */}
+                <div className="grid grid-cols-3 gap-4 mt-6 p-4 bg-gradient-to-r from-blue-50/50 to-indigo-50/50 rounded-2xl border border-blue-100/50">
+                  <div className="text-center">
+                    <div className="text-2xl font-black text-[#4DB2E0]">
+                      500+
+                    </div>
+                    <div className="text-[10px] font-medium text-zinc-500 mt-0.5">
+                      Projects Delivered
+                    </div>
+                  </div>
+                  <div className="text-center border-l border-r border-blue-100/50">
+                    <div className="text-2xl font-black text-[#4DB2E0]">
+                      98%
+                    </div>
+                    <div className="text-[10px] font-medium text-zinc-500 mt-0.5">
+                      Client Satisfaction
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-black text-[#4DB2E0]">
+                      4.9★
+                    </div>
+                    <div className="text-[10px] font-medium text-zinc-500 mt-0.5">
+                      Average Rating
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-8 pt-4 border-t border-zinc-100 text-center">
-                <p className="text-xs text-zinc-500 mb-3">
-                  Want to check out our full design philosophy, complete
-                  portfolio, and milestones?
-                </p>
-                <a
-                  href="/about"
-                  className="inline-flex items-center gap-2 bg-zinc-900 hover:bg-zinc-800 text-white text-xs font-bold px-6 py-2.5 rounded-xl transition-all hover:scale-[1.02]"
-                >
-                  <span>Click Here For More Info</span>
-                  <TbArrowUpRight className="text-sm" />
-                </a>
+              {/* Call to Action Section */}
+              <div className="mt-8 pt-6 border-t border-zinc-100">
+                <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-zinc-900 to-zinc-800 p-6 text-center">
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-[#4DB2E0]/10 rounded-full blur-2xl" />
+                  <div className="absolute bottom-0 left-0 w-24 h-24 bg-indigo-500/10 rounded-full blur-2xl" />
+                  <div className="relative">
+                    <div className="flex items-center justify-center gap-2 mb-2">
+                      <TbStars className="text-[#4DB2E0] text-lg" />
+                      <span className="text-[10px] font-bold text-[#4DB2E0] uppercase tracking-[0.2em]">
+                        Featured Portfolio
+                      </span>
+                    </div>
+                    <p className="text-sm text-zinc-300 mb-4 max-w-md mx-auto">
+                      Explore our complete design philosophy, full portfolio,
+                      and company milestones.
+                    </p>
+                    <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
+                      <a
+                        href="/about"
+                        className="group inline-flex items-center gap-2 bg-white hover:bg-zinc-100 text-zinc-900 text-xs font-bold px-6 py-3 rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-white/10 hover:shadow-white/20"
+                      >
+                        <span>View Full Portfolio</span>
+                        <TbArrowUpRight className="text-sm transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+                      </a>
+                      <a
+                        href="/contact"
+                        className="group inline-flex items-center gap-2 bg-zinc-700/50 hover:bg-zinc-700 text-white text-xs font-bold px-6 py-3 rounded-xl transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] border border-zinc-600/50"
+                      >
+                        <TbMail className="text-sm" />
+                        <span>Contact Sales</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           )}
@@ -694,30 +865,6 @@ export default function AgencyDashboardWindow() {
               </div>
             </div>
           )}
-
-          {/* Footer Banner */}
-          <div className="mt-6 bg-gradient-to-r from-[#4DB2E0]/10 to-[#2D8BB5]/10 rounded-xl border border-[#4DB2E0]/20 p-4 flex flex-col sm:flex-row sm:items-center justify-between gap-3">
-            <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-full bg-[#4DB2E0]/20 flex items-center justify-center">
-                <TbUsers className="w-4 h-4 text-[#4DB2E0]" />
-              </div>
-              <div>
-                <p className="text-xs font-bold text-zinc-800">
-                  Ready to Grow Your Business?
-                </p>
-                <p className="text-[10px] text-zinc-500">
-                  Join 30+ businesses already scaling conversions.
-                </p>
-              </div>
-            </div>
-            <a
-              href="/contact"
-              className="group inline-flex items-center gap-2 bg-gradient-to-r from-[#4DB2E0] to-[#2D8BB5] text-white rounded-full px-5 py-2 text-xs font-bold transition-all duration-300 hover:scale-105 active:scale-95 shadow-lg hover:shadow-[#4DB2E0]/30"
-            >
-              <span>Get Started</span>
-              <TbArrowUpRight className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1" />
-            </a>
-          </div>
         </main>
       </div>
     </section>
