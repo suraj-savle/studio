@@ -79,7 +79,7 @@ export default function Testimonials() {
           {/* Footer */}
           <div className="flex items-center gap-4">
             {/* Avatar */}
-            <div className="relative w-12 h-12 overflow-hidden rounded-full border-2 border-zinc-100 group-hover/card:border-[#4DB2E0]/30 transition-all duration-300 shrink-0 bg-gradient-to-br from-[#000a0e58] to-[#000000] flex items-center justify-center">
+            <div className="relative w-12 h-12 overflow-hidden rounded-full border-2 border-zinc-100 group-hover/card:border-[#4DB2E0]/30 transition-all duration-300 shrink-0 bg-[#4DB2E0] flex items-center justify-center">
               {item.avatar && item.avatar.trim() !== "" ? (
                 <Image
                   src={item.avatar}
@@ -177,7 +177,7 @@ export default function Testimonials() {
       {/* Three Row Grid */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-25">
         {/* Row 1 - Moving UP */}
-        <div className="relative h-[650px] overflow-hidden mask-gradient-container group">
+        <div className="hidden sm:block relative h-162.5 overflow-hidden mask-gradient-container group">
           <div className="animate-marquee-up hover:[animation-play-state:paused] transition-all duration-300">
             {row1.map((item, idx) => (
               <CardContent key={`row1-${idx}`} item={item} />
@@ -186,7 +186,7 @@ export default function Testimonials() {
         </div>
 
         {/* Row 2 - Moving DOWN */}
-        <div className="relative h-162.5 mask-gradient-container group">
+        <div className="hidden sm:block relative h-162.5 mask-gradient-container group">
           <div className="animate-marquee-down hover:[animation-play-state:paused] transition-all duration-300">
             {row2.map((item, idx) => (
               <CardContent key={`row2-${idx}`} item={item} />
@@ -195,7 +195,7 @@ export default function Testimonials() {
         </div>
 
         {/* Row 3 - Moving UP */}
-        <div className="relative h-[650px] overflow-hidden mask-gradient-container group">
+        <div className="relative h-162.5 overflow-hidden mask-gradient-container group">
           <div className="animate-marquee-up hover:[animation-play-state:paused] transition-all duration-300">
             {row3.map((item, idx) => (
               <CardContent key={`row3-${idx}`} item={item} />

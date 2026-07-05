@@ -37,26 +37,22 @@ const DeviceShowcase: React.FC<DeviceShowcaseProps> = ({
   return (
     <div
       ref={containerRef}
-      className={`w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 sm:py-24 flex flex-col items-center justify-center bg-zinc-50/40 rounded-3xl ${className}`}
+      className={`w-full max-w-7xl px-4 sm-px-0 my-24 flex flex-col mx-auto bg-zinc-50/40 rounded-3xl ${className}`}
     >
-      <div className="w-full max-w-2xl text-center mb-10 sm:mb-16 flex flex-col items-center">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 bg-zinc-900 text-zinc-100 rounded-full text-[11px] font-mono tracking-wider uppercase mb-4 border border-zinc-800">
-          <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-           Delivery
+      <div className="flex flex-col md:flex-row justify-between items-start sm:items-center mb-10 md:mb-20">
+          <div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl text-zinc-950 leading-[1.1]">
+              Flawless on every
+              <br />
+              <span className="text-zinc-900">viewport</span>
+            </h2>
+          </div>
+          <p className="text-sm text-zinc-700 max-w-sm ">
+            We engineer adaptive digital ecosystems. Your software scales fluidly across desktop, tablet, and mobile displays without compromising performance or aesthetics.
+          </p>
         </div>
 
-        <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-zinc-900">
-          Flawless on every viewport.
-        </h2>
-
-        <p className="mt-3 sm:mt-4 text-sm sm:text-base text-zinc-500 max-w-lg font-normal leading-relaxed">
-          We engineer adaptive digital ecosystems. Your software scales fluidly
-          across desktop, tablet, and mobile displays without compromising
-          performance or aesthetics.
-        </p>
-      </div>
-
-      <div className="w-full max-w-md sm:max-w-none flex flex-row items-center justify-center native-device-composite select-none pointer-events-none origin-center px-2 sm:px-0">
+      <div className="w-full flex flex-row items-center justify-center native-device-composite select-none pointer-events-none origin-center px-2 sm:px-0">
         <div className="max-w-[110px] sm:max-w-[160px] lg:max-w-[220px] xl:max-w-[260px] flex justify-center order-1 z-30 -mr-8 sm:-mr-12 xl:-mr-14 sm:scale-90 select-none">
           <TabletFrame
             videoSrc={tabletVideo}

@@ -6,7 +6,6 @@ import React, { useState } from "react";
 import { PiTargetBold } from "react-icons/pi";
 import {
   TbRocket,
-  TbCalendar,
   TbArrowUpRight,
   TbChartBar,
   TbBrandGoogle,
@@ -16,11 +15,9 @@ import {
   TbInbox,
   TbFileText,
   TbAlertCircle,
-  TbGraph,
   TbMail,
   TbStars,
   TbHeadset,
-  TbShield,
   TbUsers,
   TbTrendingUp,
   TbCheck,

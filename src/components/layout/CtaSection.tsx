@@ -9,7 +9,7 @@ export default function CtaSection() {
     <section className="w-full max-w-7xl mx-auto relative mb-24 md:mb-32 select-none overflow-hidden">
       
       {/* Main Card Wrapper Layout */}
-      <div className="relative rounded-xl bg-linear-to-bl from-[#f3f4f6] to-[#e5e7eb] p-8 sm:p-12 md:p-24 text-center  overflow-hidden group">
+      <div className="relative rounded-xl bg-linear-to-bl from-[#f3f4f6] to-[#e5e7eb] py-8 px-4 sm:p-12 md:p-24 text-center  overflow-hidden group mx-4 sm:mx-0">
         
         {/* Reference Style 1: Subtle Minimalist Dotted Grid Overlay Background */}
         <div 
@@ -28,14 +28,14 @@ export default function CtaSection() {
         />
 
         {/* Core Elements Stack */}
-        <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center space-y-6 md:space-y-8">
+        <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center space-y-4 md:space-y-8">
 
           {/* Reference Style 4: High Contrast Clean Headline Structure */}
-          <div className="flex flex-col items-center gap-1 sm:gap-2">
+          <div className="flex flex-col items-center gap-3 sm:gap-2">
             <h2 className="text-3xl sm:text-5xl md:text-6xl font-black tracking-tight text-zinc-950 leading-[1.05] antialiased">
               Ready to Build a Website
             </h2>
-            <h2 className="text-3xl sm:text-5xl md:text-6xl font-light tracking-tight text-zinc-500 leading-[1.05] antialiased">
+            <h2 className="text-lg sm:text-5xl md:text-6xl text-zinc-500 leading-[1.05] antialiased">
               That Actually Grows Your Business?
             </h2>
           </div>
@@ -46,21 +46,21 @@ export default function CtaSection() {
           </p>
 
           {/* Refined Actions Layout */}
-          <div className="pt-4 flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center items-center px-4">
+          <div className="pt-4 flex sm:flex-row gap-4 w-full sm:w-auto justify-center items-center">
             
             {/* Primary Action Call Button */}
             <Link
               href="/contact"
-              className="w-full sm:w-auto group/btn flex items-center justify-center gap-2 bg-zinc-950 hover:bg-zinc-900 text-white rounded-full px-8 py-4 text-xs font-bold uppercase tracking-wider shadow-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+              className="w-full sm:w-auto group/btn flex items-center justify-center gap-2 bg-zinc-950 hover:bg-zinc-900 text-white rounded-full px-4 sm:px-8 py-4 text-xs tracking-wider shadow-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
             >
               Contact Us
-              <TbArrowUpRight className="text-sm transition-transform duration-300 ease-out group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+              <TbArrowUpRight className="text-xs sm:text-sm transition-transform duration-300 ease-out group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
             </Link>
 
             {/* Secondary Action Work Link */}
             <Link
               href="/portfolio"
-              className="w-full sm:w-auto group/btn flex items-center justify-center gap-2 border border-zinc-200 bg-zinc-50/40 backdrop-blur-xs text-zinc-700 rounded-full px-8 py-4 text-xs font-bold uppercase tracking-wider transition-all duration-300 hover:border-zinc-400 hover:text-zinc-950 hover:bg-white active:scale-[0.98]"
+              className="w-full sm:w-auto group/btn flex items-center justify-center gap-2 border border-zinc-200 bg-zinc-50/40 backdrop-blur-xs text-zinc-700 rounded-full px-4 sm:px-8 py-4 text-xs tracking-wider transition-all duration-300 hover:border-zinc-400 hover:text-zinc-950 hover:bg-white active:scale-[0.98]"
             >
               View Our Work
             </Link>

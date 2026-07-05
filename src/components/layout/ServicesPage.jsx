@@ -54,10 +54,10 @@ export default function ServicesShowcaseRows() {
     <section className="w-full max-w-7xl mx-auto px-4 bg-white text-zinc-950 select-none antialiased">
       <div className="mx-auto">
         <div className="mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-zinc-900 pb-10">
-          <h2 className="text-5xl md:text-6xl font-medium tracking-tighter leading-none">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl text-zinc-700 font-medium max-w-xl leading-[1.1]">
             Our Services
           </h2>
-          <p className="text-xs md:text-xs font-medium text-zinc-500 max-w-sm leading-relaxed">
+          <p className="text-xs text-zinc-500 max-w-sm leading-relaxed font-medium">
             We operate at the exact boundary line of extreme performance metrics
             and pure engineering clarity to scale custom platforms.
           </p>
@@ -72,7 +72,7 @@ export default function ServicesShowcaseRows() {
             return (
               <div
                 key={idx}
-                className="group grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start border-b border-zinc-200 py-16 first:pt-0 last:border-0"
+                className="group grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start border-b border-zinc-200 py-12 first:pt-0 last:border-0"
               >
                 <div className="lg:col-span-1 hidden lg:block pt-1">
                   <span className="text-sm font-mono font-extrabold text-zinc-300 group-hover:text-zinc-950 transition-colors duration-300">
@@ -151,10 +151,10 @@ export default function ServicesShowcaseRows() {
         </div>
 
         {/* BOTTOM ACTION LAYER: VIEW ALL SERVICES LINK */}
-        <div className="w-full flex justify-center items-center pt-16 pb-24 border-t border-zinc-100 mt-10">
+        <div className="w-full flex justify-center items-center py-12 border-t border-zinc-100 mt-10">
           <Link
             href="/services"
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-zinc-950 hover:bg-zinc-900 text-white rounded-xl text-xs font-bold uppercase tracking-widest shadow-lg shadow-zinc-950/10 hover:shadow-xl transition-all duration-300 group active:scale-[0.98]"
+            className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-zinc-950 hover:bg-[#4DB2E0] text-white rounded-xl text-xs font-bold uppercase tracking-widest shadow-lg shadow-zinc-950/10 hover:shadow-xl transition-all duration-300 group active:scale-[0.98]"
           >
             <span>View All Services</span>
             <div className="w-5 h-5 rounded-full bg-zinc-800 flex items-center justify-center group-hover:bg-white group-hover:text-zinc-950 group-hover:rotate-45 transition-all duration-300">
