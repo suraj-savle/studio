@@ -56,7 +56,7 @@ const SERVICES = [
     icon: TbShoppingCart,
     title: "WooCommerce eCommerce Development",
     description:
-      "Launch a robust, user-friendly online store with our WooCommerce solutions — product management, Razorpay/PayU payment integration, GST handling, and seamless shopping experiences built for Mumbai customers.",
+      "Launch a robust, user-friendly online store with our WooCommerce solutions — product management, Razorpay/PayU payment integration and seamless shopping experiences built for Mumbai customers.",
     tag: "WooCommerce eCommerce development Mumbai",
   },
   {

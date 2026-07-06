@@ -14,9 +14,9 @@ export default function Home() {
       <Hero />
       <AgencyDashboardSection />
       <ServicesPage />
-      {/* <div className="max-h-screen">
+      <div className="max-h-screen">
         <DeviceShowcase />
-      </div> */}
+      </div>
       <Features />
       <HowWework />
       <Testimonials />

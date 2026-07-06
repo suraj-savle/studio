@@ -28,10 +28,9 @@ import {
   ============================================================================ */
 
 const COMPANY_INFO = {
-  name: "UpgradeUx Agency",
+  name: "UpgradeUx",
   legalName: "UpgradeUx",
-  address:
-    "UpgradeUx, a digital agency operating remotely from Mumbai, Maharashtra, India.",
+  address: "Navi Mumbai, Maharashtra, India",
   email: "upgradeux.agency@gmail.com",
   phone: "+91 8369213418",
   alternative_number: "+91 8369213418",
@@ -441,7 +440,7 @@ export default function TermsPage() {
                     described in the accepted Proposal or Quotation. Any
                     additional functionality, pages, integrations, redesigns,
                     content creation, or other work outside the agreed scope
-                    shall be treated as a Change Request and may require a
+                    will be treated as a Change Request and may require a
                     revised quotation, additional fees, and an updated delivery
                     timeline.
                   </p>
@@ -590,6 +589,21 @@ export default function TermsPage() {
                     costs.
                   </p>
                 </div>
+                <div>
+                  <h4 className="font-semibold text-zinc-800">
+                    5.7 Non-Payment Clause
+                  </h4>
+                  <p>
+                    The Company may suspend hosting, maintenance, development,
+                    or access to staging environments until overdue invoices are
+                    settled.
+                  </p>
+                  <p>
+                    Ownership of deliverables, source code, design files,
+                    credentials, and deployment materials transfers only after
+                    all outstanding invoices have been paid in full.
+                  </p>
+                </div>
               </div>
             </section>
 
@@ -652,10 +666,10 @@ export default function TermsPage() {
                     7.3 Portfolio Rights
                   </h4>
                   <p>
-                    The Company reserves the right to display completed work in
-                    its portfolio, case studies, and marketing materials unless
-                    the Client requests confidentiality in writing prior to
-                    Project Commencement (50% Advance).
+                    Unless otherwise agreed in writing, the Company may identify
+                    the Client by name, logo, screenshots, or publicly available
+                    materials solely for portfolio and marketing purposes after
+                    the Project has been publicly launched.
                   </p>
                 </div>
                 <div>
@@ -669,6 +683,14 @@ export default function TermsPage() {
                     such third-party components remains subject to their
                     original license terms and is not transferred by this
                     Agreement.
+                  </p>
+                </div>
+                <div>
+                  <p>
+                    The Company retains ownership of any reusable components,
+                    frameworks, development methodologies, utilities, internal
+                    libraries, automation scripts, and know-how created
+                    independently of the Client&apos;s Project.
                   </p>
                 </div>
               </div>
@@ -734,9 +756,8 @@ export default function TermsPage() {
                     9.2 Additional Revisions
                   </h4>
                   <p>
-                    Revisions requested beyond the agreed number, or changes
-                    that materially alter the previously approved direction,
-                    will be quoted as additional work.
+                    the total amount paid by the Client for the specific Project
+                    giving rise to the claim.
                   </p>
                 </div>
                 <div>
@@ -745,8 +766,8 @@ export default function TermsPage() {
                   </h4>
                   <p>
                     Any request by the Client to add features, expand scope, or
-                    otherwise modify the project beyond the accepted Proposal
-                    constitutes a Change Request. The Company will assess Change
+                    otherwise modify the project beyond the accepted Proposal is
+                    considered a Change Request. The Company will assess Change
                     Requests within 3 business days with a revised time and cost
                     estimate.
                   </p>
@@ -782,6 +803,11 @@ export default function TermsPage() {
                   estimates based on the information available at the time of
                   quoting. The Company will make reasonable efforts to meet
                   agreed timelines.
+                </p>
+                <p>
+                  Delays caused by the Client automatically extend delivery
+                  timelines by at least the duration of the delay and may
+                  require project rescheduling.
                 </p>
                 <div className="p-4 bg-zinc-100/70 rounded-xl border border-zinc-200">
                   <p className="text-xs sm:text-sm text-zinc-700">
@@ -832,7 +858,7 @@ export default function TermsPage() {
                   </h4>
                   <p>
                     Unless otherwise agreed in writing, the Company provides a
-                    14-day limited warranty following final delivery to correct
+                    30-day limited warranty following final delivery to correct
                     bugs directly related to the originally agreed scope.
                   </p>
                   <p>The warranty does not cover:</p>
@@ -845,12 +871,26 @@ export default function TermsPage() {
                     <li>server issues</li>
                   </ul>
                 </div>
-                <div>
+                <div className="flex flex-col gap-2 font-medium">
                   <p>
                     Websites are tested against the latest stable versions of
                     Chrome, Edge, Firefox, and Safari. Compatibility with
                     outdated browsers is not guaranteed unless agreed in
                     writing.
+                  </p>
+                  <p>
+                    Unless expressly included in the Proposal, the Company is
+                    not responsible for hosting administration, server
+                    maintenance, email delivery, domain renewal, SSL certificate
+                    renewal, DNS configuration, backups, or third-party
+                    infrastructure.
+                  </p>
+                  <p>
+                    Neither party shall be liable for delays or failure to
+                    perform obligations caused by events beyond reasonable
+                    control, including natural disasters, internet outages,
+                    cyberattacks, government restrictions, labor disputes,
+                    pandemics, or failures of third-party infrastructure.
                   </p>
                 </div>
               </div>
@@ -1058,8 +1098,8 @@ export default function TermsPage() {
                   at any time. When material changes are made, the updated Terms
                   will be published with a revised Last Updated date. Continued
                   use of this website or continuation of an active service
-                  engagement following the posting of updated Terms constitutes
-                  acceptance of those changes.
+                  engagement following the posting of updated Terms is
+                  considered acceptance of those changes.
                 </p>
               </div>
             </section>
@@ -1131,15 +1171,12 @@ export default function TermsPage() {
             <div className="pt-8 border-t border-zinc-200 text-center text-xs text-zinc-400 space-y-1">
               <p>
                 These Terms were last updated on{" "}
-                <strong className="text-zinc-600">
-                  1 July 2026
-                </strong>
-                .
+                <strong className="text-zinc-600">6 July 2026</strong>.
               </p>
               <p>
-                By engaging our services or using this website, you confirm that
-                you have read, understood, and agree to be bound by these Terms
-                in their entirety.
+                By accessing this website or engaging our services, you
+                acknowledge that you have read, understood, and agree to be
+                bound by these Terms of Service.
               </p>
             </div>
           </main>

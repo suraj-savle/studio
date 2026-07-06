@@ -1,6 +1,9 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import { FaDatabase, FaUser } from "react-icons/fa";
+import { IoIosInformationCircle } from "react-icons/io";
+import { MdElectricalServices, MdFlight, MdSecurity } from "react-icons/md";
 import {
   TbShield,
   TbMail,
@@ -24,7 +27,7 @@ import {
 const COMPANY_INFO = {
   name: "UpgradeUX",
   legalName: "UpgradeUX",
-  address: "Remote Business • Mumbai, Maharashtra, India",
+  address: "Navi Mumbai, Maharashtra, India",
   email: "upgradeux.agency@gmail.com",
   phone: "+91 8369213418",
   website: "https://upgradeux.in",
@@ -36,7 +39,33 @@ const TABLE_OF_CONTENTS = [
   { id: "data-collect", title: "Information We Collect", icon: TbDatabase },
   { id: "how-collect", title: "How We Collect Information", icon: TbShare },
   { id: "how-use", title: "How We Use Information", icon: TbServer },
-  { id: "legal-basis", title: "Legal Basis", icon: TbScale },
+  {
+    id: "Why-We-Process-Your-Information",
+    title: "Why We Process Your Information",
+    icon: TbScale,
+  },
+  {
+    id: "Information-You-Provide-Voluntarily",
+    title: "Information You Provide Voluntarily",
+    icon: IoIosInformationCircle,
+  },
+  {
+    id: "Data-Retention",
+    title: "Data Retention",
+    icon: FaDatabase,
+  },
+  { id: "Security", title: "Security", icon: MdSecurity },
+  { id: "User-Rights", title: "User Rights", icon: FaUser },
+  {
+    id: "International-Clients",
+    title: "International Clients",
+    icon: MdFlight,
+  },
+  {
+    id: "Third-Party-Services",
+    title: "Third-Party Services",
+    icon: MdElectricalServices,
+  },
   { id: "data-sharing", title: "Sharing Information", icon: TbShare },
   { id: "cookies", title: "Cookies", icon: TbCookie },
 ];
@@ -179,7 +208,7 @@ export default function PrivacyPolicyPage() {
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="p-6 pt-24 overflow-y-auto h-full space-y-4">
+        <div className="p-6 pt-24 overflow-y-auto h-full space-y-2">
           <div className="flex items-center gap-2 px-2 text-zinc-400">
             <TbShield className="size-4 " />
             <span className="text-xs font-mono font-bold uppercase tracking-widest">
@@ -262,7 +291,7 @@ export default function PrivacyPolicyPage() {
           </aside>
 
           {/* Main Context Node Container Blocks */}
-          <main className="flex-1 min-w-0 space-y-20 pb-24">
+          <main className="flex-1 min-w-0 space-y-10 pb-24">
             {/* Section 1: Who We Are */}
             <section id="who-we-are" className="scroll-mt-28 space-y-4">
               <div className="flex items-center gap-3 border-b border-zinc-100 pb-3">
@@ -275,13 +304,10 @@ export default function PrivacyPolicyPage() {
               </div>
               <div className="text-sm sm:text-base text-zinc-600 leading-relaxed space-y-4">
                 <p>
-                  UpgradeUX is an independent web design and development
-                  business operated remotely by Suraj Savle from Mumbai,
-                  Maharashtra, India. We provide custom website design, website
-                  development, UI/UX design, website redesign, SEO optimization,
-                  and related digital services to clients worldwide. This
-                  Privacy Policy explains how we collect, use, and protect your
-                  information when you use our website or contact us.
+                  UpgradeUX is an independent web design and development agency
+                  based in Mumbai, Maharashtra, India, providing professional
+                  web development, UI/UX design, SEO, and related digital
+                  services to clients worldwide.
                 </p>
                 <div className="p-5 bg-white rounded-xl border border-zinc-300">
                   <div className="flex items-start gap-3">
@@ -364,9 +390,10 @@ export default function PrivacyPolicyPage() {
                 <TbCheck className="size-5 text-emerald-600 shrink-0 mt-0.5" />
                 <p className="text-xs sm:text-sm text-emerald-800 leading-relaxed">
                   <strong>We do not collect or store</strong> sensitive personal
-                  data such as government national ID mappings, credentials
-                  tokens, biometric systems indicators, or full visual payment
-                  card details inside production storage tiers.
+                  information such as government-issued identification numbers,
+                  passwords, payment card details, biometric information, or
+                  other sensitive personal data unless required to provide our
+                  services.
                 </p>
               </div>
             </section>
@@ -447,19 +474,20 @@ export default function PrivacyPolicyPage() {
             </section>
 
             {/* Section 5: Legal Basis */}
-            <section id="legal-basis" className="scroll-mt-28 space-y-4">
+            <section
+              id="Why-We-Process-Your-Information"
+              className="scroll-mt-28 space-y-4"
+            >
               <div className="flex items-center gap-3 border-b border-zinc-100 pb-3">
                 <div className="p-2 bg-[#4DB2E0]/10 rounded-lg ">
                   <TbScale className="size-5" />
                 </div>
                 <h2 className="text-xl sm:text-2xl font-bold text-zinc-900">
-                  5. Legal Basis for Processing
+                  5. Why We Process Your Information
                 </h2>
               </div>
               <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
-                Under India&apos;s Digital Personal Data Protection Act, 2023
-                (DPDP Act) and applicable data protection principles, we process
-                your personal data on the following lawful bases:
+                We aim to handle personal information in accordance with applicable privacy and data protection laws, including the Digital Personal Data Protection Act.
               </p>
               <div className="overflow-x-auto rounded-xl border border-zinc-200/60 bg-white shadow-xs">
                 <table className="w-full text-left text-xs sm:text-sm border-collapse">
@@ -507,6 +535,172 @@ export default function PrivacyPolicyPage() {
               </div>
             </section>
 
+            <section
+              id="Information-You-Provide-Voluntarily"
+              className="scroll-mt-28 space-y-4"
+            >
+              <div className="flex items-center gap-3 border-b border-zinc-100 pb-3">
+                <div className="p-2 bg-[#4DB2E0]/10 rounded-lg ">
+                  <TbScale className="size-5" />
+                </div>
+                <h2 className="text-xl sm:text-2xl font-bold text-zinc-900">
+                  6. Information You Provide Voluntarily
+                </h2>
+              </div>
+              <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+                When you contact us, request a quotation, complete a contact
+                form, subscribe to updates, or communicate with us, you may
+                voluntarily provide personal information including:
+              </p>
+              <ul className="list-disc list-inside text-xs sm:text-sm text-zinc-600 leading-relaxed p-4">
+                <li>Name</li>
+                <li>Email Address</li>
+                <li>Phone Number</li>
+                <li>Company Name</li>
+                <li>Project Requirements</li>
+                <li>Budget</li>
+                <li>Any Other Information You Choose to Share</li>
+              </ul>
+            </section>
+
+            <section id="Data-Retention" className="scroll-mt-28 space-y-4">
+              <div className="flex items-center gap-3 border-b border-zinc-100 pb-3">
+                <div className="p-2 bg-[#4DB2E0]/10 rounded-lg ">
+                  <TbScale className="size-5" />
+                </div>
+                <h2 className="text-xl sm:text-2xl font-bold text-zinc-900">
+                  7. Data Retention
+                </h2>
+              </div>
+              <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+                We retain personal information only for as long as necessary to:
+              </p>
+              <ul className="list-disc list-inside text-xs sm:text-sm text-zinc-600 leading-relaxed p-4">
+                <li>Deliver our services</li>
+                <li>Fulfill legal obligations</li>
+                <li>Resolve disputes</li>
+                <li>Enforce agreements</li>
+              </ul>
+              <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+                When information is no longer required, it is securely deleted
+                or anonymized where reasonably possible.
+              </p>
+            </section>
+
+            <section id="Security" className="scroll-mt-28 space-y-4">
+              <div className="flex items-center gap-3 border-b border-zinc-100 pb-3">
+                <div className="p-2 bg-[#4DB2E0]/10 rounded-lg ">
+                  <TbScale className="size-5" />
+                </div>
+                <h2 className="text-xl sm:text-2xl font-bold text-zinc-900">
+                  8. Security
+                </h2>
+              </div>
+              <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+                We implement reasonable administrative, technical, and
+                organizational measures to protect your personal information
+                against unauthorized access, misuse, alteration, disclosure, or
+                destruction.
+              </p>
+              <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+                However, no internet transmission or electronic storage system
+                is completely secure, and we cannot guarantee absolute security.
+              </p>
+            </section>
+
+            <section id="Your-Rights" className="scroll-mt-28 space-y-4">
+              <div className="flex items-center gap-3 border-b border-zinc-100 pb-3">
+                <div className="p-2 bg-[#4DB2E0]/10 rounded-lg ">
+                  <TbScale className="size-5" />
+                </div>
+                <h2 className="text-xl sm:text-2xl font-bold text-zinc-900">
+                  9. Your Rights
+                </h2>
+              </div>
+              <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+                Depending on applicable law, you may have the right to:
+              </p>
+              <ul className="list-disc list-inside text-xs sm:text-sm text-zinc-600 leading-relaxed p-4">
+                <li>Request access to your personal information</li>
+                <li>Request correction of inaccurate information</li>
+                <li>Request deletion of information where legally permitted</li>
+                <li>Withdraw consent where processing is based on consent</li>
+                <li>Contact us regarding any privacy concerns</li>
+              </ul>
+            </section>
+
+            <section
+              id="International-Clients"
+              className="scroll-mt-28 space-y-4"
+            >
+              <div className="flex items-center gap-3 border-b border-zinc-100 pb-3">
+                <div className="p-2 bg-[#4DB2E0]/10 rounded-lg ">
+                  <TbScale className="size-5" />
+                </div>
+                <h2 className="text-xl sm:text-2xl font-bold text-zinc-900">
+                  10. International Data Transfers
+                </h2>
+              </div>
+              <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+                If you access our services from outside India, your information
+                may be transferred to and processed in India or other countries
+                where our service providers operate.
+              </p>
+              <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+                By using our services, you consent to such transfers where
+                permitted by applicable law.
+              </p>
+            </section>
+
+            <section
+              id="Third-Party-Services"
+              className="scroll-mt-28 space-y-4"
+            >
+              <div className="flex items-center gap-3 border-b border-zinc-100 pb-3">
+                <div className="p-2 bg-[#4DB2E0]/10 rounded-lg ">
+                  <TbScale className="size-5" />
+                </div>
+                <h2 className="text-xl sm:text-2xl font-bold text-zinc-900">
+                  11. Third-Party Services
+                </h2>
+              </div>
+              <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+                Our website may use trusted third-party providers including:
+              </p>
+              <ul className="list-disc list-inside text-xs sm:text-sm text-zinc-600 leading-relaxed p-4">
+                <li>Google Analytics</li>
+                <li>Google Fonts</li>
+                <li>Cloudflare</li>
+                <li>Vercel</li>
+                <li>Razorpay (if applicable)</li>
+                <li>Stripe (if applicable)</li>
+                <li>Resend</li>
+                <li>WhatsApp</li>
+              </ul>
+            </section>
+            <section id="Children's-Privacy" className="scroll-mt-28 space-y-4">
+              <div className="flex items-center gap-3 border-b border-zinc-100 pb-3">
+                <div className="p-2 bg-[#4DB2E0]/10 rounded-lg ">
+                  <TbScale className="size-5" />
+                </div>
+                <h2 className="text-xl sm:text-2xl font-bold text-zinc-900">
+                  12. Children&apos;s Privacy
+                </h2>
+              </div>
+              <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+                Our services are intended for businesses and individuals aged 18
+                years or older.
+              </p>
+              <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+                We do not knowingly collect personal information from children
+                under the age required by applicable law.
+              </p>
+              <p className="text-xs sm:text-sm text-zinc-600 leading-relaxed">
+                If we become aware that such information has been collected, we
+                will promptly delete it.
+              </p>
+            </section>
+
             {/* Section 6: Data Sharing */}
             <section id="data-sharing" className="scroll-mt-28 space-y-4">
               <div className="flex items-center gap-3 border-b border-zinc-100 pb-3">
@@ -514,7 +708,7 @@ export default function PrivacyPolicyPage() {
                   <TbShare className="size-5" />
                 </div>
                 <h2 className="text-xl sm:text-2xl font-bold text-zinc-900">
-                  6. Data Sharing & Disclosure
+                  13. Data Sharing & Disclosure
                 </h2>
               </div>
               <p className="text-sm sm:text-base text-zinc-600 leading-relaxed">
@@ -533,7 +727,7 @@ export default function PrivacyPolicyPage() {
                   <TbCookie className="size-5" />
                 </div>
                 <h2 className="text-xl sm:text-2xl font-bold text-zinc-900">
-                  7. Cookies & Website Tracking
+                  14. Cookies & Website Tracking
                 </h2>
               </div>
               <div className="space-y-4 text-xs sm:text-sm text-zinc-600 leading-relaxed">
@@ -582,20 +776,15 @@ export default function PrivacyPolicyPage() {
                 </div>
               </div>
             </section>
-            
+
             {/* Footer Note */}
             <div className="pt-8 border-t border-zinc-200 text-center text-xs text-zinc-400 space-y-1">
               <p>
                 These Privacy Policy were last updated on{" "}
-                <strong className="text-zinc-600">
-                  1 July 2026
-                </strong>
-                .
+                <strong className="text-zinc-600">6 July 2026</strong>.
               </p>
               <p>
-                By engaging our services or using this website, you confirm that
-                you have read, understood, and agree to be bound by these Terms
-                in their entirety.
+                By using our website or contacting us, you acknowledge that you have read and understood this Privacy Policy.
               </p>
             </div>
           </main>

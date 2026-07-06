@@ -27,12 +27,11 @@ import {
   ============================================================================ */
 
 const COMPANY_INFO = {
-  name: "upgradeUx Agency",
+  name: "upgradeUx",
   legalName: "UpgradeUx",
   address:
     "Navi Mumbai, Maharashtra, India",
   email: "upgradeux.agency@gmail.com",
-  alternateEmail: "iamsurajsavle@gmail.com",
   phone: "+91 8369213418",
   alternatePhone: "+91 8369213418",
   whatsapp: "8369213418",
@@ -105,7 +104,7 @@ const PROJECT_REFUND_TABLE = [
   },
   {
     stage: "After advance paid, before any work commenced",
-    eligibility: "Partial refund possible — reviewed case by case",
+    eligibility: "Refund requests are reviewed individually. Any approved refund will be reduced by work completed, administrative costs, and applicable transaction fees.",
   },
   {
     stage: "After project kickoff and discovery commenced",
@@ -364,11 +363,7 @@ export default function RefundPolicyPage() {
               </div>
               <div className="space-y-4 text-sm text-zinc-600 leading-relaxed">
                 <p>
-                  We are committed to delivering high-quality digital services
-                  with transparency and professionalism. As our work involves
-                  custom design, development, planning, and resource allocation,
-                  refunds are handled according to the terms outlined in this
-                  policy.
+                  Because every project is custom-built, significant planning, design, development, and resource allocation begin shortly after payment is received. This Refund Policy explains when refunds may or may not be available.
                 </p>
                 <p>
                   By making a payment for any of our services, you acknowledge
@@ -397,6 +392,9 @@ export default function RefundPolicyPage() {
                   If no work has started, a partial refund may be considered at
                   our discretion after deducting any administrative or
                   transaction charges.
+                </p>
+                <p>
+                  Administrative deductions may include payment gateway charges, banking fees, currency conversion fees (if applicable), and work already completed.
                 </p>
                 <div className="p-4 bg-amber-50 border border-amber-200 flex items-start gap-3">
                   <TbAlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
@@ -480,6 +478,9 @@ export default function RefundPolicyPage() {
                     <strong>Mid-Cycle Cancellations:</strong> Payments already
                     made for the current billing period are non-refundable, and
                     services will continue until the end of the paid term.
+                  </li>
+                  <li>
+                    Failure to cancel before the next billing cycle may result in automatic renewal where applicable.
                   </li>
                 </ul>
               </div>
@@ -616,8 +617,8 @@ export default function RefundPolicyPage() {
                 <table className="w-full text-left text-xs border-collapse">
                   <thead className="bg-zinc-50 border-b border-zinc-200 text-zinc-700 font-bold">
                     <tr>
-                      <th className="py-3 px-4">Remittance Mechanism</th>
-                      <th className="py-3 px-4">Standard Settling Windows</th>
+                      <th className="py-3 px-4">Payment Method</th>
+                      <th className="py-3 px-4">Estimated Processing Time</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-zinc-100 text-zinc-600">
@@ -682,6 +683,9 @@ export default function RefundPolicyPage() {
                   and delivery evidence to the payment provider as part of the
                   chargeback investigation.
                 </p>
+                <p>
+                  If a chargeback is resolved in the Company&apos;s favor, the Client remains responsible for any outstanding balances, chargeback fees, legal costs (where applicable), and unpaid invoices.
+                </p>
               </div>
             </div>
 
@@ -696,7 +700,7 @@ export default function RefundPolicyPage() {
               </div>
               <div className="space-y-4 text-sm text-zinc-600 leading-relaxed">
                 <p>
-                  If the client remains unresponsive for more than 30
+                  If the client remains unresponsive for more than 45
                   consecutive days without a valid reason, the project may be
                   considered abandoned.
                 </p>
@@ -789,21 +793,6 @@ export default function RefundPolicyPage() {
                           {COMPANY_INFO.email}
                         </a>
                       </div>
-
-                      {/* Alternate Email */}
-                      {COMPANY_INFO.alternateEmail && (
-                        <div className="flex items-center gap-3 group">
-                          <div className="p-2 rounded-lg transition-colors duration-200 bg-zinc-100">
-                            <TbMail className="w-4 h-4 shrink-0" />
-                          </div>
-                          <a
-                            href={`mailto:${COMPANY_INFO.alternateEmail}`}
-                            className="text-zinc-600 hover:text-[#4DB2E0] font-medium transition-colors duration-200 hover:underline break-all"
-                          >
-                            {COMPANY_INFO.alternateEmail}
-                          </a>
-                        </div>
-                      )}
                     </div>
 
                     <div className="w-full h-px bg-zinc-200/60" />
@@ -820,17 +809,6 @@ export default function RefundPolicyPage() {
                         >
                           {COMPANY_INFO.phone}
                         </a>
-                        {COMPANY_INFO.alternatePhone && (
-                          <a
-                            href={`tel:${COMPANY_INFO.alternatePhone}`}
-                            className="text-zinc-500 hover:text-[#4DB2E0] font-medium transition-colors"
-                          >
-                            {COMPANY_INFO.alternatePhone}{" "}
-                            <span className="text-xs text-zinc-400 font-normal mx-1">
-                              (Alternate)
-                            </span>
-                          </a>
-                        )}
                       </div>
                     </div>
                   </div>
@@ -843,14 +821,12 @@ export default function RefundPolicyPage() {
               <p>
                 These Refund Policy were last updated on{" "}
                 <strong className="text-zinc-600">
-                  1 July 2026
+                  6 July 2026
                 </strong>
                 .
               </p>
               <p>
-                By engaging our services or using this website, you confirm that
-                you have read, understood, and agree to be bound by these Terms
-                in their entirety.
+                By purchasing or using our services, you acknowledge that you have read, understood, and agree to this Refund Policy.
               </p>
             </div>
           </main>

@@ -99,11 +99,11 @@ export default function AboutPage() {
           {/* Social Network Connection Anchor Group */}
           <div className="border-t border-zinc-100 pt-8 mt-4">
             <span className="text-xs font-mono font-bold tracking-wider text-zinc-400 uppercase block mb-3">
-              Follow Our Pulse
+              Follow Our Social Media
             </span>
             <div className="flex items-center gap-5 text-zinc-600">
               <a
-                href="https://x.com"
+                href="https://x.com/surajsavle"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#4DB2E0] transition-colors"
@@ -111,7 +111,7 @@ export default function AboutPage() {
                 <FaXTwitter className="size-4" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/in/suraj-savle"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#4DB2E0] transition-colors"
@@ -119,15 +119,7 @@ export default function AboutPage() {
                 <FaLinkedinIn className="size-4" />
               </a>
               <a
-                href="https://github.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:text-[#4DB2E0] transition-colors"
-              >
-                <FaGithub className="size-4" />
-              </a>
-              <a
-                href="https://instagram.com"
+                href="https://instagram.com/upgradeux"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#4DB2E0] transition-colors"

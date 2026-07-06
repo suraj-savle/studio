@@ -24,8 +24,8 @@ export default async function BlogDetailPage({ params }: PageProps) {
 
   return (
     <>
-      <div className="w-full h-64 sm:h-80 bg-gradient-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12"></div>
-      <article className="w-full max-w-5xl mx-auto px-6 pb-20  animate-in fade-in duration-300 z-99">
+      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12"></div>
+      <article className="w-full max-w-5xl mx-auto px-6 pb-20 relative -mt-20  animate-in fade-in duration-300 z-99">
         
         {/* Back Navigation */}
         <Link

@@ -159,11 +159,11 @@ const Navbar = () => {
         <div className="flex items-center gap-3 min-w-37.5 justify-end">
           <Link
             href="/contact"
-            className="hidden lg:group lg:flex items-center justify-center overflow-hidden rounded-full px-5 py-2.5 transition-all duration-300 active:scale-95 border"
+            className="hidden lg:group lg:flex items-center justify-center overflow-hidden rounded-full px-5 py-2.5 transition-all duration-300 active:scale-95 border border-gray-500"
           >
             <div className="absolute inset-0 translate-y-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-y-0" />
             <div className="relative z-10 flex h-4 items-center overflow-hidden">
-              <span className="flex items-center gap-1 text-[11px] font-medium uppercase tracking-[0.15em]">
+              <span className="flex items-center gap-1 text-xs hover:text-gray-500 font-medium tracking-[0.15em]">
                 Contact Us <TbArrowUpRight className="text-sm opacity-50" />
               </span>
             </div>

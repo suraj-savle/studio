@@ -5,7 +5,6 @@ import SmoothScrolling from "@/components/ui/SmoothScrolling";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CookieConsentBanner from "@/components/ui/CookieConsentBanner";
-import SaleBanner from "@/components/marketing/SaleBanner";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ["300", "400", "700"],
@@ -26,9 +25,73 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "UpgradeUX | Independent Digital Agency",
+  metadataBase: new URL("https://upgradeux.in"),
+
+  title: {
+    default: "UpgradeUX | Custom Web Development Agency",
+    template: "%s | UpgradeUX",
+  },
+
   description:
-    "Crafting high-end responsive interfaces, premium design systems, and modern full-stack web applications.",
+    "UpgradeUX creates fast, modern, SEO-optimized websites for startups and businesses. Expert web development, UI/UX design, and performance-focused digital solutions.",
+
+  keywords: [
+    "Web Development",
+    "Web Design",
+    "Website Development Company",
+    "Next.js",
+    "React",
+    "SEO",
+    "UI UX Design",
+    "Website Redesign",
+    "Business Website",
+    "Mumbai Web Development",
+  ],
+
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    nocache: false,
+
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+      "max-snippet": -1,
+    },
+  },
+
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://upgradeux.in",
+    siteName: "UpgradeUX",
+    title: "UpgradeUX | Custom Web Development Agency",
+    description:
+      "High-performance websites designed to grow your business.",
+
+    images: [
+      {
+        url: "/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "UpgradeUX",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "UpgradeUX",
+    description:
+      "High-performance websites designed to grow your business.",
+    images: ["/twitter-image.jpg"],
+  },
 };
 
 export default function RootLayout({
