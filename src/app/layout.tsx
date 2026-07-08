@@ -5,6 +5,7 @@ import SmoothScrolling from "@/components/ui/SmoothScrolling";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CookieConsentBanner from "@/components/ui/CookieConsentBanner";
+import AppLoader from "@/components/ui/AppLoader";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ["300", "400", "700"],
@@ -109,7 +110,7 @@ export default function RootLayout({
         className="min-h-screen flex flex-col justify-between"
         suppressHydrationWarning
       >
-        {/* <SaleBanner /> */}
+        <AppLoader />
         <Navbar />
         <SmoothScrolling>
           <main>{children}</main>

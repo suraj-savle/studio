@@ -8,17 +8,30 @@ export interface BlogAuthor {
 
 export interface BlogPost {
   id: string;
+
   title: string;
+
   excerpt: string;
-  content: React.ReactNode;
+
   date: string;
-  readTime: string;
-  coverImage?: string;
+
+  updatedAt?: string;
+
+  coverImage: string;
+
   videoUrl?: string;
-  author?: BlogAuthor;
-  category?: string;
-  tags?: string[];
-  featured?: boolean;
+
+  alt?: string;
+
+  category: string;
+
+  tags: string[];
+
+  featured: boolean;
+
+  author: BlogAuthor;
+
+  content: React.ReactNode;
 }
 
 // Import all blog posts

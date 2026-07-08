@@ -3,13 +3,13 @@ import { BlogPost } from "@/lib/posts";
 export const post: BlogPost = {
   id: "welcome-to-upgradeux",
   title:
-    "Welcome to UpgradeUX — Building Digital Experiences That Drive Growth",
+    "UpgradeUX: Modern Web Development Agency for Fast & SEO-Friendly Websites",
   excerpt:
-    "Learn why UpgradeUX was created, what we do, and how we help businesses build fast, modern, and conversion-focused digital products.",
+    "Discover how UpgradeUX builds fast, SEO-friendly, and conversion-focused websites using Next.js, modern UI/UX design, and performance optimization for growing businesses.",
 
   date: "June 29, 2026",
-  readTime: "6 min read",
   coverImage: "/blog/images/upgradeux.jpg",
+  alt: "UpgradeUX web development agency building fast SEO optimized websites",
   category: "Agency",
   tags: [
     "UpgradeUX",
@@ -22,9 +22,9 @@ export const post: BlogPost = {
   featured: true,
 
   author: {
-    name: "Suraj & The UpgradeUX Team",
+    name: "Suraj Savle",
     avatar: "/blog/profile/suraj-savle.jpg",
-    role: "Founder & Full-Stack Developer",
+    role: "Founder, UpgradeUX",
   },
 
   content: (
@@ -117,7 +117,9 @@ export const post: BlogPost = {
         </p>
       </div>
 
-      <h2 className="text-xl sm:text-2xl font-medium my-4">What&apos;s Next?</h2>
+      <h2 className="text-xl sm:text-2xl font-medium my-4">
+        What&apos;s Next?
+      </h2>
 
       <p className="text-sm sm:text-lg my-4">
         This blog will regularly feature articles covering web design, UI/UX,

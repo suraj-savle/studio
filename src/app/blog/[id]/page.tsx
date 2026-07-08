@@ -3,12 +3,74 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { TbArrowLeft } from "react-icons/tb";
-import { FiCalendar, FiClock, FiTag } from "react-icons/fi";
+import { FiCalendar, FiTag } from "react-icons/fi";
 import { getPostById, getRelatedPosts } from "@/lib/posts";
 import { MediaContainer } from "@/components/MediaContainer"; // Path to your loader component
+import { Metadata } from "next";
 
 interface PageProps {
   params: Promise<{ id: string }>;
+}
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { id } = await params;
+
+  const post = getPostById(id);
+
+  if (!post) {
+    return {
+      title: "Blog Not Found | UpgradeUX",
+    };
+  }
+
+  const url = `https://upgradeux.dev/blog/${post.id}`;
+
+  return {
+    title: `${post.title} | UpgradeUX`,
+    description: post.excerpt,
+
+    alternates: {
+      canonical: url,
+    },
+
+    keywords: [
+      ...post.tags,
+      "Web Development",
+      "Next.js",
+      "SEO",
+      "Website Design",
+      "UpgradeUX",
+    ],
+
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      url,
+      siteName: "UpgradeUX",
+      locale: "en_IN",
+      type: "article",
+
+      publishedTime: post.date,
+
+      images: [
+        {
+          url: post.coverImage,
+          width: 1200,
+          height: 630,
+          alt: post.title,
+        },
+      ],
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.excerpt,
+      images: [post.coverImage],
+    },
+  };
 }
 
 export default async function BlogDetailPage({ params }: PageProps) {
@@ -22,11 +84,55 @@ export default async function BlogDetailPage({ params }: PageProps) {
   // Pre-fetching related posts simultaneously
   const relatedPosts = getRelatedPosts(post.id);
 
+  const articleSchema = {
+    "@context": "https://schema.org",
+
+    "@type": "BlogPosting",
+
+    headline: post.title,
+
+    description: post.excerpt,
+
+    image: `https://upgradeux.dev${post.coverImage}`,
+
+    author: {
+      "@type": "Person",
+      name: post.author.name,
+    },
+
+    publisher: {
+      "@type": "Organization",
+
+      name: "UpgradeUX",
+
+      logo: {
+        "@type": "ImageObject",
+
+        url: "https://upgradeux.dev/logo.png",
+      },
+    },
+
+    datePublished: post.date,
+
+    dateModified: post.date,
+
+    mainEntityOfPage: {
+      "@type": "WebPage",
+
+      "@id": `https://upgradeux.dev/blog/${post.id}`,
+    },
+  };
+
   return (
     <>
       <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12"></div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(articleSchema),
+        }}
+      />
       <article className="w-full max-w-5xl mx-auto px-6 pb-20 relative -mt-20  animate-in fade-in duration-300 z-99">
-        
         {/* Back Navigation */}
         <Link
           href="/blog"
@@ -50,11 +156,6 @@ export default async function BlogDetailPage({ params }: PageProps) {
             <span className="flex items-center gap-1.5">
               <FiCalendar className="text-sm" />
               {post.date}
-            </span>
-            <span>•</span>
-            <span className="flex items-center gap-1.5">
-              <FiClock className="text-sm" />
-              {post.readTime}
             </span>
           </div>
 
@@ -96,21 +197,17 @@ export default async function BlogDetailPage({ params }: PageProps) {
 
         {/* Cover Image Wrapper with Loader */}
         {post.coverImage && (
-          <MediaContainer 
-            type="image" 
-            src={post.coverImage} 
-            alt={post.title} 
-            priority={true} 
+          <MediaContainer
+            type="image"
+            src={post.coverImage}
+            alt={post.title}
+            priority={true}
           />
         )}
 
         {/* Video Embed Wrapper with Loader */}
         {post.videoUrl && (
-          <MediaContainer 
-            type="video" 
-            src={post.videoUrl} 
-            alt={post.title} 
-          />
+          <MediaContainer type="video" src={post.videoUrl} alt={post.title} />
         )}
 
         {/* Content */}
