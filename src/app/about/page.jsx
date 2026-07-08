@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { FaGithub, FaLinkedinIn, FaInstagram } from "react-icons/fa";
+import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { LuLayoutDashboard, LuCpu, LuEye } from "react-icons/lu";
 

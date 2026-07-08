@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { TbArrowLeft, TbCompass } from "react-icons/tb";
+import { TbArrowLeft } from "react-icons/tb";
 
 export default function NotFound() {
   return (

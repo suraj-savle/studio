@@ -3,7 +3,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaPlay } from "react-icons/fa";
-import { FiClock, FiCalendar } from "react-icons/fi";
+import { FiCalendar } from "react-icons/fi";
 import { BlogPost } from "@/lib/posts";
 
 interface BlogCardProps {
@@ -55,11 +55,6 @@ export default function BlogCard({ post, variant = "grid" }: BlogCardProps) {
             <span className="flex items-center gap-1">
               <FiCalendar className="text-zinc-400" />
               {post.date}
-            </span>
-            <span className="w-px h-4 bg-zinc-200" />
-            <span className="flex items-center gap-1">
-              <FiClock className="text-zinc-400" />
-              {post.readTime}
             </span>
           </div>
 
