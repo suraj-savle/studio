@@ -181,7 +181,7 @@ const Navbar = () => {
 
       {/* ================= FULLSCREEN MOBILE OVERLAY (WHITE BACKGROUND) ================= */}
       <div
-        className={`fixed inset-0 z-50 bg-white text-zinc-950 p-4 md:p-12 flex flex-col justify-between overflow-y-auto lg:hidden transition-transform duration-500 ease-in-out ${
+        className={`fixed inset-0 z-99 bg-white text-zinc-950 p-4 md:p-12 flex flex-col justify-between overflow-y-auto lg:hidden transition-transform duration-500 ease-in-out ${
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
