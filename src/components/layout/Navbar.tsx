@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { HiMenuAlt3 } from "react-icons/hi";
 import { TbArrowUpRight, TbMenu, TbX, TbChevronDown } from "react-icons/tb";
 
 const DROPDOWN_SERVICES = [
@@ -60,17 +61,17 @@ const Navbar = () => {
     <>
       {/* ================= STICKY NAVBAR WRAPPER ================= */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-40 flex w-full items-center justify-between px-6 md:px-12 lg:px-12 select-none transition-all duration-300 ease-out ${
-          isScrolled ? "py-3.5 bg-linear-to-b from-white to-[#ffffffb5] shadow-sm" : "py-6"
+        className={`fixed top-0 left-0 right-0 z-40 flex w-full items-center justify-between px-4 md:px-12 lg:px-12 select-none transition-all duration-300 ease-out ${
+          isScrolled
+            ? "py-3.5 bg-linear-to-b from-white to-[#ffffffd4] shadow-sm"
+            : "py-6"
         }`}
       >
-
         {/* LEFT BRAND LOGO */}
         <div className="flex items-center min-w-37.5">
           <Link href="/" className="group flex items-center focus:outline-none">
             <span
-              className="text-xl md:text-2xl font-bold tracking-tight transition-all duration-300 group-hover:opacity-80"
-              style={{ color: "var(--primary-text)" }}
+              className="text-xl md:text-2xl font-bold text-gray-800 transition-all duration-300 group-hover:opacity-80"
             >
               UpgradeUx
             </span>
@@ -140,14 +141,10 @@ const Navbar = () => {
               className="group relative rounded-full px-4 py-2 focus:outline-none"
             >
               <div className="relative overflow-hidden">
-                <span
-                  className="block text-sm font-medium tracking-[0.15em] transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0 text-[#171417]"
-                >
+                <span className="block text-sm font-medium tracking-[0.15em] transition-all duration-500 group-hover:-translate-y-full group-hover:opacity-0 text-[#171417]">
                   {link.name}
                 </span>
-                <span
-                  className="absolute inset-0 translate-y-full text-sm font-medium  tracking-[0.15em] transition-all duration-500 group-hover:translate-y-0 text-[#000000]"
-                >
+                <span className="absolute inset-0 translate-y-full text-sm font-medium  tracking-[0.15em] transition-all duration-500 group-hover:translate-y-0 text-[#000000]">
                   {link.name}
                 </span>
               </div>
@@ -172,16 +169,19 @@ const Navbar = () => {
           {/* HAMBURGER TOGGLE BUTTON */}
           <button
             onClick={() => setIsMenuOpen(true)}
-            className="flex items-center justify-center w-10 h-10 rounded-full bg-white border text-zinc-950 transition-colors duration-300 focus:outline-none lg:hidden"
+            className={`flex items-center justify-center text-2xl text-black transition-colors duration-300 lg:hidden ${
+              isDropdownOpen ? "text-zinc-100" : "text-zinc-800"
+            }`}
           >
-            <TbMenu className="text-xl" />
+            {" "}
+            <HiMenuAlt3 />
           </button>
         </div>
       </nav>
 
       {/* ================= FULLSCREEN MOBILE OVERLAY (WHITE BACKGROUND) ================= */}
       <div
-        className={`fixed inset-0 z-50 bg-white text-zinc-950 p-6 md:p-12 flex flex-col justify-between overflow-y-auto lg:hidden transition-transform duration-500 ease-in-out ${
+        className={`fixed inset-0 z-50 bg-white text-zinc-950 p-4 md:p-12 flex flex-col justify-between overflow-y-auto lg:hidden transition-transform duration-500 ease-in-out ${
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
@@ -196,7 +196,7 @@ const Navbar = () => {
           </Link>
           <button
             onClick={() => setIsMenuOpen(false)}
-            className="flex items-center justify-center w-10 h-10 rounded-full border border-zinc-200 text-zinc-950 hover:bg-zinc-950 hover:text-white transition-all duration-300 focus:outline-none"
+            className="flex items-center justify-center  h-10  text-zinc-950 hover:text-zinc-800 transition-all duration-300 focus:outline-none"
           >
             <TbX className="text-xl" />
           </button>

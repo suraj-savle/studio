@@ -75,6 +75,25 @@ const PROJECTS_DATA: Project[] = [
       "Invoice Generator is a web application that allows users to create professional invoices quickly and easily, with customizable templates and automated calculations.",
     link: "",
   },
+  {
+    id: "Blood-Bank-Management-System",
+    title: "Blood Bank Management System",
+    category: "Healthcare Management",
+    docNum: "04",
+    docType: "Doc",
+    countStr: "blood inventory",
+    icon: TbLayersIntersect,
+    mediaType: "gallery",
+    images: [
+      "/portfolio/bbms-1.png",
+      "/portfolio/bbms-2.png",
+      "/portfolio/bbms-3.png",
+      "/portfolio/bbms-4.png",
+    ],
+    description:
+      "The Blood Bank Management System (BBMS) is a web-based platform designed to streamline the management of blood donations, hospital requests, and inventory tracking. By replacing manual processes with a structured digital workflow, BBMS enables hospitals and blood banks to access real-time inventory, maintain donor records, and process blood requests efficiently.",
+    link: "",
+  },
 ];
 
 const SLIDE_INTERVAL = 3000;
