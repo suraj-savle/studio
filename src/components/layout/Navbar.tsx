@@ -3,7 +3,7 @@
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
-import { TbArrowUpRight, TbMenu, TbX, TbChevronDown } from "react-icons/tb";
+import { TbArrowUpRight, TbX, TbChevronDown } from "react-icons/tb";
 
 const DROPDOWN_SERVICES = [
   { name: "Custom Design", href: "/services/custom-website" },
