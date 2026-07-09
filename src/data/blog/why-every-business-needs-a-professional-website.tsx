@@ -3,7 +3,7 @@ import { BlogPost } from "@/lib/posts";
 export const post: BlogPost = {
   id: "why-every-business-needs-a-professional-website",
   title:
-    "Why Every Small Business Needs a Professional Website in 2026",
+    "Why Every Business Needs a Professional Website in 2026",
   excerpt:
     "Learn why a professional website is essential for growing your business in 2026. Discover how fast performance, SEO, responsive design, and user experience help convert visitors into paying customers.",
 
