@@ -61,7 +61,7 @@ const Navbar = () => {
     <>
       {/* ================= STICKY NAVBAR WRAPPER ================= */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-100 flex w-full items-center justify-between px-4 md:px-12 lg:px-12 select-none transition-all duration-300 ease-out ${
+        className={`fixed top-0 left-0 right-0 z-98 flex w-full items-center justify-between px-4 md:px-12 lg:px-12 select-none transition-all duration-300 ease-out ${
           isScrolled
             ? "py-3.5 bg-linear-to-b from-white to-[#ffffffd4] shadow-sm"
             : "py-6"
