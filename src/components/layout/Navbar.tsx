@@ -61,7 +61,7 @@ const Navbar = () => {
     <>
       {/* ================= STICKY NAVBAR WRAPPER ================= */}
       <nav
-        className={`fixed top-0 left-0 right-0 z-99 flex w-full items-center justify-between px-4 md:px-12 lg:px-12 select-none transition-all duration-300 ease-out ${
+        className={`fixed top-0 left-0 right-0 z-98 flex w-full items-center justify-between px-4 md:px-12 lg:px-12 select-none transition-all duration-300 ease-out ${
           isScrolled
             ? "py-3.5 bg-linear-to-b from-white to-[#ffffffd4] shadow-sm"
             : "py-6"
@@ -181,7 +181,7 @@ const Navbar = () => {
 
       {/* ================= FULLSCREEN MOBILE OVERLAY (WHITE BACKGROUND) ================= */}
       <div
-        className={`fixed inset-0 z-50 bg-white text-zinc-950 p-4 md:p-12 flex flex-col justify-between overflow-y-auto lg:hidden transition-transform duration-500 ease-in-out ${
+        className={`fixed inset-0 z-99 bg-white text-zinc-950 p-4 md:p-12 flex flex-col justify-between overflow-y-auto lg:hidden transition-transform duration-500 ease-in-out ${
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >

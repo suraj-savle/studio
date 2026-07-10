@@ -132,7 +132,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
           __html: JSON.stringify(articleSchema),
         }}
       />
-      <article className="w-full max-w-5xl mx-auto px-6 pb-20 relative -mt-20  animate-in fade-in duration-300 z-99">
+      <article className="w-full max-w-5xl mx-auto px-6 pb-20 relative -mt-20  animate-in fade-in duration-300 z-50">
         {/* Back Navigation */}
         <Link
           href="/blog"
