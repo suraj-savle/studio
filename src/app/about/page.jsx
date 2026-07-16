@@ -30,7 +30,7 @@ export default function AboutPage() {
   return (
     <div className="w-full min-h-screen font-sans antialiased bg-white selection:bg-[#4DB2E0]/20">
       {/* 1. TOP HERO BANNER BLOCK */}
-      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 md:mb-20">
+      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-4 sm:px-12 pb-12 md:mb-20">
         <div className="max-w-4xl">
           <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-700  leading-none">
             About Us
@@ -43,7 +43,7 @@ export default function AboutPage() {
       </div>
 
       {/* 2. CORE PHILOSOPHY SPLIT-LAYOUT GRID */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-20 sm:mb-28 mx-5 sm:mx-10">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-20 sm:mb-28 mx-5 md:mx-12">
         <div className="lg:col-span-7 flex flex-col justify-between h-full">
           <div>
             <span className="text-xs font-mono font-bold tracking-wider text-[#4DB2E0] uppercase block mb-3">

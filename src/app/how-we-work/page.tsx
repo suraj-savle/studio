@@ -48,12 +48,12 @@ export default function HowWeWorkPage() {
   const [activeStep, setActiveStep] = useState(0);
 
   return (
-    <div className="w-full min-h-screen font-sans antialiased bg-white text-zinc-950">
+    <div className="w-full min-h-screen  antialiased bg-white text-zinc-950">
       <div>
         {/* 1. TOP HERO BANNER BLOCK */}
-        <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 md:mb-20">
+        <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-4 md:px-12 pb-12 md:mb-20">
           <div className="max-w-4xl">
-            <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-700  leading-none">
+            <h1 className="text-4xl sm:text-7xl font-black text-start tracking-tight text-zinc-700  leading-none">
               How We Work
             </h1>
           </div>
@@ -65,7 +65,7 @@ export default function HowWeWorkPage() {
         </div>
 
         {/* 2. MIDDLE TWO-COLUMN GRID INTERACTION LAYER */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-16 sm:mb-24 mx-5 sm:mx-10">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-16 sm:mb-24 mx-4 md:mx-12">
           {/* LEFT PANEL: INTERACTIVE ACCORDION ROW LIST */}
           <div className="lg:col-span-7 flex flex-col justify-between h-full">
             <div>

@@ -312,7 +312,7 @@ export default function ProjectsPage() {
   return (
     <div className="w-full min-h-screen antialiased">
       {/* Header Container Section */}
-      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 mb-20">
+      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-4 md:px-12 pb-12 mb-20">
         <div>
           <h1 className="text-4xl sm:text-6xl font-black tracking-tight text-zinc-900">
             Our Projects

@@ -1,0 +1,20 @@
+/* TEAM */
+
+Agency
+
+UpgradeUX
+
+Developer
+
+Suraj Savle
+
+Website
+
+https://upgradeux.in
+
+Built With
+
+Next.js
+React
+Tailwind CSS
+Framer Motion

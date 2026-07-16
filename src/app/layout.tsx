@@ -26,15 +26,15 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://upgradeux.in"),
+  metadataBase: new URL("https://upgradeux.vercel.app"),
 
   title: {
-    default: "UpgradeUX | Custom Web Development Agency",
+    default: "UpgradeUX | Custom Web Design & Development Agency India",
     template: "%s | UpgradeUX",
   },
 
   description:
-    "UpgradeUX creates fast, modern, SEO-optimized websites for startups and businesses. Expert web development, UI/UX design, and performance-focused digital solutions.",
+    "UpgradeUX builds fast, SEO-friendly websites for startups, local businesses, and growing brands. Custom web development, UI/UX design, and performance optimization.",
 
   keywords: [
     "Web Development",
@@ -70,11 +70,10 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://upgradeux.in",
+    url: "https://upgradeux.vercel.app",
     siteName: "UpgradeUX",
-    title: "UpgradeUX | Custom Web Development Agency",
-    description:
-      "High-performance websites designed to grow your business.",
+    title: "UpgradeUX | Custom Web Design & Development Agency India",
+    description: "High-performance websites designed to grow your business.",
 
     images: [
       {
@@ -89,8 +88,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "UpgradeUX",
-    description:
-      "High-performance websites designed to grow your business.",
+    description: "High-performance websites designed to grow your business.",
     images: ["/twitter-image.jpg"],
   },
 };
@@ -114,8 +112,8 @@ export default function RootLayout({
         <Navbar />
         <SmoothScrolling>
           <main>{children}</main>
-          <Footer />
         </SmoothScrolling>
+        <Footer />
         <CookieConsentBanner />
       </body>
     </html>

@@ -112,11 +112,11 @@ export default function CustomWebsitePage() {
 
         {/* Right Content */}
         <div className="flex-1 uppercase">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-zinc-700">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight tracking-tight text-zinc-700">
             Websites That
             <br />
             <span className="text-[#4DB2E0]">Grow Your Business</span>
-          </h1>
+          </h2>
 
           <p className="mt-6 text-base leading-8 text-zinc-600">
             We design and develop high-performance custom websites tailored to
