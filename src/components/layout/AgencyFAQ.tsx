@@ -49,24 +49,33 @@ export default function AgencyFAQ() {
 
   const handleToggle = (index: number) => {
     const isOpening = activeIndex !== index;
-    
+
     // 1. Close current active panel if it exists
     if (activeIndex !== null) {
       const closingIndex = activeIndex;
-      gsap.killTweensOf([answerRefs.current[closingIndex], contentRefs.current[closingIndex]]);
-      
+      gsap.killTweensOf([
+        answerRefs.current[closingIndex],
+        contentRefs.current[closingIndex],
+      ]);
+
       const closeTl = gsap.timeline();
-      closeTl.to(contentRefs.current[closingIndex], {
-        y: -10,
-        opacity: 0,
-        duration: 0.25,
-        ease: "power2.in",
-      }).to(answerRefs.current[closingIndex], {
-        height: 0,
-        opacity: 0,
-        duration: 0.35,
-        ease: "power3.inOut",
-      }, "-=0.15");
+      closeTl
+        .to(contentRefs.current[closingIndex], {
+          y: -10,
+          opacity: 0,
+          duration: 0.25,
+          ease: "power2.in",
+        })
+        .to(
+          answerRefs.current[closingIndex],
+          {
+            height: 0,
+            opacity: 0,
+            duration: 0.35,
+            ease: "power3.inOut",
+          },
+          "-=0.15",
+        );
     }
 
     // 2. Update state index target
@@ -74,25 +83,31 @@ export default function AgencyFAQ() {
 
     // 3. Open target panel if requested action is expanding
     if (isOpening) {
-      gsap.killTweensOf([answerRefs.current[index], contentRefs.current[index]]);
-      
+      gsap.killTweensOf([
+        answerRefs.current[index],
+        contentRefs.current[index],
+      ]);
+
       const openTl = gsap.timeline();
-      openTl.to(answerRefs.current[index], {
-        height: "auto",
-        opacity: 1,
-        duration: 0.45,
-        ease: "power3.inOut",
-      }).fromTo(contentRefs.current[index],
-        { y: 15, opacity: 0 },
-        {
-          y: 0,
+      openTl
+        .to(answerRefs.current[index], {
+          height: "auto",
           opacity: 1,
-          duration: 0.35,
-          ease: "power2.out",
-          force3D: true,
-        },
-        "-=0.2"
-      );
+          duration: 0.45,
+          ease: "power3.inOut",
+        })
+        .fromTo(
+          contentRefs.current[index],
+          { y: 15, opacity: 0 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.35,
+            ease: "power2.out",
+            force3D: true,
+          },
+          "-=0.2",
+        );
     }
   };
 
@@ -143,7 +158,9 @@ export default function AgencyFAQ() {
                     {/* Question Headline text */}
                     <h3
                       className={`text-sm md:text-2xl sm:font-medium transition-colors duration-300 ${
-                        isOpen ? "text-zinc-950" : "text-zinc-600 group-hover:text-zinc-950"
+                        isOpen
+                          ? "text-zinc-950"
+                          : "text-zinc-600 group-hover:text-zinc-950"
                       }`}
                     >
                       {item.question}
@@ -173,7 +190,7 @@ export default function AgencyFAQ() {
                       {index === faqData.length - 1 && (
                         <div className="mt-6 pt-6 border-t border-zinc-100">
                           <a
-                            href="/free-consulting"
+                            href="/free-consultation"
                             className="text-zinc-950 text-xs tracking-wider inline-flex items-center gap-2 group/btn transition-all duration-300"
                           >
                             <span>Schedule a consultation</span>
