@@ -56,7 +56,7 @@ const SERVICE_SHOWCASE: ServiceTier[] = [
     icon: TbRocket,
     featured: false,
     tag: "Starter",
-    slug: "/services/landing-page",
+    slug: "/services/custom-website",
     highlights: [
       "Premium UI",
       "Lead Forms",
@@ -75,7 +75,7 @@ const SERVICE_SHOWCASE: ServiceTier[] = [
     icon: TbBuildingStore,
     featured: true,
     tag: "Most Popular",
-    slug: "/services/business-website",
+    slug: "/services/custom-website",
     highlights: [
       "Up to 8 Pages",
       "WhatsApp",
@@ -94,7 +94,7 @@ const SERVICE_SHOWCASE: ServiceTier[] = [
     icon: TbBrandWordpress,
     featured: false,
     tag: "CMS",
-    slug: "/services/wordpress-website",
+    slug: "/services/wordpress",
     highlights: [
       "Custom Theme",
       "Easy Editing",
@@ -132,7 +132,7 @@ const SERVICE_SHOWCASE: ServiceTier[] = [
     icon: TbBrandNextjs,
     featured: true,
     tag: "Performance",
-    slug: "/services/nextjs-development",
+    slug: "/services/custom-website",
     highlights: [
       "App Router",
       "SSR & SSG",
@@ -151,7 +151,7 @@ const SERVICE_SHOWCASE: ServiceTier[] = [
     icon: TbStack2,
     featured: false,
     tag: "Full Stack",
-    slug: "/services/mern-development",
+    slug: "/services/custom-website",
     highlights: [
       "MongoDB",
       "Express API",
@@ -170,7 +170,7 @@ const SERVICE_SHOWCASE: ServiceTier[] = [
     icon: TbUsersGroup,
     featured: false,
     tag: "Business",
-    slug: "/services/crm-solutions",
+    slug: "/services/custom-website",
     highlights: [
       "Zoho CRM",
       "EspoCRM",
@@ -189,7 +189,7 @@ const SERVICE_SHOWCASE: ServiceTier[] = [
     icon: TbSeo,
     featured: false,
     tag: "Growth",
-    slug: "/services/seo-ai",
+    slug: "/services/service-engine-optimization",
     highlights: [
       "Technical SEO",
       "Local SEO",
