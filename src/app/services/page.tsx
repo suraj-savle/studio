@@ -189,7 +189,7 @@ const SERVICE_SHOWCASE: ServiceTier[] = [
     icon: TbSeo,
     featured: false,
     tag: "Growth",
-    slug: "/services/service-engine-optimization",
+    slug: "/services/search-engine-optimization",
     highlights: [
       "Technical SEO",
       "Local SEO",
