@@ -103,7 +103,7 @@ export default function AboutPage() {
             </span>
             <div className="flex items-center gap-5 text-zinc-600">
               <a
-                href="https://x.com/surajsavle"
+                href="https://x.com/upgradeuxagency"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#4DB2E0] transition-colors"
@@ -111,7 +111,7 @@ export default function AboutPage() {
                 <FaXTwitter className="size-4" />
               </a>
               <a
-                href="https://linkedin.com/in/suraj-savle"
+                href="https://linkedin.com/in/surajsavle"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-[#4DB2E0] transition-colors"

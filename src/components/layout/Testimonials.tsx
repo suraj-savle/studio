@@ -25,7 +25,7 @@ export default function Testimonials() {
       company: "rare ui",
       metricLabel: "Project Delivery",
       metricValue: "100% On Time",
-      avatar: "/assets/testimonials/swapanil.jpg",
+      avatar: "/assets/testimonials/default.jpg",
     },
     {
       quote:
@@ -45,7 +45,7 @@ export default function Testimonials() {
       company: "",
       metricLabel: "Performance",
       metricValue: "+92 Lighthouse",
-      avatar: "/assets/testimonials/tushar.jpg",
+      avatar: "/assets/testimonials/default.jpg",
     },
   ];
 
