@@ -1,4 +1,4 @@
-Contact: mailto:hello@upgradeux.in
+Contact: mailto:contact@upgradeux.in
 Expires: 2027-01-01T00:00:00.000Z
 Preferred-Languages: en
 Canonical: https://upgradeux.in/.well-known/security.txt

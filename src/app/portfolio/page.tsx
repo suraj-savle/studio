@@ -14,9 +14,9 @@ interface Project {
   id: string;
   title: string;
   category: string; // Maps to "Notes & Journaling" area
-  docNum: string;    // Maps to "05" area
-  docType: string;   // Maps to "Doc" area
-  countStr: string;  // Maps to "1270 Notes" area
+  docNum: string; // Maps to "05" area
+  docType: string; // Maps to "Doc" area
+  countStr: string; // Maps to "1270 Notes" area
   icon: React.ElementType;
   description: string;
   link: string;
@@ -102,59 +102,67 @@ const SLIDE_INTERVAL = 3000;
 // Subcomponents
 // ============================================================================
 
-const GallerySlideFrame: React.FC<{ images: string[] }> = React.memo(({ images }) => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>({});
+const GallerySlideFrame: React.FC<{ images: string[] }> = React.memo(
+  ({ images }) => {
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [loadedImages, setLoadedImages] = useState<Record<number, boolean>>(
+      {},
+    );
 
-  useEffect(() => {
-    if (images.length <= 1) return;
-    const intervalId = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % images.length);
-    }, SLIDE_INTERVAL);
+    useEffect(() => {
+      if (images.length <= 1) return;
+      const intervalId = setInterval(() => {
+        setActiveIndex((prev) => (prev + 1) % images.length);
+      }, SLIDE_INTERVAL);
 
-    return () => clearInterval(intervalId);
-  }, [images.length]);
+      return () => clearInterval(intervalId);
+    }, [images.length]);
 
-  const handleImageLoad = (index: number) => {
-    setLoadedImages((prev) => ({ ...prev, [index]: true }));
-  };
+    const handleImageLoad = (index: number) => {
+      setLoadedImages((prev) => ({ ...prev, [index]: true }));
+    };
 
-  const getSlideClassName = useCallback((index: number, activeIndex: number, total: number) => {
-    const isCurrent = index === activeIndex;
-    const isPast = index < activeIndex || (activeIndex === 0 && index === total - 1);
+    const getSlideClassName = useCallback(
+      (index: number, activeIndex: number, total: number) => {
+        const isCurrent = index === activeIndex;
+        const isPast =
+          index < activeIndex || (activeIndex === 0 && index === total - 1);
 
-    if (isCurrent) return "opacity-100 scale-100 z-10";
-    return isPast ? "opacity-0 scale-95 z-0" : "opacity-0 scale-95 z-0";
-  }, []);
+        if (isCurrent) return "opacity-100 scale-100 z-10";
+        return isPast ? "opacity-0 scale-95 z-0" : "opacity-0 scale-95 z-0";
+      },
+      [],
+    );
 
-  return (
-    <div className="w-full h-full relative overflow-hidden bg-zinc-100 dark:bg-zinc-900">
-      {!loadedImages[activeIndex] && (
-        <div className="absolute inset-0 z-30 flex items-center justify-center bg-zinc-100 dark:bg-zinc-900">
-          <div className="w-6 h-6 border-2 border-zinc-300 border-t-zinc-600 rounded-full animate-spin"></div>
-        </div>
-      )}
+    return (
+      <div className="w-full h-full relative overflow-hidden bg-zinc-100 dark:bg-zinc-900">
+        {!loadedImages[activeIndex] && (
+          <div className="absolute inset-0 z-30 flex items-center justify-center bg-zinc-100 dark:bg-zinc-900">
+            <div className="w-6 h-6 border-2 border-zinc-300 border-t-zinc-600 rounded-full animate-spin"></div>
+          </div>
+        )}
 
-      {images.map((imgUrl, idx) => (
-        <Image
-          key={imgUrl}
-          src={imgUrl}
-          alt={`Slide tracking asset ${idx + 1}`}
-          className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out ${getSlideClassName(
-            idx,
-            activeIndex,
-            images.length
-          )}`}
-          width={450}
-          height={300}
-          sizes="450px"
-          priority={idx === 0}
-          onLoad={() => handleImageLoad(idx)}
-        />
-      ))}
-    </div>
-  );
-});
+        {images.map((imgUrl, idx) => (
+          <Image
+            key={imgUrl}
+            src={imgUrl}
+            alt={`Slide tracking asset ${idx + 1}`}
+            className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out ${getSlideClassName(
+              idx,
+              activeIndex,
+              images.length,
+            )}`}
+            width={450}
+            height={300}
+            sizes="450px"
+            priority={idx === 0}
+            onLoad={() => handleImageLoad(idx)}
+          />
+        ))}
+      </div>
+    );
+  },
+);
 
 GallerySlideFrame.displayName = "GallerySlideFrame";
 
@@ -243,11 +251,12 @@ const TaskelloStyleCard: React.FC<{
       </div>
 
       {/* 2. TAB CUTOUT DESIGN LOWER CONTENT BODY */}
-      <div 
+      <div
         className="mt-32 w-full flex-1 bg-[#ffffff] rounded-2xl border border-zinc-300 z-10 pt-6 px-4 pb-2 flex flex-col justify-between relative"
         style={{
           // Creates a sleek folder-tab style layout line structure
-          clipPath: "polygon(0% 16px, 120px 16px, 150px 0%, 100px 0%, 100% 0%, 100% 100%, 0% 100%)",
+          clipPath:
+            "polygon(0% 16px, 120px 16px, 150px 0%, 100px 0%, 100% 0%, 100% 100%, 0% 100%)",
         }}
       >
         <div className="flex flex-col gap-0.5 mt-2">
@@ -319,12 +328,13 @@ export default function ProjectsPage() {
           </h1>
         </div>
         <p className="text-xs sm:text-sm font-medium text-zinc-400 max-w-xs leading-relaxed">
-          A systematic showcase of engineering infrastructure, custom responsive UI layouts, and production application templates.
+          A systematic showcase of engineering infrastructure, custom responsive
+          UI layouts, and production application templates.
         </p>
       </div>
 
       {/* Grid Canvas Component Showcase Workspace */}
-      <main className="max-w-7xl mx-auto px-6 sm:px-10 pb-32">
+      <main className="max-w-7xl mx-auto px-4 sm:px-10 pb-32">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {PROJECTS_DATA.map((project) => (
             <TaskelloStyleCard

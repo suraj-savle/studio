@@ -122,10 +122,16 @@ export default function ContactPage() {
                   Email
                 </span>
                 <a
-                  href="mailto:upgradeux.agency@gmail.com"
+                  href="mailto:contact@upgradeux.in"
                   className="text-base font-bold text-zinc-900 hover:text-[#4DB2E0] transition-colors"
                 >
-                  upgradeux.agency@gmail.com
+                  contact@upgradeux.in
+                </a>
+                <a
+                  href="mailto:contact@upgradeux.in"
+                  className="text-base font-bold text-zinc-900 hover:text-[#4DB2E0] transition-colors"
+                >
+                  support@upgradeux.in
                 </a>
               </div>
 
@@ -225,7 +231,7 @@ export default function ContactPage() {
                   type="email"
                   required
                   disabled={loading}
-                  placeholder="alex@company.com"
+                  placeholder="support@upgradeux.in"
                   value={formState.email}
                   onChange={(e) =>
                     setFormState({ ...formState, email: e.target.value })
@@ -281,7 +287,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="inline-flex items-center justify-center gap-2 mt-2 px-6 py-3.5 bg-zinc-950 hover:bg-zinc-900 text-white rounded-xl text-xs font-bold uppercase tracking-widest shadow-md transition-all duration-300 group active:scale-[0.98] disabled:opacity-60 disabled:pointer-events-none"
+                className="inline-flex items-center justify-center gap-2 mt-2 px-4 py-3.5 bg-zinc-950 hover:bg-zinc-900 text-white rounded-xl text-xs font-bold uppercase tracking-widest shadow-md transition-all duration-300 group active:scale-[0.98] disabled:opacity-60 disabled:pointer-events-none"
               >
                 <span>
                   {loading ? "Sending Integration..." : "Send message"}

@@ -121,7 +121,7 @@ export default function Footer() {
           <div className="flex flex-col space-y-6 sm:col-span-2 lg:col-span-1 lg:pl-4">
             {/* EMAIL LINK COMPONENT */}
             <a
-              href="mailto:upgradeux.agency@gmail.com"
+              href="mailto:hello@upgradeux.in"
               className="group flex items-center justify-between border-b border-zinc-100 pb-5"
             >
               <div className="min-w-0">
@@ -129,7 +129,7 @@ export default function Footer() {
                   Email Inquiry
                 </p>
                 <h4 className="mt-1 text-xl sm:text-sm md:base font-bold text-zinc-950 truncate hover:text-[#4DB2E0] transition-colors duration-200 hover:underline">
-                  upgradeux.agency@gmail.com
+                  hello@upgradeux.in
                 </h4>
               </div>
             </a>

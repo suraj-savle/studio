@@ -178,11 +178,14 @@ const ENTERPRISE_SOLUTIONS = [
   Component Render Layer
   ============================================================================ */
 
+  const phoneNumber = "918369213418";
+const message = "Hello! I am looking to build a website for my business and would love to discuss details.";
+
 export default function WordPressServicesPage() {
   return (
     <div className="w-full min-h-screen font-sans antialiased bg-zinc-50/70 text-zinc-900 selection:bg-[#4DB2E0]/20 scroll-smooth">
       {/* Editorial Header Section */}
-      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 md:mb-20">
+      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 md:px-10 pb-12 md:mb-20">
         <div className="max-w-4xl">
           <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-700 uppercase leading-none">
             WordPress
@@ -196,7 +199,7 @@ export default function WordPressServicesPage() {
       </div>
 
       {/* Core Transformation Breakdown */}
-      <main className="px-6 sm:px-12 py-20 space-y-40">
+      <main className="px-4 sm:px-12 py-20 space-y-40">
         {/* Hero Section */}
         <section className="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20">
           <div className="w-full lg:w-1/2 space-y-8">
@@ -222,7 +225,7 @@ export default function WordPressServicesPage() {
 
             <div className="pt-4 flex flex-wrap gap-4">
               <a
-                href="https://cal.com/suraj-savle-tua3qw/30min"
+                href="https://cal.com/upgradeux/15min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-2.5 rounded-xl bg-zinc-900 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-zinc-800 shadow-sm"
@@ -232,14 +235,14 @@ export default function WordPressServicesPage() {
               </a>
 
               <a
-                href="https://wa.me/8369213418"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2.5 rounded-xl bg-[#25D366] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#20ba59] shadow-sm"
-              >
-                <FaWhatsapp className="text-lg" />
-                Chat on WhatsApp
-              </a>
+              href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#20ba59]"
+            >
+              <FaWhatsapp className="text-lg" />
+              WhatsApp Us
+            </a>
             </div>
           </div>
 
@@ -382,7 +385,6 @@ export default function WordPressServicesPage() {
             FINAL CTA
             ============================================================ */}
         <section className="relative overflow-hidden bg-linear-to-br from-[#000000] to-[#000000] p-8 sm:p-12 text-center">
-          <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
           <div className="relative z-10 max-w-3xl mx-auto">
             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-black text-white mb-4">
               Ready to Build Your WordPress Website?
@@ -394,7 +396,7 @@ export default function WordPressServicesPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="https://cal.com/suraj-savle-tua3qw/30min"
+                href="https://cal.com/upgradeux/15min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 px-8 py-3.5 bg-white text-zinc-900 font-semibold rounded-xl hover:shadow-xl transition-all hover:scale-[1.02] active:scale-[0.98]"
@@ -403,14 +405,14 @@ export default function WordPressServicesPage() {
                 <TbArrowUpRight className="transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
               </a>
               <a
-                href="https://wa.me/8369213418"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-8 py-3.5 bg-[#25D366] text-white font-semibold rounded-xl hover:bg-[#20ba59] transition-all hover:scale-[1.02] active:scale-[0.98]"
-              >
-                <FaWhatsapp className="text-lg" />
-                Chat on WhatsApp
-              </a>
+              href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#20ba59]"
+            >
+              <FaWhatsapp className="text-lg" />
+              WhatsApp Us
+            </a>
             </div>
           </div>
         </section>

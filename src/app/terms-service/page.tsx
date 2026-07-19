@@ -31,7 +31,7 @@ const COMPANY_INFO = {
   name: "UpgradeUx",
   legalName: "UpgradeUx",
   address: "Navi Mumbai, Maharashtra, India",
-  email: "upgradeux.agency@gmail.com",
+  email: "contact@upgradeux.in",
   phone: "+91 8369213418",
   alternative_number: "+91 8369213418",
   website: "https://upgradeux.dev",

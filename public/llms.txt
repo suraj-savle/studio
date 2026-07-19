@@ -1,28 +1,26 @@
 # UpgradeUX
 
-Official Website
+UpgradeUX is a web design and development agency based in India.
 
-UpgradeUX builds
+Services
 
-- Custom Websites
-- UI/UX Design
-- SEO Optimization
+- Custom Website Development
 - Website Redesign
+- Business Website Development
+- Landing Page Development
+- SEO Optimization
 - Website Maintenance
+- Business Dashboards
+- CMS Development
 
 Website
 
-https://upgradeux.in
+https://www.upgradeux.in
 
-Email
+Contact
 
-hello@upgradeux.in
+https://www.upgradeux.in/contact
 
-Social
+Blog
 
-https://linkedin.com/in/surajsavle
-https://instagram.com/upgradeux
-
-Sitemap
-
-https://upgradeux.in/sitemap.xml
+https://www.upgradeux.in/blog

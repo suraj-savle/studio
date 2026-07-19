@@ -74,11 +74,10 @@ const ADVANTAGES = [
     desc: "Modern development standards ensure your website remains secure, reliable, and easy to maintain for years.",
   },
 ];
-{
-  /* ============================================================================
-    Component Layout Screen
-    ============================================================================ */
-}
+
+const phoneNumber = "918369213418";
+const message = "Hello! I am looking to build a website for my business and would love to discuss details.";
+
 
 export default function CustomWebsitePage() {
   return (
@@ -127,7 +126,7 @@ export default function CustomWebsitePage() {
 
           <div className="mt-10 flex flex-wrap gap-4">
             <a
-              href="https://cal.com/suraj-savle-tua3qw/30min"
+              href="https://cal.com/upgradeux/15min"
               target="_blank"
               rel="noopener noreferrer"
               className="group flex items-center gap-2 rounded-xl bg-zinc-900 px-6 py-3 text-sm font-semibold text-white transition hover:bg-zinc-800"
@@ -137,7 +136,7 @@ export default function CustomWebsitePage() {
             </a>
 
             <a
-              href="https://wa.me/8369213418"
+              href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#20ba59]"

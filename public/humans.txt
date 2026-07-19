@@ -1,20 +1,24 @@
 /* TEAM */
 
-Agency
+Agency: UpgradeUX
+Founder: Suraj Savle
 
-UpgradeUX
+Website:
+https://www.upgradeux.in
 
-Developer
+Email:
+contact@upgradeux.in
 
-Suraj Savle
+Location:
+India
 
-Website
-
-https://upgradeux.in
-
-Built With
-
+Tech Stack:
 Next.js
 React
 Tailwind CSS
 Framer Motion
+
+/* SITE */
+
+Built with:
+Next.js 16

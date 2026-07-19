@@ -27,7 +27,7 @@ export default function AllBlogsPage() {
         </p>
       </div>
 
-      <div className="w-full px-6 sm:px-12">
+      <div className="w-full px-4 sm:px-12">
         {/* Featured Posts */}
         {featuredPosts.length > 0 && (
           <div className="mb-12">

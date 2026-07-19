@@ -99,8 +99,6 @@ export const metadata: Metadata = {
       "Modern websites engineered for performance, SEO, and business growth.",
     images: ["/social/twitter-image.jpg"],
   },
-  themeColor: "#4DB2E0",
-  colorScheme: "light",
   verification: {
     // google: "ADD_YOUR_ACTUAL_CODE_HERE",
   },

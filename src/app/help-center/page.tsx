@@ -19,7 +19,7 @@ const COMPANY_INFO = {
   type: "Next-Gen Digital Product & UI/UX Agency",
   established: "2026",
   address: "Mumbai, Maharashtra, India",
-  email: "upgradeux.agency@gmail.com",
+  email: "support@upgradeux.in",
   phone: "+91 8369213418",
   website: "https://upgradeux.agency",
   supportHours: "10:00 AM – 6:00 PM (IST), Monday to Friday",
@@ -28,7 +28,7 @@ const COMPANY_INFO = {
 
   grievanceOfficer: {
     title: "Data Protection & Grievance Officer",
-    email: "upgradeux.agency@gmail.com",
+    email: "support@upgradeux.in",
     turnaroundTime: "Within 7 business days",
   },
 };

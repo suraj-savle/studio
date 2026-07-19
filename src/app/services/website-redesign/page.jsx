@@ -167,6 +167,9 @@ const SEO_SAFEGUARDS = [
   Component Render Layer
   ============================================================================ */
 
+  const phoneNumber = "918369213418";
+const message = "Hello! I am looking to build a website for my business and would love to discuss details.";
+
 export default function PremiumRedesignPage() {
   // Initialize state as empty array (JavaScript syntax)
   const [selectedSigns, setSelectedSigns] = useState([]);
@@ -224,7 +227,7 @@ export default function PremiumRedesignPage() {
 
             <div className="pt-4 flex flex-wrap gap-4">
               <a
-                href="https://cal.com/suraj-savle-tua3qw/30min"
+                href="https://cal.com/upgradeux/15min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-2.5 rounded-xl bg-zinc-900 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-zinc-800 shadow-sm"
@@ -234,14 +237,14 @@ export default function PremiumRedesignPage() {
               </a>
 
               <a
-                href="https://wa.me/8369213418"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2.5 rounded-xl bg-[#25D366] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#20ba59] shadow-sm"
-              >
-                <FaWhatsapp className="text-lg" />
-                Chat on WhatsApp
-              </a>
+              href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#20ba59]"
+            >
+              <FaWhatsapp className="text-lg" />
+              WhatsApp Us
+            </a>
             </div>
           </div>
 
@@ -310,21 +313,12 @@ export default function PremiumRedesignPage() {
               you leads, and give you a clear priority roadmap.
             </p>
             <a
-              href="https://cal.com/suraj-savle-tua3qw/30min"
+              href="https://cal.com/upgradeux/15min"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-5 py-3.5 bg-[#4DB2E0] text-white font-semibold rounded-xl hover:bg-[#000000] transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-[#4DB2E0]/25 mx-2"
             >
               Get My Free Meeting Schedule
-              <TbArrowUpRight className="size-4" />
-            </a>
-            <a
-              href="https://wa.me/8369213418"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-3.5 bg-[#000000] text-white font-semibold rounded-xl hover:bg-[#3ba5d4] transition-all hover:scale-[1.02] active:scale-[0.98] shadow-lg shadow-[#4DB2E0]/25 mx-2"
-            >
-              Get My Free consultation
               <TbArrowUpRight className="size-4" />
             </a>
           </div>

@@ -102,7 +102,7 @@ export default function FreeConsultingPage() {
     <div className="w-full min-h-screen font-sans antialiased bg-white">
       <div>
         {/* 1. TOP HERO BANNER BLOCK */}
-        <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 md:mb-20">
+        <div className="w-full h-64 sm:h-80   relative flex items-end justify-between px-5 sm:px-10 pb-12 md:mb-20">
           <div className="max-w-4xl">
             <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-800 leading-none">
               free consultation
@@ -205,7 +205,6 @@ export default function FreeConsultingPage() {
 
           {/* RIGHT PANEL: SECURE APPOINTMENT SCHEDULER BRIEF CARD */}
           <div className="lg:col-span-5 bg-white border-t lg:border-t-0 lg:border-l py-6 lg:pl-10 lg:pr-2 relative overflow-hidden group/card">
-
             {/* Success Overlay Display (Matches ContactPage Absolute Layout Pattern) */}
             {submitted && (
               <div className="absolute inset-0 bg-white/95 backdrop-blur-sm z-20 flex flex-col items-center justify-center text-center p-6 transition-all duration-300">
@@ -241,9 +240,7 @@ export default function FreeConsultingPage() {
             >
               {/* Input 1: Identity */}
               <div className="flex flex-col gap-2 border-b border-zinc-700 py-2.5">
-                <label className="text-sm font-bold uppercase">
-                  Full Name
-                </label>
+                <label className="text-sm font-bold uppercase">Full Name</label>
                 <input
                   type="text"
                   required
@@ -295,7 +292,8 @@ export default function FreeConsultingPage() {
               {/* Input 5: Context Brief */}
               <div className="flex flex-col gap-2 border-b border-zinc-00 py-2.5">
                 <label className="text-sm font-bold tracking-wider text-zinc-00 uppercase">
-                  Any Specific message or context you want to share with our team?
+                  Any Specific message or context you want to share with our
+                  team?
                 </label>
                 <textarea
                   rows={3}
@@ -321,7 +319,7 @@ export default function FreeConsultingPage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="inline-flex items-center justify-center gap-2 mt-2 px-6 py-3.5 bg-zinc-950 hover:bg-zinc-900 text-white rounded-xl text-xs font-bold uppercase tracking-widest shadow-md transition-all duration-300 group active:scale-[0.98] disabled:opacity-60 disabled:pointer-events-none"
+                className="inline-flex items-center justify-center gap-2 mt-2 px-4 py-3.5 bg-zinc-950 hover:bg-zinc-900 text-white rounded-xl text-xs font-bold uppercase tracking-widest shadow-md transition-all duration-300 group active:scale-[0.98] disabled:opacity-60 disabled:pointer-events-none"
               >
                 <span>
                   {loading ? "Processing Brief..." : "send brief & schedule"}

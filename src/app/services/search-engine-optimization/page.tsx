@@ -183,9 +183,8 @@ const AI_ACRONYMS = [
   },
 ];
 
-/* ============================================================================
-  Component Render Layer
-  ============================================================================ */
+const phoneNumber = "918369213418";
+const message = "Hello! I am looking to build a website for my business and would love to discuss details.";
 
 export default function SEOOptimisationPage() {
   return (
@@ -231,7 +230,7 @@ export default function SEOOptimisationPage() {
 
             <div className="pt-4 flex flex-wrap gap-4">
               <a
-                href="https://cal.com/suraj-savle-tua3qw/30min"
+                href="https://cal.com/upgradeux/15min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center gap-2.5 rounded-xl bg-zinc-900 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-zinc-800 shadow-sm hover:shadow-lg hover:shadow-zinc-900/20"
@@ -241,14 +240,14 @@ export default function SEOOptimisationPage() {
               </a>
 
               <a
-                href="https://wa.me/8369213418"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2.5 rounded-xl bg-[#25D366] px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-[#20ba59] shadow-sm hover:shadow-lg hover:shadow-[#25D366]/20"
-              >
-                <FaWhatsapp className="text-lg" />
-                Chat on WhatsApp
-              </a>
+              href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#20ba59]"
+            >
+              <FaWhatsapp className="text-lg" />
+              WhatsApp Us
+            </a>
             </div>
           </div>
 
@@ -498,7 +497,6 @@ export default function SEOOptimisationPage() {
 
         {/* Final CTA */}
         <section className="relative bg-linear-to-br from-[#4DB2E0] to-[#3ba5d4] text-center space-y-12 px-6 md:px-12 py-8 md:py-12 mb-20">
-          <div className="absolute inset-0 bg-[url('/grid-pattern.svg')] opacity-10" />
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
           <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
           <div className="relative z-10 max-w-3xl mx-auto">
@@ -516,7 +514,7 @@ export default function SEOOptimisationPage() {
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
-                href="https://cal.com/suraj-savle-tua3qw/30min"
+                href="https://cal.com/upgradeux/15min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 px-8 py-3.5 bg-white text-zinc-900 font-semibold rounded-xl hover:shadow-xl transition-all hover:scale-[1.02] active:scale-[0.98]"
