@@ -1,6 +1,7 @@
 import { post as post1 } from "@/data/blog/welcome-to-upgradeux";
 import { post as post2 } from "@/data/blog/why-every-business-needs-a-professional-website";
-import {post as post3 } from "@/data/blog/how-ai-automation-is-transforming-businesses";
+import { post as post3 } from "@/data/blog/how-ai-automation-is-transforming-businesses";
+import { post as post4 } from "@/data/blog/website-still-worth-it-in-2026";
 
 export interface BlogAuthor {
   name: string;
@@ -41,6 +42,7 @@ const allPosts: BlogPost[] = [
   post1,
   post2,
   post3,
+  post4
 ];
 
 export function getAllPosts(): BlogPost[] {
