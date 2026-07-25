@@ -1,6 +1,6 @@
-"use client";
-
 import React from "react";
+import type { Metadata } from "next";
+
 import {
   TbBuildingStore,
   TbRocket,
@@ -14,12 +14,7 @@ import {
   TbUsersGroup,
   TbStack2,
 } from "react-icons/tb";
-import {
-  TbRefresh,
-  TbShoppingBag,
-  TbBrandWordpress,
-  TbUserStar,
-} from "react-icons/tb";
+import { TbRefresh, TbBrandWordpress } from "react-icons/tb";
 
 interface ServiceTier {
   id: string;
@@ -57,12 +52,7 @@ const SERVICE_SHOWCASE: ServiceTier[] = [
     featured: false,
     tag: "Starter",
     slug: "/services/custom-website",
-    highlights: [
-      "Premium UI",
-      "Lead Forms",
-      "Mobile Responsive",
-      "SEO Ready",
-    ],
+    highlights: ["Premium UI", "Lead Forms", "Mobile Responsive", "SEO Ready"],
   },
   {
     id: "business-website",
@@ -76,12 +66,7 @@ const SERVICE_SHOWCASE: ServiceTier[] = [
     featured: true,
     tag: "Most Popular",
     slug: "/services/custom-website",
-    highlights: [
-      "Up to 8 Pages",
-      "WhatsApp",
-      "Google Maps",
-      "SEO Optimized",
-    ],
+    highlights: ["Up to 8 Pages", "WhatsApp", "Google Maps", "SEO Optimized"],
   },
   {
     id: "wordpress",
@@ -95,12 +80,7 @@ const SERVICE_SHOWCASE: ServiceTier[] = [
     featured: false,
     tag: "CMS",
     slug: "/services/wordpress",
-    highlights: [
-      "Custom Theme",
-      "Easy Editing",
-      "SEO Friendly",
-      "Admin Panel",
-    ],
+    highlights: ["Custom Theme", "Easy Editing", "SEO Friendly", "Admin Panel"],
   },
   {
     id: "redesign",
@@ -133,12 +113,7 @@ const SERVICE_SHOWCASE: ServiceTier[] = [
     featured: true,
     tag: "Performance",
     slug: "/services/custom-website",
-    highlights: [
-      "App Router",
-      "SSR & SSG",
-      "SEO Ready",
-      "Lightning Fast",
-    ],
+    highlights: ["App Router", "SSR & SSG", "SEO Ready", "Lightning Fast"],
   },
   {
     id: "mern",
@@ -152,12 +127,7 @@ const SERVICE_SHOWCASE: ServiceTier[] = [
     featured: false,
     tag: "Full Stack",
     slug: "/services/custom-website",
-    highlights: [
-      "MongoDB",
-      "Express API",
-      "React Frontend",
-      "Node Backend",
-    ],
+    highlights: ["MongoDB", "Express API", "React Frontend", "Node Backend"],
   },
   {
     id: "crm",
@@ -171,12 +141,7 @@ const SERVICE_SHOWCASE: ServiceTier[] = [
     featured: false,
     tag: "Business",
     slug: "/services/custom-website",
-    highlights: [
-      "Zoho CRM",
-      "EspoCRM",
-      "Automation",
-      "Training",
-    ],
+    highlights: ["Zoho CRM", "EspoCRM", "Automation", "Training"],
   },
   {
     id: "seo-ai",
@@ -190,12 +155,7 @@ const SERVICE_SHOWCASE: ServiceTier[] = [
     featured: false,
     tag: "Growth",
     slug: "/services/search-engine-optimization",
-    highlights: [
-      "Technical SEO",
-      "Local SEO",
-      "AI Visibility",
-      "Analytics",
-    ],
+    highlights: ["Technical SEO", "Local SEO", "AI Visibility", "Analytics"],
   },
 ];
 
@@ -244,6 +204,86 @@ const SUPPORT_SERVICES: MaintenanceTier[] = [
   },
 ];
 
+export const metadata: Metadata = {
+  title:
+    "Web Development Services | Custom Websites, SEO & AI Automation | UpgradeUX",
+
+  description:
+    "Explore UpgradeUX services including custom website development, Next.js, React, WordPress, website redesign, SEO, AI automation, n8n workflows, CRM solutions, landing pages, and ongoing website maintenance for businesses and startups.",
+
+  keywords: [
+    "Web Development Services",
+    "Website Development Company",
+    "Custom Website Development",
+    "Business Website",
+    "Landing Page Design",
+    "Next.js Development",
+    "React Development",
+    "MERN Stack Development",
+    "WordPress Development",
+    "Website Redesign",
+    "SEO Services",
+    "Technical SEO",
+    "Local SEO",
+    "AI Automation",
+    "n8n Automation",
+    "Business Automation",
+    "CRM Solutions",
+    "WhatsApp Chatbot",
+    "AI Assistant",
+    "Website Maintenance",
+    "Performance Optimization",
+    "Startup Website",
+    "Agency Website",
+    "UpgradeUX",
+  ],
+
+  alternates: {
+    canonical: "/services",
+  },
+
+  openGraph: {
+    title:
+      "Web Development Services | Websites, SEO & AI Automation | UpgradeUX",
+
+    description:
+      "From custom websites and Next.js development to SEO, AI automation, CRM integrations, and website maintenance—UpgradeUX helps businesses build a powerful online presence.",
+
+    url: "https://www.upgradeux.in/services",
+
+    siteName: "UpgradeUX",
+
+    locale: "en_IN",
+
+    type: "website",
+
+    images: [
+      {
+        url: "/social/services-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "UpgradeUX Web Development Services",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+
+    title: "Web Development Services | UpgradeUX",
+
+    description:
+      "Custom websites, Next.js, WordPress, SEO, AI automation, CRM solutions, website redesigns, and business growth services.",
+
+    images: ["/social/services-og.jpg"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
 export default function ServicesOverviewPage() {
   return (
     <div className="w-full min-h-screen text-zinc-950 antialiased">
@@ -255,7 +295,9 @@ export default function ServicesOverviewPage() {
           </h1>
         </div>
         <p className="hidden sm:block text-sm font-medium text-zinc-500 max-w-sm leading-relaxed">
-          Explore our range of web solutions, from high-converting landing pages to scalable e-commerce systems and bespoke web applications, all designed to elevate your digital presence.
+          Explore our range of web solutions, from high-converting landing pages
+          to scalable e-commerce systems and bespoke web applications, all
+          designed to elevate your digital presence.
         </p>
       </div>
 
@@ -320,19 +362,18 @@ export default function ServicesOverviewPage() {
                         {service.description}
                       </p>
                       <div className="space-y-0.5 py-2.5 rounded-xl">
-                      <span className="text-xs text-zinc-400 block">
-                        Best For
-                      </span>
-                      <p className="text-xs font-bold text-zinc-700 leading-tight">
-                        {service.bestFor}
-                      </p>
-                    </div>
+                        <span className="text-xs text-zinc-400 block">
+                          Best For
+                        </span>
+                        <p className="text-xs font-bold text-zinc-700 leading-tight">
+                          {service.bestFor}
+                        </p>
+                      </div>
                     </div>
                   </div>
 
                   {/* Pricing Stack and Redirecting Details Anchor Link Trigger */}
                   <div className="relative z-10 ">
-
                     <a
                       href={service.slug}
                       className={`w-full py-3 rounded-sm font-bold text-xs tracking-wide flex items-center justify-center gap-1 transition-all shadow-sm ${

@@ -1,9 +1,68 @@
-"use client";
-
 import React from "react";
+import type { Metadata } from "next";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { LuLayoutDashboard, LuCpu, LuEye } from "react-icons/lu";
+
+export const metadata: Metadata = {
+  title: "About UpgradeUX | Web Design, Development & AI Automation Agency",
+  description:
+    "Learn about UpgradeUX, a modern web design and development agency helping startups and businesses grow through custom websites, UI/UX design, SEO, AI automation, CRM solutions, and business process automation.",
+
+  keywords: [
+    "About UpgradeUX",
+    "Web Design Agency",
+    "Web Development Agency India",
+    "Next.js Agency",
+    "React Development",
+    "Custom Website Development",
+    "UI UX Design",
+    "SEO Services",
+    "AI Automation",
+    "n8n Automation",
+    "CRM Solutions",
+    "Website Redesign",
+    "Business Website",
+    "Startup Website",
+    "Digital Agency",
+  ],
+
+  alternates: {
+    canonical: "/about",
+  },
+
+  openGraph: {
+    title:
+      "About UpgradeUX | Building Modern Websites That Drive Business Growth",
+    description:
+      "Discover the story behind UpgradeUX and how we help businesses build a strong online presence through high-performance websites, SEO, AI automation, CRM systems, and modern digital solutions.",
+    url: "https://www.upgradeux.in/about",
+    siteName: "UpgradeUX",
+    locale: "en_IN",
+    type: "website",
+    images: [
+      {
+        url: "/social/about-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "About UpgradeUX",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "About UpgradeUX | Modern Web Development Agency",
+    description:
+      "We help startups and businesses grow with custom websites, SEO, AI automation, CRM solutions, and performance-focused web development.",
+    images: ["/social/about-og.jpg"],
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
 
 export default function AboutPage() {
   const philosophyValues = [
