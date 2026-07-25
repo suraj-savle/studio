@@ -259,7 +259,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/social/services-og.jpg",
+        url: "/social/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "UpgradeUX Web Development Services",
@@ -275,7 +275,7 @@ export const metadata: Metadata = {
     description:
       "Custom websites, Next.js, WordPress, SEO, AI automation, CRM solutions, website redesigns, and business growth services.",
 
-    images: ["/social/services-og.jpg"],
+    images: ["/social/og-image.jpg"],
   },
 
   robots: {
