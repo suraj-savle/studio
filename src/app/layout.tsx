@@ -8,7 +8,6 @@ import SmoothScrolling from "@/components/ui/SmoothScrolling";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import CookieConsentBanner from "@/components/ui/CookieConsentBanner";
-import AppLoader from "@/components/ui/AppLoader";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -28,7 +27,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.upgradeux.in"),
   applicationName: "UpgradeUX",
   title: {
-    default: "UpgradeUX | Premium Web Design & Development Agency in India",
+    default:
+      "UpgradeUX | Web Development, SEO & AI Automation Agency for Growing Businesses",
     template: "%s | UpgradeUX",
   },
   description:
@@ -127,7 +127,10 @@ export default function RootLayout({
       suppressHydrationWarning // Keep here if using dark/light theme providers
       className={`${plusJakartaSans.variable} ${geist.variable} antialiased`}
     >
-      <body suppressHydrationWarning className="min-h-screen flex flex-col justify-between">
+      <body
+        suppressHydrationWarning
+        className="min-h-screen flex flex-col justify-between"
+      >
         {/* Structured Schema Scripts */}
         <script
           type="application/ld+json"
@@ -142,7 +145,6 @@ export default function RootLayout({
           }}
         />
 
-        <AppLoader />
         <Navbar />
 
         {/* Smooth scroll can sometimes mess with anchor links / crawl indexing. Ensure your SmoothScrolling component uses native fallback for crawlers */}
