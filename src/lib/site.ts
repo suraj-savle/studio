@@ -8,7 +8,7 @@ export const siteConfig = {
 
   legalName: "UpgradeUX",
 
-  title: "UpgradeUX | Premium Web Design & Development Agency",
+  title: "UpgradeUX | Web Development, SEO & AI Automation Agency for Growing Businesses",
 
   description:
     "UpgradeUX helps businesses grow with fast, SEO-friendly websites, custom web applications, UI/UX design, WordPress development, business solutions, and AI-ready digital experiences.",

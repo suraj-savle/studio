@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://www.upgradeux.in",
     siteName: "UpgradeUX",
-    title: "UpgradeUX | Premium Web Design & Development Agency in India",
+    title: "UpgradeUX | Web Development, SEO & AI Automation Agency for Growing Businesses",
     description:
       "We build fast, modern, SEO-optimized websites and digital experiences that help businesses grow.",
     images: [
@@ -94,7 +94,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "UpgradeUX | Premium Web Design & Development Agency",
+    title: "UpgradeUX | Web Development, SEO & AI Automation Agency",
     description:
       "Modern websites engineered for performance, SEO, and business growth.",
     images: ["/social/twitter-image.jpg"],
