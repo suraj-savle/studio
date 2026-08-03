@@ -1,26 +1,34 @@
 # UpgradeUX
 
-UpgradeUX is a web design and development agency based in India.
+> UpgradeUX is an independent digital agency specializing in custom web design, Next.js development, SEO, and digital transformation for startups and growing businesses.
 
-Services
+## Core Services
 
-- Custom Website Development
-- Website Redesign
-- Business Website Development
-- Landing Page Development
-- SEO Optimization
-- Website Maintenance
-- Business Dashboards
-- CMS Development
+- [Services Overview](https://www.upgradeux.in/services): Overview of digital services, technical capabilities, and web solutions.
+- [Custom Website Development](https://www.upgradeux.in/services/custom-website): Bespoke web design and high-performance frontend engineering built with Next.js and React.
+- [Search Engine Optimization](https://www.upgradeux.in/services/search-engine-optimization): Technical, on-page, and structural SEO services to scale organic traffic.
+- [Website Redesign](https://www.upgradeux.in/services/website-redesign): Complete digital overhaul of legacy websites focused on speed, modern UI/UX, and conversion.
+- [WordPress Development](https://www.upgradeux.in/services/wordpress): Tailored, secure, and scalable WordPress development and custom themes.
 
-Website
+## Company & Workflow
 
-https://www.upgradeux.in
+- [About UpgradeUX](https://www.upgradeux.in/about): Our agency background, mission statement, founding story, and core values.
+- [How We Work](https://www.upgradeux.in/how-we-work): Detailed step-by-step development process and client collaboration model.
+- [Portfolio](https://www.upgradeux.in/portfolio): Case studies, featured client projects, and recent web application deployments.
 
-Contact
+## Insights & Support
 
-https://www.upgradeux.in/contact
+- [Blog](https://www.upgradeux.in/blog): Articles and insights on web design trends, SEO strategy, Next.js development, and business growth.
+- [Help Center](https://www.upgradeux.in/help-center): Client resources, frequently asked questions, and support channels.
+- [Free Consultation](https://www.upgradeux.in/free-consultation): Schedule a strategy call or request a free website evaluation.
+- [Contact Us](https://www.upgradeux.in/contact): Inquiries, project quotes, and direct communication.
 
-Blog
+## Legal & Policies
 
-https://www.upgradeux.in/blog
+- [Privacy Policy](https://www.upgradeux.in/privacy-policy): Privacy commitments and data processing standards.
+- [Terms of Service](https://www.upgradeux.in/terms-service): Terms and conditions governing agency services and platform usage.
+- [Refund Policy](https://www.upgradeux.in/refund-policy): Service delivery guarantees and cancellation policies.
+
+## Optional Details
+
+- [Sitemap](https://www.upgradeux.in/sitemap.xml): XML index of public pages.

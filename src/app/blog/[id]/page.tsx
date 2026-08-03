@@ -7,6 +7,7 @@ import { FiCalendar, FiTag } from "react-icons/fi";
 import { getPostById, getRelatedPosts } from "@/lib/posts";
 import { MediaContainer } from "@/components/MediaContainer"; // Path to your loader component
 import { Metadata } from "next";
+import { siteConfig } from "@/lib/site";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -25,7 +26,7 @@ export async function generateMetadata({
     };
   }
 
-  const url = `https://upgradeux.dev/blog/${post.id}`;
+  const url = `${siteConfig.url}/blog/${post.id}`;
 
   return {
     title: `${post.title} | UpgradeUX`,
@@ -93,7 +94,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
 
     description: post.excerpt,
 
-    image: `https://upgradeux.dev${post.coverImage}`,
+    image: `${siteConfig.url}${post.coverImage}`,
 
     author: {
       "@type": "Person",
@@ -108,7 +109,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
       logo: {
         "@type": "ImageObject",
 
-        url: "https://upgradeux.dev/logo.png",
+        url: `${siteConfig.url}/logo.png`,
       },
     },
 
@@ -119,7 +120,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
     mainEntityOfPage: {
       "@type": "WebPage",
 
-      "@id": `https://upgradeux.dev/blog/${post.id}`,
+      "@id": `${siteConfig.url}/blog/${post.id}`,
     },
   };
 

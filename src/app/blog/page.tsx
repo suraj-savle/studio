@@ -1,11 +1,26 @@
 import React from "react";
+import type { Metadata } from "next";
 import BlogCard from "@/components/ui/blog/BlogCard";
 import { getAllPosts, getFeaturedPosts } from "@/lib/posts";
 
-export const metadata = {
-  title: "Insights Hub | UpgradeUx",
+export const metadata: Metadata = {
+  title: "Blog & SEO Insights | UpgradeUX",
   description:
-    "Browse all industry publications regarding full-stack capabilities and interface architectures.",
+    "Explore web development, SEO, AI automation, and digital growth insights from UpgradeUX — a modern agency for businesses that want stronger online visibility.",
+  alternates: {
+    canonical: "https://www.upgradeux.in/blog",
+  },
+  keywords: [
+    "web development blog",
+    "SEO insights",
+    "AI automation blog",
+    "marketing agency insights",
+    "UpgradeUX",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function AllBlogsPage() {

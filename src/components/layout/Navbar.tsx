@@ -1,5 +1,4 @@
 "use client";
-
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { HiMenuAlt3 } from "react-icons/hi";
@@ -70,9 +69,7 @@ const Navbar = () => {
         {/* LEFT BRAND LOGO */}
         <div className="flex items-center min-w-37.5">
           <Link href="/" className="group flex items-center focus:outline-none">
-            <span
-              className="text-xl md:text-2xl font-bold text-gray-800 transition-all duration-300 group-hover:opacity-80"
-            >
+            <span className="text-xl md:text-2xl font-bold text-gray-800 transition-all duration-300 group-hover:opacity-80">
               UpgradeUx
             </span>
           </Link>
@@ -168,6 +165,7 @@ const Navbar = () => {
 
           {/* HAMBURGER TOGGLE BUTTON */}
           <button
+            aria-label="Toggle Navigation Menu"
             onClick={() => setIsMenuOpen(true)}
             className={`flex items-center justify-center text-2xl text-black transition-colors duration-300 lg:hidden ${
               isDropdownOpen ? "text-zinc-100" : "text-zinc-800"

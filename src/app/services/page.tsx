@@ -205,8 +205,7 @@ const SUPPORT_SERVICES: MaintenanceTier[] = [
 ];
 
 export const metadata: Metadata = {
-  title:
-    "Web Development Services | Custom Websites, SEO & AI Automation | UpgradeUX",
+  title: "Web Development & Design Services | UpgradeUX",
 
   description:
     "Explore UpgradeUX services including custom website development, Next.js, React, WordPress, website redesign, SEO, AI automation, n8n workflows, CRM solutions, landing pages, and ongoing website maintenance for businesses and startups.",

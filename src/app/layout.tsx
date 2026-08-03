@@ -80,7 +80,8 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: "https://www.upgradeux.in",
     siteName: "UpgradeUX",
-    title: "UpgradeUX | Web Development, SEO & AI Automation Agency for Growing Businesses",
+    title:
+      "UpgradeUX | Web Development, SEO & AI Automation Agency for Growing Businesses",
     description:
       "We build fast, modern, SEO-optimized websites and digital experiences that help businesses grow.",
     images: [

@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
@@ -119,9 +117,11 @@ export default function Footer() {
 
           {/* COLUMN 4: INBOUND INTERACTION CONTACTS */}
           <div className="flex flex-col space-y-6 sm:col-span-2 lg:col-span-1 lg:pl-4">
-            {/* EMAIL LINK COMPONENT */}
+            {/* Disable Cloudflare Obfuscation on this specific element */}
+            {/*email_off*/}
             <a
               href="mailto:hello@upgradeux.in"
+              data-cfemail="false"
               className="group flex items-center justify-between border-b border-zinc-100 pb-5"
             >
               <div className="min-w-0">
@@ -133,6 +133,7 @@ export default function Footer() {
                 </h4>
               </div>
             </a>
+            {/*email_off*/}
 
             {/* LOCATION FOOTPRINT DATA */}
             <div>
@@ -152,9 +153,9 @@ export default function Footer() {
 
       {/* HERO SCALED TEXT OVERLAY BACKGROUND ELEMENT */}
       <div className="w-full relative pointer-events-none select-none overflow-hidden h-30 sm:h-45 md:h-60 lg:h-70">
-        <h1 className="absolute bottom-[-20%] right-0.5 text-[17.8vw] font-black tracking-tighter leading-none antialiased uppercase bg-clip-text text-transparent bg-linear-to-b from-[#FFFFFF] to-[#4DB2E0] font-geist">
+        <p className="absolute bottom-[-20%] right-0.5 text-[17.8vw] font-black tracking-tighter leading-none antialiased uppercase bg-clip-text text-transparent bg-linear-to-b from-[#FFFFFF] to-[#4DB2E0] font-geist">
           UpgradeUX
-        </h1>
+        </p>
       </div>
     </footer>
   );

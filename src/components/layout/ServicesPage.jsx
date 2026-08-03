@@ -27,7 +27,7 @@ const DETAILED_SERVICES = [
       "TypeScript",
       "Tailwind CSS",
     ],
-    href: "/custom-website",
+    href: "/services/custom-website",
   },
 
   {

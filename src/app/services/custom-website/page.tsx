@@ -76,8 +76,8 @@ const ADVANTAGES = [
 ];
 
 const phoneNumber = "918369213418";
-const message = "Hello! I am looking to build a website for my business and would love to discuss details.";
-
+const message =
+  "Hello! I am looking to build a website for my business and would love to discuss details.";
 
 export default function CustomWebsitePage() {
   return (

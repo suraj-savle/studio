@@ -184,7 +184,8 @@ const AI_ACRONYMS = [
 ];
 
 const phoneNumber = "918369213418";
-const message = "Hello! I am looking to build a website for my business and would love to discuss details.";
+const message =
+  "Hello! I am looking to build a website for my business and would love to discuss details.";
 
 export default function SEOOptimisationPage() {
   return (
@@ -240,14 +241,14 @@ export default function SEOOptimisationPage() {
               </a>
 
               <a
-              href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#20ba59]"
-            >
-              <FaWhatsapp className="text-lg" />
-              WhatsApp Us
-            </a>
+                href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 rounded-xl bg-[#25D366] px-6 py-3 text-sm font-semibold text-white transition hover:bg-[#20ba59]"
+              >
+                <FaWhatsapp className="text-lg" />
+                WhatsApp Us
+              </a>
             </div>
           </div>
 

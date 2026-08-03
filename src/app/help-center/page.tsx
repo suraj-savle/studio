@@ -49,7 +49,7 @@ const POLICY_LINKS = [
   {
     title: "Terms of Service",
     description: "Read the governing structural conditions, development agreements, and legal layouts.",
-    link: "/terms",
+    link: "/terms-service",
     icon: TbScale,
   },
 ];

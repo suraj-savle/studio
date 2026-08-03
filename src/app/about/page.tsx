@@ -5,9 +5,9 @@ import { FaXTwitter } from "react-icons/fa6";
 import { LuLayoutDashboard, LuCpu, LuEye } from "react-icons/lu";
 
 export const metadata: Metadata = {
-  title: "About UpgradeUX | Web Design, Development & AI Automation Agency",
+  title: "About Us | UpgradeUX Web Agency",
   description:
-    "Learn about UpgradeUX, a modern web design and development agency helping startups and businesses grow through custom websites, UI/UX design, SEO, AI automation, CRM solutions, and business process automation.",
+    "Learn about UpgradeUX, a modern web design and development agency helping startups and businesses grow through custom websites, UI/UX design, SEO, and AI automation.",
 
   keywords: [
     "About UpgradeUX",
@@ -32,10 +32,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title:
-      "About UpgradeUX | Building Modern Websites That Drive Business Growth",
+    title: "About UpgradeUX | Modern Websites That Drive Growth",
     description:
-      "Discover the story behind UpgradeUX and how we help businesses build a strong online presence through high-performance websites, SEO, AI automation, CRM systems, and modern digital solutions.",
+      "Discover how UpgradeUX helps businesses build a strong online presence through high-performance websites, SEO, and modern digital solutions.",
     url: "https://www.upgradeux.in/about",
     siteName: "UpgradeUX",
     locale: "en_IN",
@@ -52,7 +51,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "About UpgradeUX | Modern Web Development Agency",
+    title: "About Us | UpgradeUX Web Agency",
     description:
       "We help startups and businesses grow with custom websites, SEO, AI automation, CRM solutions, and performance-focused web development.",
     images: ["/social/about-og.jpg"],

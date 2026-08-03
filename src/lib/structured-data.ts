@@ -7,12 +7,24 @@ export function organizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
 
-    name: siteConfig.name,
-    legalName: siteConfig.legalName,
+    "@id": `${baseUrl}/#organization`,
+
+    name: "UpgradeUX",
+
+    alternateName: [
+      "Upgrade UX",
+      "UpgradeUX Agency",
+      "UpgradeUX Web Design Agency",
+    ],
+
+    legalName: "UpgradeUX",
 
     url: baseUrl,
 
-    logo: `${baseUrl}${siteConfig.logo}`,
+    logo: {
+      "@type": "ImageObject",
+      url: `${baseUrl}/logo.png`,
+    },
 
     image: `${baseUrl}${siteConfig.ogImage}`,
 
@@ -22,40 +34,47 @@ export function organizationSchema() {
 
     telephone: siteConfig.contact.phone,
 
+    foundingDate: "2026",
+
     founder: {
       "@type": "Person",
-      name: siteConfig.founder.name,
-      jobTitle: siteConfig.founder.role,
-      image: `${baseUrl}${siteConfig.founder.image}`,
+      name: "Suraj Savle",
     },
 
     address: {
       "@type": "PostalAddress",
-      addressCountry: siteConfig.address.country,
-      addressRegion: siteConfig.address.state,
-      addressLocality: siteConfig.address.city,
+      addressCountry: "IN",
+      addressRegion: "Maharashtra",
     },
 
-    sameAs: Object.values(siteConfig.social).filter(Boolean),
+    sameAs: [
+      "https://www.linkedin.com/in/surajsavle",
+      "https://www.instagram.com/upgradeux",
+      "https://x.com/upgradeuxagency",
+    ],
   };
 }
 
 export function websiteSchema() {
   return {
     "@context": "https://schema.org",
+
     "@type": "WebSite",
 
-    name: siteConfig.name,
+    "@id": `${baseUrl}/#website`,
 
     url: baseUrl,
 
+    name: "UpgradeUX",
+
+    alternateName: "Upgrade UX",
+
     description: siteConfig.description,
 
-    inLanguage: siteConfig.language,
+    inLanguage: "en",
 
     publisher: {
-      "@type": "Organization",
-      name: siteConfig.name,
+      "@id": `${baseUrl}/#organization`,
     },
 
     potentialAction: {
@@ -66,23 +85,25 @@ export function websiteSchema() {
   };
 }
 
+
+
 export function personSchema() {
   return {
     "@context": "https://schema.org",
+
     "@type": "Person",
 
-    name: siteConfig.founder.name,
+    "@id": `${baseUrl}/#founder`,
 
-    jobTitle: siteConfig.founder.role,
+    name: "Suraj Savle",
+
+    url: siteConfig.founder.url,
 
     image: `${baseUrl}${siteConfig.founder.image}`,
 
     worksFor: {
-      "@type": "Organization",
-      name: siteConfig.name,
+      "@id": `${baseUrl}/#organization`,
     },
-
-    url: siteConfig.founder.url,
   };
 }
 
@@ -233,18 +254,27 @@ export function webpageSchema({
 
     "@type": "WebPage",
 
-    name: title,
-
-    description,
+    "@id": `${url}#webpage`,
 
     url,
 
-    inLanguage: siteConfig.language,
+    name: title,
 
     isPartOf: {
-      "@type": "WebSite",
-      name: siteConfig.name,
-      url: baseUrl,
+      "@id": `${baseUrl}/#website`,
     },
+
+    about: {
+      "@id": `${baseUrl}/#organization`,
+    },
+
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      url: `${baseUrl}/social/og-image.jpg`,
+    },
+
+    description,
+
+    inLanguage: "en",
   };
 }

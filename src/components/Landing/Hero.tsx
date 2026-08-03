@@ -27,7 +27,7 @@ export default function HeroHeading() {
       {/* BACKGROUND VIDEO FRAMEWORK CONTAINER */}
       <div className="absolute inset-0 w-full h-full object-cover pointer-events-none z-10 border-none outline-none select-none">
         <video
-          poster="/landing-page.png"
+          poster="/landing-page.webp"
           src="/landing-page-1.mp4"
           autoPlay
           muted
