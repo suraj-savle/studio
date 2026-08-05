@@ -175,7 +175,7 @@ export default function FreeConsultingPage() {
                 </span>
                 <div className="flex items-center gap-4 mt-1 text-zinc-600">
                   <a
-                    href="https://twitter.com/surajsavle"
+                    href="https://x.com/upgradeuxagency"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-[#4DB2E0] transition-colors"
@@ -319,6 +319,7 @@ export default function FreeConsultingPage() {
               <button
                 type="submit"
                 disabled={loading}
+                aria-label="Submit Consultation Request"
                 className="inline-flex items-center justify-center gap-2 mt-2 px-4 py-3.5 bg-zinc-950 hover:bg-zinc-900 text-white rounded-xl text-xs font-bold uppercase tracking-widest shadow-md transition-all duration-300 group active:scale-[0.98] disabled:opacity-60 disabled:pointer-events-none"
               >
                 <span>

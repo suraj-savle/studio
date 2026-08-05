@@ -29,8 +29,7 @@ import {
 const COMPANY_INFO = {
   name: "upgradeux",
   legalName: "upgradeux",
-  address:
-    "Navi Mumbai, Maharashtra, India",
+  address: "Navi Mumbai, Maharashtra, India",
   email: "support@upgradeux.in",
   phone: "+91 8369213418",
   alternatePhone: "+91 8369213418",
@@ -104,7 +103,8 @@ const PROJECT_REFUND_TABLE = [
   },
   {
     stage: "After advance paid, before any work commenced",
-    eligibility: "Refund requests are reviewed individually. Any approved refund will be reduced by work completed, administrative costs, and applicable transaction fees.",
+    eligibility:
+      "Refund requests are reviewed individually. Any approved refund will be reduced by work completed, administrative costs, and applicable transaction fees.",
   },
   {
     stage: "After project kickoff and discovery commenced",
@@ -234,6 +234,7 @@ export default function RefundPolicyPage() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
+                  aria-label={item.title}
                   className={`
                     w-full flex items-center gap-3 px-4 py-3 text-sm transition-all text-left
                     ${
@@ -290,6 +291,7 @@ export default function RefundPolicyPage() {
                       <button
                         key={item.id}
                         onClick={() => scrollToSection(item.id)}
+                        aria-label={item.title}
                         className={`
                           w-full flex items-center gap-3 px-3 py-2.5 text-sm transition-all text-left
                           ${
@@ -363,7 +365,10 @@ export default function RefundPolicyPage() {
               </div>
               <div className="space-y-4 text-sm text-zinc-600 leading-relaxed">
                 <p>
-                  Because every project is custom-built, significant planning, design, development, and resource allocation begin shortly after payment is received. This Refund Policy explains when refunds may or may not be available.
+                  Because every project is custom-built, significant planning,
+                  design, development, and resource allocation begin shortly
+                  after payment is received. This Refund Policy explains when
+                  refunds may or may not be available.
                 </p>
                 <p>
                   By making a payment for any of our services, you acknowledge
@@ -394,7 +399,9 @@ export default function RefundPolicyPage() {
                   transaction charges.
                 </p>
                 <p>
-                  Administrative deductions may include payment gateway charges, banking fees, currency conversion fees (if applicable), and work already completed.
+                  Administrative deductions may include payment gateway charges,
+                  banking fees, currency conversion fees (if applicable), and
+                  work already completed.
                 </p>
                 <div className="p-4 bg-amber-50 border border-amber-200 flex items-start gap-3">
                   <TbAlertCircle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
@@ -480,7 +487,8 @@ export default function RefundPolicyPage() {
                     services will continue until the end of the paid term.
                   </li>
                   <li>
-                    Failure to cancel before the next billing cycle may result in automatic renewal where applicable.
+                    Failure to cancel before the next billing cycle may result
+                    in automatic renewal where applicable.
                   </li>
                 </ul>
               </div>
@@ -684,7 +692,10 @@ export default function RefundPolicyPage() {
                   chargeback investigation.
                 </p>
                 <p>
-                  If a chargeback is resolved in the Company&apos;s favor, the Client remains responsible for any outstanding balances, chargeback fees, legal costs (where applicable), and unpaid invoices.
+                  If a chargeback is resolved in the Company&apos;s favor, the
+                  Client remains responsible for any outstanding balances,
+                  chargeback fees, legal costs (where applicable), and unpaid
+                  invoices.
                 </p>
               </div>
             </div>
@@ -748,7 +759,7 @@ export default function RefundPolicyPage() {
               <div className="bg-zinc-50 border border-zinc-200/60 rounded-2xl p-6 shadow-sm">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-zinc-600">
                   {/* Left Side: Corporate Identity & Address Card */}
-                  <div className="p-5 rounded-xl border border-zinc-200/50 bg-gradient-to-br from-white to-zinc-50/50 space-y-4 shadow-sm">
+                  <div className="p-5 rounded-xl border border-zinc-200/50 bg-linear-to-br from-white to-zinc-50/50 space-y-4 shadow-sm">
                     <div className="flex items-start gap-3">
                       <div className="p-2 rounded-lg bg-zinc-100 mt-0.5">
                         <TbReceipt className="w-4 h-4 shrink-0" />
@@ -770,7 +781,7 @@ export default function RefundPolicyPage() {
 
                     <div className="flex items-start gap-3">
                       <div className="p-2 rounded-lg bg-zinc-100 text-zinc-400 mt-0.5">
-                        <TbMapPin className="w-4 h-4 flex-shrink-0 text-zinc-500" />
+                        <TbMapPin className="w-4 h-4 shrink-0 text-zinc-500" />
                       </div>
                       <p className="leading-relaxed text-zinc-600 font-medium pt-1">
                         {COMPANY_INFO.address}
@@ -779,19 +790,16 @@ export default function RefundPolicyPage() {
                   </div>
 
                   {/* Right Side: Communication Channels Card */}
-                  <div className="p-5 rounded-xl border border-zinc-200/50 bg-gradient-to-br from-white to-zinc-50/50 flex flex-col justify-between gap-3.5 shadow-sm">
+                  <div className="p-5 rounded-xl border border-zinc-200/50 bg-linear-to-br from-white to-zinc-50/50 flex flex-col justify-between gap-3.5 shadow-sm">
                     <div className="space-y-2.5">
                       {/* Primary Email */}
                       <div className="flex items-center gap-3 group">
                         <div className="p-2 rounded-lg transition-colors duration-200 bg-zinc-100">
                           <TbMail className="w-4 h-4 shrink-0" />
                         </div>
-                        <a
-                          href={`mailto:${COMPANY_INFO.email}`}
-                          className="text-zinc-700 hover:text-[#4DB2E0] font-semibold transition-colors duration-200 hover:underline break-all"
-                        >
+                        <span className="text-zinc-700 font-semibold break-all">
                           {COMPANY_INFO.email}
-                        </a>
+                        </span>
                       </div>
                     </div>
 
@@ -815,18 +823,16 @@ export default function RefundPolicyPage() {
                 </div>
               </div>
             </div>
-            
+
             {/* Footer Note */}
             <div className="pt-8 border-t border-zinc-200 text-center text-xs text-zinc-400 space-y-1">
               <p>
                 These Refund Policy were last updated on{" "}
-                <strong className="text-zinc-600">
-                  6 July 2026
-                </strong>
-                .
+                <strong className="text-zinc-600">6 July 2026</strong>.
               </p>
               <p>
-                By purchasing or using our services, you acknowledge that you have read, understood, and agree to this Refund Policy.
+                By purchasing or using our services, you acknowledge that you
+                have read, understood, and agree to this Refund Policy.
               </p>
             </div>
           </main>

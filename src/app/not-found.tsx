@@ -33,6 +33,7 @@ export default function NotFound() {
         <div className="pt-4 max-w-md">
           <Link
             href="/"
+            aria-label="Go back to homepage"
             className="w-full group/btn relative inline-flex items-center justify-center gap-2.5 bg-gray-900 text-white rounded-full px-6 py-3.5 text-xs overflow-hidden shadow-lg shadow-gray-900/10 transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] hover:shadow-sm hover:shadow-gray-900/20"
           >
             <TbArrowLeft className="text-sm transition-transform duration-300 ease-out group-hover/btn:-translate-x-1" />

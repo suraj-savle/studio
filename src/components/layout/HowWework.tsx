@@ -238,6 +238,7 @@ export default function HowItWorks() {
                       setActiveStep(idx);
                       setIsAutoPlaying(false);
                     }}
+                    aria-label={step.title}
                     className={`group relative flex items-center gap-4 p-4 rounded-full border text-left transition-all duration-500 w-full sm:w-64 lg:w-60 xl:w-64 ${
                       isSelected
                         ? "bg-white border-zinc-200/80 shadow-xl shadow-zinc-950/5 translate-x-2 scale-[1.02]"
@@ -300,7 +301,7 @@ export default function HowItWorks() {
                   key={activeStep}
                 >
                   {/* Hardware Glass Glare Coating Reflection Line */}
-                  <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.02] to-white/[0.06] pointer-events-none z-30 mix-blend-overlay" />
+                  <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/[0.02] to-white/[0.06] pointer-events-none z-30 mix-blend-overlay" />
 
                   {/* Browser Top Navigation Bar */}
                   <div className="flex items-center justify-between gap-4 w-full bg-zinc-100 border-b border-zinc-300/80 px-2 sm:px-4 py-1 sm:py-2 shrink-0">
@@ -353,7 +354,7 @@ export default function HowItWorks() {
                   <div className=" p-1 sm:p-4 space-y-6 relative flex-1 flex flex-col justify-between bg-white">
                     {/* Accent ambient lighting wash logic layer */}
                     <div
-                      className={`absolute inset-0 bg-gradient-to-br ${getAccentClasses(
+                      className={`absolute inset-0 bg-linear-to-br ${getAccentClasses(
                         currentStep.accentColor,
                       )} opacity-10 mix-blend-multiply transition-opacity duration-700 pointer-events-none z-0`}
                     />
@@ -443,6 +444,7 @@ export default function HowItWorks() {
                             setActiveStep((prev) => (prev + 1) % STEPS.length);
                             setIsAutoPlaying(false);
                           }}
+                          aria-label="Next step"
                           className="inline-flex items-center gap-1.5 px-3.5 h-4 sm:h-8 bg-zinc-950 text-white rounded sm:rounded-lg text-[6px] sm:text-[10px] font-black tracking-wider hover:bg-zinc-800 active:scale-[0.97] transition-all shadow-sm"
                         >
                           <span>Next Phase</span>
@@ -496,7 +498,7 @@ export default function HowItWorks() {
               <div className="w-20 h-1 bg-zinc-600/60 rounded-b-sm border-b border-zinc-400/20 absolute top-0 shadow-inner" />
 
               {/* 3D Skeuomorphic Front Trackpad Inset Indicator */}
-              <div className="w-32 h-3.5 mt-0.5 bg-gradient-to-b from-zinc-300/40 to-zinc-400/20 rounded-t-md border-t border-x border-zinc-500/30 shadow-[inset_0_1px_1px_rgba(0,0,0,0.1)] relative opacity-90">
+              <div className="w-32 h-3.5 mt-0.5 bg-linear-to-b from-zinc-300/40 to-zinc-400/20 rounded-t-md border-t border-x border-zinc-500/30 shadow-[inset_0_1px_1px_rgba(0,0,0,0.1)] relative opacity-90">
                 {/* Precision Trackpad separator rim highlight border line */}
                 <div className="absolute inset-x-0 bottom-0 h-px bg-zinc-400/40" />
               </div>

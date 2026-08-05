@@ -28,14 +28,19 @@ export default function HeroHeading() {
       <div className="absolute inset-0 w-full h-full object-cover pointer-events-none z-10 border-none outline-none select-none">
         <video
           poster="/landing-page.webp"
-          src="/landing-page-1.mp4"
           autoPlay
           muted
           loop
           playsInline
-          preload="auto"
+          preload="metadata"
           className="absolute inset-0 w-full h-full object-cover"
-        />
+        >
+          <source
+            src="/landing-page-1.mp4"
+            type="video/mp4"
+            media="(min-width: 768px)"
+          />
+        </video>
       </div>
 
       {/* CSS Keyframes injected directly to avoid external stylesheet dependencies */}
@@ -87,7 +92,7 @@ export default function HeroHeading() {
           <div className="relative select-none py-2 md:py-4">
             {/* Dynamic Typography Header Layout */}
             <h1
-              className="relative z-10 flex flex-col items-center leading-[0.9] tracking-[-0.05em] gap-2 md:gap-4 animate-fade-up"
+              className="relative z-10 flex flex-col items-center leading-[0.9] tracking-tighter gap-2 md:gap-4 animate-fade-up"
               style={{ animationDuration: "1000ms" }}
             >
               <span className="text-[3rem] sm:text-[5rem] font-medium text-white">

@@ -51,6 +51,7 @@ export default function CtaSection() {
             {/* Primary Action Call Button */}
             <Link
               href="/contact"
+              aria-label="Contact Us"
               className="w-full sm:w-auto group/btn flex items-center justify-center gap-2 bg-zinc-950 hover:bg-zinc-900 text-white rounded-full px-4 sm:px-8 py-4 text-xs tracking-wider shadow-md transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
             >
               Contact Us
@@ -60,6 +61,7 @@ export default function CtaSection() {
             {/* Secondary Action Work Link */}
             <Link
               href="/portfolio"
+              aria-label="View Our Work"
               className="w-full sm:w-auto group/btn flex items-center justify-center gap-2 border border-zinc-200 bg-zinc-50/40 backdrop-blur-xs text-zinc-700 rounded-full px-4 sm:px-8 py-4 text-xs tracking-wider transition-all duration-300 hover:border-zinc-400 hover:text-zinc-950 hover:bg-white active:scale-[0.98]"
             >
               View Our Work

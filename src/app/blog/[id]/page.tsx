@@ -137,6 +137,7 @@ export default async function BlogDetailPage({ params }: PageProps) {
         {/* Back Navigation */}
         <Link
           href="/blog"
+          aria-label="Back to all blogs"
           className="inline-flex items-center gap-1.5 text-xs font-semibold text-zinc-400 hover:text-zinc-950 mb-8 group transition-colors"
         >
           <TbArrowLeft className="text-sm transition-transform group-hover:-translate-x-0.5" />

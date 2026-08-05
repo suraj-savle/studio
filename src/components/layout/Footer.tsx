@@ -69,6 +69,7 @@ export default function Footer() {
                   <Link
                     key={service.name}
                     href={service.href}
+                    aria-label={service.name}
                     className="text-sm font-medium text-zinc-500 transition-colors duration-200 hover:text-[#4DB2E0]"
                   >
                     {service.name}
@@ -87,6 +88,7 @@ export default function Footer() {
                   <Link
                     key={item.name}
                     href={item.href}
+                    aria-label={item.name}
                     className="text-sm font-medium text-zinc-500 transition-colors duration-200 hover:text-[#4DB2E0]"
                   >
                     {item.name}
@@ -117,23 +119,16 @@ export default function Footer() {
 
           {/* COLUMN 4: INBOUND INTERACTION CONTACTS */}
           <div className="flex flex-col space-y-6 sm:col-span-2 lg:col-span-1 lg:pl-4">
-            {/* Disable Cloudflare Obfuscation on this specific element */}
-            {/*email_off*/}
-            <a
-              href="mailto:hello@upgradeux.in"
-              data-cfemail="false"
-              className="group flex items-center justify-between border-b border-zinc-100 pb-5"
-            >
+            <div className="flex items-center justify-between border-b border-zinc-100 pb-5">
               <div className="min-w-0">
                 <p className="text-xs sm:text-[10px] font-bold uppercase tracking-[0.15em] text-zinc-400">
                   Email Inquiry
                 </p>
-                <h4 className="mt-1 text-xl sm:text-sm md:base font-bold text-zinc-950 truncate hover:text-[#4DB2E0] transition-colors duration-200 hover:underline">
+                <h4 className="mt-1 text-xl sm:text-sm md:base font-bold text-zinc-950 truncate">
                   hello@upgradeux.in
                 </h4>
               </div>
-            </a>
-            {/*email_off*/}
+            </div>
 
             {/* LOCATION FOOTPRINT DATA */}
             <div>

@@ -61,20 +61,20 @@ export default function Testimonials() {
     return (
       <div className="group/card relative flex flex-col p-6 mb-6 bg-white/80 backdrop-blur-xl border border-gray-200 rounded-2xl shadow-[0000003b] hover:shadow-[#0000003b] transition-all duration-500 ease-out hover:-translate-y-1 hover:border-[#00000034]">
         {/* Gradient Background on Hover */}
-        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-[#4DB2E0]/0 via-[#4DB2E0]/0 to-[#4DB2E0]/5 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500" />
-        
+        <div className="absolute inset-0 rounded-2xl bg-linear-to-br from-[#4DB2E0]/0 via-[#4DB2E0]/0 to-[#4DB2E0]/5 opacity-0 group-hover/card:opacity-100 transition-opacity duration-500" />
+
         {/* Content */}
         <div className="relative z-10">
           {/* Quote Icon */}
           <FaQuoteLeft className="text-[#4DB2E0]/20 text-2xl mb-4 group-hover/card:text-[#000000b7] transition-colors duration-300" />
-          
+
           {/* Quote Text */}
           <p className="text-sm text-zinc-600 leading-relaxed font-normal antialiased mb-6 line-clamp-4 group-hover/card:text-zinc-500 transition-colors duration-300">
             &ldquo;{item.quote}&rdquo;
           </p>
 
           {/* Divider */}
-          <div className="w-full h-px bg-gradient-to-r from-transparent via-zinc-200 to-transparent mb-5 group-hover/card:via-[#4DB2E0]/30 transition-all duration-300" />
+          <div className="w-full h-px bg-linear-to-r from-transparent via-zinc-200 to-transparent mb-5 group-hover/card:via-[#4DB2E0]/30 transition-all duration-300" />
 
           {/* Footer */}
           <div className="flex items-center gap-4">
@@ -117,25 +117,33 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 bg-gradient-to-b from-white to-zinc-50/50 py-12 sm:py-20 select-none border-t border-zinc-100">
+    <section className="max-w-7xl mx-auto px-4 bg-linear-to-b from-white to-zinc-50/50 py-12 sm:py-20 select-none border-t border-zinc-100">
       <style jsx global>{`
         @keyframes marquee-up {
-          0% { transform: translateY(0%); }
-          100% { transform: translateY(-50%); }
+          0% {
+            transform: translateY(0%);
+          }
+          100% {
+            transform: translateY(-50%);
+          }
         }
-        
+
         @keyframes marquee-down {
-          0% { transform: translateY(-50%); }
-          100% { transform: translateY(0%); }
+          0% {
+            transform: translateY(-50%);
+          }
+          100% {
+            transform: translateY(0%);
+          }
         }
-        
+
         .animate-marquee-up {
           display: flex;
           flex-direction: column;
           height: max-content;
           animation: marquee-up 25s linear infinite;
         }
-        
+
         .animate-marquee-down {
           display: flex;
           flex-direction: column;
@@ -144,8 +152,20 @@ export default function Testimonials() {
         }
 
         .mask-gradient-container {
-          mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
-          -webkit-mask-image: linear-gradient(to bottom, transparent, black 15%, black 85%, transparent);
+          mask-image: linear-gradient(
+            to bottom,
+            transparent,
+            black 15%,
+            black 85%,
+            transparent
+          );
+          -webkit-mask-image: linear-gradient(
+            to bottom,
+            transparent,
+            black 15%,
+            black 85%,
+            transparent
+          );
         }
 
         .line-clamp-4 {
@@ -162,9 +182,7 @@ export default function Testimonials() {
           <h2 className="text-3xl sm:text-5xl text-zinc-900 font-medium">
             Loved by Clients.
             <br />
-            <span className="text-zinc-900">
-              Built to Perform.
-            </span>
+            <span className="text-zinc-900">Built to Perform.</span>
           </h2>
         </div>
         <p className="text-sm text-zinc-500 max-w-sm leading-relaxed">

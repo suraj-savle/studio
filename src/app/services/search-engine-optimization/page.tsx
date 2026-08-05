@@ -189,7 +189,7 @@ const message =
 
 export default function SEOOptimisationPage() {
   return (
-    <div className="w-full min-h-screen font-sans antialiased bg-gradient-to-br from-zinc-50 via-white to-zinc-50/80 text-zinc-900 selection:bg-[#4DB2E0]/20 scroll-smooth">
+    <div className="w-full min-h-screen font-sans antialiased bg-linear-to-br from-zinc-50 via-white to-zinc-50/80 text-zinc-900 selection:bg-[#4DB2E0]/20 scroll-smooth">
       <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 md:mb-20">
         <div className="max-w-4xl">
           <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-700 leading-none">
@@ -333,7 +333,7 @@ export default function SEOOptimisationPage() {
           </div>
 
           {/* Strategic Insight */}
-          <div className="p-6 bg-gradient-to-r from-[#4DB2E0]/10 via-[#4DB2E0]/5 to-transparent border-l-4 border-[#4DB2E0] rounded-r-2xl">
+          <div className="p-6 bg-linear-to-r from-[#4DB2E0]/10 via-[#4DB2E0]/5 to-transparent border-l-4 border-[#4DB2E0] rounded-r-2xl">
             <p className="text-sm text-zinc-700 leading-relaxed">
               <strong className="text-[#4DB2E0]">
                 💡 The strategic insight:
@@ -371,7 +371,7 @@ export default function SEOOptimisationPage() {
                   className="group p-6 bg-white border border-zinc-400 rounded-2xl hover:shadow-xl hover:shadow-zinc-200/30 transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="flex items-start gap-4">
-                    <div className="p-2.5 bg-[#4DB2E0]/10 rounded-xl text-[#4DB2E0] group-hover:bg-[#4DB2E0] group-hover:text-white transition-colors duration-300 flex-shrink-0">
+                    <div className="p-2.5 bg-[#4DB2E0]/10 rounded-xl text-[#4DB2E0] group-hover:bg-[#4DB2E0] group-hover:text-white transition-colors duration-300 shrink-0">
                       <Icon className="size-5" />
                     </div>
                     <div>
@@ -472,7 +472,7 @@ export default function SEOOptimisationPage() {
               return (
                 <div
                   key={index}
-                  className="group p-6 bg-gradient-to-br from-purple-50/30 to-pink-50/30 border border-zinc-300 rounded-2xl hover:shadow-xl hover:shadow-purple-100/30 transition-all duration-300 hover:-translate-y-1"
+                  className="group p-6 bg-linear-to-br from-purple-50/30 to-pink-50/30 border border-zinc-300 rounded-2xl hover:shadow-xl hover:shadow-purple-100/30 transition-all duration-300 hover:-translate-y-1"
                 >
                   <div className="flex items-start gap-4">
                     <div className="p-2.5 rounded shrink-0">

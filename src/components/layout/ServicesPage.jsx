@@ -154,6 +154,7 @@ export default function ServicesShowcaseRows() {
         <div className="w-full flex justify-center items-center py-12 border-t border-zinc-100 mt-10">
           <Link
             href="/services"
+            aria-label="View All Services"
             className="inline-flex items-center justify-center gap-3 px-8 py-4 bg-zinc-950 hover:bg-[#4DB2E0] text-white rounded-xl text-xs font-bold uppercase tracking-widest shadow-lg shadow-zinc-950/10 hover:shadow-xl transition-all duration-300 group active:scale-[0.98]"
           >
             <span>View All Services</span>

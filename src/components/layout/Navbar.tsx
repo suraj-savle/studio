@@ -68,7 +68,7 @@ const Navbar = () => {
       >
         {/* LEFT BRAND LOGO */}
         <div className="flex items-center min-w-37.5">
-          <Link href="/" className="group flex items-center focus:outline-none">
+          <Link href="/" aria-label="Home" className="group flex items-center focus:outline-none">
             <span className="text-xl md:text-2xl font-bold text-gray-800 transition-all duration-300 group-hover:opacity-80">
               UpgradeUx
             </span>
@@ -110,6 +110,7 @@ const Navbar = () => {
                     <Link
                       key={subItem.name}
                       href={subItem.href}
+                      aria-label={subItem.name}
                       className="flex items-center gap-3 px-3 py-2.5 text-xs font-medium transition-all duration-200 group/link border border-transparent hover:border-b-zinc-500"
                       style={{ color: "var(--secondary-text)" }}
                     >
@@ -135,6 +136,7 @@ const Navbar = () => {
             <Link
               key={link.name}
               href={link.href}
+              aria-label={link.name}
               className="group relative rounded-full px-4 py-2 focus:outline-none"
             >
               <div className="relative overflow-hidden">
@@ -154,6 +156,7 @@ const Navbar = () => {
           <Link
             href="/contact"
             className="hidden lg:group lg:flex items-center justify-center overflow-hidden rounded-full px-5 py-2.5 transition-all duration-300 active:scale-95 border border-gray-500"
+            aria-label="Contact Us"
           >
             <div className="absolute inset-0 translate-y-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-y-0" />
             <div className="relative z-10 flex h-4 items-center overflow-hidden">
@@ -188,12 +191,14 @@ const Navbar = () => {
           <Link
             href="/"
             onClick={() => setIsMenuOpen(false)}
+            aria-label="Home"
             className="text-xl font-bold tracking-tight text-zinc-950"
           >
             UpgradeUx
           </Link>
           <button
             onClick={() => setIsMenuOpen(false)}
+            aria-label="Close Navigation Menu"
             className="flex items-center justify-center  h-10  text-zinc-950 hover:text-zinc-800 transition-all duration-300 focus:outline-none"
           >
             <TbX className="text-xl" />
@@ -206,6 +211,7 @@ const Navbar = () => {
           <Link
             href="/services"
             onClick={() => setIsMenuOpen(false)}
+            aria-label="Services"
             className="group inline-flex items-center gap-2 text-3xl font-bold tracking-tight text-zinc-500 hover:text-zinc-950 transition-colors duration-200"
           >
             <span>Services</span>
@@ -218,6 +224,7 @@ const Navbar = () => {
               key={idx}
               href={link.href}
               onClick={() => setIsMenuOpen(false)}
+              aria-label={link.name}
               className="group inline-flex items-center gap-2 text-3xl font-bold tracking-tight text-zinc-500 hover:text-zinc-950 transition-colors duration-200"
             >
               <span>{link.name}</span>
@@ -229,6 +236,7 @@ const Navbar = () => {
           <Link
             href="/contact"
             onClick={() => setIsMenuOpen(false)}
+            aria-label="Contact Us"
             className="group inline-flex items-center gap-2 text-3xl font-bold tracking-tight text-[#4DB2E0] hover:text-[#4DB2E0]/80 transition-colors duration-200 pt-4 border-t w-full max-w-xs"
           >
             <span>Contact US</span>

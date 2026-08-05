@@ -79,6 +79,7 @@ export default function CookieConsentBanner() {
             <div className="flex flex-col gap-1.5 w-full">
               <button
                 onClick={handleAcceptAll}
+                aria-label="Accept all cookies"
                 className="w-full py-2 px-3 bg-zinc-950 hover:bg-zinc-900 text-white rounded-xl text-[11px] transition-all active:scale-[0.98]"
               >
                 Accept All
@@ -86,12 +87,14 @@ export default function CookieConsentBanner() {
               <div className="grid grid-cols-2 gap-1.5 w-full">
                 <button
                   onClick={() => setShowPreferences(true)}
+                  aria-label="Customize cookie preferences"
                   className="py-2 px-1.5 bg-zinc-100 hover:bg-zinc-200/70 border border-zinc-200 text-zinc-800 rounded-xl text-[10px] transition-all"
                 >
                   Customize
                 </button>
                 <button
                   onClick={handleDeclineAll}
+                  aria-label="Reject non-essential cookies"
                   className="py-2 px-1.5 bg-zinc-50 hover:bg-zinc-100 border border-zinc-200 text-zinc-500 rounded-xl text-[10px] transition-all"
                 >
                   Reject Non-Essential

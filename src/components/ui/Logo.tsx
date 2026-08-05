@@ -16,7 +16,7 @@ export default function Logo() {
       setTimeout(() => {
         setIsAnimating(true);
         setShowExpanded(true);
-        
+
         // Reset after animation completes
         setTimeout(() => {
           setShowExpanded(false);
@@ -24,7 +24,7 @@ export default function Logo() {
             setIsAnimating(false);
           }, 300);
         }, 2500);
-        
+
         triggerRandomAnimation();
       }, randomDelay);
     };
@@ -49,8 +49,9 @@ export default function Logo() {
 
   return (
     <div className="flex items-center min-w-[150px]">
-      <Link 
-        href="/" 
+      <Link
+        href="/"
+        aria-label="Home"
         className="group flex items-center focus:outline-none relative"
         onMouseEnter={handleHoverStart}
       >
@@ -61,7 +62,7 @@ export default function Logo() {
           <span className="relative inline-block">
             {/* Always show "Ux" */}
             <span className="inline-block">Ux</span>
-            
+
             {/* Expanded text overlay */}
             <AnimatePresence mode="wait">
               {showExpanded && (
@@ -107,7 +108,8 @@ export default function Logo() {
                 delay: 0.2,
               }}
               style={{
-                background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)",
+                background:
+                  "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)",
                 filter: "blur(4px)",
               }}
             />
@@ -115,7 +117,7 @@ export default function Logo() {
 
           {/* Underline glow */}
           <motion.span
-            className="absolute -bottom-1 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-[#4DB2E0] to-transparent"
+            className="absolute -bottom-1 left-0 w-full h-[2px] bg-linear-to-r from-transparent via-[#4DB2E0] to-transparent"
             initial={{ scaleX: 0 }}
             animate={{
               scaleX: isAnimating ? 1 : 0,

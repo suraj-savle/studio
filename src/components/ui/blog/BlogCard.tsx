@@ -15,12 +15,14 @@ export default function BlogCard({ post, variant = "grid" }: BlogCardProps) {
   const isFeatured = variant === "featured" || post.featured;
 
   return (
-    <Link href={`/blog/${post.id}`}>
-      <article className={`
+    <Link href={`/blog/${post.id}`} aria-label={post.title}>
+      <article
+        className={`
         group relative rounded overflow-hidden shadow-sm 
         transition-all duration-300 hover:-translate-y-1 border border-zinc-300 h-full flex flex-col
-        ${isFeatured ? 'lg:col-span-2 lg:row-span-2' : ''}
-      `}>
+        ${isFeatured ? "lg:col-span-2 lg:row-span-2" : ""}
+      `}
+      >
         {/* Media Container */}
         <div className="relative aspect-video overflow-hidden">
           {post.coverImage ? (
@@ -33,11 +35,13 @@ export default function BlogCard({ post, variant = "grid" }: BlogCardProps) {
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             />
           ) : (
-            <div className="w-full h-full bg-gradient-to-br from-primary-500 to-primary-700 flex items-center justify-center">
-              <span className="text-white text-4xl font-bold opacity-20">UP</span>
+            <div className="w-full h-full bg-linear-to-br from-primary-500 to-primary-700 flex items-center justify-center">
+              <span className="text-white text-4xl font-bold opacity-20">
+                UP
+              </span>
             </div>
           )}
-          
+
           {/* Video Badge */}
           {post.videoUrl && (
             <div className="absolute inset-0 bg-black/30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
@@ -72,7 +76,10 @@ export default function BlogCard({ post, variant = "grid" }: BlogCardProps) {
           {post.tags && post.tags.length > 0 && (
             <div className="flex flex-wrap gap-2 mt-4">
               {post.tags.slice(0, 3).map((tag) => (
-                <span key={tag} className="text-[10px] font-medium text-zinc-500 bg-zinc-100 px-2 py-1 rounded-full">
+                <span
+                  key={tag}
+                  className="text-[10px] font-medium text-zinc-500 bg-zinc-100 px-2 py-1 rounded-full"
+                >
                   #{tag}
                 </span>
               ))}

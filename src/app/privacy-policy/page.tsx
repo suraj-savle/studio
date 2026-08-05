@@ -223,6 +223,7 @@ export default function PrivacyPolicyPage() {
                 <button
                   key={item.id}
                   onClick={() => scrollToSection(item.id)}
+                  aria-label={item.title}
                   className={`w-full flex items-center gap-3 px-3 py-2.5 text-xs font-medium rounded-lg transition-all text-left ${
                     isActive
                       ? "bg-[#4DB2E0]/10 font-semibold"
@@ -272,6 +273,7 @@ export default function PrivacyPolicyPage() {
                     <button
                       key={item.id}
                       onClick={() => scrollToSection(item.id)}
+                      aria-label={item.title}
                       className={`w-full flex items-center gap-2.5 px-3 py-2 text-xs font-medium rounded-lg transition-all text-left ${
                         isActive
                           ? "bg-[#0000001f] font-semibold"

@@ -121,18 +121,12 @@ export default function ContactPage() {
                 <span className="text-xs font-mono font-bold tracking-wider text-zinc-400 uppercase">
                   Email
                 </span>
-                <a
-                  href="mailto:contact@upgradeux.in"
-                  className="text-base font-bold text-zinc-900 hover:text-[#4DB2E0] transition-colors"
-                >
+                <span className="text-base font-bold text-zinc-900">
                   contact@upgradeux.in
-                </a>
-                <a
-                  href="mailto:contact@upgradeux.in"
-                  className="text-base font-bold text-zinc-900 hover:text-[#4DB2E0] transition-colors"
-                >
+                </span>
+                <span className="text-base font-bold text-zinc-900">
                   support@upgradeux.in
-                </a>
+                </span>
               </div>
 
               {/* Box 4: Networks */}
@@ -142,7 +136,7 @@ export default function ContactPage() {
                 </span>
                 <div className="flex items-center gap-4 mt-1 text-zinc-600">
                   <a
-                    href="https://twitter.com/surajsavle"
+                    href="https://x.com/upgradeuxagency"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="hover:text-[#4DB2E0] transition-colors"
@@ -193,7 +187,7 @@ export default function ContactPage() {
                 <h3 className="text-lg font-bold text-zinc-950 tracking-tight">
                   Message Captured
                 </h3>
-                <p className="text-xs text-zinc-500 max-w-[240px] mt-1 leading-relaxed">
+                <p className="text-xs text-zinc-500 max-w-60 mt-1 leading-relaxed">
                   We will review your project requirements metrics and get back
                   to you inside our 12-hour response bracket.
                 </p>
@@ -287,6 +281,7 @@ export default function ContactPage() {
               <button
                 type="submit"
                 disabled={loading}
+                aria-label="Submit Contact Form"
                 className="inline-flex items-center justify-center gap-2 mt-2 px-4 py-3.5 bg-zinc-950 hover:bg-zinc-900 text-white rounded-xl text-xs font-bold uppercase tracking-widest shadow-md transition-all duration-300 group active:scale-[0.98] disabled:opacity-60 disabled:pointer-events-none"
               >
                 <span>

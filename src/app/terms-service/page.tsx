@@ -1134,12 +1134,9 @@ export default function TermsPage() {
                     </div>
                     <div className="flex items-start gap-3">
                       <TbMail className="size-4 text-zinc-400 mt-0.5" />
-                      <a
-                        href={`mailto:${COMPANY_INFO.email}`}
-                        className="text-[#000000] hover:text-[#3fa1cc] transition-colors"
-                      >
+                      <span className="text-[#000000]">
                         {COMPANY_INFO.email}
-                      </a>
+                      </span>
                     </div>
                     <div className="flex items-start gap-3">
                       <TbPhone className="size-4 text-zinc-400 mt-0.5" />

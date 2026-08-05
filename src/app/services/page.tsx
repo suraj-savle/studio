@@ -324,7 +324,7 @@ export default function ServicesOverviewPage() {
                 >
                   {/* Subtle Ambient Mesh Color Gradient Glow for Featured Flagship Card */}
                   {service.featured && (
-                    <div className="absolute top-0 right-0 w-44 h-44 bg-gradient-to-br from-pink-500/20 via-purple-500/20 to-cyan-500/10 rounded-full blur-3xl pointer-events-none -mr-12 -mt-12 opacity-90" />
+                    <div className="absolute top-0 right-0 w-44 h-44 bg-linear-to-br from-pink-500/20 via-purple-500/20 to-cyan-500/10 rounded-full blur-3xl pointer-events-none -mr-12 -mt-12 opacity-90" />
                   )}
 
                   <div className="relative z-10 space-y-4">
@@ -401,7 +401,7 @@ export default function ServicesOverviewPage() {
                             key={idx}
                             className="flex items-start gap-2 text-xs font-medium text-zinc-600"
                           >
-                            <TbCircleCheck className="text-zinc-400 w-3.5 h-3.5 mt-0.5 flex-shrink-0" />
+                            <TbCircleCheck className="text-zinc-400 w-3.5 h-3.5 mt-0.5 shrink-0" />
                             <span className="leading-tight">{highlight}</span>
                           </li>
                         ))}

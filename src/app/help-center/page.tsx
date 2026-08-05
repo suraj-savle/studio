@@ -36,19 +36,22 @@ const COMPANY_INFO = {
 const POLICY_LINKS = [
   {
     title: "Refund Policy",
-    description: "Review our project milestone cancellations, refund criteria timelines, and service terms.",
+    description:
+      "Review our project milestone cancellations, refund criteria timelines, and service terms.",
     link: "/refund-policy",
     icon: TbRefresh,
   },
   {
     title: "Privacy Policy",
-    description: "Understand how your data is safely managed, encrypted, and structurally processed.",
+    description:
+      "Understand how your data is safely managed, encrypted, and structurally processed.",
     link: "/privacy-policy",
     icon: TbShieldCheck,
   },
   {
     title: "Terms of Service",
-    description: "Read the governing structural conditions, development agreements, and legal layouts.",
+    description:
+      "Read the governing structural conditions, development agreements, and legal layouts.",
     link: "/terms-service",
     icon: TbScale,
   },
@@ -61,22 +64,21 @@ const POLICY_LINKS = [
 export default function HelpSupportPage() {
   return (
     <div className="w-full min-h-screen font-sans antialiased bg-white">
-      
       {/* 1. TOP HERO BANNER BLOCK */}
-      <div className="w-full h-64 sm:h-80 bg-gradient-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 mb-20">
+      <div className="w-full h-64 sm:h-80 bg-linear-to-b from-[#4DB2E0] to-[#FFFFFF] relative flex items-end justify-between px-5 sm:px-10 pb-12 mb-20">
         <div className="max-w-4xl">
           <h1 className="text-4xl sm:text-7xl font-black tracking-tight text-zinc-800 leading-none">
             Help Center
           </h1>
         </div>
         <p className="text-xs sm:text-sm font-normal text-zinc-500 max-w-xs leading-relaxed hidden md:block">
-          Access immediate operational systems documentation or trigger direct integration support threads.
+          Access immediate operational systems documentation or trigger direct
+          integration support threads.
         </p>
       </div>
 
       {/* 2. MIDDLE TWO-COLUMN GRID INTERACTION LAYER */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-16 sm:mb-24 mx-5 sm:mx-10">
-        
         {/* LEFT PANEL: CONTENT STRIP & DIRECT TOUCHPOINTS */}
         <div className="lg:col-span-6 flex flex-col justify-between h-full">
           <div>
@@ -85,15 +87,16 @@ export default function HelpSupportPage() {
             </h2>
 
             <p className="text-sm sm:text-base text-zinc-500 max-w-xl font-normal leading-relaxed mb-12">
-              Have an operational infrastructure query, milestone dependency, or security parameter verification requirement? Review our legal frameworks or connect directly with the <strong>{COMPANY_INFO.name}</strong> desk.
+              Have an operational infrastructure query, milestone dependency, or
+              security parameter verification requirement? Review our legal
+              frameworks or connect directly with the{" "}
+              <strong>{COMPANY_INFO.name}</strong> desk.
             </p>
           </div>
         </div>
 
         {/* RIGHT PANEL: ACTION BRIEF & POLICY LINK REDIRECTS */}
         <div className="lg:col-span-6 flex flex-col gap-12 bg-white border-t lg:border-t-0 lg:border-l py-6 lg:pl-10 lg:pr-2 relative overflow-hidden">
-          
-
           {/* Legal Frameworks & Redirect Links Segment */}
           <div className="space-y-4">
             <h3 className="text-xs tracking-widest text-zinc-700">
@@ -106,6 +109,7 @@ export default function HelpSupportPage() {
                   <Link
                     key={idx}
                     href={policy.link}
+                    aria-label={policy.title}
                     className="flex items-start gap-4 p-4 rounded-xl border border-zinc-300 hover:border-[#4DB2E0]/50 hover:bg-sky-50/10 transition-all group"
                   >
                     <div className="p-2.5 rounded-lg bg-zinc-50 border border-zinc-100 text-zinc-600 group-hover:bg-[#4DB2E0]/10 group-hover:text-[#000000] transition-colors shrink-0">
@@ -127,10 +131,8 @@ export default function HelpSupportPage() {
               })}
             </div>
           </div>
-
         </div>
       </div>
-
     </div>
   );
 }

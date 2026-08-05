@@ -75,6 +75,7 @@ export default function AgencyDashboardWindow() {
               <nav className="space-y-0.5">
                 <button
                   onClick={() => setCurrentNav("about-us")}
+                  aria-label="About Us"
                   className={`w-full flex items-center gap-3 px-3 py-1.5 text-xs font-medium rounded-lg transition-all ${currentNav === "about-us" ? "bg-zinc-200 text-zinc-900 font-semibold" : "text-zinc-600 hover:bg-zinc-100"}`}
                 >
                   <TbHome className="text-sm text-zinc-400" />
@@ -82,6 +83,7 @@ export default function AgencyDashboardWindow() {
                 </button>
                 <button
                   onClick={() => setCurrentNav("why-website")}
+                  aria-label="How We Work"
                   className={`w-full flex items-center justify-between px-3 py-1.5 text-xs font-medium rounded-lg transition-all ${currentNav === "why-website" ? "bg-zinc-200 text-zinc-900 font-semibold" : "text-zinc-600 hover:bg-zinc-100"}`}
                 >
                   <div className="flex items-center gap-3">
@@ -102,6 +104,7 @@ export default function AgencyDashboardWindow() {
               <nav className="space-y-0.5">
                 <button
                   onClick={() => setCurrentNav("lead-graph")}
+                  aria-label="Why it Matters"
                   className={`w-full flex items-center gap-3 px-3 py-1.5 text-xs font-medium rounded-lg transition-all ${currentNav === "lead-graph" ? "bg-zinc-200 text-zinc-900 font-semibold" : "text-zinc-600 hover:bg-zinc-100"}`}
                 >
                   <TbFileText className="text-sm text-zinc-400" />
@@ -109,13 +112,15 @@ export default function AgencyDashboardWindow() {
                 </button>
                 <button
                   onClick={() => setCurrentNav("what-you-get")}
+                  aria-label="What You Get"
                   className={`w-full flex items-center gap-3 px-3 py-1.5 text-xs font-medium rounded-lg transition-all ${currentNav === "what-you-get" ? "bg-zinc-200 text-zinc-900 font-semibold" : "text-zinc-600 hover:bg-zinc-100"}`}
                 >
-                  <PiTargetBold  className="text-sm text-zinc-400" />
+                  <PiTargetBold className="text-sm text-zinc-400" />
                   <span>what you get</span>
                 </button>
                 <button
                   onClick={() => setCurrentNav("seo-services")}
+                  aria-label="SEO Services"
                   className={`w-full flex items-center gap-3 px-3 py-1.5 text-xs font-medium rounded-lg transition-all ${
                     currentNav === "seo-services"
                       ? "bg-zinc-200 text-zinc-900 font-semibold"
@@ -216,7 +221,7 @@ export default function AgencyDashboardWindow() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                   <div className="flex items-start gap-3 p-4 bg-white rounded-xl border border-zinc-100 hover:shadow-md transition-shadow">
-                    <div className="w-9 h-9 rounded-lg bg-[#4DB2E0]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-9 h-9 rounded-lg bg-[#4DB2E0]/10 flex items-center justify-center shrink-0 mt-0.5">
                       <TbPalette className="text-[#4DB2E0] text-lg" />
                     </div>
                     <div>
@@ -230,7 +235,7 @@ export default function AgencyDashboardWindow() {
                   </div>
 
                   <div className="flex items-start gap-3 p-4 bg-white rounded-xl border border-zinc-100 hover:shadow-md transition-shadow">
-                    <div className="w-9 h-9 rounded-lg bg-[#2D8BB5]/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-9 h-9 rounded-lg bg-[#2D8BB5]/10 flex items-center justify-center shrink-0 mt-0.5">
                       <TbCode className="text-[#2D8BB5] text-lg" />
                     </div>
                     <div>
@@ -244,7 +249,7 @@ export default function AgencyDashboardWindow() {
                   </div>
 
                   <div className="flex items-start gap-3 p-4 bg-white rounded-xl border border-zinc-100 hover:shadow-md transition-shadow">
-                    <div className="w-9 h-9 rounded-lg bg-emerald-400/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-9 h-9 rounded-lg bg-emerald-400/10 flex items-center justify-center shrink-0 mt-0.5">
                       <TbRocket className="text-emerald-500 text-lg" />
                     </div>
                     <div>
@@ -258,7 +263,7 @@ export default function AgencyDashboardWindow() {
                   </div>
 
                   <div className="flex items-start gap-3 p-4 bg-white rounded-xl border border-zinc-100 hover:shadow-md transition-shadow">
-                    <div className="w-9 h-9 rounded-lg bg-purple-400/10 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <div className="w-9 h-9 rounded-lg bg-purple-400/10 flex items-center justify-center shrink-0 mt-0.5">
                       <TbHeadset className="text-purple-500 text-lg" />
                     </div>
                     <div>
@@ -275,7 +280,7 @@ export default function AgencyDashboardWindow() {
 
               {/* Call to Action */}
               <div className="mt-2 pt-6 border-t border-zinc-100 mb-5">
-                <div className="text-center bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-2xl p-6">
+                <div className="text-center bg-linear-to-br from-zinc-900 to-zinc-800 rounded-2xl p-6">
                   <h4 className="text-white font-bold text-sm mb-2">
                     Ready to Build Something Amazing?
                   </h4>
@@ -506,7 +511,7 @@ export default function AgencyDashboardWindow() {
                   </div>
                   <div className="flex flex-col items-center py-4">
                     <div className="relative w-16 h-16 flex items-center justify-center">
-                      <div className="absolute inset-0 bg-gradient-to-br from-[#4DB2E0]/20 to-[#2D8BB5]/20 rounded-full animate-pulse" />
+                      <div className="absolute inset-0 bg-linear-to-br from-[#4DB2E0]/20 to-[#2D8BB5]/20 rounded-full animate-pulse" />
                       <TbRocket className="text-3xl text-[#4DB2E0]" />
                     </div>
                     <p className="text-xs text-zinc-600 text-center mt-2 leading-relaxed font-medium">
@@ -541,6 +546,7 @@ export default function AgencyDashboardWindow() {
                 <div className="flex bg-zinc-100 p-1 rounded-lg border border-zinc-200">
                   <button
                     onClick={() => setGraphTimeline("monthly")}
+                    aria-label="Switch to monthly view"
                     className={`px-3 py-1 text-[10px] font-bold rounded-lg transition-all ${
                       graphTimeline === "monthly"
                         ? "bg-white text-zinc-950 shadow-sm"
@@ -551,6 +557,7 @@ export default function AgencyDashboardWindow() {
                   </button>
                   <button
                     onClick={() => setGraphTimeline("quarterly")}
+                    aria-label="Switch to quarterly view"
                     className={`px-3 py-1 text-[10px] font-bold rounded-lg transition-all ${
                       graphTimeline === "quarterly"
                         ? "bg-white text-zinc-950 shadow-sm"
@@ -618,7 +625,7 @@ export default function AgencyDashboardWindow() {
                           {/* After Bar - Growing */}
                           <div
                             style={{ height: `${barHeight}%` }}
-                            className="w-4 sm:w-6 bg-gradient-to-t from-[#2D8BB5] to-[#4DB2E0] rounded-t transition-all duration-700 ease-out relative shadow-sm group-hover:brightness-110"
+                            className="w-4 sm:w-6 bg-linear-to-t from-[#2D8BB5] to-[#4DB2E0] rounded-t transition-all duration-700 ease-out relative shadow-sm group-hover:brightness-110"
                           >
                             <div className="absolute -top-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity">
                               <span className="text-[8px] font-mono font-bold bg-[#2D8BB5] text-white px-1.5 py-0.5 rounded whitespace-nowrap z-10">
@@ -686,7 +693,8 @@ export default function AgencyDashboardWindow() {
                 {/* Call to Action */}
                 <Link
                   href="/contact"
-                  className="mt-4 w-full py-3 bg-gradient-to-r from-[#2D8BB5] to-[#4DB2E0] hover:from-[#2D8BB5]/90 hover:to-[#4DB2E0]/90 text-white text-xs font-bold rounded-xl transition-all inline-flex items-center justify-center gap-2 shadow-lg shadow-[#4DB2E0]/20"
+                  aria-label="Contact Us"
+                  className="mt-4 w-full py-3 bg-linear-to-r from-[#2D8BB5] to-[#4DB2E0] hover:from-[#2D8BB5]/90 hover:to-[#4DB2E0]/90 text-white text-xs font-bold rounded-xl transition-all inline-flex items-center justify-center gap-2 shadow-lg shadow-[#4DB2E0]/20"
                 >
                   <TbRocket className="text-sm" />
                   <span>Take Your Business Online Today</span>
@@ -722,7 +730,7 @@ export default function AgencyDashboardWindow() {
                 {/* Design & UI */}
                 <div className="group p-4 bg-white rounded-xl border border-zinc-100 hover:border-[#4DB2E0]/30 hover:shadow-lg transition-all hover:-translate-y-0.5">
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-[#4DB2E0]/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-9 h-9 rounded-lg bg-[#4DB2E0]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <TbPalette className="text-[#4DB2E0] text-lg" />
                     </div>
                     <div className="flex-1">
@@ -743,7 +751,7 @@ export default function AgencyDashboardWindow() {
                 {/* Development */}
                 <div className="group p-4 bg-white rounded-xl border border-zinc-100 hover:border-[#2D8BB5]/30 hover:shadow-lg transition-all hover:-translate-y-0.5">
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-[#2D8BB5]/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-9 h-9 rounded-lg bg-[#2D8BB5]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <TbCode className="text-[#2D8BB5] text-lg" />
                     </div>
                     <div className="flex-1">
@@ -764,7 +772,7 @@ export default function AgencyDashboardWindow() {
                 {/* SEO */}
                 <div className="group p-4 bg-white rounded-xl border border-zinc-100 hover:border-emerald-400/30 hover:shadow-lg transition-all hover:-translate-y-0.5">
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-emerald-400/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-9 h-9 rounded-lg bg-emerald-400/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <TbBrandGoogle className="text-emerald-500 text-lg" />
                     </div>
                     <div className="flex-1">
@@ -785,7 +793,7 @@ export default function AgencyDashboardWindow() {
                 {/* Performance */}
                 <div className="group p-4 bg-white rounded-xl border border-zinc-100 hover:border-purple-400/30 hover:shadow-lg transition-all hover:-translate-y-0.5">
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-purple-400/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-9 h-9 rounded-lg bg-purple-400/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <TbRocket className="text-purple-500 text-lg" />
                     </div>
                     <div className="flex-1">
@@ -805,7 +813,7 @@ export default function AgencyDashboardWindow() {
                 {/* Contact Forms */}
                 <div className="group p-4 bg-white rounded-xl border border-zinc-100 hover:border-[#4DB2E0]/30 hover:shadow-lg transition-all hover:-translate-y-0.5">
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-[#4DB2E0]/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-9 h-9 rounded-lg bg-[#4DB2E0]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <TbMail className="text-[#4DB2E0] text-lg" />
                     </div>
                     <div className="flex-1">
@@ -826,7 +834,7 @@ export default function AgencyDashboardWindow() {
                 {/* Analytics */}
                 <div className="group p-4 bg-white rounded-xl border border-zinc-100 hover:border-[#2D8BB5]/30 hover:shadow-lg transition-all hover:-translate-y-0.5">
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-[#2D8BB5]/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-9 h-9 rounded-lg bg-[#2D8BB5]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <TbChartBar className="text-[#2D8BB5] text-lg" />
                     </div>
                     <div className="flex-1">
@@ -847,7 +855,7 @@ export default function AgencyDashboardWindow() {
                 {/* Deployment */}
                 <div className="group p-4 bg-white rounded-xl border border-zinc-100 hover:border-emerald-400/30 hover:shadow-lg transition-all hover:-translate-y-0.5">
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-emerald-400/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-9 h-9 rounded-lg bg-emerald-400/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <TbRocket className="text-emerald-500 text-lg" />
                     </div>
                     <div className="flex-1">
@@ -868,7 +876,7 @@ export default function AgencyDashboardWindow() {
                 {/* Documentation */}
                 <div className="group p-4 bg-white rounded-xl border border-zinc-100 hover:border-purple-400/30 hover:shadow-lg transition-all hover:-translate-y-0.5">
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-purple-400/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-9 h-9 rounded-lg bg-purple-400/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <TbFileText className="text-purple-500 text-lg" />
                     </div>
                     <div className="flex-1">
@@ -889,7 +897,7 @@ export default function AgencyDashboardWindow() {
 
               {/* Bonus Section - What's Included Summary */}
               <div className="mt-6 pt-6 mb-5 border-t border-zinc-100">
-                <div className="bg-gradient-to-br from-zinc-900 to-zinc-800 rounded-2xl p-5">
+                <div className="bg-linear-to-br from-zinc-900 to-zinc-800 rounded-2xl p-5">
                   <div className="flex items-center gap-2 mb-3">
                     <TbStars className="text-[#4DB2E0] text-lg" />
                     <span className="text-[10px] font-bold text-[#4DB2E0] uppercase tracking-[0.2em]">
@@ -954,7 +962,7 @@ export default function AgencyDashboardWindow() {
               {/* Problem Statement */}
               <div className="mb-4 p-4 bg-amber-50 rounded-xl border border-amber-200">
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center flex-shrink-0">
+                  <div className="w-8 h-8 rounded-lg bg-amber-100 flex items-center justify-center shrink-0">
                     <TbAlertCircle className="text-amber-600 text-lg" />
                   </div>
                   <div>
@@ -975,7 +983,7 @@ export default function AgencyDashboardWindow() {
                 {/* SEO Audit */}
                 <div className="group p-4 bg-white rounded-xl border border-zinc-100 hover:border-[#4DB2E0]/30 hover:shadow-lg transition-all hover:-translate-y-0.5">
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-[#4DB2E0]/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-9 h-9 rounded-lg bg-[#4DB2E0]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <TbFileText className="text-[#4DB2E0] text-lg" />
                     </div>
                     <div>
@@ -996,7 +1004,7 @@ export default function AgencyDashboardWindow() {
                 {/* Keyword Strategy */}
                 <div className="group p-4 bg-white rounded-xl border border-zinc-100 hover:border-[#2D8BB5]/30 hover:shadow-lg transition-all hover:-translate-y-0.5">
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-[#2D8BB5]/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-9 h-9 rounded-lg bg-[#2D8BB5]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <TbBrandGoogle className="text-[#2D8BB5] text-lg" />
                     </div>
                     <div>
@@ -1017,7 +1025,7 @@ export default function AgencyDashboardWindow() {
                 {/* On-Page SEO */}
                 <div className="group p-4 bg-white rounded-xl border border-zinc-100 hover:border-emerald-400/30 hover:shadow-lg transition-all hover:-translate-y-0.5">
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-emerald-400/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-9 h-9 rounded-lg bg-emerald-400/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <TbCode className="text-emerald-500 text-lg" />
                     </div>
                     <div>
@@ -1038,7 +1046,7 @@ export default function AgencyDashboardWindow() {
                 {/* Technical SEO */}
                 <div className="group p-4 bg-white rounded-xl border border-zinc-100 hover:border-purple-400/30 hover:shadow-lg transition-all hover:-translate-y-0.5">
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-purple-400/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-9 h-9 rounded-lg bg-purple-400/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <TbRocket className="text-purple-500 text-lg" />
                     </div>
                     <div>
@@ -1059,7 +1067,7 @@ export default function AgencyDashboardWindow() {
                 {/* Content Strategy */}
                 <div className="group p-4 bg-white rounded-xl border border-zinc-100 hover:border-[#4DB2E0]/30 hover:shadow-lg transition-all hover:-translate-y-0.5">
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-[#4DB2E0]/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-9 h-9 rounded-lg bg-[#4DB2E0]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <TbFileText className="text-[#4DB2E0] text-lg" />
                     </div>
                     <div>
@@ -1080,7 +1088,7 @@ export default function AgencyDashboardWindow() {
                 {/* Local SEO */}
                 <div className="group p-4 bg-white rounded-xl border border-zinc-100 hover:border-[#2D8BB5]/30 hover:shadow-lg transition-all hover:-translate-y-0.5">
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-[#2D8BB5]/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-9 h-9 rounded-lg bg-[#2D8BB5]/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <TbMapPin className="text-[#2D8BB5] text-lg" />
                     </div>
                     <div>
@@ -1101,7 +1109,7 @@ export default function AgencyDashboardWindow() {
                 {/* Link Building */}
                 <div className="group p-4 bg-white rounded-xl border border-zinc-100 hover:border-emerald-400/30 hover:shadow-lg transition-all hover:-translate-y-0.5">
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-emerald-400/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-9 h-9 rounded-lg bg-emerald-400/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <TbUsers className="text-emerald-500 text-lg" />
                     </div>
                     <div>
@@ -1122,7 +1130,7 @@ export default function AgencyDashboardWindow() {
                 {/* Analytics & Reporting */}
                 <div className="group p-4 bg-white rounded-xl border border-zinc-100 hover:border-purple-400/30 hover:shadow-lg transition-all hover:-translate-y-0.5">
                   <div className="flex items-start gap-3">
-                    <div className="w-9 h-9 rounded-lg bg-purple-400/10 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
+                    <div className="w-9 h-9 rounded-lg bg-purple-400/10 flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
                       <TbChartBar className="text-purple-500 text-lg" />
                     </div>
                     <div>
@@ -1169,7 +1177,7 @@ export default function AgencyDashboardWindow() {
                   </div>
 
                   {/* After Card */}
-                  <div className="p-4 bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-200">
+                  <div className="p-4 bg-linear-to-br from-blue-50 to-indigo-50 rounded-xl border border-blue-200">
                     <div className="flex items-center gap-2 mb-2">
                       <TbRocket className="text-[#4DB2E0] text-lg" />
                       <span className="text-[10px] font-bold text-[#4DB2E0] uppercase tracking-wider">

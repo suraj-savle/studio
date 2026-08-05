@@ -18,7 +18,7 @@ export default function AppLoader() {
     <AnimatePresence>
       {show && (
         <motion.div
-          className="fixed inset-0 z-[9999] flex items-center justify-center bg-white pointer-events-none"
+          className="fixed inset-0 z-9999 flex items-center justify-center bg-white pointer-events-none"
           initial={{ opacity: 1 }}
           exit={{
             opacity: 0,
@@ -29,7 +29,7 @@ export default function AppLoader() {
           }}
         >
           {/* Background */}
-          <div className="absolute inset-0 bg-gradient-to-b from-white via-white to-[#eef9ff]" />
+          <div className="absolute inset-0 bg-linear-to-b from-white via-white to-[#eef9ff]" />
 
           {/* Optional subtle grid */}
           <div
@@ -62,7 +62,7 @@ export default function AppLoader() {
               duration: 0.55,
               ease: [0.16, 1, 0.3, 1],
             }}
-            className="relative text-5xl sm:text-8xl font-black tracking-tight bg-gradient-to-b from-[#4DB2E0] to-[#7b7c7c] bg-clip-text text-transparent"
+            className="relative text-5xl sm:text-8xl font-black tracking-tight bg-linear-to-b from-[#4DB2E0] to-[#7b7c7c] bg-clip-text text-transparent"
           >
             UpgradeUX
           </motion.h1>
